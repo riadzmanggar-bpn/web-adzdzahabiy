@@ -1,0 +1,124 @@
+/* =====================================
+   NAVBAR
+===================================== */
+
+.navbar{
+
+    padding:18px 0;
+
+    transition:var(--transition);
+
+}
+
+.logo{
+
+    width:120px;
+
+}
+
+.nav-link{
+
+    margin-left:20px;
+
+    color:var(--primary)!important;
+
+    font-size:1.15rem;
+
+    position:relative;
+
+}
+
+.nav-link::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-5px;
+
+    width:0;
+
+    height:2px;
+
+    background:var(--primary);
+
+    transition:.3s;
+
+}
+
+.nav-link:hover::after{
+
+    width:100%;
+
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+
+    padding:180px 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.60),
+            rgba(0,0,0,.40)
+        ),
+        url("../images/GambarPemandanganBakau.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.hero h1{
+
+    color:#fff;
+
+    font-size:3rem;
+
+    font-weight:700;
+
+}
+
+.hero p{
+
+    color:#fff;
+
+    font-size:1.4rem;
+
+    line-height:1.9;
+
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer{
+
+    background:var(--primary-dark);
+
+    color:#fff;
+
+    padding:60px 0 30px;
+
+}
+
+.footer-logo{
+
+    width:190px;
+
+}
+
+.footer-tagline{
+
+    color:var(--accent);
+
+}

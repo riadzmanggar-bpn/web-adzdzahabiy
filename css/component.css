@@ -1,0 +1,97 @@
+/* =====================================
+   BUTTON
+===================================== */
+
+.btn-round{
+
+    border-radius:30px;
+
+    padding:12px 30px;
+
+    font-weight:600;
+
+}
+
+.btn-success{
+
+    background:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-donasi{
+
+    background:#fff;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.btn-donasi:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+
+/* =====================================
+   CARD
+===================================== */
+
+.card-box{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+    text-align:center;
+
+    height:100%;
+
+}
+
+.card-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+
+/* =====================================
+   ICON
+===================================== */
+
+.circle-icon{
+
+    width:80px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    margin:auto auto 20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    font-size:2rem;
+
+}

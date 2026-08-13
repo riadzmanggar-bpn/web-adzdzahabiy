@@ -1,0 +1,355 @@
+@media (max-width:992px){
+
+    .hero{
+
+        text-align:center;
+
+        padding:120px 0;
+
+    }
+
+    .hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .section-title{
+
+        font-size:2rem;
+
+    }
+
+    .nav-link{
+
+        margin-left:0;
+
+    }
+
+}
+
+@media (max-width:768px){
+
+    .hero p{
+
+        font-size:1.1rem;
+
+    }
+
+    .section-subtitle{
+
+        font-size:1rem;
+
+    }
+
+}
+/* =====================================
+   SEJARAH - VISI - MISI
+===================================== */
+
+@media (max-width:768px){
+
+    .about-section{
+
+        padding:45px 0;
+
+    }
+
+    .info-card{
+
+        padding:25px 22px;
+
+    }
+
+    .card-title h2{
+
+        font-size:25px;
+
+    }
+
+    .card-content{
+
+        font-size:15px;
+
+        line-height:1.7;
+
+    }
+
+    .vision-mission{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+    }
+
+}
+
+/* =====================================
+   ABOUT INTRO
+===================================== */
+
+.about-intro{
+
+    padding:90px 0;
+
+    background:#fff;
+
+}
+
+
+.about-intro-label{
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+}
+
+
+.about-intro h2{
+
+    font-size:2.8rem;
+
+    line-height:1.25;
+
+    font-weight:700;
+
+    color:#20252a;
+
+    margin:0;
+
+}
+
+
+.about-intro h2 span{
+
+    color:var(--primary);
+
+}
+
+
+.about-intro p{
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    color:var(--text);
+
+    margin-bottom:18px;
+
+}
+
+
+.about-intro .about-lead{
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+    color:#333;
+
+}
+
+
+/* =====================================
+   HISTORY
+===================================== */
+
+.history-section{
+
+    padding:90px 0;
+
+    background:#f7f9f8;
+
+}
+
+
+.section-heading{
+
+    max-width:700px;
+
+    margin-bottom:60px;
+
+}
+
+
+.section-heading > span{
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+.section-heading h2{
+
+    font-size:2.8rem;
+
+    font-weight:700;
+
+    margin:10px 0 15px;
+
+}
+
+
+.section-heading p{
+
+    color:#666;
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+}
+
+
+/* TIMELINE */
+
+.history-timeline{
+
+    position:relative;
+
+    max-width:1000px;
+
+}
+
+
+.history-timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:110px;
+
+    top:0;
+
+    bottom:0;
+
+    width:2px;
+
+    background:#dce8e1;
+
+}
+
+
+.history-item{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:90px 40px 1fr;
+
+    gap:20px;
+
+    margin-bottom:50px;
+
+}
+
+
+.history-year{
+
+    padding-top:3px;
+
+    color:var(--primary);
+
+    font-weight:700;
+
+    font-size:.9rem;
+
+    text-align:right;
+
+}
+
+
+.history-dot{
+
+    position:relative;
+
+    width:14px;
+
+    height:14px;
+
+    margin-top:5px;
+
+    margin-left:13px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    box-shadow:0 0 0 6px #eaf4ee;
+
+}
+
+
+.history-content{
+
+    background:#fff;
+
+    padding:25px 30px;
+
+    border-radius:12px;
+
+    border:1px solid #e5eae7;
+
+    box-shadow:0 5px 20px rgba(0,0,0,.04);
+
+}
+
+
+.history-content h3{
+
+    margin:0 0 10px;
+
+    font-size:1.3rem;
+
+    color:#222;
+
+}
+
+
+.history-content p{
+
+    margin:0;
+
+    color:#555;
+
+    line-height:1.8;
+
+}
+
+
+/* QUOTE */
+
+.history-quote{
+
+    margin-top:30px;
+
+    padding:25px 30px;
+
+    border-left:4px solid var(--primary);
+
+    background:#fff;
+
+    color:var(--primary);
+
+    font-style:italic;
+
+    line-height:1.8;
+
+}
