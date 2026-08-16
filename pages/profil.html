@@ -20,8 +20,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/component.css">
+    <link rel="stylesheet" href="../css/layout.css">
     <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/responsive.css">  
 
 </head>
 
@@ -30,57 +34,7 @@
 <!-- ==========================================================
     NAVBAR
 ========================================================== -->
-<nav class="navbar navbar-expand-lg bg-white shadow-sm">
-
-    <div class="container">
-
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-
-            <img src="../images/logo-rtq.png"
-                alt="Logo RTQ"
-                class="logo me-3">
-
-            <div>
-                <div class="fw-bold fs-5">Rumah Tahfizhul Quran</div>
-                <small>Al Imam Adz Dzahabiy</small>
-            </div>
-
-         </a>
-
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarRTQ">
-
-            <span class="navbar-toggler-icon"></span>
-
-        </button>
-
-        <div class="collapse navbar-collapse"
-             id="navbarRTQ">
-
-            <ul class="navbar-nav ms-auto align-items-center">
-
-                <li class="nav-item"><a class="nav-link" href="../index.html">Beranda</a></li>
-                <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
-                <li class="nav-item"><a class="nav-link" href="#program">Program</a></li>
-                <li class="nav-item"><a class="nav-link" href="#ibadah">Ibadah</a></li>
-                <li class="nav-item"><a class="nav-link" href="#berita">Berita</a></li>
-                <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
-                <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-                
-            </ul>
-
-            <div class="d-flex ms-4">
-                <a href="#donasi" class="btn btn-donasi me-3">Donasi</a>
-                <a href="#daftar" class="btn btn-success">Daftar</a>
-            </div>
-
-        </div>
-
-    </div>
-
-</nav>
+<div id="global-navbar"></div>
 <!-- END NAVBAR -->
 
 <!-- ==========================================
@@ -129,11 +83,7 @@
      TENTANG RTQ
 ========================================== -->
 
-<!-- ==========================================
-     TENTANG RTQ
-========================================== -->
-
-<section class="about-intro">
+<section class="about-intro" id="tentang">
 
     <div class="container">
 
@@ -259,7 +209,7 @@
      SEJARAH
 ========================================== -->
 
-<section class="history-section">
+<section class="history-section" id="sejarah">
 
     <div class="container">
 
@@ -401,7 +351,7 @@
 ========================================== -->
        
 
-        <div class="vision-mission">
+        <div class="vision-mission" id="visi-misi">
 
             <!-- VISI -->
             <div class="info-card visi-card">
@@ -471,7 +421,7 @@
      NILAI-NILAI
 ========================================================== -->
 
-<section class="page-section value-section bg-light">
+<section class="page-section value-section bg-light" id="nilai">
 
     <div class="container">
 
@@ -629,13 +579,156 @@
      FASILITAS
 ========================================== -->
 
-<section class="page-section">
+<section class="page-section facility-section" id="fasilitas">
 
     <div class="container">
 
-        <h2>Fasilitas</h2>
+        <div class="text-center mb-5">
 
-        Masjid, ruang kelas, asrama, perpustakaan, lapangan olahraga, dan fasilitas pendukung lainnya untuk mendukung proses pendidikan dan pembinaan santri.
+            <h2>Fasilitas</h2>
+
+            <p class="section-subtitle">
+                Fasilitas yang mendukung proses pendidikan,
+                ibadah, dan pembinaan santri di RTQ Al Imam Adz Dzahabiy.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <!-- Masjid -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="facility-card">
+
+                    <div class="facility-image">
+
+                        <img
+                            src="../images/fasilitas/Masjid 3.jpeg"
+                            alt="Masjid RTQ Al Imam Adz Dzahabiy">
+
+                    </div>
+
+                    <h4>Masjid</h4>
+
+                    <p>
+                        Masjid sebagai pusat ibadah, pembinaan,
+                        dan kegiatan keagamaan santri.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Ruang Kelas -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="facility-card">
+
+                    <div class="facility-image">
+                        <img
+                            src="../images/fasilitas/kelas.jpeg"
+                            alt="Masjid RTQ Al Imam Adz Dzahabiy">
+                    </div>
+
+                    <h4>Ruang Kelas</h4>
+
+                    <p>
+                        Ruang kelas yang digunakan untuk mendukung
+                        kegiatan belajar dan mengajar santri.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Asrama -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="facility-card">
+
+                    <div class="facility-icon">
+                        <i class="bi bi-house-fill"></i>
+                    </div>
+
+                    <h4>Asrama</h4>
+
+                    <p>
+                        Fasilitas asrama sebagai tempat tinggal
+                        dan pembinaan santri.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Perpustakaan -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="facility-card">
+
+                    <div class="facility-icon">
+                        <i class="bi bi-book-fill"></i>
+                    </div>
+
+                    <h4>Perpustakaan</h4>
+
+                    <p>
+                        Sarana untuk mendukung santri dalam
+                        membaca dan menambah wawasan keilmuan.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Lapangan -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="facility-card">
+
+                    <div class="facility-icon">
+                        <i class="bi bi-dribbble"></i>
+                    </div>
+
+                    <h4>Lapangan Olahraga</h4>
+
+                    <p>
+                        Fasilitas olahraga untuk mendukung
+                        kesehatan dan aktivitas santri.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Fasilitas Pendukung -->
+            <div class="col-lg-4 col-md-6">
+
+                <div class="facility-card">
+
+                    <div class="facility-icon">
+                        <i class="bi bi-grid-fill"></i>
+                    </div>
+
+                    <h4>Fasilitas Pendukung</h4>
+
+                    <p>
+                        Berbagai fasilitas pendukung lainnya
+                        untuk menunjang proses pendidikan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
@@ -646,7 +739,7 @@
      CTA
 ========================================== -->
 
-<section class="cta">
+<section class="cta" id="cta">
 
     ....
 
@@ -656,103 +749,14 @@
      FOOTER
 ========================================================== -->
 
-<footer class="footer">
-
-    <div class="container">
-
-        <div class="row align-items-start gy-5">
-
-            <!-- Logo -->
-            <div class="col-lg-3 mb-4">
-
-                <img src="../images/RTQ Emas.png"
-                     class="footer-logo"
-                     alt="Logo RTQ">
-
-                <h5>Rumah Tahfizhul Quran</h5>
-
-                    <p class="footer-tagline">
-                        Mencetak Generasi Qurani di atas Manhaj Salaf
-                    </p>
-               
-            </div>
-
-            <!-- Menu -->
-            <div class="col-lg-3 ps-lg-5">
-
-                <h5>Menu</h5>
-
-                <ul class="footer-menu">
-
-                    <li><a href="#">Beranda</a></li>
-                    <li><a href="pages/profil.html">Profil</a></li>
-                    <li><a href="pages/program.html">Program</a></li>
-                    <li><a href="pages/ibadah.html">Ibadah</a></li>
-                    <li><a href="pages/berita.html">Berita</a></li>
-
-                </ul>
-
-            </div>
-
-            <!-- Program -->
-            <div class="col-lg-3">
-            
-
-                <h5>Pendidikan</h5>
-
-                <ul class="footer-menu">
-
-                    <li>RA / RB</li>
-                    <li>MU</li>
-                    <li>MW</li>
-                    <li>MUY</li>
-
-                </ul>
-
-            </div>
-
-            <!-- Kontak -->
-            <div class="col-lg-3">
-
-                <h5>Kontak</h5>
-
-                <p>
-                    <i class="bi bi-geo-alt-fill"></i>
-                    Jl. Pasir Putih RT.95<br>
-                    Kel. Manggar, Balikpapan<br>
-                    Kalimantan Timur 76116
-                </p>
-
-                <p>
-                    <i class="bi bi-envelope-fill"></i>
-                    yayasanalmuntaqo@gmail.com
-                </p>
-
-                <p>
-                    <i class="bi bi-whatsapp"></i>
-                    0851-8521-2467
-                </p>
-
-            </div>
-
-        </div>
-
-        <hr>
-
-        <div class="text-center footer-copy">
-
-            © 2026 Rumah Tahfizhul Quran Al Imam Adz Dzahabiy.
-            Seluruh Hak Cipta Dilindungi.
-
-        </div>
-
-    </div>
+<div id="global-footer"></div>
 
 </footer>
 
 <!-- END FOOTER -->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/navbar.js"></script>
 
 </body>
 </html>

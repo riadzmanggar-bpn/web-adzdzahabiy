@@ -1,355 +1,1520 @@
-@media (max-width:992px){
+/* ==========================================================
+   RESPONSIVE - DESKTOP & MOBILE
+   Untuk halaman Tentang RTQ
+   Desktop tetap mengikuti CSS utama.
+   Mobile dibuat satu kolom seperti tampilan Nilai-Nilai.
+========================================================== */
+
+
+/* ==========================================================
+   RESPONSIVE UMUM
+========================================================== */
+
+@media (max-width: 992px){
 
     .hero{
-
         text-align:center;
-
         padding:120px 0;
-
     }
 
     .hero h1{
-
         font-size:2.2rem;
-
     }
 
     .section-title{
-
         font-size:2rem;
-
     }
 
     .nav-link{
-
         margin-left:0;
+    }
+}
 
+
+@media (max-width: 768px){
+
+    .hero p{
+        font-size:1.1rem;
+    }
+
+    .section-subtitle{
+        font-size:1rem;
+    }
+}
+
+
+/* ==========================================================
+   MOBILE - TENTANG RTQ
+   Desktop tidak disentuh.
+   Semua layout desktop dipaksa menjadi satu kolom di HP.
+========================================================== */
+
+@media (max-width: 767.98px){
+
+    /* ======================================================
+       GLOBAL
+    ====================================================== */
+
+    html,
+    body{
+        width:100%;
+        max-width:100%;
+        overflow-x:hidden;
+    }
+
+    *,
+    *::before,
+    *::after{
+        box-sizing:border-box;
+    }
+
+
+    /* ======================================================
+       CONTAINER
+    ====================================================== */
+
+    .about-intro > .container,
+    .history-section > .container,
+    .about-section > .container,
+    .value-section > .container{
+        width:100% !important;
+        max-width:100% !important;
+        margin:0 auto !important;
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+
+    /* ======================================================
+       ABOUT INTRO
+       HP:
+       JUDUL
+          ↓
+       TIMELINE
+    ====================================================== */
+
+    .about-intro{
+        width:100% !important;
+        max-width:100% !important;
+
+        padding:52px 20px 65px !important;
+
+        overflow:hidden !important;
+        box-sizing:border-box !important;
+    }
+
+
+    .about-intro-inner{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+
+        min-width:0 !important;
+        min-height:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        position:relative !important;
+
+        grid-template-columns:none !important;
+        grid-template-rows:none !important;
+
+        flex-direction:column !important;
+    }
+
+
+    /* ======================================================
+       ABOUT - JUDUL
+    ====================================================== */
+
+    .about-intro-title{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        position:static !important;
+
+        margin:0 0 38px !important;
+        padding:0 !important;
+
+        grid-column:auto !important;
+        grid-row:auto !important;
+
+        transform:none !important;
+    }
+
+
+    .about-intro-label{
+        display:block !important;
+
+        width:100% !important;
+
+        margin:0 0 12px !important;
+
+        color:var(--primary);
+
+        font-size:.76rem !important;
+        line-height:1.4 !important;
+
+        letter-spacing:2px !important;
+        font-weight:700;
+    }
+
+
+    .about-intro-title h2,
+    .about-intro h2{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        position:static !important;
+
+        font-size:2.25rem !important;
+        line-height:1.12 !important;
+        font-weight:700 !important;
+
+        word-break:normal !important;
+        overflow-wrap:normal !important;
+
+        transform:none !important;
+    }
+
+
+    .about-intro-title h2::after{
+        content:"";
+
+        display:block;
+
+        width:48px;
+        height:3px;
+
+        margin-top:18px;
+
+        background:var(--primary);
+    }
+
+
+    /* ======================================================
+       ABOUT - TIMELINE
+       Timeline desktop yang 2 kolom dibongkar total.
+    ====================================================== */
+
+    .about-timeline{
+        display:block !important;
+
+        position:relative !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:0 0 0 48px !important;
+
+        left:auto !important;
+        right:auto !important;
+        top:auto !important;
+
+        grid-column:auto !important;
+        grid-row:auto !important;
+
+        transform:none !important;
+    }
+
+
+    .about-timeline::before{
+        content:"" !important;
+
+        position:absolute !important;
+
+        left:17px !important;
+        top:18px !important;
+        bottom:18px !important;
+
+        width:2px !important;
+
+        border:0 !important;
+
+        background:#dce8e1 !important;
+    }
+
+
+    .about-timeline-item{
+        display:block !important;
+
+        position:relative !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 0 28px !important;
+        padding:0 !important;
+
+        grid-column:auto !important;
+        grid-row:auto !important;
+    }
+
+
+    .about-timeline-item:last-child{
+        margin-bottom:0 !important;
+    }
+
+
+    /* ICON KEMBALI DITAMPILKAN DI HP */
+
+    .about-timeline-icon{
+        display:flex !important;
+
+        align-items:center !important;
+        justify-content:center !important;
+
+        position:absolute !important;
+
+        left:-48px !important;
+        top:0 !important;
+
+        width:36px !important;
+        height:36px !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        border-radius:50% !important;
+
+        background:#eaf4ee !important;
+        color:var(--primary) !important;
+
+        font-size:17px !important;
+
+        z-index:2 !important;
+    }
+
+
+    .about-timeline-text{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        position:static !important;
+    }
+
+
+    .about-timeline-text p{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        color:#444;
+
+        font-size:1rem !important;
+        line-height:1.75 !important;
+
+        overflow-wrap:anywhere !important;
+        word-break:normal !important;
+    }
+
+
+    .about-leaf-left,
+    .about-leaf-right{
+        display:none !important;
+    }
+
+
+    .about-divider{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin-top:42px !important;
+    }
+
+
+    .about-divider-icon{
+        width:46px !important;
+        height:46px !important;
+        font-size:18px !important;
+    }
+
+
+    /* ======================================================
+       HISTORY
+       HP dibuat seperti card Nilai-Nilai:
+       judul → card 1 → card 2 → card 3 → quote
+    ====================================================== */
+
+    .history-section{
+        width:100% !important;
+        max-width:100% !important;
+
+        padding:58px 20px 68px !important;
+
+        overflow:hidden !important;
+    }
+
+
+    .section-heading{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 0 32px !important;
+        padding:0 !important;
+    }
+
+
+    .section-heading > span{
+        display:block;
+
+        font-size:.76rem !important;
+        line-height:1.4 !important;
+
+        letter-spacing:2px !important;
+        font-weight:700;
+    }
+
+
+    .section-heading h2{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:9px 0 14px !important;
+
+        font-size:2.25rem !important;
+        line-height:1.15 !important;
+
+        word-break:normal !important;
+    }
+
+
+    .section-heading p{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 !important;
+
+        font-size:1rem !important;
+        line-height:1.75 !important;
+
+        color:#666;
+    }
+
+
+    /* MATIKAN TIMELINE DESKTOP */
+
+    .history-timeline{
+        display:block !important;
+
+        position:relative !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        overflow:visible !important;
+    }
+
+
+    .history-timeline::before{
+        display:none !important;
+    }
+
+
+    .history-item{
+        display:block !important;
+
+        position:relative !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 0 20px !important;
+        padding:0 !important;
+
+        grid-template-columns:none !important;
+        grid-template-rows:none !important;
+        gap:0 !important;
+    }
+
+
+    .history-item:last-child{
+        margin-bottom:0 !important;
+    }
+
+
+    .history-year{
+        display:inline-flex !important;
+        align-items:center !important;
+
+        width:auto !important;
+        max-width:100% !important;
+
+        margin:0 0 9px !important;
+        padding:5px 11px !important;
+
+        text-align:left !important;
+
+        color:var(--primary) !important;
+        background:#eaf4ee !important;
+
+        border-radius:999px !important;
+
+        font-size:.78rem !important;
+        font-weight:700 !important;
+        line-height:1.3 !important;
+        letter-spacing:.5px;
+    }
+
+
+    .history-dot{
+        display:none !important;
+    }
+
+
+    .history-content{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:21px 19px !important;
+
+        background:#fff !important;
+
+        border:1px solid #e5eae7 !important;
+        border-radius:14px !important;
+
+        box-shadow:0 5px 18px rgba(0,0,0,.045) !important;
+
+        overflow:hidden !important;
+    }
+
+
+    .history-content h3{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 0 9px !important;
+
+        color:#222;
+
+        font-size:1.18rem !important;
+        line-height:1.4 !important;
+    }
+
+
+    .history-content p{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 !important;
+
+        color:#555;
+
+        font-size:1rem !important;
+        line-height:1.75 !important;
+
+        overflow-wrap:anywhere !important;
+    }
+
+
+    .history-quote{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:25px 0 0 !important;
+        padding:20px 18px !important;
+
+        border-left:3px solid var(--primary) !important;
+        border-radius:0 10px 10px 0;
+
+        background:#fff !important;
+
+        color:var(--primary) !important;
+
+        font-size:.98rem !important;
+        line-height:1.7 !important;
+
+        text-align:left !important;
+
+        overflow-wrap:anywhere !important;
+    }
+
+
+    /* ======================================================
+       VISI & MISI
+       1 kolom, card penuh seperti Nilai-Nilai.
+    ====================================================== */
+
+    .about-section{
+        width:100% !important;
+        max-width:100% !important;
+
+        padding:55px 20px 68px !important;
+
+        overflow:hidden !important;
+    }
+
+
+    .vision-mission{
+        display:flex !important;
+        flex-direction:column !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        gap:18px !important;
+
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+
+    .vision-mission .info-card,
+    .info-card{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:23px 19px !important;
+
+        border-radius:14px !important;
+
+        box-sizing:border-box !important;
+
+        overflow:hidden !important;
+    }
+
+
+    .card-title{
+        display:flex !important;
+        align-items:center !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        gap:11px !important;
+
+        margin:0 0 18px !important;
+        padding:0 0 13px !important;
+
+        border-bottom:1px solid #e8eeea;
+    }
+
+
+    .card-title h2{
+        min-width:0 !important;
+
+        margin:0 !important;
+
+        font-size:1.45rem !important;
+        line-height:1.3 !important;
+
+        word-break:normal !important;
+        overflow-wrap:normal !important;
+    }
+
+
+    .card-icon{
+        display:flex !important;
+        align-items:center !important;
+        justify-content:center !important;
+
+        width:42px !important;
+        height:42px !important;
+
+        flex:0 0 42px !important;
+
+        border-radius:12px;
+
+        font-size:19px !important;
+    }
+
+
+    .card-content{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+        min-width:0 !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        font-size:1rem !important;
+        line-height:1.75 !important;
+
+        overflow-wrap:anywhere !important;
+    }
+
+
+    .card-content p{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 !important;
+    }
+
+
+    .card-content ul{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 !important;
+        padding-left:20px !important;
+
+        box-sizing:border-box !important;
+    }
+
+
+    .card-content li{
+        margin:0 0 10px !important;
+
+        overflow-wrap:anywhere !important;
+    }
+
+
+    .card-content li:last-child{
+        margin-bottom:0 !important;
+    }
+
+
+    /* ======================================================
+       NILAI-NILAI
+       Pertahankan pola yang sudah bagus, hanya pastikan
+       bootstrap tidak membuat overflow.
+    ====================================================== */
+
+    .value-section{
+        width:100% !important;
+        max-width:100% !important;
+
+        padding:58px 20px 68px !important;
+
+        overflow:hidden !important;
+    }
+
+
+    .value-section .container{
+        width:100% !important;
+        max-width:100% !important;
+        padding:0 !important;
+    }
+
+
+    .value-section .text-center{
+        width:100% !important;
+        max-width:100% !important;
+    }
+
+
+    .value-section .text-center h2{
+        width:100% !important;
+        max-width:100% !important;
+
+        font-size:2.2rem !important;
+        line-height:1.2 !important;
+    }
+
+
+    .value-section .section-subtitle{
+        width:100% !important;
+        max-width:100% !important;
+
+        font-size:1rem !important;
+        line-height:1.75 !important;
+    }
+
+
+    .value-section .row{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+
+
+    .value-section .row > *{
+        width:100% !important;
+        max-width:100% !important;
+
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+
+    .value-card{
+        width:100% !important;
+        max-width:100% !important;
+        min-height:0 !important;
+
+        padding:24px 19px !important;
+
+        border-radius:14px !important;
+
+        overflow:hidden !important;
+    }
+
+
+    .value-card h4{
+        font-size:1.2rem !important;
+        line-height:1.4 !important;
+    }
+
+
+    .value-card p{
+        width:100% !important;
+        max-width:100% !important;
+
+        font-size:1rem !important;
+        line-height:1.75 !important;
+
+        overflow-wrap:anywhere !important;
+    }
+    /* ======================================================
+       PROGRAM CTA
+       HP dibuat penuh dan lebih proporsional
+    ====================================================== */
+
+    .program-cta{
+        width:100% !important;
+        max-width:100% !important;
+
+        padding:65px 20px 70px !important;
+
+        overflow:hidden !important;
+        box-sizing:border-box !important;
+
+        text-align:center !important;
+    }
+
+
+    .program-cta > .container{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 auto !important;
+        padding:0 !important;
+    }
+
+
+    .program-cta .row{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+
+
+    .program-cta .row > *{
+        width:100% !important;
+        max-width:100% !important;
+
+        padding-left:0 !important;
+        padding-right:0 !important;
+    }
+
+
+    .program-cta h2{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 0 20px !important;
+
+        font-size:2rem !important;
+        line-height:1.2 !important;
+        font-weight:700 !important;
+
+        overflow-wrap:normal !important;
+    }
+
+
+    .program-cta p{
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 auto 28px !important;
+
+        font-size:1rem !important;
+        line-height:1.7 !important;
+
+        overflow-wrap:normal !important;
+    }
+
+
+    .program-cta .btn{
+        display:inline-block !important;
+
+        padding:12px 30px !important;
+
+        border-radius:30px !important;
+
+        font-size:1rem !important;
+        font-weight:600 !important;
+    }
+
+        /* ======================================================
+       INTERAKSI MOBILE
+       Card tetap terasa hidup saat disentuh
+    ====================================================== */
+
+    .program-detail-card,
+    .value-card,
+    .info-card,
+    .history-content,
+    .facility-card,
+    .why-box{
+        transition:
+            transform .2s ease,
+            box-shadow .2s ease,
+            border-color .2s ease !important;
+    }
+
+
+    /* Saat disentuh di HP */
+
+    .program-detail-card:active,
+    .value-card:active,
+    .info-card:active,
+    .history-content:active,
+    .facility-card:active,
+    .why-box:active{
+
+        transform:translateY(-4px) !important;
+
+        box-shadow:
+            0 12px 28px rgba(0,0,0,.12) !important;
+    }
+
+
+    /* ======================================================
+       NAVBAR MOBILE
+       Garis bawah ketika menu disentuh
+    ====================================================== */
+
+    .navbar .nav-link{
+
+        position:relative;
+
+        display:inline-block;
+
+        width:auto;
+
+        transition:color .2s ease;
+    }
+
+
+    .navbar .nav-link::after{
+
+        content:"";
+
+        position:absolute;
+
+        left:0;
+        bottom:3px;
+
+        width:0;
+        height:2px;
+
+        background:#198754;
+
+        transition:width .25s ease;
+    }
+
+
+    /* Sentuh / fokus */
+
+    .navbar .nav-link:active::after,
+    .navbar .nav-link:focus::after{
+
+        width:100%;
+    }
+
+
+    /* Menu yang sedang aktif */
+
+    .navbar .nav-link.active::after{
+
+        width:100%;
+    }
+
+
+    /* Warna teks saat disentuh */
+
+    .navbar .nav-link:active,
+    .navbar .nav-link:focus{
+
+        color:#198754 !important;
+    }
+
+
+    /* ======================================================
+       DROPDOWN ITEM MOBILE
+    ====================================================== */
+
+    .navbar .dropdown-item{
+
+        position:relative;
+
+        transition:
+            color .2s ease,
+            background-color .2s ease,
+            padding-left .2s ease;
+    }
+
+
+    .navbar .dropdown-item:active,
+    .navbar .dropdown-item:focus{
+
+        color:#198754 !important;
+
+        background:#f0f7f3 !important;
+
+        padding-left:20px;
+    }
+    /* ======================================================
+       FINAL SAFETY
+       Mencegah style desktop tersisa membuat kolom melebar.
+    ====================================================== */
+
+    .about-intro *,
+    .history-section *,
+    .about-section *,
+    .value-section *{
+        max-width:100%;
     }
 
 }
 
-@media (max-width:768px){
 
-    .hero p{
+/* ==========================================================
+   HP KECIL
+   ========================================================== */
+
+@media (max-width:380px){
+
+    .about-intro,
+    .history-section,
+    .about-section,
+    .value-section{
+        padding-left:16px !important;
+        padding-right:16px !important;
+    }
+
+    .about-intro h2,
+    .about-intro-title h2,
+    .section-heading h2,
+    .value-section .text-center h2{
+        font-size:2rem !important;
+    }
+
+    .about-timeline{
+        padding-left:44px !important;
+    }
+
+    .about-timeline::before{
+        left:15px !important;
+    }
+
+    .about-timeline-icon{
+        left:-44px !important;
+        width:34px !important;
+        height:34px !important;
+    }
+
+    .history-content,
+    .info-card,
+    .vision-mission .info-card,
+    .value-card{
+        padding-left:17px !important;
+        padding-right:17px !important;
+    }
+}
+
+/* ==========================================================
+   MOBILE - RAUDHATUL ATHFAL
+========================================================== */
+
+@media (max-width: 767.98px){
+
+    /* ======================================================
+       HERO RA
+    ====================================================== */
+
+    .ra-page-hero{
+
+        padding:70px 20px 75px !important;
+
+        background:
+            linear-gradient(
+                rgba(255,255,255,.94),
+                rgba(255,255,255,.86)
+            ),
+            url("../images/GambarPemandanganBakau.jpg");
+
+        background-position:center;
+
+    }
+
+
+    .ra-page-hero .breadcrumb-custom{
+
+        margin-bottom:32px;
+
+        flex-wrap:wrap;
+
+        font-size:.88rem;
+
+    }
+
+
+    .ra-page-hero h1{
+
+        font-size:2.35rem !important;
+
+        line-height:1.15 !important;
+
+        margin-bottom:18px !important;
+
+    }
+
+
+    .ra-page-hero p{
+
+        font-size:1rem !important;
+
+        line-height:1.75 !important;
+
+    }
+
+
+    /* ======================================================
+       INTRO
+    ====================================================== */
+
+    .ra-intro{
+
+        padding:58px 20px 68px !important;
+
+        overflow:hidden;
+
+    }
+
+
+    .ra-intro-inner{
+
+        display:block !important;
+
+    }
+
+
+    .ra-intro-title{
+
+        padding:0 !important;
+
+        margin-bottom:35px;
+
+    }
+
+
+    .ra-intro-title h2{
+
+        font-size:2.25rem !important;
+
+        line-height:1.15 !important;
+
+    }
+
+
+    .ra-intro-content{
+
+        width:100%;
+
+        max-width:100%;
+
+    }
+
+
+    .ra-intro-content > p{
+
+        font-size:1rem !important;
+
+        line-height:1.75 !important;
+
+    }
+
+
+    .ra-highlight-card{
+
+        padding:19px !important;
+
+    }
+
+
+    .ra-highlight-card h4{
+
+        font-size:1rem !important;
+
+    }
+
+
+    .ra-highlight-card p{
+
+        font-size:.9rem !important;
+
+    }
+
+
+    /* ======================================================
+       TARGET
+    ====================================================== */
+
+    .ra-target-section{
+
+        padding:60px 20px 70px !important;
+
+    }
+
+
+    .ra-target-section h2,
+    .ra-schedule-section h2,
+    .ra-method-section h2,
+    .ra-facility-section h2{
+
+        font-size:2.25rem !important;
+
+        line-height:1.15 !important;
+
+    }
+
+
+    .ra-target-section .section-subtitle,
+    .ra-schedule-section .section-subtitle,
+    .ra-method-section .section-subtitle,
+    .ra-facility-section .section-subtitle{
+
+        font-size:1rem !important;
+
+        line-height:1.75 !important;
+
+    }
+
+
+    .ra-target-card{
+
+        padding:28px 22px !important;
+
+        border-radius:15px !important;
+
+    }
+
+
+    .ra-card-icon{
+
+        width:58px;
+
+        height:58px;
+
+        font-size:1.5rem;
+
+    }
+
+
+    /* ======================================================
+       JADWAL
+    ====================================================== */
+
+    .ra-schedule-section{
+
+        padding:60px 20px 70px !important;
+
+    }
+
+
+    .ra-schedule-info{
+
+        padding:20px !important;
+
+    }
+
+
+    .ra-schedule-info strong{
 
         font-size:1.1rem;
 
     }
 
-    .section-subtitle{
 
-        font-size:1rem;
+    .ra-daily-list{
 
-    }
-
-}
-/* =====================================
-   SEJARAH - VISI - MISI
-===================================== */
-
-@media (max-width:768px){
-
-    .about-section{
-
-        padding:45px 0;
+        margin-top:25px;
 
     }
 
-    .info-card{
 
-        padding:25px 22px;
+    .ra-daily-item{
+
+        grid-template-columns:45px 1fr;
+
+        gap:14px;
+
+        padding:22px 0;
 
     }
 
-    .card-title h2{
 
-        font-size:25px;
+    .ra-daily-item > span{
+
+        width:38px;
+
+        height:38px;
 
     }
 
-    .card-content{
 
-        font-size:15px;
+    .ra-daily-item h4{
+
+        font-size:1.05rem;
+
+    }
+
+
+    .ra-daily-item p{
+
+        font-size:.95rem;
 
         line-height:1.7;
 
     }
 
-    .vision-mission{
 
-        grid-template-columns:1fr;
+    /* ======================================================
+       METODE
+    ====================================================== */
 
-        gap:20px;
+    .ra-method-section{
+
+        padding:60px 20px 70px !important;
+
+    }
+
+
+    .ra-method-card{
+
+        padding:24px 15px !important;
+
+        border-radius:15px !important;
+
+    }
+
+
+    .ra-method-icon{
+
+        width:55px;
+
+        height:55px;
+
+        font-size:1.4rem;
+
+    }
+
+
+    .ra-method-card h4{
+
+        font-size:.95rem;
+
+    }
+
+
+    /* ======================================================
+       PENDAFTARAN
+    ====================================================== */
+
+    .ra-registration-section{
+
+        padding:60px 20px 70px !important;
+
+    }
+
+
+    .ra-registration-section h2{
+
+        font-size:2.25rem !important;
+
+    }
+
+
+    .ra-registration-section > .container > .row > .col-lg-5 > p{
+
+        font-size:1rem;
+
+        line-height:1.75;
+
+    }
+
+
+    .ra-age-box{
+
+        margin-bottom:25px;
+
+    }
+
+
+    .ra-requirement-item{
+
+        gap:14px;
+
+        padding:17px 0;
+
+    }
+
+
+    .ra-requirement-item > span{
+
+        width:35px;
+
+        height:35px;
+
+        flex:0 0 35px;
+
+    }
+
+
+    .ra-requirement-item p{
+
+        font-size:.95rem;
+
+    }
+
+
+    /* ======================================================
+       FASILITAS
+    ====================================================== */
+
+    .ra-facility-section{
+
+        padding:60px 20px 70px !important;
+
+    }
+
+
+    .ra-facility-card{
+
+        padding:28px 20px !important;
+
+        border-radius:15px !important;
+
+    }
+
+
+    .ra-facility-icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:1.5rem;
+
+    }
+
+
+    /* ======================================================
+       PENUTUP
+    ====================================================== */
+
+    .ra-closing-section{
+
+        padding:75px 20px 80px !important;
+
+    }
+
+
+    .ra-closing-section h2{
+
+        font-size:2.3rem !important;
+
+    }
+
+
+    .ra-closing-section p{
+
+        font-size:1rem !important;
+
+        line-height:1.8 !important;
 
     }
 
 }
+/* ==========================================================
+   MOBILE NAVBAR - HOVER / FOCUS UNDERLINE
+========================================================== */
 
-/* =====================================
-   ABOUT INTRO
-===================================== */
+@media (max-width: 991.98px) {
 
-.about-intro{
+    .navbar .nav-link {
+        position: relative;
+        width: max-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-    padding:90px 0;
+    /* Garis bawah */
+    .navbar .nav-link::before {
+        content: "";
+        position: absolute;
 
-    background:#fff;
+        left: 50%;
+        bottom: 0;
 
-}
+        width: 0;
+        height: 3px;
 
+        background: #198754;
 
-.about-intro-label{
+        transform: translateX(-50%);
+        transition: width 0.25s ease;
+    }
 
-    color:var(--primary);
+    /* Saat kursor diarahkan */
+    .navbar .nav-link:hover::before,
 
-    font-size:.85rem;
+    /* Saat menu mendapat fokus */
+    .navbar .nav-link:focus-visible::before,
 
-    font-weight:700;
+    /* Saat dropdown sedang terbuka */
+    .navbar .dropdown.show > .nav-link::before {
 
-    letter-spacing:2px;
-
-    margin-bottom:15px;
-
-}
-
-
-.about-intro h2{
-
-    font-size:2.8rem;
-
-    line-height:1.25;
-
-    font-weight:700;
-
-    color:#20252a;
-
-    margin:0;
-
-}
-
-
-.about-intro h2 span{
-
-    color:var(--primary);
-
-}
-
-
-.about-intro p{
-
-    font-size:1.05rem;
-
-    line-height:1.9;
-
-    color:var(--text);
-
-    margin-bottom:18px;
-
-}
-
-
-.about-intro .about-lead{
-
-    font-size:1.25rem;
-
-    line-height:1.8;
-
-    color:#333;
-
-}
-
-
-/* =====================================
-   HISTORY
-===================================== */
-
-.history-section{
-
-    padding:90px 0;
-
-    background:#f7f9f8;
-
-}
-
-
-.section-heading{
-
-    max-width:700px;
-
-    margin-bottom:60px;
-
-}
-
-
-.section-heading > span{
-
-    color:var(--primary);
-
-    font-size:.85rem;
-
-    font-weight:700;
-
-    letter-spacing:2px;
-
-}
-
-
-.section-heading h2{
-
-    font-size:2.8rem;
-
-    font-weight:700;
-
-    margin:10px 0 15px;
-
-}
-
-
-.section-heading p{
-
-    color:#666;
-
-    font-size:1.05rem;
-
-    line-height:1.8;
-
-}
-
-
-/* TIMELINE */
-
-.history-timeline{
-
-    position:relative;
-
-    max-width:1000px;
-
-}
-
-
-.history-timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    left:110px;
-
-    top:0;
-
-    bottom:0;
-
-    width:2px;
-
-    background:#dce8e1;
-
-}
-
-
-.history-item{
-
-    position:relative;
-
-    display:grid;
-
-    grid-template-columns:90px 40px 1fr;
-
-    gap:20px;
-
-    margin-bottom:50px;
-
-}
-
-
-.history-year{
-
-    padding-top:3px;
-
-    color:var(--primary);
-
-    font-weight:700;
-
-    font-size:.9rem;
-
-    text-align:right;
-
-}
-
-
-.history-dot{
-
-    position:relative;
-
-    width:14px;
-
-    height:14px;
-
-    margin-top:5px;
-
-    margin-left:13px;
-
-    border-radius:50%;
-
-    background:var(--primary);
-
-    box-shadow:0 0 0 6px #eaf4ee;
-
-}
-
-
-.history-content{
-
-    background:#fff;
-
-    padding:25px 30px;
-
-    border-radius:12px;
-
-    border:1px solid #e5eae7;
-
-    box-shadow:0 5px 20px rgba(0,0,0,.04);
-
-}
-
-
-.history-content h3{
-
-    margin:0 0 10px;
-
-    font-size:1.3rem;
-
-    color:#222;
-
-}
-
-
-.history-content p{
-
-    margin:0;
-
-    color:#555;
-
-    line-height:1.8;
-
-}
-
-
-/* QUOTE */
-
-.history-quote{
-
-    margin-top:30px;
-
-    padding:25px 30px;
-
-    border-left:4px solid var(--primary);
-
-    background:#fff;
-
-    color:var(--primary);
-
-    font-style:italic;
-
-    line-height:1.8;
+        width: 100%;
+    }
 
 }
