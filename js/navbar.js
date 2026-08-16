@@ -49,7 +49,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         galeri: "galeri.html",
 
-        kontak: "kontak.html"
+        kontak: "kontak.html",
+
+        donasi: "donasi.html"
 
     };
 

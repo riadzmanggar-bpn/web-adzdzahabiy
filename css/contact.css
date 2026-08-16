@@ -1,0 +1,480 @@
+/* ==========================================================
+   CONTACT PAGE
+   RTQ AL IMAM ADZ DZAHABIY
+========================================================== */
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.contact-hero{
+
+    padding:110px 0 100px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.68),
+            rgba(0,0,0,.40),
+            rgba(0,0,0,.20)
+        ),
+        url("../images/GambarPemandanganBakau.jpg");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:#fff;
+
+}
+
+
+.contact-hero-content{
+
+    max-width:850px;
+
+}
+
+
+.contact-hero .page-label{
+
+    display:inline-block;
+
+    margin-bottom:18px;
+
+    color:#FFD45A;
+
+    font-size:.95rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+.contact-hero h1{
+
+    margin:0 0 20px;
+
+    font-size:3.2rem;
+
+    font-weight:700;
+
+    color:#fff;
+
+    text-shadow:
+        2px 2px 6px rgba(0,0,0,.7);
+
+}
+
+
+.contact-hero p{
+
+    max-width:800px;
+
+    margin:0;
+
+    font-size:1.3rem;
+
+    line-height:1.9;
+
+    color:#fff;
+
+    text-shadow:
+        1px 1px 5px rgba(0,0,0,.7);
+
+}
+
+
+/* ==========================================================
+   CONTACT SECTION
+========================================================== */
+
+.contact-section{
+
+    padding:90px 0 100px;
+
+    background:#f8f9fa;
+
+}
+
+
+.contact-section .section-label,
+.contact-location .section-label{
+
+    display:inline-block;
+
+    margin-bottom:12px;
+
+    color:#198754;
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+.contact-section h2,
+.contact-location h2{
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+
+.contact-section .section-subtitle{
+
+    max-width:800px;
+
+    margin:0 auto;
+
+    color:#666;
+
+    font-size:1.2rem;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   CONTACT CARD
+========================================================== */
+
+.contact-card{
+
+    height:100%;
+
+    padding:40px 30px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.08);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.contact-card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.12);
+
+}
+
+
+/* ==========================================================
+   CONTACT ICON
+========================================================== */
+
+.contact-icon{
+
+    width:75px;
+
+    height:75px;
+
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    background:#198754;
+
+    color:#fff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:2rem;
+
+}
+
+
+.contact-card h4{
+
+    margin-bottom:15px;
+
+    font-weight:700;
+
+}
+
+
+.contact-card p{
+
+    margin-bottom:18px;
+
+    color:#666;
+
+    font-size:1.05rem;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   CONTACT LINK
+========================================================== */
+
+.contact-link{
+
+    display:inline-block;
+
+    color:#198754;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+    transition:.25s ease;
+
+}
+
+
+.contact-link:hover{
+
+    color:#0f633c;
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================================================
+   LOCATION
+========================================================== */
+
+.contact-location{
+
+    padding:90px 0;
+
+    background:#fff;
+
+}
+
+
+.contact-location h2{
+
+    font-size:2.2rem;
+
+}
+
+
+.contact-location p{
+
+    max-width:650px;
+
+    color:#666;
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+}
+
+
+/* ==========================================================
+   MAP PLACEHOLDER
+========================================================== */
+
+.contact-map-placeholder{
+
+    min-height:320px;
+
+    padding:40px;
+
+    border-radius:20px;
+
+    background:#f1f5f3;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+}
+
+
+.contact-map-placeholder i{
+
+    margin-bottom:15px;
+
+    color:#198754;
+
+    font-size:4rem;
+
+}
+
+
+.contact-map-placeholder h4{
+
+    margin-bottom:8px;
+
+    font-weight:700;
+
+}
+
+
+.contact-map-placeholder p{
+
+    margin:0;
+
+    color:#666;
+
+}
+
+
+/* ==========================================================
+   CTA
+========================================================== */
+
+.contact-cta{
+
+    padding:80px 20px;
+
+    background:#17663b;
+
+    color:#fff;
+
+}
+
+
+.contact-cta h2{
+
+    margin-bottom:15px;
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+}
+
+
+.contact-cta p{
+
+    max-width:700px;
+
+    margin:0 auto 30px;
+
+    color:rgba(255,255,255,.9);
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+
+.contact-cta .btn-light{
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:768px){
+
+    .contact-hero{
+
+        padding:80px 0 75px;
+
+    }
+
+
+    .contact-hero h1{
+
+        font-size:2.3rem;
+
+    }
+
+
+    .contact-hero p{
+
+        font-size:1.05rem;
+
+        line-height:1.8;
+
+    }
+
+
+    .contact-section{
+
+        padding:65px 0 75px;
+
+    }
+
+
+    .contact-card{
+
+        padding:35px 25px;
+
+    }
+
+
+    .contact-location{
+
+        padding:65px 0;
+
+    }
+
+
+    .contact-location h2{
+
+        font-size:1.9rem;
+
+    }
+
+
+    .contact-map-placeholder{
+
+        min-height:260px;
+
+    }
+
+
+    .contact-cta{
+
+        padding:65px 20px;
+
+    }
+
+
+    .contact-cta h2{
+
+        font-size:1.8rem;
+
+    }
+
+}
