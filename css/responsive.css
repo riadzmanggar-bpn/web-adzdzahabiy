@@ -1518,3 +1518,77 @@
     }
 
 }
+
+/* ==========================================================
+   MOBILE - PROGRAM PENDIDIKAN HERO
+========================================================== */
+
+@media (max-width: 767.98px){
+
+    .program-hero{
+        padding:100px 20px 80px;
+
+        background:
+            linear-gradient(
+                to right,
+                rgba(255,255,255,.88),
+                rgba(255,255,255,.60)
+            ),
+            url("../images/GambarPemandanganBakau.jpg");
+
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+    }
+
+    .program-hero .container{
+        width:100%;
+    }
+
+    .program-hero .col-lg-8{
+        width:100%;
+    }
+
+    .program-hero-label{
+        font-size:.85rem;
+        letter-spacing:3px;
+    }
+
+    .program-hero h1{
+        font-size:2.5rem;
+        line-height:1.15;
+        margin:15px 0 25px;
+
+        /* Supaya teks tidak keluar/tembus */
+        max-width:100%;
+        overflow-wrap:break-word;
+        word-wrap:break-word;
+    }
+
+    .program-hero p{
+        font-size:1rem;
+        line-height:1.7;
+        margin:0;
+
+        max-width:100%;
+        overflow-wrap:break-word;
+        word-wrap:break-word;
+    }
+
+}
+/* ==========================================================
+   LANDASAN PENDIDIKAN - MOBILE
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .program-principles{
+        padding-top:55px;
+        padding-bottom:60px;
+    }
+
+    .program-principles .text-center{
+        margin-bottom:40px !important;
+    }
+
+}

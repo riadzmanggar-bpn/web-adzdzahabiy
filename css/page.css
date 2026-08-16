@@ -1968,7 +1968,7 @@
 
 
 /* ==========================================================
-   HERO PROGRAM
+   HERO PROGRAM PENDIDIKAN
 ========================================================== */
 
 .program-hero{
@@ -2448,4 +2448,16 @@
 
     font-weight:600;
 
+}
+/* ==========================================================
+   LANDASAN PENDIDIKAN
+========================================================== */
+
+.program-principles{
+    padding-top:80px;
+    padding-bottom:90px;
+}
+
+.program-principles .text-center{
+    margin-bottom:60px !important;
 }
