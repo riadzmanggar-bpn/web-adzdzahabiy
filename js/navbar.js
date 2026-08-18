@@ -51,7 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         kontak: "kontak.html",
 
-        donasi: "donasi.html"
+        donasi: "donasi.html",
+
+        daftar: "daftar.html"
 
     };
 

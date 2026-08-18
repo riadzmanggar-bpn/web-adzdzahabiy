@@ -901,7 +901,139 @@
     color: #666;
 }
 
+/* ==========================================================
+   KONFIRMASI & PENYERAHAN DONASI
+========================================================== */
 
+.donasi-contact-title {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+
+/* Container 2 kolom */
+.donasi-contact-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* Kartu kontak */
+.donasi-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    min-height: 150px;
+    padding: 25px;
+
+    border: 1px solid #dee2e6;
+    border-radius: 16px;
+    background: #ffffff;
+}
+
+
+/* Icon */
+.donasi-contact-icon {
+    flex: 0 0 58px;
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+    color: #ffffff;
+
+    font-size: 2rem;
+}
+
+
+/* Isi kontak */
+.donasi-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+
+/* Judul */
+.donasi-contact-info strong {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111827;
+}
+
+
+/* Nama */
+.donasi-contact-info span {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+
+/* Nomor WhatsApp */
+.donasi-contact-info a {
+    display: inline-block;
+
+    font-size: 1.15rem;
+    font-weight: 600;
+
+    color: var(--primary);
+    text-decoration: none;
+}
+
+
+.donasi-contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 767px) {
+
+    .donasi-contact-title {
+        margin-top: 35px;
+        font-size: 1.5rem;
+    }
+
+    .donasi-contact-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .donasi-contact {
+        min-height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .donasi-contact-icon {
+        flex: 0 0 52px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.7rem;
+    }
+
+    .donasi-contact-info span {
+        font-size: 1.05rem;
+    }
+
+    .donasi-contact-info a {
+        font-size: 1.05rem;
+    }
+
+}
 
 /* ==========================================================
    GALERI DOKUMENTASI DONASI
@@ -1410,3 +1542,215 @@
     }
 
 }
+/* ==========================================================
+   HERO DETAIL DONASI
+========================================================== */
+
+.donasi-detail-hero {
+    min-height: 520px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.68) 0%,
+            rgba(0, 0, 0, 0.45) 45%,
+            rgba(0, 0, 0, 0.05) 75%
+        ),
+        url("../images/donasi/ac-hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+
+    color: white;
+}
+
+/* ==========================================================
+   GALERI DONASI AC
+   Mengikuti standar galeri Donasi Masjid
+========================================================== */
+
+.donasi-ac-gallery {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+}
+
+.donasi-ac-gallery .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.donasi-ac-gallery .col-md-6 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.donasi-ac-gallery .donasi-gallery-image {
+    width: 100%;
+    height: 275px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-radius: 14px;
+}
+
+
+/* ==========================================================
+   TOMBOL KEMBALI
+========================================================== */
+
+.donasi-ac-detail .donasi-back {
+    margin-bottom: 40px;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .donasi-ac-detail {
+        padding: 0 15px;
+    }
+
+    .donasi-ac-detail .donasi-ac-image {
+        height: 220px;
+        border-radius: 12px;
+        margin-bottom: 30px;
+    }
+
+}
+
+/* ==========================================================
+   SLIDER DONASI UTAMA
+========================================================== */
+
+.donasi-featured-image img {
+    transition: opacity .4s ease;
+}
+
+/* ==========================================================
+   Title kontak - WHATSAPP 
+========================================================== */
+.donasi-contact-title {
+    margin-top: 42px;
+    margin-bottom: 18px;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #14213d;
+}
+
+/* ==========================================================
+   KONFIRMASI DONASI MASJID - WHATSAPP 
+========================================================== */
+
+.donasi-confirmation {
+    margin-top: 38px;
+}
+
+.donasi-confirmation h3 {
+    margin-bottom: 20px;
+}
+
+
+.donasi-contact-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+
+.donasi-contact {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    padding: 18px 20px;
+
+    background: #ffffff;
+    border: 1px solid #e3e8e5;
+    border-radius: 14px;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+
+.donasi-contact:hover {
+    transform: translateY(-2px);
+
+    border-color: #198754;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.donasi-contact-icon {
+    width: 46px;
+    height: 46px;
+
+    flex: 0 0 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #198754;
+    color: #ffffff;
+
+    font-size: 24px;
+}
+
+
+.donasi-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.donasi-contact-info strong {
+    color: #172033;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+.donasi-contact-info span {
+    color: #198754;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================================================
+   MOBILE MASJID
+========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .donasi-contact-list {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .donasi-contact {
+        padding: 16px;
+    }
+
+}
+
