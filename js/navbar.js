@@ -33,6 +33,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         program: "program.html",
 
+        taklim: "jadwal-taklim.html",
+
         ra: "ra.html",
 
         rb: "rb.html",

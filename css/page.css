@@ -2462,3 +2462,635 @@
     font-weight:600;
 
 }
+
+/* =====================================
+   JADWAL TAKLIM - BERANDA 
+===================================== */
+
+.taklim-section{
+
+    padding:90px 0;
+
+    background:#f7f9f8;
+
+}
+
+.taklim-section h2{
+
+    margin-bottom:15px;
+
+    color:#222;
+
+    font-size:2.8rem;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+}
+
+.taklim-section .section-subtitle {
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    color: #666;
+
+    font-size: 1.1rem;
+
+    line-height: 1.8;
+
+    text-align: center;
+
+}
+
+.taklim-section .section-subtitle strong{
+
+    color:var(--primary);
+
+}
+
+
+/* =====================================
+   KARTU TAKLIM - BERANDA
+===================================== */
+
+.taklim-card{
+
+    height:100%;
+
+    padding:30px;
+
+    background:#fff;
+
+    border:1px solid #e5ebe7;
+
+    border-radius:16px;
+
+    box-shadow:0 7px 22px rgba(0,0,0,.05);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.taklim-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 32px rgba(0,0,0,.09);
+
+}
+
+
+/* =====================================
+   HARI - BERANDA
+===================================== */
+
+.taklim-day{
+
+    display:block;
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+
+}
+
+
+/* =====================================
+   ICON - BERANDA
+===================================== */
+
+.taklim-icon{
+
+    width:50px;
+
+    height:50px;
+
+    margin-bottom:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:13px;
+
+    background:#eaf4ee;
+
+    color:var(--primary);
+
+    font-size:1.3rem;
+
+}
+
+
+/* =====================================
+   JUDUL KITAB - BERANDA
+===================================== */
+
+.taklim-card h4{
+
+    margin:0 0 12px;
+
+    color:#222;
+
+    font-size:1.2rem;
+
+    line-height:1.4;
+
+    font-weight:700;
+
+}
+
+
+/* =====================================
+   PEMATERI - BERANDA
+===================================== */
+
+.taklim-card p{
+
+    margin:0;
+
+    color:#666;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+.taklim-card p strong{
+
+    color:#333;
+
+}
+
+
+/* =====================================
+   WAKTU - BERANDA
+===================================== */
+
+.taklim-time{
+
+    margin-top:18px !important;
+
+    padding-top:13px;
+
+    border-top:1px solid #e6ebe8;
+
+    color:var(--primary) !important;
+
+    font-size:.9rem !important;
+
+    font-weight:600;
+
+}
+
+
+/* =====================================
+   SABTU - BERANDA - JADWAL TAKLIM PAGE
+===================================== */
+
+.taklim-saturday{
+
+    max-width:calc(33.333% - 16px);
+
+    margin:24px auto 0;
+
+}
+
+
+/* =====================================
+   TOMBOL - BERANDA - JADWAL TAKLIM PAGE
+===================================== */
+
+.taklim-more{
+
+    margin-top:45px;
+
+}
+
+.taklim-more .btn{
+
+    padding:11px 25px;
+
+    border-radius:30px;
+
+    font-weight:600;
+
+}
+
+/* ==========================================================
+   PAGE JADWAL TAKLIM - JADWAL TAKLIM PAGE
+========================================================== */
+
+.taklim-page-section{
+
+    padding:90px 0 110px;
+
+    background:#f7f9f8;
+
+}
+
+
+.taklim-page-section h2{
+
+    margin:0 0 15px;
+
+    color:#222;
+
+    font-size:2.8rem;
+
+    line-height:1.2;
+
+    font-weight:700;
+
+}
+
+
+.taklim-page-section .section-subtitle{
+
+    max-width:760px;
+
+    margin:0 auto;
+
+    color:#666;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    text-align:center;
+
+}
+
+
+.taklim-page-section .section-subtitle strong{
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================================
+   PEMISAH HARI - JADWAL TAKLIM PAGE
+========================================================== */
+
+.taklim-day-section{
+
+    margin-bottom:70px;
+
+}
+
+
+.taklim-day-section:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+.taklim-day-heading{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+
+.taklim-day-heading::after{
+
+    content:"";
+
+    flex:1;
+
+    height:1px;
+
+    background:#dce6e0;
+
+}
+
+
+.taklim-day-heading span{
+
+    color:var(--primary);
+
+    font-size:.9rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+
+/* ==========================================================
+   CARD DETAIL - JADWAL TAKLIM PAGE
+========================================================== */
+
+.taklim-detail-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    height:100%;
+
+    padding:30px;
+
+    background:#fff;
+
+    border:1px solid #e5ebe7;
+
+    border-radius:18px;
+
+    box-shadow:0 7px 22px rgba(0,0,0,.05);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.taklim-detail-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 32px rgba(0,0,0,.09);
+
+}
+
+
+/* ==========================================================
+   ICON - JADWAL TAKLIM PAGE
+========================================================== */
+
+.taklim-detail-icon{
+
+    width:58px;
+
+    height:58px;
+
+    flex:0 0 58px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:15px;
+
+    background:#eaf4ee;
+
+    color:var(--primary);
+
+    font-size:1.5rem;
+
+}
+
+
+/* ==========================================================
+   CONTENT - JADWAL TAKLIM PAGE
+========================================================== */
+
+.taklim-detail-content{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+
+.taklim-detail-content h3{
+
+    margin:0 0 16px;
+
+    color:#222;
+
+    font-size:1.35rem;
+
+    line-height:1.4;
+
+    font-weight:700;
+
+}
+
+
+.taklim-detail-content p{
+
+    margin:0 0 14px;
+
+    color:#666;
+
+    font-size:1rem;
+
+    line-height:1.75;
+
+}
+
+
+.taklim-detail-content p strong{
+
+    color:#333;
+
+}
+
+
+/* ==========================================================
+   WAKTU - JADWAL TAKLIM PAGE
+========================================================== */
+
+.taklim-detail-time{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-top:5px;
+
+    padding:9px 14px;
+
+    background:#eaf4ee;
+
+    border-radius:8px;
+
+    color:var(--primary);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+}
+
+
+/* ==========================================================
+   LINK LIVE / LOKASI - JADWAL TAKLIM PAGE
+========================================================== */
+
+.taklim-links{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:18px;
+
+}
+
+
+.taklim-live{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    margin-top:18px;
+
+    color:var(--primary);
+
+    font-size:.9rem;
+
+    font-weight:600;
+
+    text-decoration:none;
+
+}
+
+
+.taklim-links .taklim-live{
+
+    margin-top:0;
+
+}
+
+
+.taklim-live:hover{
+
+    color:#145c34;
+
+    text-decoration:underline;
+
+}
+
+
+/* ==========================================================
+   MOBILE - JADWAL TAKLIM PAGE
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .taklim-page-section{
+
+        padding:60px 20px 75px;
+
+    }
+
+
+    .taklim-page-section h2{
+
+        font-size:2.2rem;
+
+    }
+
+
+    .taklim-page-section .section-subtitle{
+
+        font-size:1rem;
+
+    }
+
+
+    .taklim-day-section{
+
+        margin-bottom:50px;
+
+    }
+
+
+    .taklim-day-heading{
+
+        gap:12px;
+
+        margin-bottom:20px;
+
+    }
+
+
+    .taklim-day-heading span{
+
+        font-size:.8rem;
+
+        letter-spacing:1.5px;
+
+    }
+
+
+    .taklim-detail-card{
+
+        display:block;
+
+        padding:24px 20px;
+
+        border-radius:15px;
+
+    }
+
+
+    .taklim-detail-icon{
+
+        width:50px;
+
+        height:50px;
+
+        margin-bottom:18px;
+
+        font-size:1.3rem;
+
+    }
+
+
+    .taklim-detail-content h3{
+
+        font-size:1.2rem;
+
+    }
+
+
+    .taklim-detail-content p{
+
+        font-size:.95rem;
+
+        line-height:1.7;
+
+    }
+
+}
