@@ -119,6 +119,36 @@
 
 }
 
+/* ==========================================================
+   KETERANGAN FOTO
+========================================================== */
+
+.gallery-caption{
+
+    position:absolute;
+
+    top:0;
+    left:0;
+    right:0;
+
+    padding:14px 18px;
+
+    background:rgba(0,0,0,.55);
+
+    color:#fff;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    letter-spacing:.2px;
+
+    text-align:left;
+
+    backdrop-filter:blur(3px);
+
+}
+
 
 .gallery-card:hover img{
 

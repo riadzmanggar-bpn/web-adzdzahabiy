@@ -1518,3 +1518,67 @@
     }
 
 }
+/* ==========================================================
+   MOBILE FIX - HERO JADWAL TAKLIM
+========================================================== */
+
+@media (max-width: 767.98px){
+
+    .page-hero{
+
+        min-height: auto;
+
+        padding: 70px 20px 90px;
+
+        background:
+            linear-gradient(
+                90deg,
+                rgba(255, 255, 255, 0.942) 0%,
+                rgba(255, 255, 255, 0.881) 55%,
+                rgba(255, 255, 255, 0.496) 100%
+            ),
+            url("../images/GambarPemandanganBakau.jpg");
+
+        background-size: cover;
+
+        background-position: center;
+
+    }
+
+
+    .page-hero .container{
+
+        position:relative;
+
+        z-index:2;
+
+    }
+
+
+    .page-hero h1{
+
+        font-size:2.8rem;
+
+        line-height:1.15;
+
+        max-width:100%;
+
+        color:#20252a;
+
+    }
+
+
+    .page-hero p{
+
+        max-width:100%;
+
+        color:#20252a;
+
+        font-size:1.05rem;
+
+        line-height:1.8;
+
+    }
+
+
+}
