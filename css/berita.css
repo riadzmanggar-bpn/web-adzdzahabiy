@@ -1,11 +1,19 @@
 /* ==========================================================
    BERITA
    RTQ AL IMAM ADZ DZAHABIY
+
+   FILE INI KHUSUS UNTUK:
+   - Featured News
+   - Berita Terkini
+   - Card Berita
+   - Slider / Indicator
+
+   DETAIL SETIAP BERITA MENGGUNAKAN CSS SENDIRI
 ========================================================== */
 
 
 /* ==========================================================
-   HERO BERITA DINAMIS
+   FEATURED NEWS
 ========================================================== */
 
 .news-featured{
@@ -31,13 +39,11 @@
 
     overflow:hidden;
 
-    border-radius:22px;
-
 }
 
 
 /* ==========================================================
-   ITEM BERITA
+   FEATURED ITEM
 ========================================================== */
 
 .news-featured-item{
@@ -69,7 +75,7 @@
 
 
 /* ==========================================================
-   ANIMASI
+   ANIMASI SLIDER
 ========================================================== */
 
 @keyframes newsSlideIn{
@@ -78,7 +84,7 @@
 
         opacity:0;
 
-        transform:translateX(50px);
+        transform:translateX(40px);
 
     }
 
@@ -94,31 +100,65 @@
 
 
 /* ==========================================================
-   GAMBAR
+   FEATURED IMAGE
 ========================================================== */
 
 .news-featured-image{
 
     width:100%;
 
-    height:280px;
-
-    overflow:hidden;
+    min-height:280px;
 
     border-radius:16px;
 
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#f5f7f6;
+
 }
 
+
+/*
+   Gambar mengikuti rasio aslinya.
+
+   Tidak menggunakan object-fit:cover
+   supaya gambar TIDAK terpotong.
+*/
 
 .news-featured-image img{
 
     width:100%;
 
-    height:100%;
+    height:auto;
 
-    object-fit:cover;
+    max-height:390px;
+
+    object-fit:contain;
 
     display:block;
+
+}
+
+
+/* ==========================================================
+   FEATURED CONTENT
+========================================================== */
+
+.news-featured-content{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
 
 }
 
@@ -145,10 +185,12 @@
 
 
 /* ==========================================================
-   JUDUL BERITA FEATURED
+   JUDUL FEATURED
 ========================================================== */
 
 .news-featured-item h2{
+
+    color:#176b35;
 
     font-size:2rem;
 
@@ -156,18 +198,22 @@
 
     line-height:1.35;
 
-    color:#176b35;
-
     margin-bottom:12px;
 
 }
 
 
 /* ==========================================================
-   TANGGAL
+   INFORMASI TANGGAL
 ========================================================== */
 
 .news-date{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
 
     color:#777;
 
@@ -182,16 +228,44 @@
 
     color:#198754;
 
-    margin-right:6px;
+}
+
+
+/* ==========================================================
+   INFORMASI LOKASI
+========================================================== */
+
+.news-location{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:7px;
+
+    color:#777;
+
+    font-size:.95rem;
+
+    margin-bottom:15px;
+
+}
+
+
+.news-location i{
+
+    color:#198754;
+
+    margin-top:3px;
 
 }
 
 
 /* ==========================================================
-   DESKRIPSI
+   RINGKASAN FEATURED
 ========================================================== */
 
-.news-featured-item p{
+.news-featured-summary{
 
     color:#666;
 
@@ -205,10 +279,18 @@
 
 
 /* ==========================================================
-   BUTTON
+   BUTTON / BACA SELENGKAPNYA
 ========================================================== */
 
 .news-featured-item .btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    width:max-content;
 
     border-radius:25px;
 
@@ -271,29 +353,7 @@
 
 
 /* ==========================================================
-   HERO STATIS
-========================================================== */
-
-.berita-hero{
-
-    background:
-        linear-gradient(
-            rgba(0,0,0,.55),
-            rgba(0,0,0,.40)
-        ),
-        url("../images/GambarPemandanganBakau.jpg");
-
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
-}
-
-
-/* ==========================================================
-   DAFTAR BERITA
+   BERITA TERKINI
 ========================================================== */
 
 .news-list-section{
@@ -327,7 +387,7 @@
 
 .news-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-6px);
 
     box-shadow:
         0 18px 40px rgba(0,0,0,.12);
@@ -343,9 +403,17 @@
 
     width:100%;
 
-    height:220px;
+    min-height:200px;
 
     overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#f5f7f6;
 
 }
 
@@ -354,9 +422,11 @@
 
     width:100%;
 
-    height:100%;
+    height:auto;
 
-    object-fit:cover;
+    max-height:260px;
+
+    object-fit:contain;
 
     display:block;
 
@@ -368,7 +438,7 @@
 .news-card:hover
 .news-card-image img{
 
-    transform:scale(1.05);
+    transform:scale(1.03);
 
 }
 
@@ -380,6 +450,17 @@
 .news-card-body{
 
     padding:28px;
+
+}
+
+
+/* ==========================================================
+   KATEGORI CARD
+========================================================== */
+
+.news-card .news-category{
+
+    margin-bottom:8px;
 
 }
 
@@ -398,13 +479,35 @@
 
     line-height:1.45;
 
+    margin-bottom:12px;
+
+}
+
+
+/* ==========================================================
+   TANGGAL CARD
+========================================================== */
+
+.news-card .news-date{
+
     margin-bottom:10px;
 
 }
 
 
 /* ==========================================================
-   DESKRIPSI CARD
+   LOKASI CARD
+========================================================== */
+
+.news-card .news-location{
+
+    margin-bottom:12px;
+
+}
+
+
+/* ==========================================================
+   RINGKASAN CARD
 ========================================================== */
 
 .news-card p{
@@ -453,7 +556,7 @@
 
 
 /* ==========================================================
-   RESPONSIVE
+   RESPONSIVE TABLET
 ========================================================== */
 
 @media (max-width:991px){
@@ -474,7 +577,21 @@
 
     .news-featured-image{
 
-        height:240px;
+        min-height:240px;
+
+    }
+
+
+    .news-featured-image img{
+
+        max-height:300px;
+
+    }
+
+
+    .news-featured-content{
+
+        padding-top:25px;
 
     }
 
@@ -487,6 +604,10 @@
 
 }
 
+
+/* ==========================================================
+   RESPONSIVE MOBILE
+========================================================== */
 
 @media (max-width:767px){
 
@@ -515,9 +636,27 @@
 
     .news-featured-image{
 
-        height:190px;
+        min-height:0;
 
         border-radius:12px;
+
+    }
+
+
+    .news-featured-image img{
+
+        width:100%;
+
+        height:auto;
+
+        max-height:none;
+
+    }
+
+
+    .news-featured-content{
+
+        padding-top:22px;
 
     }
 
@@ -529,7 +668,7 @@
     }
 
 
-    .news-featured-item p{
+    .news-featured-summary{
 
         font-size:.95rem;
 
@@ -538,9 +677,35 @@
     }
 
 
+    .news-category{
+
+        font-size:.85rem;
+
+    }
+
+
+    .news-date,
+    .news-location{
+
+        font-size:.9rem;
+
+    }
+
+
     .news-card-image{
 
-        height:190px;
+        min-height:0;
+
+    }
+
+
+    .news-card-image img{
+
+        width:100%;
+
+        height:auto;
+
+        max-height:none;
 
     }
 

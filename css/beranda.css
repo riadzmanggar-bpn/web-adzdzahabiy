@@ -1,0 +1,193 @@
+/* ==========================================================
+   BERANDA - HERO
+   RTQ AL IMAM ADZ DZAHABIY
+========================================================== */
+
+.hero{
+
+    padding:110px 0 100px;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.68),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.18)
+        ),
+        url("../images/Bakau GPT1.png");
+
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+    color:#fff;
+
+    min-height:520px;
+
+    display:flex;
+    align-items:center;
+}
+
+
+/* ==========================================================
+   ISI HERO
+========================================================== */
+
+.hero .col-lg-7{
+
+    max-width:850px;
+
+}
+
+
+.hero h1{
+
+    margin:0 0 22px;
+
+    font-size:3.4rem;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+    color:#fff;
+
+    text-shadow:
+        2px 2px 7px rgba(0,0,0,.75);
+
+}
+
+
+.hero p{
+
+    max-width:800px;
+
+    margin:0 0 28px;
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+    color:#fff;
+
+    text-shadow:
+        1px 1px 5px rgba(0,0,0,.75);
+
+}
+
+
+/* ==========================================================
+   TOMBOL PROFIL
+========================================================== */
+
+.hero .btn{
+
+    padding:11px 25px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    border-radius:8px;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width:991.98px){
+
+    .hero{
+
+        padding:90px 0 80px;
+
+        min-height:450px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .hero p{
+
+        font-size:1.15rem;
+
+    }
+
+}
+
+
+@media (max-width:767.98px){
+
+    .hero{
+
+        padding:75px 20px 70px;
+
+        min-height:420px;
+
+        text-align:center;
+
+        background-position:center;
+
+    }
+
+    .hero .col-lg-7{
+
+        max-width:100%;
+
+    }
+
+    .hero h1{
+
+        font-size:2.15rem;
+
+        line-height:1.25;
+
+    }
+
+    .hero p{
+
+        font-size:1.05rem;
+
+        line-height:1.75;
+
+    }
+
+}
+
+
+/* ==========================================================
+   JADWAL TAKLIM - SABTU
+   RESPONSIVE HP & TABLET
+========================================================== */
+
+@media (max-width: 767.98px){
+
+    /* Area Sabtu */
+    .taklim-saturday{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 !important;
+        padding:0 !important;
+    }
+
+
+    /* Kartu Sabtu */
+    .taklim-saturday .taklim-card{
+        display:block !important;
+
+        width:100% !important;
+        max-width:100% !important;
+
+        margin:0 !important;
+    }
+
+}

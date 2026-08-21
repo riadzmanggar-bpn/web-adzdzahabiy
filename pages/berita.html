@@ -54,8 +54,12 @@
 <div id="global-navbar"></div>
 
 
+
 <!-- ==========================================================
      BERITA TERBARU / FEATURED NEWS
+     
+     DATA FEATURED DIAMBIL OTOMATIS
+     DARI BERITA NOMOR 1 DI BAWAH
 ========================================================== -->
 
 <section class="news-featured">
@@ -64,53 +68,61 @@
 
         <div class="news-featured-slider">
 
-            <!-- ==================================================
-                 BERITA 1
-            =================================================== -->
-
             <article class="news-featured-item active">
 
                 <div class="row align-items-center g-4">
 
+
+                    <!-- ==================================================
+                         GAMBAR
+                    ================================================== -->
+
                     <div class="col-lg-5">
 
                         <div class="news-featured-image">
 
                             <img
-                                src="../images/berita/classmeeting.jpg"
-                                alt="Persiapan Classmeeting RTQ">
+                                id="featuredImage"
+                                src=""
+                                alt="">
 
                         </div>
 
                     </div>
 
 
+                    <!-- ==================================================
+                         ISI
+                    ================================================== -->
+
                     <div class="col-lg-7">
 
-                        <span class="news-category">
-                            KEGIATAN
+                        <span
+                            id="featuredCategory"
+                            class="news-category">
                         </span>
 
-                        <h2>
-                            Persiapan Classmeeting RTQ
-                        </h2>
 
-                        <div class="news-date">
+                        <h2 id="featuredTitle"></h2>
 
-                            <i class="bi bi-calendar3"></i>
 
-                            Persiapan Kegiatan Classmeeting
-
+                        <div
+                            id="featuredDate"
+                            class="news-date">
                         </div>
 
-                        <p>
-                            Persiapan kegiatan classmeeting sebagai bagian
-                            dari kegiatan pendidikan, kebersamaan, dan
-                            pengembangan potensi peserta didik di RTQ
-                            Al Imam Adz Dzahabiy.
-                        </p>
+
+                        <p id="featuredSummary"></p>
+
+
+                        <div
+                            id="featuredLocation"
+                            class="news-location">
+                        </div>
+
 
                         <a
+                            id="featuredLink"
                             href="#"
                             class="btn btn-success">
 
@@ -123,281 +135,6 @@
                 </div>
 
             </article>
-
-
-            <!-- ==================================================
-                 BERITA 2
-            =================================================== -->
-
-            <article class="news-featured-item">
-
-                <div class="row align-items-center g-4">
-
-                    <div class="col-lg-5">
-
-                        <div class="news-featured-image">
-
-                            <img
-                                src="../images/berita/news-default.jpg"
-                                alt="Kegiatan RTQ">
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-lg-7">
-
-                        <span class="news-category">
-                            PENDIDIKAN
-                        </span>
-
-                        <h2>
-                            Kegiatan Pendidikan RTQ
-                        </h2>
-
-                        <div class="news-date">
-
-                            <i class="bi bi-calendar3"></i>
-
-                            Informasi Terbaru
-
-                        </div>
-
-                        <p>
-                            Informasi dan kegiatan pendidikan
-                            Rumah Tahfizhul Quran Al Imam Adz Dzahabiy.
-                        </p>
-
-                        <a
-                            href="#"
-                            class="btn btn-success">
-
-                            Baca Selengkapnya
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- ==================================================
-                 BERITA 3
-            =================================================== -->
-
-            <article class="news-featured-item">
-
-                <div class="row align-items-center g-4">
-
-                    <div class="col-lg-5">
-
-                        <div class="news-featured-image">
-
-                            <img
-                                src="../images/berita/news-default.jpg"
-                                alt="Informasi RTQ">
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-lg-7">
-
-                        <span class="news-category">
-                            INFORMASI
-                        </span>
-
-                        <h2>
-                            Informasi RTQ Al Imam Adz Dzahabiy
-                        </h2>
-
-                        <div class="news-date">
-
-                            <i class="bi bi-calendar3"></i>
-
-                            Informasi Terbaru
-
-                        </div>
-
-                        <p>
-                            Berbagai informasi terbaru seputar kegiatan
-                            dan program pendidikan RTQ.
-                        </p>
-
-                        <a
-                            href="#"
-                            class="btn btn-success">
-
-                            Baca Selengkapnya
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- ==================================================
-                 BERITA 4
-            =================================================== -->
-
-            <article class="news-featured-item">
-
-                <div class="row align-items-center g-4">
-
-                    <div class="col-lg-5">
-
-                        <div class="news-featured-image">
-
-                            <img
-                                src="../images/berita/news-default.jpg"
-                                alt="Kegiatan Peserta Didik">
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-lg-7">
-
-                        <span class="news-category">
-                            KEGIATAN
-                        </span>
-
-                        <h2>
-                            Kegiatan Peserta Didik
-                        </h2>
-
-                        <div class="news-date">
-
-                            <i class="bi bi-calendar3"></i>
-
-                            Kegiatan RTQ
-
-                        </div>
-
-                        <p>
-                            Berbagai kegiatan yang mendukung pendidikan,
-                            pembinaan adab, dan pengembangan peserta didik.
-                        </p>
-
-                        <a
-                            href="#"
-                            class="btn btn-success">
-
-                            Baca Selengkapnya
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- ==================================================
-                 BERITA 5
-            =================================================== -->
-
-            <article class="news-featured-item">
-
-                <div class="row align-items-center g-4">
-
-                    <div class="col-lg-5">
-
-                        <div class="news-featured-image">
-
-                            <img
-                                src="../images/berita/news-default.jpg"
-                                alt="Berita RTQ">
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-lg-7">
-
-                        <span class="news-category">
-                            BERITA
-                        </span>
-
-                        <h2>
-                            Kabar Terbaru RTQ
-                        </h2>
-
-                        <div class="news-date">
-
-                            <i class="bi bi-calendar3"></i>
-
-                            Berita & Informasi
-
-                        </div>
-
-                        <p>
-                            Kabar terbaru seputar Rumah Tahfizhul Quran
-                            Al Imam Adz Dzahabiy.
-                        </p>
-
-                        <a
-                            href="#"
-                            class="btn btn-success">
-
-                            Baca Selengkapnya
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
-
-
-            <!-- ==================================================
-                 INDICATOR
-            =================================================== -->
-
-            <div class="news-featured-indicators">
-
-                <button
-                    class="news-indicator active"
-                    type="button"
-                    aria-label="Berita 1">
-                </button>
-
-                <button
-                    class="news-indicator"
-                    type="button"
-                    aria-label="Berita 2">
-                </button>
-
-                <button
-                    class="news-indicator"
-                    type="button"
-                    aria-label="Berita 3">
-                </button>
-
-                <button
-                    class="news-indicator"
-                    type="button"
-                    aria-label="Berita 4">
-                </button>
-
-                <button
-                    class="news-indicator"
-                    type="button"
-                    aria-label="Berita 5">
-                </button>
-
-            </div>
 
         </div>
 
@@ -409,6 +146,8 @@
 
 <!-- ==========================================================
      DAFTAR BERITA
+     
+     BERITA NOMOR 1 ADALAH SUMBER DATA FEATURED NEWS
 ========================================================== -->
 
 <section class="page-section news-list-section">
@@ -438,57 +177,100 @@
         </div>
 
 
+
         <!-- ==================================================
              GRID BERITA
-        =================================================== -->
+        ================================================== -->
 
         <div class="row g-4">
 
 
-            <!-- BERITA CLASSMEETING -->
+            <!-- ==================================================
+                 BERITA 1
+                 
+                 INI SUMBER DATA UNTUK FEATURED NEWS
+            ================================================== -->
 
             <div class="col-lg-4 col-md-6">
 
-                <article class="news-card">
+                <article
+                    class="news-card"
+                    data-featured="true">
+
+
+                    <!-- GAMBAR -->
 
                     <div class="news-card-image">
 
                         <img
-                            src="../images/berita/classmeeting.jpg"
-                            alt="Persiapan Classmeeting">
+                            src="../images/berita/Pantai-Tanah-Merah-Samboja-Google.jpg"
+                            alt="Class Meeting RTQ">
 
                     </div>
 
 
+                    <!-- ISI -->
+
                     <div class="news-card-body">
 
+
                         <span class="news-category">
+
                             KEGIATAN
+
                         </span>
 
+
                         <h3>
-                            Persiapan Classmeeting RTQ
+
+                            Class Meeting Santri
+                            RTQ Al Imam Adz Dzahabiy
+
                         </h3>
+
+
+                        <!-- TANGGAL -->
 
                         <div class="news-date">
 
                             <i class="bi bi-calendar3"></i>
 
-                            Persiapan Kegiatan
+                            Tahun 2026
 
                         </div>
 
+
+                        <!-- RINGKASAN -->
+
                         <p>
-                            Persiapan kegiatan classmeeting
-                            sebagai sarana kebersamaan dan
-                            pengembangan potensi peserta didik.
+
+                            Kegiatan class meeting santri
+                            sebagai sarana kebersamaan,
+                            penyegaran, dan pengembangan
+                            potensi peserta didik.
+
                         </p>
 
+
+                        <!-- LOKASI -->
+
+                        <div class="news-location">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            Pantai Tanah Merah, Samboja
+
+                        </div>
+
+
+                        <!-- LINK -->
+
                         <a
-                            href="#"
+                            href="berita/berita-classmeeting.html"
                             class="news-read-more">
 
                             Baca Selengkapnya
+
                             <i class="bi bi-arrow-right"></i>
 
                         </a>
@@ -500,30 +282,41 @@
             </div>
 
 
-            <!-- BERITA 2 -->
+
+            <!-- ==================================================
+                 BERITA 2
+            ================================================== -->
 
             <div class="col-lg-4 col-md-6">
 
                 <article class="news-card">
 
+
                     <div class="news-card-image">
 
                         <img
                             src="../images/berita/news-default.jpg"
-                            alt="Kegiatan Pendidikan">
+                            alt="Kegiatan Pendidikan RTQ">
 
                     </div>
 
 
                     <div class="news-card-body">
 
+
                         <span class="news-category">
+
                             PENDIDIKAN
+
                         </span>
 
+
                         <h3>
+
                             Kegiatan Pendidikan RTQ
+
                         </h3>
+
 
                         <div class="news-date">
 
@@ -533,16 +326,31 @@
 
                         </div>
 
+
                         <p>
+
                             Informasi kegiatan pendidikan
-                            dan pembinaan peserta didik.
+                            dan pembinaan peserta didik
+                            di RTQ Al Imam Adz Dzahabiy.
+
                         </p>
+
+
+                        <div class="news-location">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            RTQ Al Imam Adz Dzahabiy
+
+                        </div>
+
 
                         <a
                             href="#"
                             class="news-read-more">
 
                             Baca Selengkapnya
+
                             <i class="bi bi-arrow-right"></i>
 
                         </a>
@@ -554,11 +362,15 @@
             </div>
 
 
-            <!-- BERITA 3 -->
+
+            <!-- ==================================================
+                 BERITA 3
+            ================================================== -->
 
             <div class="col-lg-4 col-md-6">
 
                 <article class="news-card">
+
 
                     <div class="news-card-image">
 
@@ -571,13 +383,21 @@
 
                     <div class="news-card-body">
 
+
                         <span class="news-category">
+
                             INFORMASI
+
                         </span>
 
+
                         <h3>
-                            Informasi RTQ Al Imam Adz Dzahabiy
+
+                            Informasi RTQ
+                            Al Imam Adz Dzahabiy
+
                         </h3>
+
 
                         <div class="news-date">
 
@@ -587,16 +407,31 @@
 
                         </div>
 
+
                         <p>
+
                             Berbagai informasi terbaru
-                            seputar kegiatan RTQ.
+                            seputar kegiatan dan program
+                            pendidikan RTQ.
+
                         </p>
+
+
+                        <div class="news-location">
+
+                            <i class="bi bi-geo-alt"></i>
+
+                            Balikpapan
+
+                        </div>
+
 
                         <a
                             href="#"
                             class="news-read-more">
 
                             Baca Selengkapnya
+
                             <i class="bi bi-arrow-right"></i>
 
                         </a>
@@ -615,11 +450,13 @@
 </section>
 
 
+
 <!-- ==========================================================
      FOOTER
 ========================================================== -->
 
 <div id="global-footer"></div>
+
 
 
 <!-- ==========================================================
@@ -631,6 +468,7 @@
 </script>
 
 
+
 <!-- ==========================================================
      NAVBAR
 ========================================================== -->
@@ -638,11 +476,167 @@
 <script src="../js/navbar.js"></script>
 
 
+
 <!-- ==========================================================
-     BERITA JS
+     FEATURED NEWS
+     OTOMATIS MENGAMBIL BERITA #1
 ========================================================== -->
 
-<script src="../js/berita.js"></script>
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+
+        /* ==============================================
+           AMBIL BERITA PERTAMA
+        ============================================== */
+
+        const firstNews =
+            document.querySelector(
+                ".news-card[data-featured='true']"
+            );
+
+
+        if (!firstNews) return;
+
+
+
+        /* ==============================================
+           AMBIL DATA
+        ============================================== */
+
+        const image =
+            firstNews.querySelector(
+                ".news-card-image img"
+            );
+
+
+        const category =
+            firstNews.querySelector(
+                ".news-category"
+            );
+
+
+        const title =
+            firstNews.querySelector(
+                "h3"
+            );
+
+
+        const date =
+            firstNews.querySelector(
+                ".news-date"
+            );
+
+
+        const summary =
+            firstNews.querySelector(
+                ".news-card-body p"
+            );
+
+
+        const location =
+            firstNews.querySelector(
+                ".news-location"
+            );
+
+
+        const link =
+            firstNews.querySelector(
+                ".news-read-more"
+            );
+
+
+
+        /* ==============================================
+           TARGET FEATURED
+        ============================================== */
+
+        const featuredImage =
+            document.getElementById(
+                "featuredImage"
+            );
+
+
+        const featuredCategory =
+            document.getElementById(
+                "featuredCategory"
+            );
+
+
+        const featuredTitle =
+            document.getElementById(
+                "featuredTitle"
+            );
+
+
+        const featuredDate =
+            document.getElementById(
+                "featuredDate"
+            );
+
+
+        const featuredSummary =
+            document.getElementById(
+                "featuredSummary"
+            );
+
+
+        const featuredLocation =
+            document.getElementById(
+                "featuredLocation"
+            );
+
+
+        const featuredLink =
+            document.getElementById(
+                "featuredLink"
+            );
+
+
+
+        /* ==============================================
+           SALIN DATA BERITA #1
+        ============================================== */
+
+        featuredImage.src =
+            image.src;
+
+        featuredImage.alt =
+            image.alt;
+
+
+        featuredCategory.innerHTML =
+            category.innerHTML;
+
+
+        featuredTitle.innerHTML =
+            title.innerHTML;
+
+
+        featuredDate.innerHTML =
+            date.innerHTML;
+
+
+        featuredSummary.innerHTML =
+            summary.innerHTML;
+
+
+        featuredLocation.innerHTML =
+            location.innerHTML;
+
+
+        featuredLink.href =
+            link.href;
+
+
+    }
+
+);
+
+</script>
 
 
 </body>
