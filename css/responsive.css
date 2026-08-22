@@ -1582,3 +1582,75 @@
 
 
 }
+
+/* ==========================================================
+   NAVBAR BUTTONS - MOBILE
+========================================================== */
+
+@media (max-width: 991.98px){
+
+    #navbarRTQ .navbar-buttons{
+
+        display:flex !important;
+
+        flex-direction:row !important;
+
+        align-items:center !important;
+        justify-content:center !important;
+
+        width:100% !important;
+
+        margin:20px 0 12px !important;
+        padding:0 !important;
+
+        gap:16px !important;
+
+        box-sizing:border-box !important;
+    }
+
+
+    #navbarRTQ .navbar-buttons .btn{
+
+        display:flex !important;
+
+        align-items:center !important;
+        justify-content:center !important;
+
+        width:110px !important;
+        min-width:110px !important;
+        height:56px !important;
+
+        margin:0 !important;
+        padding:0 !important;
+
+        box-sizing:border-box !important;
+    }
+
+}
+
+
+/* ==========================================================
+   DESKTOP
+========================================================== */
+
+@media (min-width: 992px){
+
+    #navbarRTQ .navbar-buttons{
+
+        display:flex;
+
+        align-items:center;
+
+        gap:12px;
+
+        margin-left:1.5rem;
+    }
+
+
+    #navbarRTQ .navbar-buttons .btn{
+
+        margin:0;
+    }
+
+}
+
