@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 const daftarBerita = [
 
     "berita/berita-classmeeting.html",
+    "berita/donasi-aceh-2025.html",
 
     // Berita berikutnya tambahkan di sini
     // "berita/berita-xxxx2.html",
