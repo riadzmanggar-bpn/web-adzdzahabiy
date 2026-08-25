@@ -573,3 +573,665 @@
     }
 
 }
+/* ==========================================================
+   IQAAMAH DI NAVBAR
+========================================================== */
+
+/* ==========================================================
+   IQAAMAH DI NAVBAR
+========================================================== */
+
+.navbar-iqaamah{
+    display:flex;
+    flex-direction:column;
+
+    /* jangan center secara vertikal */
+    justify-content:flex-start;
+
+    margin-left:8px;
+
+    /* sejajarkan dengan judul Rumah Tahfizhul Qur'an */
+    margin-top:8px;
+
+    white-space:nowrap;
+    line-height:1.15;
+}
+
+
+/* ==========================================================
+   JUDUL IQAAMAH
+========================================================== */
+
+.navbar-iqaamah .iqaamah-title{
+    color:#17663B;
+
+    font-size:1.45rem;
+    font-weight:1000;
+
+    letter-spacing:5px;
+
+    line-height:1;
+
+    margin:0 0 7px;
+}
+
+
+/* ==========================================================
+   NILAI IQAAMAH
+========================================================== */
+
+.navbar-iqaamah .iqaamah-values{
+    display:flex;
+    align-items:center;
+
+    gap:6px;
+
+    color:#17663B;
+
+    font-size:.55rem;
+    font-weight:700;
+
+    line-height:1.35;
+}
+
+
+/* ==========================================================
+   PEMISAH LOGO RTQ DAN IQAAMAH
+========================================================== */
+
+.brand-divider{
+    width:1px;
+    height:52px;
+
+    background:rgba(0,0,0,.25);
+
+    margin-left:18px;
+    margin-right:8px;
+}
+
+
+/* ==========================================================
+   JUDUL IQAAMAH
+========================================================== */
+
+.navbar-iqaamah .iqaamah-title{
+    color:#17663B;
+
+    font-size:1.2rem;
+    font-weight:2000;
+
+    letter-spacing:8px;
+
+    line-height:0.5;
+
+    margin-bottom:6px;
+}
+
+
+/* ==========================================================
+   NILAI IQAAMAH
+========================================================== */
+
+.navbar-iqaamah .iqaamah-values{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+
+    gap:6px;
+
+    color:#17663B;
+
+    font-size:.5rem;
+    font-weight:700;
+
+    line-height:0.8;
+
+    letter-spacing:.1px;
+}
+
+/* BULLET */
+.navbar-iqaamah .iqaamah-values b{
+    color:#17663B;
+    font-size:.65rem;
+    font-weight:900;
+}
+
+
+/* ==========================================================
+   RESPONSIVE TABLET
+========================================================== */
+
+@media (max-width:1199.98px){
+
+    .navbar-iqaamah .iqaamah-title{
+        font-size:1.25rem;
+        letter-spacing:4px;
+    }
+
+    .navbar-iqaamah .iqaamah-values{
+        font-size:.48rem;
+        gap:4px;
+    }
+
+    .brand-divider{
+        margin-left:12px;
+        margin-right:6px;
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:991.98px){
+
+    .navbar-brand{
+        flex-wrap:nowrap;
+    }
+
+    .brand-divider{
+        height:42px;
+
+        margin-left:10px;
+        margin-right:8px;
+    }
+
+    .navbar-iqaamah{
+        margin-left:0;
+    }
+
+    .navbar-iqaamah .iqaamah-title{
+        font-size:1rem;
+        letter-spacing:3px;
+    }
+
+    .navbar-iqaamah .iqaamah-values{
+        font-size:.38rem;
+        gap:3px;
+    }
+
+}
+
+
+/* ==========================================================
+   HP KECIL
+========================================================== */
+
+@media (max-width:575.98px){
+
+    .brand-divider{
+        display:none;
+    }
+
+    .navbar-iqaamah{
+        display:none;
+    }
+
+}
+
+/* ==========================================================
+   NAVBAR DROPDOWN - HOVER DESKTOP
+========================================================== */
+
+@media (min-width: 992px){
+
+    /* Dropdown langsung muncul saat mouse diarahkan */
+    .navbar .dropdown:hover > .dropdown-menu{
+        display:block;
+        margin-top:0;
+    }
+
+    /* Tetap tandai menu yang sedang aktif */
+    .navbar .dropdown:hover > .nav-link{
+        color:#17663B;
+    }
+
+    /* Panah dropdown tetap terlihat */
+    .navbar .dropdown:hover > .dropdown-toggle::after{
+        transform:rotate(180deg);
+    }
+
+    /* Tampilan dropdown */
+    .navbar .dropdown-menu{
+        margin-top:0;
+        border:0;
+        border-radius:8px;
+        box-shadow:0 8px 25px rgba(0,0,0,.12);
+
+        padding:8px 0;
+    }
+
+    .navbar .dropdown-item{
+        padding:9px 18px;
+
+        font-size:1rem;
+        color:#333;
+
+        transition:
+            background .2s ease,
+            color .2s ease,
+            padding-left .2s ease;
+    }
+
+    .navbar .dropdown-item:hover{
+        background:#f0f7f3;
+        color:#17663B;
+        padding-left:23px;
+    }
+
+}
+/* ==========================================================
+   HIGHLIGHT TERBARU
+========================================================== */
+
+.highlight-section {
+    padding: 80px 0;
+    background: #f8faf9;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT HEADER
+========================================================== */
+
+.highlight-header {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 45px;
+}
+
+.highlight-label {
+    display: block;
+
+    color: #E04B5A;
+
+    font-size: 16px;
+    font-weight: 900;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 10px;
+}
+
+.highlight-header h2 {
+    margin: 0 0 15px;
+
+    color: #006B3C;
+
+    font-size: 42px;
+    font-weight: 900;
+}
+
+.highlight-header p {
+    margin: 0;
+
+    color: #555;
+
+    font-size: 19px;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+  HIGHLIGHT WRAPPER
+========================================================== */
+
+.highlight-wrapper {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    height: 560px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT TRACK
+========================================================== */
+
+.highlight-track {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT CARD
+========================================================== */
+
+.highlight-card {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 100%;
+    max-width: 1000px;
+
+    height: 540px;
+
+    transform: translateX(-50%);
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.10);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    animation: highlightSlide 10s infinite;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT DELAY CARD
+========================================================== */
+
+.highlight-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.highlight-card:nth-child(2) {
+    animation-delay: 5s;
+}
+
+
+/* ==========================================================
+  HIGHLIGHT  ANIMASI CARD
+========================================================== */
+
+@keyframes highlightSlide {
+
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) scale(0.98);
+    }
+
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) scale(1);
+    }
+
+    45% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) scale(0.98);
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) scale(0.98);
+    }
+
+}
+
+
+/* ==========================================================
+   HIGHLIGHT GAMBAR
+========================================================== */
+
+.highlight-image {
+    position: relative;
+
+    width: 100%;
+    height: 280px;
+
+    overflow: hidden;
+}
+
+.highlight-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT BADGE
+========================================================== */
+
+.highlight-badge {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 9px 18px;
+
+    background: #E04B5A;
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================================
+   HIGHLIGHT CONTENT
+========================================================== */
+
+.highlight-content {
+    padding: 25px 30px;
+
+    text-align: left;
+}
+
+.highlight-content small {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+.highlight-content h3 {
+    margin: 0 0 10px;
+
+    color: #006B3C;
+
+    font-size: 26px;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+.highlight-content p {
+    margin: 0 0 18px;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+.highlight-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #006B3C;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.highlight-link span {
+    transition: transform 0.3s ease;
+}
+
+.highlight-link:hover {
+    color: #E04B5A;
+}
+
+.highlight-link:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================
+  HIGHLIGHT RESPONSIVE TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .highlight-section {
+        padding: 65px 20px;
+    }
+
+    .highlight-wrapper {
+        height: 530px;
+    }
+
+    .highlight-card {
+        height: 510px;
+    }
+
+    .highlight-image {
+        height: 250px;
+    }
+
+    .highlight-header h2 {
+        font-size: 36px;
+    }
+
+}
+
+
+/* ==========================================================
+   HIGHLIGHT RESPONSIVE HP
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .highlight-section {
+        padding: 55px 15px;
+    }
+
+    .highlight-header {
+        margin-bottom: 30px;
+    }
+
+    .highlight-label {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+    .highlight-header h2 {
+        font-size: 30px;
+    }
+
+    .highlight-header p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .highlight-wrapper {
+        height: 500px;
+    }
+
+    .highlight-card {
+        height: 480px;
+
+        border-radius: 18px;
+    }
+
+    .highlight-image {
+        height: 210px;
+    }
+
+    .highlight-content {
+        padding: 20px;
+    }
+
+    .highlight-content h3 {
+        font-size: 21px;
+    }
+
+    .highlight-content p {
+        font-size: 15px;
+    }
+
+    .highlight-badge {
+        top: 14px;
+        left: 14px;
+
+        padding: 8px 15px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==========================================================
+   HIGHLIGHT HP KECIL
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .highlight-wrapper {
+        height: 480px;
+    }
+
+    .highlight-card {
+        height: 460px;
+    }
+
+    .highlight-image {
+        height: 185px;
+    }
+
+    .highlight-header h2 {
+        font-size: 27px;
+    }
+
+    .highlight-content h3 {
+        font-size: 19px;
+    }
+
+    .highlight-content p {
+        font-size: 14px;
+    }
+
+}
