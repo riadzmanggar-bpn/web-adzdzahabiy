@@ -302,7 +302,6 @@
 
 }
 
-
 /* ==========================================================
    GOOGLE MAP
 ========================================================== */
@@ -310,6 +309,8 @@
 .contact-map{
 
     width:100%;
+
+    min-height:500px;
 
     overflow:hidden;
 
@@ -329,7 +330,7 @@
 
     width:100%;
 
-    min-height:400px;
+    height:500px;
 
     border:0;
 
@@ -435,14 +436,16 @@
 
     .contact-map{
 
-        border-radius:16px;
+    border-radius:16px;
+
+    min-height:320px;
 
     }
 
 
     .contact-map iframe{
 
-        min-height:320px;
+        height:320px;
 
     }
 
