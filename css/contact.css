@@ -87,6 +87,11 @@
 
 }
 
+/* ==========================================================
+   CONTACT
+   Rumah Tahfizhul Quran Al Imam Adz Dzahabiy
+========================================================== */
+
 
 /* ==========================================================
    CONTACT SECTION
@@ -100,6 +105,10 @@
 
 }
 
+
+/* ==========================================================
+   SECTION LABEL
+========================================================== */
 
 .contact-section .section-label,
 .contact-location .section-label{
@@ -119,12 +128,16 @@
 }
 
 
+/* ==========================================================
+   SECTION TITLE
+========================================================== */
+
 .contact-section h2,
 .contact-location h2{
 
-    font-weight:700;
-
     margin-bottom:15px;
+
+    font-weight:700;
 
 }
 
@@ -187,22 +200,20 @@
 .contact-icon{
 
     width:75px;
-
     height:75px;
 
     margin:0 auto 20px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
 
     border-radius:50%;
 
     background:#198754;
 
     color:#fff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
 
     font-size:2rem;
 
@@ -293,57 +304,172 @@
 
 
 /* ==========================================================
-   MAP PLACEHOLDER
+   GOOGLE MAP
 ========================================================== */
 
-.contact-map-placeholder{
+.contact-map{
 
-    min-height:320px;
+    width:100%;
 
-    padding:40px;
+    overflow:hidden;
 
     border-radius:20px;
 
     background:#f1f5f3;
 
-    display:flex;
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.06);
 
-    flex-direction:column;
+}
 
-    align-items:center;
 
-    justify-content:center;
+.contact-map iframe{
+
+    display:block;
+
+    width:100%;
+
+    min-height:400px;
+
+    border:0;
+
+}
+
+
+/* ==========================================================
+   CONTACT CTA
+========================================================== */
+
+.contact-cta{
+
+    padding:90px 0;
+
+    background:#176b3d;
+
+    color:#fff;
 
     text-align:center;
 
 }
 
 
-.contact-map-placeholder i{
+.contact-cta h2{
 
     margin-bottom:15px;
 
-    color:#198754;
+    color:#fff;
 
-    font-size:4rem;
-
-}
-
-
-.contact-map-placeholder h4{
-
-    margin-bottom:8px;
+    font-size:2.6rem;
 
     font-weight:700;
 
 }
 
 
-.contact-map-placeholder p{
+.contact-cta p{
 
-    margin:0;
+    max-width:750px;
 
-    color:#666;
+    margin:0 auto 25px;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   RESPONSIVE - CONTACT
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .contact-section{
+
+        padding:65px 0 75px;
+
+    }
+
+
+    .contact-section .section-subtitle{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+    }
+
+
+    .contact-card{
+
+        padding:35px 25px;
+
+    }
+
+
+    .contact-location{
+
+        padding:65px 0;
+
+    }
+
+
+    .contact-location h2{
+
+        font-size:2rem;
+
+    }
+
+
+    .contact-location p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+
+    .contact-map{
+
+        border-radius:16px;
+
+    }
+
+
+    .contact-map iframe{
+
+        min-height:320px;
+
+    }
+
+
+    .contact-cta{
+
+        padding:65px 20px 70px;
+
+    }
+
+
+    .contact-cta h2{
+
+        font-size:2rem;
+
+        line-height:1.25;
+
+    }
+
+
+    .contact-cta p{
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+    }
 
 }
 

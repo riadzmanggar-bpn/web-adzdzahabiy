@@ -162,32 +162,1341 @@
 
 
 /* ==========================================================
-   JADWAL TAKLIM - SABTU
-   RESPONSIVE HP & TABLET
+   HIGHLIGHT TERBARU
 ========================================================== */
 
-@media (max-width: 767.98px){
+.highlight-section {
+    padding: 80px 0;
+    background: #f8faf9;
+}
 
-    /* Area Sabtu */
-    .taklim-saturday{
-        display:block !important;
 
-        width:100% !important;
-        max-width:100% !important;
+/* ==========================================================
+   HIGHLIGHT HEADER
+========================================================== */
 
-        margin:0 !important;
-        padding:0 !important;
+.highlight-header {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 45px;
+    text-align: center !important;
+}
+
+.highlight-label {
+    display: block;
+    color: #E04B5A;
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.highlight-header h2 {
+    margin: 0 0 15px;
+    color: #006B3C;
+    font-weight: 700;
+    text-align: center !important;
+
+}
+
+.highlight-header p {
+    margin: 0;
+    color: #555;
+    font-size: 19px;
+    line-height: 1.7;
+    text-align: center !important;
+}
+
+
+/* ==========================================================
+  HIGHLIGHT WRAPPER
+========================================================== */
+
+.highlight-wrapper {
+    position: relative;
+
+    width: 100%;
+    max-width: 1100px;
+
+    height: 560px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT TRACK
+========================================================== */
+
+.highlight-track {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT CARD
+========================================================== */
+
+.highlight-card {
+    position: absolute;
+
+    top: 0;
+    left: 50%;
+
+    width: 100%;
+    max-width: 1000px;
+
+    height: 540px;
+
+    transform: translateX(-50%);
+
+    background: #ffffff;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.10);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    animation: highlightSlide 10s infinite;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT DELAY CARD
+========================================================== */
+
+.highlight-card:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.highlight-card:nth-child(2) {
+    animation-delay: 5s;
+}
+
+
+/* ==========================================================
+  HIGHLIGHT  ANIMASI CARD
+========================================================== */
+
+@keyframes highlightSlide {
+
+    0% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) scale(0.98);
+    }
+
+    5% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) scale(1);
+    }
+
+    45% {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) scale(1);
+    }
+
+    50% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) scale(0.98);
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(-50%) scale(0.98);
+    }
+
+}
+
+
+/* ==========================================================
+   HIGHLIGHT GAMBAR
+========================================================== */
+
+.highlight-image {
+    position: relative;
+
+    width: 100%;
+    height: 280px;
+
+    overflow: hidden;
+}
+
+.highlight-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   HIGHLIGHT BADGE
+========================================================== */
+
+.highlight-badge {
+    position: absolute;
+
+    top: 18px;
+    left: 18px;
+
+    padding: 9px 18px;
+
+    background: #E04B5A;
+    color: #ffffff;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ==========================================================
+   HIGHLIGHT CONTENT
+========================================================== */
+
+.highlight-content {
+    padding: 25px 30px;
+
+    text-align: left;
+}
+
+.highlight-content small {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+.highlight-content h3 {
+    margin: 0 0 10px;
+
+    color: #006B3C;
+
+    font-size: 26px;
+    font-weight: 800;
+
+    line-height: 1.3;
+}
+
+.highlight-content p {
+    margin: 0 0 18px;
+
+    color: #666;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+.highlight-link {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #006B3C;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.highlight-link span {
+    transition: transform 0.3s ease;
+}
+
+.highlight-link:hover {
+    color: #E04B5A;
+}
+
+.highlight-link:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================
+  HIGHLIGHT RESPONSIVE TABLET
+========================================================== */
+
+@media (max-width: 992px) {
+
+    .highlight-section {
+        padding: 65px 20px;
+    }
+
+    .highlight-wrapper {
+        height: 530px;
+    }
+
+    .highlight-card {
+        height: 510px;
+    }
+
+    .highlight-image {
+        height: 250px;
+    }
+
+    .highlight-header h2 {
+        font-size: 36px;
+    }
+
+}
+
+
+/* ==========================================================
+   HIGHLIGHT RESPONSIVE HP
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .highlight-section {
+        padding: 55px 15px;
+    }
+
+    .highlight-header {
+        margin-bottom: 30px;
+    }
+
+    .highlight-label {
+        font-size: 14px;
+        letter-spacing: 4px;
+    }
+
+    .highlight-header h2 {
+        font-size: 30px;
+    }
+
+    .highlight-header p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .highlight-wrapper {
+        height: 500px;
+    }
+
+    .highlight-card {
+        height: 480px;
+
+        border-radius: 18px;
+    }
+
+    .highlight-image {
+        height: 210px;
+    }
+
+    .highlight-content {
+        padding: 20px;
+    }
+
+    .highlight-content h3 {
+        font-size: 21px;
+    }
+
+    .highlight-content p {
+        font-size: 15px;
+    }
+
+    .highlight-badge {
+        top: 14px;
+        left: 14px;
+
+        padding: 8px 15px;
+
+        font-size: 13px;
+    }
+
+}
+
+
+/* ==========================================================
+   HIGHLIGHT HP KECIL
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .highlight-wrapper {
+        height: 480px;
+    }
+
+    .highlight-card {
+        height: 460px;
+    }
+
+    .highlight-image {
+        height: 185px;
+    }
+
+    .highlight-header h2 {
+        font-size: 27px;
+    }
+
+    .highlight-content h3 {
+        font-size: 19px;
+    }
+
+    .highlight-content p {
+        font-size: 14px;
+    }
+
+}
+
+/* =====================================
+   PROGRAM PENDIDIKAN
+===================================== */
+
+.program{
+
+    background:#f8f9fa;
+    padding:90px 0;
+
+}
+
+.program h2{
+    font-weight:700;
+    margin-bottom:15px;
+}
+
+.program p{
+    color:#666;
+    font-size:1.5rem;      /* 20px */
+    line-height:1.8;
+}
+
+.program-box{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:45px 30px;
+
+    text-align:center;
+
+    height:100%;
+
+    transition:all .3s ease;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+}
+
+.program-box:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.program-icon{
+
+    font-size:55px;
+
+    color:#198754;
+
+    margin-bottom:20px;
+
+    display:block;
+
+}
+
+.program-box h4{
+
+    font-weight:700;
+
+    margin-bottom:10px;
+
+}
+
+.program-box p{
+
+    margin:0;
+
+}
+
+.program-box p a{
+    color:#555;
+    text-decoration:none;
+    font-size:1.15rem;
+    font-weight:500;
+    transition:all .25s ease;
+}
+
+.program-box p a:hover{
+    color:#d5aa32;
+    text-decoration:none;
+}
+
+/* ==========================================================
+   DETAIL PROGRAM
+========================================================== */
+
+.program-detail-section{
+
+    padding:90px 0 100px;
+
+    background:#f7f9f8;
+
+}
+
+
+.program-detail-card{
+
+    display:flex;
+
+    gap:25px;
+
+    height:100%;
+
+    padding:35px;
+
+    background:#fff;
+
+    border:1px solid #e5ebe7;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    transition:.3s;
+
+}
+
+
+.program-detail-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.10);
+
+}
+
+/* ==========================================================
+   ICON PROGRAM
+========================================================== */
+
+.program-detail-icon{
+
+    width:70px;
+
+    height:70px;
+
+    flex:0 0 70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#eaf4ee;
+
+    color:var(--primary);
+
+    font-size:1.8rem;
+
+}
+
+
+/* ==========================================================
+   ISI PROGRAM
+========================================================== */
+
+.program-detail-content{
+
+    flex:1;
+
+}
+
+
+.program-level{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--primary);
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+}
+
+
+.program-detail-content h3{
+
+    margin:0 0 5px;
+
+    color:#222;
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
+}
+
+
+.program-detail-content h5{
+
+    margin-bottom:15px;
+
+    color:#666;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+}
+
+
+.program-detail-content p{
+
+    margin-bottom:18px;
+
+    color:#666;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   LIST PROGRAM
+========================================================== */
+
+.program-detail-content ul{
+
+    margin:0 0 22px;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+
+.program-detail-content li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    margin-bottom:10px;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+
+.program-detail-content li i{
+
+    margin-top:4px;
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================================
+   JENJANG PENDIDIKAN
+========================================================== */
+
+.program-path{
+
+    padding:90px 0;
+
+    background:#fff;
+
+}
+
+
+.program-path h2{
+
+    margin-bottom:15px;
+
+    color:#222;
+
+    font-size:2.8rem;
+
+    font-weight:700;
+
+}
+
+
+.program-path > .container > .text-center > p{
+
+    color:#666;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+}
+
+
+
+/* ==========================================================
+   PATH CARD
+========================================================== */
+
+.path-card{
+
+    height:100%;
+
+    padding:35px 25px;
+
+    text-align:center;
+
+    background:#fff;
+
+    border:1px solid #e5ebe7;
+
+    border-radius:18px;
+
+    box-shadow:0 7px 22px rgba(0,0,0,.05);
+
+    transition:.3s;
+
+}
+
+
+.path-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 15px 30px rgba(0,0,0,.09);
+
+}
+
+
+.path-card > span{
+
+    display:block;
+
+    margin-bottom:15px;
+
+    color:#b0beb6;
+
+    font-size:.8rem;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+}
+
+
+.path-card > i{
+
+    display:block;
+
+    margin-bottom:18px;
+
+    color:var(--primary);
+
+    font-size:2.2rem;
+
+}
+
+
+.path-card h4{
+
+    margin-bottom:8px;
+
+    color:#222;
+
+    font-size:1.25rem;
+
+    font-weight:700;
+
+}
+
+
+.path-card p{
+
+    margin:0;
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/* ==========================================================
+   PROGRAM CTA
+========================================================== */
+
+.program-cta{
+
+    padding:90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17663b,
+            #198754
+        );
+
+    color:#fff;
+
+    text-align:center;
+}
+
+
+.program-cta h2{
+
+    margin-bottom:15px;
+
+    color:#fff;
+
+    font-size:2.6rem;
+
+    font-weight:700;
+}
+
+
+.program-cta p{
+
+    max-width:750px;
+
+    margin:0 auto 25px;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+}
+
+
+.program-cta .btn{
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    font-weight:600;
+}
+
+
+/* ==========================================================
+   PROGRAM CTA - RESPONSIVE HP
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .program-cta{
+
+        width:100%;
+
+        padding:65px 20px 70px;
+
+        overflow:hidden;
+
+        box-sizing:border-box;
     }
 
 
-    /* Kartu Sabtu */
+    .program-cta > .container{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin:0 auto;
+
+        padding:0;
+    }
+
+
+    .program-cta .row{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin-left:0;
+
+        margin-right:0;
+    }
+
+
+    .program-cta .row > *{
+
+        width:100%;
+
+        max-width:100%;
+
+        padding-left:0;
+
+        padding-right:0;
+    }
+
+
+    .program-cta h2{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin:0 0 20px;
+
+        font-size:2rem;
+
+        line-height:1.2;
+
+        font-weight:700;
+
+        overflow-wrap:normal;
+    }
+
+
+    .program-cta p{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin:0 auto 28px;
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        overflow-wrap:normal;
+    }
+
+
+    .program-cta .btn{
+
+        display:inline-block;
+
+        padding:12px 30px;
+
+        border-radius:30px;
+
+        font-size:1rem;
+
+        font-weight:600;
+    }
+
+}
+/* ==========================================================
+   WHY - MENGAPA MEMILIH RTQ
+========================================================== */
+
+.why{
+
+    padding:90px 0;
+
+    background:#fff;
+}
+
+
+/* ==========================================================
+   WHY TITLE
+========================================================== */
+
+.why h2{
+
+    margin-bottom:15px;
+
+    font-weight:700;
+}
+
+
+/* ==========================================================
+   WHY SUBTITLE
+========================================================== */
+
+.why > .container > .text-center p{
+
+    color:#666;
+
+    font-size:1.5rem;
+
+    line-height:1.8;
+}
+
+
+/* ==========================================================
+   WHY CARD
+========================================================== */
+
+.why-box{
+
+    height:100%;
+
+    padding:40px 30px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:.3s;
+}
+
+
+.why-box:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+
+
+/* ==========================================================
+   WHY ICON
+========================================================== */
+
+.why-icon{
+
+    display:block;
+
+    margin-bottom:20px;
+
+    color:#198754;
+
+    font-size:55px;
+}
+
+
+/* ==========================================================
+   WHY CARD TITLE
+========================================================== */
+
+.why-box h4{
+
+    margin-bottom:15px;
+
+    font-weight:700;
+}
+
+
+/* ==========================================================
+   WHY CARD TEXT
+========================================================== */
+
+.why-box p{
+
+    margin:0;
+
+    color:#666;
+
+    font-size:1.3rem;
+
+    line-height:1.8;
+}
+/* ==========================================================
+   JADWAL TAKLIM - BERANDA
+========================================================== */
+
+.taklim-section{
+
+    padding:90px 0;
+
+    background:#f7f9f8;
+}
+
+
+/* ==========================================================
+   JUDUL & SUBJUDUL
+========================================================== */
+
+.taklim-section h2{
+
+    margin-bottom:15px;
+
+    color:#222;
+
+    font-size:2.8rem;
+
+    line-height:1.2;
+
+    font-weight:700;
+}
+
+
+.taklim-section .section-subtitle{
+
+    width:100%;
+
+    margin:0 auto;
+
+    color:#666;
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+
+    text-align:center;
+}
+
+
+.taklim-section .section-subtitle strong{
+
+    color:var(--primary);
+}
+
+
+/* ==========================================================
+   KARTU TAKLIM
+========================================================== */
+
+.taklim-card{
+
+    width:100%;
+
+    max-width:none;
+
+    margin:0;
+
+    padding:36px;
+
+    background:#fff;
+
+    border:1px solid #e1e8e4;
+
+    border-radius:20px;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.05);
+
+    transition:.3s;
+}
+
+
+.taklim-card:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:0 15px 32px rgba(0,0,0,.09);
+}
+
+
+.taklim-list{
+
+    width:100%;
+
+    max-width:none;
+}
+
+
+/* ==========================================================
+   HARI
+========================================================== */
+
+.taklim-day{
+
+    display:block;
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.taklim-icon{
+
+    width:50px;
+
+    height:50px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-bottom:18px;
+
+    border-radius:13px;
+
+    background:#eaf4ee;
+
+    color:var(--primary);
+
+    font-size:1.3rem;
+}
+
+
+/* ==========================================================
+   JUDUL KITAB
+========================================================== */
+
+.taklim-card h4{
+
+    margin:0 0 12px;
+
+    color:#222;
+
+    font-size:1.2rem;
+
+    line-height:1.4;
+
+    font-weight:700;
+}
+
+
+/* ==========================================================
+   PEMATERI
+========================================================== */
+
+.taklim-card p{
+
+    margin:0;
+
+    color:#666;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+}
+
+
+.taklim-card p strong{
+
+    color:#333;
+}
+
+
+/* ==========================================================
+   WAKTU
+========================================================== */
+
+.taklim-time{
+
+    margin-top:18px !important;
+
+    padding-top:13px;
+
+    border-top:1px solid #e6ebe8;
+
+    color:var(--primary) !important;
+
+    font-size:.9rem !important;
+
+    font-weight:600;
+}
+
+
+/* ==========================================================
+   JADWAL SABTU
+========================================================== */
+
+.taklim-saturday{
+
+    max-width:calc(33.333% - 16px);
+
+    margin:24px auto 0;
+}
+
+
+/* ==========================================================
+   TOMBOL LIHAT JADWAL
+========================================================== */
+
+.taklim-more{
+
+    margin-top:45px;
+}
+
+
+.taklim-more .btn{
+
+    padding:11px 25px;
+
+    border-radius:30px;
+
+    font-weight:600;
+}
+
+
+/* ==========================================================
+   RESPONSIVE HP
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .taklim-saturday{
+
+        display:block;
+
+        width:100%;
+
+        max-width:100%;
+
+        margin:0;
+
+        padding:0;
+    }
+
+
     .taklim-saturday .taklim-card{
-        display:block !important;
 
-        width:100% !important;
-        max-width:100% !important;
+        display:block;
 
-        margin:0 !important;
+        width:100%;
+
+        max-width:100%;
+
+        margin:0;
     }
 
 }

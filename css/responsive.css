@@ -21,10 +21,6 @@
         font-size:2.2rem;
     }
 
-    .section-title{
-        font-size:2rem;
-    }
-
     .nav-link{
         margin-left:0;
     }
@@ -800,90 +796,9 @@
 
         overflow-wrap:anywhere !important;
     }
+    
+
     /* ======================================================
-       PROGRAM CTA
-       HP dibuat penuh dan lebih proporsional
-    ====================================================== */
-
-    .program-cta{
-        width:100% !important;
-        max-width:100% !important;
-
-        padding:65px 20px 70px !important;
-
-        overflow:hidden !important;
-        box-sizing:border-box !important;
-
-        text-align:center !important;
-    }
-
-
-    .program-cta > .container{
-        width:100% !important;
-        max-width:100% !important;
-
-        margin:0 auto !important;
-        padding:0 !important;
-    }
-
-
-    .program-cta .row{
-        width:100% !important;
-        max-width:100% !important;
-
-        margin-left:0 !important;
-        margin-right:0 !important;
-    }
-
-
-    .program-cta .row > *{
-        width:100% !important;
-        max-width:100% !important;
-
-        padding-left:0 !important;
-        padding-right:0 !important;
-    }
-
-
-    .program-cta h2{
-        width:100% !important;
-        max-width:100% !important;
-
-        margin:0 0 20px !important;
-
-        font-size:2rem !important;
-        line-height:1.2 !important;
-        font-weight:700 !important;
-
-        overflow-wrap:normal !important;
-    }
-
-
-    .program-cta p{
-        width:100% !important;
-        max-width:100% !important;
-
-        margin:0 auto 28px !important;
-
-        font-size:1rem !important;
-        line-height:1.7 !important;
-
-        overflow-wrap:normal !important;
-    }
-
-
-    .program-cta .btn{
-        display:inline-block !important;
-
-        padding:12px 30px !important;
-
-        border-radius:30px !important;
-
-        font-size:1rem !important;
-        font-weight:600 !important;
-    }
-
-        /* ======================================================
        INTERAKSI MOBILE
        Card tetap terasa hidup saat disentuh
     ====================================================== */

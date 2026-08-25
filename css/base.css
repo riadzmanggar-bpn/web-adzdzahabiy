@@ -59,27 +59,3 @@ img{
     padding:90px 0;
 
 }
-
-.section-title{
-
-    font-size:2.5rem;
-
-    font-weight:700;
-
-    margin-bottom:15px;
-
-}
-
-.section-subtitle{
-
-    max-width:900px;
-
-    margin:auto;
-
-    color:var(--text);
-
-    font-size:1.2rem;
-
-    line-height:1.9;
-
-}

@@ -823,415 +823,52 @@
 
 }
 /* ==========================================================
-   HIGHLIGHT TERBARU
+   NAVBAR - ANIMASI GARIS BAWAH
+   Garis muncul dari pendek → panjang
 ========================================================== */
 
-.highlight-section {
-    padding: 80px 0;
-    background: #f8faf9;
-}
+@media (min-width: 992px){
 
+    .navbar .nav-link{
 
-/* ==========================================================
-   HIGHLIGHT HEADER
-========================================================== */
+        position:relative;
 
-.highlight-header {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 45px;
-}
-
-.highlight-label {
-    display: block;
-
-    color: #E04B5A;
-
-    font-size: 16px;
-    font-weight: 900;
-
-    letter-spacing: 5px;
-
-    margin-bottom: 10px;
-}
-
-.highlight-header h2 {
-    margin: 0 0 15px;
-
-    color: #006B3C;
-
-    font-size: 42px;
-    font-weight: 900;
-}
-
-.highlight-header p {
-    margin: 0;
-
-    color: #555;
-
-    font-size: 19px;
-    line-height: 1.7;
-}
-
-
-/* ==========================================================
-  HIGHLIGHT WRAPPER
-========================================================== */
-
-.highlight-wrapper {
-    position: relative;
-
-    width: 100%;
-    max-width: 1100px;
-
-    height: 560px;
-
-    margin: 0 auto;
-
-    overflow: hidden;
-}
-
-
-/* ==========================================================
-   HIGHLIGHT TRACK
-========================================================== */
-
-.highlight-track {
-    position: relative;
-
-    width: 100%;
-    height: 100%;
-}
-
-
-/* ==========================================================
-   HIGHLIGHT CARD
-========================================================== */
-
-.highlight-card {
-    position: absolute;
-
-    top: 0;
-    left: 50%;
-
-    width: 100%;
-    max-width: 1000px;
-
-    height: 540px;
-
-    transform: translateX(-50%);
-
-    background: #ffffff;
-
-    border-radius: 24px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.10);
-
-    opacity: 0;
-
-    visibility: hidden;
-
-    animation: highlightSlide 10s infinite;
-}
-
-
-/* ==========================================================
-   HIGHLIGHT DELAY CARD
-========================================================== */
-
-.highlight-card:nth-child(1) {
-    animation-delay: 0s;
-}
-
-.highlight-card:nth-child(2) {
-    animation-delay: 5s;
-}
-
-
-/* ==========================================================
-  HIGHLIGHT  ANIMASI CARD
-========================================================== */
-
-@keyframes highlightSlide {
-
-    0% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(-50%) scale(0.98);
     }
 
-    5% {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) scale(1);
+
+    /* Garis bawah */
+
+    .navbar .nav-link::before{
+
+        content:"";
+
+        position:absolute;
+
+        left:50%;
+        bottom:2px;
+
+        width:70%;
+        height:3px;
+
+        background:#17663B;
+
+        border-radius:10px;
+
+        transform:translateX(-50%) scaleX(0);
+
+        transform-origin:center;
+
+        transition:transform .3s ease;
+
     }
 
-    45% {
-        opacity: 1;
-        visibility: visible;
-        transform: translateX(-50%) scale(1);
-    }
 
-    50% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(-50%) scale(0.98);
-    }
+    /* Saat mouse diarahkan */
 
-    100% {
-        opacity: 0;
-        visibility: hidden;
-        transform: translateX(-50%) scale(0.98);
-    }
+    .navbar .nav-link:hover::before{
 
-}
+        transform:translateX(-50%) scaleX(1);
 
-
-/* ==========================================================
-   HIGHLIGHT GAMBAR
-========================================================== */
-
-.highlight-image {
-    position: relative;
-
-    width: 100%;
-    height: 280px;
-
-    overflow: hidden;
-}
-
-.highlight-image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-
-/* ==========================================================
-   HIGHLIGHT BADGE
-========================================================== */
-
-.highlight-badge {
-    position: absolute;
-
-    top: 18px;
-    left: 18px;
-
-    padding: 9px 18px;
-
-    background: #E04B5A;
-    color: #ffffff;
-
-    border-radius: 30px;
-
-    font-size: 14px;
-    font-weight: 800;
-
-    box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-
-/* ==========================================================
-   HIGHLIGHT CONTENT
-========================================================== */
-
-.highlight-content {
-    padding: 25px 30px;
-
-    text-align: left;
-}
-
-.highlight-content small {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: #777;
-
-    font-size: 15px;
-}
-
-.highlight-content h3 {
-    margin: 0 0 10px;
-
-    color: #006B3C;
-
-    font-size: 26px;
-    font-weight: 800;
-
-    line-height: 1.3;
-}
-
-.highlight-content p {
-    margin: 0 0 18px;
-
-    color: #666;
-
-    font-size: 16px;
-
-    line-height: 1.6;
-}
-
-.highlight-link {
-    display: inline-flex;
-
-    align-items: center;
-
-    gap: 8px;
-
-    color: #006B3C;
-
-    font-size: 16px;
-    font-weight: 800;
-
-    text-decoration: none;
-
-    transition: 0.3s ease;
-}
-
-.highlight-link span {
-    transition: transform 0.3s ease;
-}
-
-.highlight-link:hover {
-    color: #E04B5A;
-}
-
-.highlight-link:hover span {
-    transform: translateX(5px);
-}
-
-
-/* ==========================================================
-  HIGHLIGHT RESPONSIVE TABLET
-========================================================== */
-
-@media (max-width: 992px) {
-
-    .highlight-section {
-        padding: 65px 20px;
-    }
-
-    .highlight-wrapper {
-        height: 530px;
-    }
-
-    .highlight-card {
-        height: 510px;
-    }
-
-    .highlight-image {
-        height: 250px;
-    }
-
-    .highlight-header h2 {
-        font-size: 36px;
-    }
-
-}
-
-
-/* ==========================================================
-   HIGHLIGHT RESPONSIVE HP
-========================================================== */
-
-@media (max-width: 768px) {
-
-    .highlight-section {
-        padding: 55px 15px;
-    }
-
-    .highlight-header {
-        margin-bottom: 30px;
-    }
-
-    .highlight-label {
-        font-size: 14px;
-        letter-spacing: 4px;
-    }
-
-    .highlight-header h2 {
-        font-size: 30px;
-    }
-
-    .highlight-header p {
-        font-size: 16px;
-        line-height: 1.6;
-    }
-
-    .highlight-wrapper {
-        height: 500px;
-    }
-
-    .highlight-card {
-        height: 480px;
-
-        border-radius: 18px;
-    }
-
-    .highlight-image {
-        height: 210px;
-    }
-
-    .highlight-content {
-        padding: 20px;
-    }
-
-    .highlight-content h3 {
-        font-size: 21px;
-    }
-
-    .highlight-content p {
-        font-size: 15px;
-    }
-
-    .highlight-badge {
-        top: 14px;
-        left: 14px;
-
-        padding: 8px 15px;
-
-        font-size: 13px;
-    }
-
-}
-
-
-/* ==========================================================
-   HIGHLIGHT HP KECIL
-========================================================== */
-
-@media (max-width: 480px) {
-
-    .highlight-wrapper {
-        height: 480px;
-    }
-
-    .highlight-card {
-        height: 460px;
-    }
-
-    .highlight-image {
-        height: 185px;
-    }
-
-    .highlight-header h2 {
-        font-size: 27px;
-    }
-
-    .highlight-content h3 {
-        font-size: 19px;
-    }
-
-    .highlight-content p {
-        font-size: 14px;
     }
 
 }
