@@ -373,199 +373,300 @@
     background:#17663b;
 }
 
-
 /* ==========================================================
-   MOBILE
+   FOOTER — RESPONSIVE
+   Bootstrap breakpoint
 ========================================================== */
 
-@media (max-width:991.98px){
 
-    .navbar{
-        padding:10px 15px;
+/* ==========================================================
+   iPAD PRO
+   992px — 1199.98px
+
+   Tetap 4 kolom
+========================================================== */
+
+@media (min-width:992px) and (max-width:1199.98px){
+
+    .footer{
+        padding:50px 20px 25px;
     }
 
-    .navbar-brand .logo{
-        width:65px;
-        max-height:58px;
+    .footer .container{
+        max-width:100%;
     }
 
-    .navbar-brand .brand-title{
-        font-size:.9rem;
+    .footer .row{
+        display:grid;
+
+        grid-template-columns:
+            29%
+            22%
+            22%
+            27%;
+
+        column-gap:0;
+        row-gap:0;
     }
 
-    .navbar-brand .brand-subtitle{
-        font-size:.8rem;
+    .footer .row > div{
+        width:100%;
+        padding-left:0;
+        padding-right:0;
     }
 
-    .navbar-collapse{
-        padding-top:15px;
+    /* Logo tidak terlalu keluar di iPad */
+    .footer .row > div:first-child{
+        transform:translateX(-20px);
     }
 
-    .navbar-nav{
-        align-items:flex-start;
+    .footer-logo{
+        width:170px;
     }
 
-    .navbar .nav-link{
-        padding:8px 0;
+    .footer h5{
+        font-size:1.2rem;
+        margin-bottom:12px;
     }
 
-    .navbar .d-flex{
-        margin-top:10px;
-        margin-left:0 !important;
+    .footer-menu li,
+    .footer-menu li a{
+        font-size:.95rem;
+    }
+
+    .footer p{
+        font-size:.95rem;
+        line-height:1.65;
+    }
+
+    .iqaamah-title-footer{
+        font-size:1.4rem;
+    }
+
+    .iqaamah-values-footer{
+        font-size:.52rem;
+    }
+
+    .footer p.footer-tagline{
+        font-size:.95rem;
     }
 
 }
 
 
 /* ==========================================================
-   FOOTER - RESPONSIVE HP & TABLET
+   iPAD MINI
+   768px — 991.98px
+
+   2 × 2 kolom
 ========================================================== */
 
-@media (max-width: 991.98px){
+@media (min-width:768px) and (max-width:991.98px){
+
+    .footer{
+        padding:45px 25px 25px;
+    }
+
+    .footer .container{
+        max-width:100%;
+    }
 
     .footer .row{
         display:grid;
 
         grid-template-columns:1fr 1fr;
 
-        gap:40px 30px;
+        column-gap:50px;
+        row-gap:35px;
     }
 
+    .footer .row > div{
+        width:100%;
+        padding-left:0;
+        padding-right:0;
+    }
 
-    /* Kolom logo */
-
+    /* Logo kembali ke posisi normal */
     .footer .row > div:first-child{
         transform:none;
     }
 
-
     .footer-logo{
-        width:170px;
-
-        margin-left:auto;
-        margin-right:auto;
+        width:155px;
     }
-
-
-    .footer-iqaamah{
-        margin-top:15px;
-    }
-
-
-    .footer p.footer-tagline{
-        font-size:1rem;
-    }
-
-
-    /* Kolom lainnya */
 
     .footer h5{
-        font-size:1.2rem;
+        font-size:1.15rem;
+        margin-bottom:12px;
+    }
+
+    .footer-menu li,
+    .footer-menu li a{
+        font-size:.9rem;
+        line-height:1.5;
+        margin-bottom:9px;
+    }
+
+    .footer p{
+        font-size:.88rem;
+        line-height:1.55;
+        margin-bottom:10px;
+    }
+
+    .footer i{
+        width:18px;
+        margin-right:5px;
+    }
+
+    .footer-iqaamah{
+        margin-top:14px;
+    }
+
+    .iqaamah-title-footer{
+        font-size:1.25rem;
+        letter-spacing:4px;
+    }
+
+    .iqaamah-values-footer{
+        font-size:.46rem;
+        line-height:1.4;
+    }
+
+    .footer p.footer-tagline{
+        font-size:.85rem;
+        margin-top:14px;
+    }
+
+    .footer hr{
+        margin:35px 0 18px;
+    }
+
+    .footer-copy{
+        font-size:.75rem;
     }
 
 }
 
-
 /* ==========================================================
-   FOOTER - HP
+   IPAD MINI — KOREKSI POSISI FOOTER KOLOM PENDIDIKAN
 ========================================================== */
 
-@media (max-width:575.98px){
+@media (min-width: 768px) and (max-width: 991px){
+
+    /* Pendidikan geser ke kanan */
+    .footer .row > div:nth-child(3){
+        transform: translateX(100px);
+    }
+
+    /* Email tetap satu baris dan terpotong */
+    .footer .row > div:nth-child(4) p{
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+}
+
+/* ==========================================================
+   IPAD MINI — GESER MENU & KONTAK KE KIRI
+========================================================== */
+
+@media (min-width: 768px) and (max-width: 991px){
+
+    /* Menu */
+    .footer .row > div:nth-child(2){
+        transform: translateX(-70px);
+    }
+
+    /* Kontak */
+    .footer .row > div:nth-child(4){
+        transform: translateX(-70px);
+    }
+
+}
+
+/* ==========================================================
+   HP
+   < 768px
+
+   1 kolom
+========================================================== */
+
+@media (max-width:767.98px){
 
     .footer{
         padding:45px 20px 25px;
     }
 
-
     .footer .container{
         width:100%;
+        max-width:none;
     }
-
 
     .footer .row{
+        display:grid;
+
         grid-template-columns:1fr;
 
-        gap:35px;
+        row-gap:35px;
     }
-
-
-    /* Semua kolom full width */
 
     .footer .row > div{
         width:100%;
         text-align:center;
+        padding-left:0;
+        padding-right:0;
     }
 
-
-    /* Logo */
+    .footer .row > div:first-child{
+        transform:none;
+    }
 
     .footer-logo{
         width:165px;
-
         margin-left:auto;
         margin-right:auto;
     }
 
-
-    /* Iqaamah */
-
     .footer-iqaamah{
         width:100%;
+        margin-top:15px;
     }
-
 
     .iqaamah-title-footer{
         font-size:1.4rem;
     }
 
-
     .iqaamah-values-footer{
         font-size:.56rem;
+        white-space:normal;
     }
-
-
-    /* Tagline */
 
     .footer p.footer-tagline{
         font-size:.95rem;
         line-height:1.4;
     }
 
-
-    /* Judul kolom */
-
     .footer h5{
         font-size:1.2rem;
     }
 
-
-    /* Menu */
-
     .footer-menu{
         text-align:center;
     }
-
 
     .footer-menu li{
         font-size:1rem;
         margin-bottom:10px;
     }
 
-
-    /* Kontak */
-
     .footer p{
         font-size:.95rem;
         line-height:1.7;
     }
 
-
-    /* Copyright */
-
     .footer hr{
         margin:35px 0 20px;
     }
-
 
     .footer-copy{
         font-size:.8rem;
@@ -573,6 +674,8 @@
     }
 
 }
+
+
 /* ==========================================================
    IQAAMAH DI NAVBAR
 ========================================================== */

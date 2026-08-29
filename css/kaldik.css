@@ -1,0 +1,1178 @@
+/* ==========================================================
+   KALDIK
+   RTQ AL IMAM ADZ DZAHABIY
+========================================================== */
+
+
+/* ==========================================================
+   HERO
+========================================================== */
+
+.kaldik-hero {
+
+    position: relative;
+
+    min-height: 360px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.45),
+            rgba(0,0,0,.30)
+        ),
+        url("../images/hero.jpg")
+        center / cover no-repeat;
+
+}
+
+
+.kaldik-hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    color: #fff;
+
+    padding: 40px 20px;
+
+}
+
+
+.kaldik-hero-label {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: #d8b45a;
+
+}
+
+
+.kaldik-hero h1 {
+
+    margin: 0;
+
+    font-size: clamp(
+        2rem,
+        5vw,
+        3.5rem
+    );
+
+    font-weight: 800;
+
+}
+
+
+.kaldik-hero p {
+
+    margin: 12px 0 0;
+
+    font-size: 1.1rem;
+
+    opacity: .9;
+
+}
+
+
+
+/* ==========================================================
+   PAGE
+========================================================== */
+
+.kaldik-page {
+
+    width: min(
+        1180px,
+        calc(100% - 32px)
+    );
+
+    margin: 0 auto;
+
+    padding: 80px 0 100px;
+
+}
+
+
+
+/* ==========================================================
+   INTRO
+========================================================== */
+
+.kaldik-intro {
+
+    max-width: 720px;
+
+    margin: 0 auto 45px;
+
+    text-align: center;
+
+}
+
+
+.kaldik-intro .section-label,
+.kaldik-information .section-label,
+.kaldik-note .section-label {
+
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #16804d;
+
+    font-size: .78rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+}
+
+
+.kaldik-intro h2 {
+
+    margin: 0 0 12px;
+
+    color: #164b35;
+
+    font-size: clamp(
+        1.8rem,
+        4vw,
+        2.5rem
+    );
+
+}
+
+
+.kaldik-intro p {
+
+    margin: 0;
+
+    color: #666;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* ==========================================================
+   MAIN CALENDAR CARD
+========================================================== */
+
+.kaldik-main-card {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.08);
+
+    border: 1px solid #e8eee9;
+
+}
+
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.kaldik-main-header {
+
+    display: grid;
+
+    grid-template-columns: 55px 1fr 55px;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 25px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #145c3b,
+            #0c442c
+        );
+
+    color: #fff;
+
+}
+
+
+.kaldik-main-title {
+
+    text-align: center;
+
+}
+
+
+.kaldik-main-title h2 {
+
+    margin: 0;
+
+    font-size: 1.8rem;
+
+    font-weight: 800;
+
+}
+
+
+.kaldik-main-title span {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color: #d9c27a;
+
+    font-size: .95rem;
+
+    font-weight: 600;
+
+}
+
+
+.kaldik-main-nav {
+
+    width: 44px;
+
+    height: 44px;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.08);
+
+    color: #fff;
+
+    font-size: 1.1rem;
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        transform .2s ease;
+
+}
+
+
+.kaldik-main-nav:hover {
+
+    background: rgba(255,255,255,.18);
+
+    transform: scale(1.05);
+
+}
+
+
+
+/* ==========================================================
+   GREGORIAN RANGE
+========================================================== */
+
+.kaldik-gregorian-range {
+
+    padding: 14px 20px;
+
+    text-align: center;
+
+    color: #68756e;
+
+    font-size: .9rem;
+
+    background: #f7faf8;
+
+    border-bottom: 1px solid #e8eee9;
+
+}
+
+
+
+/* ==========================================================
+   WEEKDAYS
+========================================================== */
+
+.kaldik-weekdays {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    background: #f1f5f2;
+
+    border-bottom: 1px solid #e2e9e4;
+
+}
+
+
+.kaldik-weekdays div {
+
+    padding: 15px 5px;
+
+    text-align: center;
+
+    color: #426052;
+
+    font-size: .82rem;
+
+    font-weight: 700;
+
+}
+
+
+.kaldik-weekdays div:first-child,
+.kaldik-weekdays div:last-child {
+
+    color: #a34b4b;
+
+}
+
+
+
+/* ==========================================================
+   DAYS
+========================================================== */
+
+.kaldik-days {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    padding: 12px;
+
+    gap: 6px;
+
+}
+
+
+.kaldik-day {
+
+    min-height: 85px;
+
+    padding: 9px;
+
+    position: relative;
+
+    border-radius: 10px;
+
+    border: 1px solid #edf1ee;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        border-color .18s ease;
+
+}
+
+
+.kaldik-day:hover {
+
+    transform: translateY(-2px);
+
+    border-color: #b8d4c3;
+
+    box-shadow:
+        0 5px 14px rgba(0,0,0,.07);
+
+}
+
+
+.kaldik-day.empty {
+
+    background: #fafbfa;
+
+    cursor: default;
+
+    border-color: transparent;
+
+}
+
+
+.kaldik-day.empty:hover {
+
+    transform: none;
+
+    box-shadow: none;
+
+}
+
+
+.kaldik-day-number {
+
+    font-size: 1rem;
+
+    font-weight: 800;
+
+    color: #254b38;
+
+}
+
+
+.kaldik-day-gregorian {
+
+    margin-top: 3px;
+
+    color: #8a958e;
+
+    font-size: .7rem;
+
+}
+
+
+.kaldik-day-event {
+
+    margin-top: 7px;
+
+    font-size: .68rem;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+}
+
+
+.kaldik-day.selected {
+
+    outline: 2px solid #16804d;
+
+    outline-offset: -2px;
+
+}
+
+
+.kaldik-day.today {
+
+    box-shadow:
+        inset 0 0 0 2px #d8b45a;
+
+}
+
+
+
+/* ==========================================================
+   EVENT DETAIL
+========================================================== */
+
+.kaldik-event-detail {
+
+    padding: 25px 30px;
+
+    border-top: 1px solid #e8eee9;
+
+    background: #fbfcfb;
+
+}
+
+
+.kaldik-event-empty {
+
+    text-align: center;
+
+    color: #7b857f;
+
+    font-size: .9rem;
+
+    padding: 15px;
+
+}
+
+
+.kaldik-event-date {
+
+    margin-bottom: 15px;
+
+}
+
+
+.kaldik-event-date strong {
+
+    display: block;
+
+    color: #164b35;
+
+    font-size: 1.1rem;
+
+}
+
+
+.kaldik-event-date span {
+
+    color: #7a857e;
+
+    font-size: .85rem;
+
+}
+
+
+.kaldik-event-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+.kaldik-event {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+
+    background: #fff;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 10px;
+
+}
+
+
+.kaldik-event-color {
+
+    flex: 0 0 9px;
+
+    width: 9px;
+
+    height: 35px;
+
+    border-radius: 5px;
+
+}
+
+
+.kaldik-event-name {
+
+    color: #30473b;
+
+    font-weight: 700;
+
+}
+
+
+.kaldik-event-type {
+
+    margin-top: 3px;
+
+    color: #89928d;
+
+    font-size: .75rem;
+
+}
+
+
+
+/* ==========================================================
+   LEGEND
+========================================================== */
+
+.kaldik-information {
+
+    margin-top: 70px;
+
+}
+
+
+.kaldik-information-header {
+
+    margin-bottom: 25px;
+
+}
+
+
+.kaldik-information-header h2 {
+
+    margin: 0 0 10px;
+
+    color: #164b35;
+
+}
+
+
+.kaldik-information-header p {
+
+    margin: 0;
+
+    color: #707a74;
+
+    line-height: 1.7;
+
+}
+
+
+.kaldik-legend-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 12px;
+
+}
+
+
+.kaldik-legend-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 16px;
+
+    border: 1px solid #e5ebe7;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    color: #43534a;
+
+    font-size: .88rem;
+
+}
+
+
+.kaldik-color {
+
+    width: 14px;
+
+    height: 14px;
+
+    flex: 0 0 14px;
+
+    border-radius: 50%;
+
+}
+
+
+
+/* ==========================================================
+   WARNA KALDIK
+========================================================== */
+
+.kaldik-color.administrasi {
+    background: #607d8b;
+}
+
+.kaldik-color.kbm {
+    background: #16804d;
+}
+
+.kaldik-color.uhab {
+    background: #2196f3;
+}
+
+.kaldik-color.ujian {
+    background: #9c27b0;
+}
+
+.kaldik-color.libur {
+    background: #e53935;
+}
+
+.kaldik-color.dauroh {
+    background: #f59e0b;
+}
+
+.kaldik-color.classmeeting {
+    background: #795548;
+}
+
+.kaldik-color.rapot {
+    background: #607d8b;
+}
+
+.kaldik-color.musabaqoh {
+    background: #00897b;
+}
+
+.kaldik-color.pendaftaran {
+    background: #c0a04b;
+}
+
+
+
+/* ==========================================================
+   NOTE
+========================================================== */
+
+.kaldik-note {
+
+    margin-top: 50px;
+
+    padding: 28px 30px;
+
+    border-left: 4px solid #d8b45a;
+
+    border-radius: 0 12px 12px 0;
+
+    background: #f7f5ed;
+
+}
+
+
+.kaldik-note h3 {
+
+    margin: 0 0 8px;
+
+    color: #164b35;
+
+}
+
+
+.kaldik-note p {
+
+    margin: 7px 0;
+
+    color: #68736c;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 768px) {
+
+    .kaldik-page {
+
+        width:
+            min(
+                100% - 20px,
+                680px
+            );
+
+        padding:
+            55px 0 70px;
+
+    }
+
+
+    .kaldik-hero {
+
+        min-height: 280px;
+
+    }
+
+
+    .kaldik-main-header {
+
+        grid-template-columns:
+            45px 1fr 45px;
+
+        padding:
+            20px 15px;
+
+    }
+
+
+    .kaldik-main-nav {
+
+        width: 38px;
+
+        height: 38px;
+
+    }
+
+
+    .kaldik-main-title h2 {
+
+        font-size: 1.4rem;
+
+    }
+
+
+    .kaldik-weekdays div {
+
+        font-size: .7rem;
+
+        padding: 11px 2px;
+
+    }
+
+
+    .kaldik-days {
+
+        padding: 7px;
+
+        gap: 4px;
+
+    }
+
+
+    .kaldik-day {
+
+        min-height: 65px;
+
+        padding: 6px;
+
+    }
+
+
+    .kaldik-day-number {
+
+        font-size: .85rem;
+
+    }
+
+
+    .kaldik-day-gregorian {
+
+        font-size: .6rem;
+
+    }
+
+
+    .kaldik-day-event {
+
+        display: none;
+
+    }
+
+
+    .kaldik-legend-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+    }
+
+
+    .kaldik-event-detail {
+
+        padding: 20px 15px;
+
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .kaldik-hero-content {
+
+        padding:
+            30px 15px;
+
+    }
+
+
+    .kaldik-hero h1 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .kaldik-hero p {
+
+        font-size: .9rem;
+
+    }
+
+
+    .kaldik-legend-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .kaldik-day {
+
+        min-height: 55px;
+
+    }
+
+}
+/* ==========================================================
+   KALDIK DATE GRID
+========================================================== */
+
+.kaldik-days {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    min-height: 260px;
+
+}
+
+
+.kaldik-day {
+
+    min-height: 70px;
+
+    padding: 14px;
+
+    border-right:
+        1px solid #e5ebe8;
+
+    border-bottom:
+        1px solid #e5ebe8;
+
+    background: #ffffff;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    justify-content: flex-end;
+
+    cursor: default;
+
+    transition:
+        background .2s ease;
+
+}
+
+
+.kaldik-day:hover {
+
+    background:
+        #f5faf7;
+
+}
+
+
+.kaldik-day-empty {
+
+    background:
+        #fafcfb;
+
+    cursor: default;
+
+}
+
+
+.kaldik-day-hijri {
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color:
+        #174f3b;
+
+}
+
+
+.kaldik-main-nav:disabled {
+
+    opacity: .35;
+
+    cursor: not-allowed;
+
+}
+/* ==========================================================
+   LAYOUT TANGGAL + KEGIATAN
+========================================================== */
+
+.kaldik-day {
+
+    min-height: 70px;
+
+    padding: 10px;
+
+    border-right:
+        1px solid #e5ebe8;
+
+    border-bottom:
+        1px solid #e5ebe8;
+
+    background: #ffffff;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    cursor: default;
+
+    transition:
+        background .2s ease;
+
+}
+
+
+/* ==========================================================
+   ANGKA TANGGAL
+========================================================== */
+
+.kaldik-day-hijri {
+
+    align-self: flex-end;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    color: #174f3b;
+
+}
+
+
+/* ==========================================================
+   KETERANGAN KEGIATAN
+========================================================== */
+
+.kaldik-day-event {
+
+    display: block;
+
+    margin-top: 8px;
+
+    padding: 4px 5px;
+
+    border-radius: 5px;
+
+    font-size: .68rem;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    text-align: left;
+
+}
+/* ==========================================================
+   MOBILE FIX
+   Mencegah kalender melebar keluar layar
+========================================================== */
+
+.kaldik-days {
+
+    width: 100%;
+
+    min-width: 0;
+
+    grid-template-columns:
+        repeat(7, minmax(0, 1fr));
+
+    box-sizing: border-box;
+
+}
+
+
+.kaldik-day {
+
+    min-width: 0;
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+}
+
+
+.kaldik-day-hijri {
+
+    min-width: 0;
+
+}
+
+
+.kaldik-day-event {
+
+    min-width: 0;
+
+    max-width: 100%;
+
+    overflow-wrap: anywhere;
+
+    word-break: normal;
+
+}
+
+
+@media (max-width: 480px) {
+
+    .kaldik-days {
+
+        padding: 5px;
+
+        gap: 3px;
+
+    }
+
+
+    .kaldik-day {
+
+        min-height: 60px;
+
+        padding: 7px 5px;
+
+        border-radius: 7px;
+
+    }
+
+
+    .kaldik-day-hijri {
+
+        font-size: 14px;
+
+    }
+
+
+    .kaldik-day-event {
+
+        margin-top: 6px;
+
+        font-size: .58rem;
+
+        line-height: 1.2;
+
+    }
+
+}
