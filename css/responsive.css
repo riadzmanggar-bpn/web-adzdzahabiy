@@ -1569,3 +1569,93 @@
 
 }
 
+/* ==========================================================
+   RESPONSIVE — DATA SANTRI
+========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .student-data-section {
+        padding: 55px 0;
+    }
+
+
+    .student-data-section h2 {
+        font-size: 1.7rem;
+    }
+
+
+    .student-data-section .section-subtitle {
+        padding: 0 15px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+
+    /* TOTAL */
+
+    .student-total-summary {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+
+    .student-total-item {
+        padding: 16px 18px;
+    }
+
+
+    /* CARD */
+
+    .student-summary-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+
+    .student-summary-card {
+        padding: 20px;
+    }
+
+
+    .student-summary-header h3 {
+        font-size: 1.15rem;
+    }
+
+
+    .student-class-row {
+        padding: 12px 0;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .student-data-section {
+        padding: 45px 0;
+    }
+
+
+    .student-summary-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+
+    .student-total-item {
+        padding: 15px;
+    }
+
+
+    .student-class-row > span {
+        font-size: 0.9rem;
+    }
+
+
+    .student-class-row > strong {
+        font-size: 0.9rem;
+    }
+
+}

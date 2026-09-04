@@ -29,7 +29,7 @@
             rgba(255,255,255,.08) 75%,
             rgba(255,255,255,0) 100%
         ),
-        url("../images/berita/Pantai-Tanah-Merah-Samboja-Google.jpg");
+        url("../images/berita/class-meeting-camping-senja.jpeg");
 
     background-size:cover;
 
@@ -305,7 +305,7 @@
                 rgba(255,255,255,.25) 75%,
                 rgba(255,255,255,0) 100%
             ),
-            url("../images/berita/GambarPemandanganBakau.jpg");
+            url("../images/berita/class-meeting-camping-senja.jpeg");
 
         background-position:center;
 
@@ -352,7 +352,7 @@
                 rgba(255,255,255,.55) 68%,
                 rgba(255,255,255,.15) 100%
             ),
-            url("../images/berita/GambarPemandanganBakau.jpg");
+            url("../images/berita/class-meeting-camping-senja.jpeg");
 
         background-position:center;
     
@@ -462,3 +462,185 @@
     }
 
 }
+/* ==========================================================
+   FOTO + NARASI DALAM BOX
+========================================================== */
+
+.news-feature-box{
+
+    display:grid;
+
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+
+    gap:30px;
+
+    align-items:center;
+
+    margin:40px 0;
+
+    padding:25px;
+
+    background:#f8faf9;
+
+    border:1px solid #e2e8e5;
+
+    border-radius:18px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.05);
+
+}
+
+
+/* ==========================================================
+   FOTO
+========================================================== */
+
+.news-feature-image{
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background:#fff;
+
+}
+
+
+.news-feature-image img{
+
+    width:100%;
+
+    height:auto;
+
+    display:block;
+
+    border-radius:14px;
+
+}
+
+
+/* ==========================================================
+   KETERANGAN FOTO
+========================================================== */
+
+.news-feature-caption{
+
+    padding:12px 15px;
+
+    color:#666;
+
+    font-size:.9rem;
+
+    line-height:1.6;
+
+    text-align:center;
+
+}
+
+
+/* ==========================================================
+   TEKS DI SEBELAH FOTO
+========================================================== */
+
+.news-feature-text{
+
+    padding:5px 10px;
+
+}
+
+
+.news-feature-text p{
+
+    margin:0 0 18px;
+
+    color:#555;
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+}
+
+
+.news-feature-text p:last-child{
+
+    margin-bottom:0;
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width:991px){
+
+    .news-feature-box{
+
+        grid-template-columns:1fr 1fr;
+
+        gap:22px;
+
+        padding:20px;
+
+    }
+
+
+    .news-feature-text p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:767px){
+
+    .news-feature-box{
+
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+        margin:30px 0;
+
+        padding:15px;
+
+        border-radius:14px;
+
+    }
+
+
+    .news-feature-text{
+
+        padding:0 5px;
+
+    }
+
+
+    .news-feature-text p{
+
+        font-size:1rem;
+
+        line-height:1.8;
+
+    }
+
+
+    .news-feature-caption{
+
+        font-size:.85rem;
+
+    }
+
+}
+/* ==========================================================
+   END FOTO + NARASI DALAM BOX
+========================================================== */

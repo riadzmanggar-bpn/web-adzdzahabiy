@@ -769,6 +769,28 @@
 
 }
 
+/* =====================================
+   HOVER CARD VISI - MISI
+===================================== */
+
+.info-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+.info-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 16px 35px rgba(0,0,0,.12);
+
+    border-color: #d5e4dc;
+
+}
+
 
 /* JUDUL CARD */
 
@@ -940,6 +962,606 @@
     color: #B5AA5A;
     font-weight: 1000;
 }
+
+/* ==========================================================
+   DATA SANTRI
+   RTQ AL IMAM ADZ DZAHABIY
+========================================================== */
+
+.student-data-section {
+    padding: 85px 0;
+    background: #ffffff;
+}
+
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.student-data-section .section-title {
+    text-align: center;
+}
+
+.student-data-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #1f2933;
+}
+
+.student-data-section .section-subtitle {
+    max-width: 850px;
+    margin: 0 auto;
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   STATISTIK UTAMA
+========================================================== */
+
+.student-total-summary {
+
+    display: grid;
+
+    grid-template-columns:
+        1.2fr
+        1fr
+        1fr;
+
+    gap: 20px;
+
+    margin-bottom: 50px;
+}
+
+
+/* CARD STATISTIK */
+
+.student-total-item {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    min-height: 105px;
+
+    padding: 22px 26px;
+
+    background: #f8faf9;
+
+    border: 1px solid #e7ebe8;
+
+    border-radius: 16px;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.student-total-item:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ICON */
+
+.student-total-item > i {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 12px;
+
+    background: #edf3ef;
+
+    color: #315b45;
+
+    font-size: 1.35rem;
+}
+
+
+/* LABEL */
+
+.student-total-item span {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #6b7280;
+
+    font-size: 0.88rem;
+}
+
+
+/* ANGKA */
+
+.student-total-item strong {
+
+    display: block;
+
+    color: #1f2933;
+
+    font-size: 1.45rem;
+
+    font-weight: 700;
+
+    line-height: 1.2;
+}
+
+
+/* ==========================================================
+   GRID JENJANG
+========================================================== */
+
+.student-summary-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+
+    align-items: start;
+}
+
+
+/* ==========================================================
+   CARD JENJANG
+========================================================== */
+
+.student-summary-card {
+
+    position: relative;
+
+    padding: 26px 28px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.045);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.student-summary-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.07);
+}
+
+
+/* ==========================================================
+   HEADER JENJANG
+========================================================== */
+
+.student-summary-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 20px;
+}
+
+
+.student-summary-icon {
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 13px;
+
+    background: #f1f4f2;
+
+    color: #315b45;
+
+    font-size: 1.25rem;
+}
+
+
+.student-summary-header h3 {
+
+    margin: 0;
+
+    color: #1f2933;
+
+    font-size: 1.3rem;
+
+    font-weight: 600;
+}
+
+
+.student-summary-header span {
+
+    display: block;
+
+    margin-top: 2px;
+
+    color: #8a9299;
+
+    font-size: 0.82rem;
+}
+
+
+/* ==========================================================
+   KHUSUS PUTRA / PUTRI
+========================================================== */
+
+.student-gender-note {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-bottom: 14px;
+
+    padding: 5px 11px;
+
+    border-radius: 20px;
+
+    background: #f5f6f5;
+
+    color: #65706a;
+
+    font-size: 0.78rem;
+
+    font-weight: 500;
+}
+
+
+/* ==========================================================
+   LIST KELAS
+========================================================== */
+
+.student-class-list {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.student-class-row {
+
+    position: relative;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #edf0ee;
+}
+
+
+.student-class-row:first-child {
+    padding-top: 8px;
+}
+
+
+.student-class-row:last-child {
+
+    border-bottom: none;
+
+    padding-bottom: 8px;
+}
+
+
+/* NAMA KELAS */
+
+.student-class-row > span {
+
+    display: inline-block;
+
+    color: #27312c;
+
+    font-size: 0.94rem;
+
+    font-weight: 500;
+}
+
+
+/* JUMLAH */
+
+.student-class-row > strong {
+
+    float: right;
+
+    color: #1f2933;
+
+    font-size: 0.95rem;
+
+    font-weight: 700;
+}
+
+
+.student-class-row > strong small {
+
+    color: #89918d;
+
+    font-size: 0.75rem;
+
+    font-weight: 400;
+}
+
+
+/* ==========================================================
+   DETAIL PUTRA / PUTRI
+========================================================== */
+
+.student-detail {
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #8a9290;
+
+    font-size: 0.78rem;
+
+    line-height: 1.4;
+}
+
+
+/* ==========================================================
+   TOTAL JENJANG
+========================================================== */
+
+.student-summary-total {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 17px;
+
+    padding-top: 17px;
+
+    border-top: 1px solid #e5e9e6;
+}
+
+
+.student-summary-total span {
+
+    color: #58615c;
+
+    font-size: 0.88rem;
+
+    font-weight: 600;
+}
+
+
+.student-summary-total strong {
+
+    color: #1f2933;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   CARD TERAKHIR
+   Supaya MU tidak terlihat terlalu kecil
+========================================================== */
+
+.student-summary-card:last-child {
+
+    max-width: 100%;
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 991.98px) {
+
+    .student-total-summary {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+    }
+
+
+    .student-summary-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .student-data-section {
+
+        padding: 60px 0;
+
+    }
+
+
+    .student-data-section h2 {
+
+        font-size: 1.75rem;
+
+    }
+
+
+    .student-data-section .section-subtitle {
+
+        padding: 0 15px;
+
+        font-size: 0.88rem;
+
+        line-height: 1.65;
+
+    }
+
+
+    /* STATISTIK */
+
+    .student-total-summary {
+
+        margin-bottom: 32px;
+
+    }
+
+
+    .student-total-item {
+
+        min-height: 85px;
+
+        padding: 17px 18px;
+
+    }
+
+
+    .student-total-item > i {
+
+        width: 42px;
+        height: 42px;
+
+        font-size: 1.15rem;
+
+    }
+
+
+    .student-total-item strong {
+
+        font-size: 1.3rem;
+
+    }
+
+
+    /* CARD */
+
+    .student-summary-card {
+
+        padding: 21px 20px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .student-summary-header {
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .student-summary-header h3 {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    .student-class-row {
+
+        padding: 13px 0;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE KECIL
+========================================================== */
+
+@media (max-width: 480px) {
+
+    .student-data-section {
+
+        padding: 50px 0;
+
+    }
+
+
+    .student-data-section h2 {
+
+        font-size: 1.6rem;
+
+    }
+
+
+    .student-summary-card {
+
+        padding: 19px 17px;
+
+    }
+
+
+    .student-summary-icon {
+
+        width: 43px;
+        height: 43px;
+
+    }
+
+
+    .student-class-row > span {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .student-class-row > strong {
+
+        font-size: 0.9rem;
+
+    }
+
+}
+
 /* ==========================================================
    RAUDHATUL ATHFAL
    KHUSUS HALAMAN RA

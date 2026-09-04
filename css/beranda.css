@@ -268,7 +268,7 @@
 
     visibility: hidden;
 
-    animation: highlightSlide 10s infinite;
+    animation: highlightSlide 20s infinite;
 }
 
 
@@ -283,10 +283,17 @@
 .highlight-card:nth-child(2) {
     animation-delay: 5s;
 }
+.highlight-card:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.highlight-card:nth-child(4) {
+    animation-delay: 15s;
+}
 
 
 /* ==========================================================
-  HIGHLIGHT  ANIMASI CARD
+   HIGHLIGHT ANIMASI CARD
 ========================================================== */
 
 @keyframes highlightSlide {
@@ -297,19 +304,19 @@
         transform: translateX(-50%) scale(0.98);
     }
 
-    5% {
+    3% {
         opacity: 1;
         visibility: visible;
         transform: translateX(-50%) scale(1);
     }
 
-    45% {
+    30% {
         opacity: 1;
         visibility: visible;
         transform: translateX(-50%) scale(1);
     }
 
-    50% {
+    33% {
         opacity: 0;
         visibility: hidden;
         transform: translateX(-50%) scale(0.98);
