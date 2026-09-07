@@ -1,0 +1,135 @@
+/* ==========================================================
+   TOMBOL KEMBALI
+========================================================== */
+
+.back-button-wrapper {
+
+    width:100%;
+
+    padding:10px 0;
+
+    background:#fff;
+
+}
+
+
+/* ==========================================================
+   BUTTON
+========================================================== */
+
+.back-button {
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    margin-left:15px;
+
+    padding:7px 15px;
+
+    border:1px solid #d9e4df;
+
+    border-radius:30px;
+
+    background:#fff;
+
+    color:#075c48;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    line-height:1;
+
+    cursor:pointer;
+
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.back-button-icon {
+
+    font-size:19px;
+
+    line-height:1;
+
+    transition:transform .25s ease;
+
+}
+
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.back-button:hover {
+
+    background:#075c48;
+
+    color:#fff;
+
+    transform:translateX(-2px);
+
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+
+}
+
+
+.back-button:hover .back-button-icon {
+
+    transform:translateX(-3px);
+
+}
+
+
+/* ==========================================================
+   ACTIVE
+========================================================== */
+
+.back-button:active {
+
+    transform:translateX(0);
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:767px) {
+
+    .back-button-wrapper {
+
+        padding:8px 0;
+
+    }
+
+    .back-button {
+
+        margin-left:12px;
+
+        padding:7px 13px;
+
+        font-size:13px;
+
+    }
+
+    .back-button-icon {
+
+        font-size:17px;
+
+    }
+
+}

@@ -134,6 +134,7 @@
 <section class="hero">
 
     <div class="container">
+    
 
         <div class="row align-items-center">
 
@@ -141,7 +142,8 @@
                  HERO CONTENT
             ================================================== -->
 
-            <div class="col-lg-7">
+            <div class="col-lg-7"
+                data-reveal="right">
 
                 <h1>
                     Mencetak Generasi Qur'ani<br>
@@ -163,16 +165,19 @@
 
             </div>
 
-
             <!-- ==================================================
-                 KALENDER HARI INI
+                KALENDER HARI INI
             ================================================== -->
 
-            <div class="col-lg-5">
+            <div class="col-lg-5"
+                data-reveal="left"
+                data-delay="0.1s">
 
                 <div class="home-date">
 
-                    <div class="home-date-card">
+                    <a
+                        href="pages/kaldik.html"
+                        class="home-date-card">
 
                         <div
                             id="home-date-weekday"
@@ -205,7 +210,7 @@
                         >
                         </div>
 
-                    </div>
+                    </a>
 
 
                     <a
@@ -235,7 +240,9 @@
 
     <div class="container">
 
-        <div class="highlight-header">
+        <div class="highlight-header"
+            data-reveal="zoom"
+            data-delay="0.1s">
 
             <span class="highlight-label">
                 TERBARU
@@ -285,13 +292,13 @@
                         </small>
 
                         <h3>
-                            Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy 29-30 Agustus 2026
+                            Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy 
                         </h3>
 
                         <p>
-                            Kegiatan kebersamaan dan aktivitas santri
-                            dalam rangka mempererat ukhuwah di lingkungan
-                            Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy.
+                            Kegiatan kebersamaan santri
+                            selepas ujian semester, 29-30 Agustus 2026, Tanah Merah,
+                            Samboja
                         </p>
 
                         <a
@@ -428,9 +435,7 @@
                         </h3>
 
                         <p>
-                            Menyambut pelaksanaan Musabaqah Al-Qur'an
-                            Al-Imam Asy-Syathiby ke-2 Se-Borneo pada 14-16 Rabiul Akhir 1448 H / 25 - 27 September 2026
-                            di Masjid Al-Anshar RTQ Al-Imam Adz-Dzahabiy, Balikpapan. 
+                            14-16 Rabiul Akhir 1448 H / 25 - 27 September 2026, Masjid Al-Anshar, Balikpapan. 
                         </p>
 
                         <a
@@ -454,7 +459,6 @@
     </div>
 
 </section>
-
 <!-- ==========================================================
      PROGRAM PENDIDIKAN
 ========================================================== -->
@@ -463,7 +467,10 @@
 
     <div class="container">
 
-        <div class="text-center mb-5">
+
+        <div class="text-center mb-5"
+             data-reveal
+             data-delay="0.1s">
 
             <h2>
                 Program Pendidikan
@@ -475,68 +482,159 @@
 
         </div>
 
+
         <div class="row g-4">
 
-            <!-- RA/RB -->
-            <div class="col-lg-3 col-md-6">
 
-                <div class="program-box">
+            <!-- ==================================================
+                 RA
+            ================================================== -->
 
-                    <i class="bi bi-backpack2 program-icon"></i>
+            <div class="col-lg col-md-6"
+                 data-reveal="left"
+                 data-delay="0.15s">
 
-                    <h4>RA & RB</h4>
+                <a href="pages/ra.html"
+                   class="program-box-link">
 
-                    <p><a href="pages/ra.html">Raudhatul Athfal</a></p>
-                    <p><a href="pages/rb.html">Raudhatul Banaat</a></p>
+                    <div class="program-box">
 
-                </div>
+                        <i class="bi bi-backpack2 program-icon"></i>
 
-            </div>
+                        <h4>
+                            RA
+                        </h4>
 
-            <!-- MU -->
-            <div class="col-lg-3 col-md-6">
+                        <p>
+                            Raudhatul Athfal
+                        </p>
 
-                <div class="program-box">
+                    </div>
 
-                    <i class="bi bi-book program-icon"></i>
-
-                    <h4>MU</h4>
-
-                    <p><a href="pages/mu.html">Marhalah Ula</a></p>
-
-                </div>
-
-            </div>
-
-            <!-- MW -->
-            <div class="col-lg-3 col-md-6">
-
-                <div class="program-box">
-
-                    <i class="bi bi-mortarboard program-icon"></i>
-
-                    <h4>MW</h4>
-
-                    <p><a href="pages/mw.html">Marhalah Wustho</a></p>
-
-                </div>
+                </a>
 
             </div>
 
-            <!-- MUY -->
-            <div class="col-lg-3 col-md-6">
 
-                <div class="program-box">
+            <!-- ==================================================
+                 RB
+            ================================================== -->
 
-                    <i class="bi bi-building program-icon"></i>
+            <div class="col-lg col-md-6"
+                 data-reveal="right"
+                 data-delay="0.2s">
 
-                    <h4>MUY</h4>
+                <a href="pages/rb.html"
+                   class="program-box-link">
 
-                    <p><a href="pages/muy.html">Marhalah Ulya</a></p>
+                    <div class="program-box">
 
-                </div>
+                        <i class="bi bi-backpack2 program-icon"></i>
+
+                        <h4>
+                            RB
+                        </h4>
+
+                        <p>
+                            Raudhatul Banaat
+                        </p>
+
+                    </div>
+
+                </a>
 
             </div>
+
+
+            <!-- ==================================================
+                 ULA
+            ================================================== -->
+
+            <div class="col-lg col-md-6"
+                 data-reveal="left"
+                 data-delay="0.3s">
+
+                <a href="pages/mu.html"
+                   class="program-box-link">
+
+                    <div class="program-box">
+
+                        <i class="bi bi-book program-icon"></i>
+
+                        <h4>
+                            ULA
+                        </h4>
+
+                        <p>
+                            Marhalah Ula
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 WUSTHO
+            ================================================== -->
+
+            <div class="col-lg col-md-6"
+                 data-reveal="right"
+                 data-delay="0.4s">
+
+                <a href="pages/mw.html"
+                   class="program-box-link">
+
+                    <div class="program-box">
+
+                        <i class="bi bi-mortarboard program-icon"></i>
+
+                        <h4>
+                            WUSTHO
+                        </h4>
+
+                        <p>
+                            Marhalah Wustho
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
+
+            <!-- ==================================================
+                 ULYA
+            ================================================== -->
+
+            <div class="col-lg col-md-6"
+                 data-reveal="left"
+                 data-delay="0.5s">
+
+                <a href="pages/muy.html"
+                   class="program-box-link">
+
+                    <div class="program-box">
+
+                        <i class="bi bi-building program-icon"></i>
+
+                        <h4>
+                            ULYA
+                        </h4>
+
+                        <p>
+                            Marhalah Ulya
+                        </p>
+
+                    </div>
+
+                </a>
+
+            </div>
+
 
         </div>
 
@@ -546,7 +644,6 @@
 
 <!-- END PROGRAM PENDIDIKAN -->
 
-
 <!-- ==========================================================
      MENGAPA MEMILIH RTQ
 ========================================================== -->
@@ -555,7 +652,8 @@
 
     <div class="container">
 
-        <div class="text-center mb-5">
+        <div class="text-center mb-5"
+             data-reveal="0s">
 
             <h2>Mengapa Memilih Rumah Tahfizhul Quran <br>
                 Al Imam Adz Dzahabiy?</h2>
@@ -569,7 +667,9 @@
 
         <div class="row g-4">
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal="left"
+                data-delay="0.1s">
 
                 <div class="why-box">
 
@@ -586,7 +686,9 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.2s">
 
                 <div class="why-box">
 
@@ -603,7 +705,9 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6">
+           <div class="col-lg-4 col-md-6"
+                data-reveal="right"
+                data-delay="0.3s">
 
                 <div class="why-box">
 
@@ -620,7 +724,9 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal="left"
+                data-delay="0.4s">
 
                 <div class="why-box">
                     
@@ -637,7 +743,9 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.5s">
 
                 <div class="why-box">
 
@@ -654,7 +762,9 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal="right"
+                data-delay="0.6s">
 
                 <div class="why-box">
 
@@ -687,12 +797,13 @@
 
     <div class="container">
 
-        <div class="text-center mb-5">
+        <div class="text-center mb-5"
+            data-reveal>
 
             <h2>Jadwal Taklim</h2>
 
             <p class="section-subtitle">
-                Kajian rutin mingguan
+                Kajian rutin mingguan<br>
                 <strong>Ba'da Maghrib – Isya</strong>
             </p>
 
@@ -701,7 +812,9 @@
         <div class="row g-4">
 
             <!-- AHAD -->
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal="left"
+                data-delay="0.1s">
 
                 <div class="taklim-card">
 
@@ -729,7 +842,9 @@
 
 
             <!-- SENIN -->
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+            data-reveal
+            data-delay="0.2s">
 
                 <div class="taklim-card">
 
@@ -757,7 +872,9 @@
 
 
             <!-- SELASA -->
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+            data-reveal="right"
+            data-delay="0.3s">
 
                 <div class="taklim-card">
 
@@ -785,7 +902,9 @@
 
 
             <!-- RABU -->
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal="left"
+                data-delay="0.4s">
 
                 <div class="taklim-card">
 
@@ -813,7 +932,9 @@
 
 
             <!-- KAMIS -->
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.5s">
 
                 <div class="taklim-card">
 
@@ -841,7 +962,9 @@
 
 
             <!-- JUMAT -->
-            <div class="col-lg-4 col-md-6">
+            <div class="col-lg-4 col-md-6"
+                data-reveal=""right"
+                data-delay="0.6s">
 
                 <div class="taklim-card">
 
@@ -871,7 +994,9 @@
 
 
         <!-- SABTU -->
-        <div class="taklim-saturday">
+        <div class="taklim-saturday"
+            data-reveal
+            data-delay="0.7s">
 
             <div class="taklim-card">
 
@@ -898,7 +1023,9 @@
         </div>
 
 
-        <div class="text-center taklim-more">
+        <div class="text-center taklim-more"
+            data-reveal
+            data-delay="0.8s">
 
             <a href="pages/jadwal-taklim.html"
                class="btn btn-success">
@@ -920,7 +1047,10 @@
      FOOTER
 ========================================================== -->
 
-<div id="global-footer"></div>
+<div id="global-footer"
+    data-reveal="zoom">
+
+</div>
 
 <!-- END FOOTER -->
 
@@ -930,6 +1060,7 @@
 <script src="js/kaldik.js"></script>
 <script src="js/beranda-kaldik.js"></script>
 <script src="js/navbar.js"></script>
+<script src="js/scroll-reveal.js"></script>
 
 </body>
 </html>

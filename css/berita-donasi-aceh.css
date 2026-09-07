@@ -1,11 +1,5 @@
 /* ==========================================================
-   BERITA CLASSMEETING
-   RTQ AL IMAM ADZ DZAHABIY
-========================================================== */
-
-
-/* ==========================================================
-   HERO BERITA CLASSMEETING
+   HERO BERITA
 ========================================================== */
 
 .berita-detail-hero{
@@ -20,7 +14,27 @@
 
     overflow:hidden;
 
-    background-image:
+    background-size:cover;
+
+    background-position:center;
+
+    background-repeat:no-repeat;
+}
+
+
+/* ==========================================================
+   OVERLAY HERO
+========================================================== */
+
+.berita-detail-hero .berita-hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:1;
+
+    background:
         linear-gradient(
             90deg,
             rgba(255,255,255,.96) 0%,
@@ -28,15 +42,9 @@
             rgba(255,255,255,.45) 52%,
             rgba(255,255,255,.08) 75%,
             rgba(255,255,255,0) 100%
-        ),
-        url("../images/berita/donasi-via-AL.jpg");
+        );
 
-    background-size:cover;
-
-    background-position:center;
-
-    background-repeat:no-repeat;
-
+    pointer-events:none;
 }
 
 
@@ -50,10 +58,11 @@
 
     z-index:2;
 
+    width:100%;
+
     padding-top:40px;
 
     padding-bottom:40px;
-
 }
 
 
@@ -65,6 +74,7 @@
 
     margin-bottom:28px;
 
+    line-height:1.5;
 }
 
 
@@ -85,7 +95,6 @@
     letter-spacing:3px;
 
     margin-bottom:18px;
-
 }
 
 
@@ -107,6 +116,7 @@
 
     line-height:1.15;
 
+    overflow-wrap:break-word;
 }
 
 
@@ -127,7 +137,6 @@
     margin-top:30px;
 
     background:#198754;
-
 }
 
 
@@ -143,147 +152,19 @@
 
     margin-bottom:0;
 
-    color:#30363b;
+    padding:10px 14px;
+
+    color:#202428;
+
+    background:rgba(255,255,255,.90);
+
+    border-radius:6px;
 
     font-size:1.15rem;
 
     line-height:1.8;
 
-}
-
-
-/* ==========================================================
-   META BERITA
-========================================================== */
-
-.news-detail-meta{
-
-    display:flex;
-
-    flex-wrap:wrap;
-
-    align-items:center;
-
-    gap:22px;
-
-    padding:18px 0;
-
-    color:#555;
-
-    font-size:.95rem;
-
-}
-
-
-.news-detail-meta span{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    gap:7px;
-
-}
-
-
-.news-detail-meta i{
-
-    color:#198754;
-
-}
-
-
-/* ==========================================================
-   GAMBAR UTAMA BERITA
-========================================================== */
-
-.news-detail-image{
-
-    width:100%;
-
-    max-width:900px;
-
-    margin:0 auto 35px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    overflow:hidden;
-
-    border-radius:16px;
-
-    background:#f5f7f6;
-
-}
-
-
-.news-detail-image img{
-
-    width:100%;
-
-    height:auto;
-
-    max-height:500px;
-
-    object-fit:contain;
-
-    display:block;
-
-    border-radius:16px;
-
-}
-
-
-/* ==========================================================
-   ISI BERITA
-========================================================== */
-
-.news-detail-content{
-
-    max-width:900px;
-
-    margin:0 auto;
-
-}
-
-
-.news-detail-content p{
-
-    color:#555;
-
-    font-size:1.05rem;
-
-    line-height:1.9;
-
-    margin-bottom:22px;
-
-}
-
-
-/* ==========================================================
-   GALERI
-========================================================== */
-
-.news-detail-gallery{
-
-    margin:35px 0;
-
-}
-
-
-.news-detail-gallery img{
-
-    width:100%;
-
-    height:auto;
-
-    display:block;
-
-    border-radius:14px;
-
+    box-sizing:border-box;
 }
 
 
@@ -296,19 +177,19 @@
     .berita-detail-hero{
 
         min-height:480px;
+    }
 
-        background-image:
+
+    .berita-detail-hero .berita-hero-overlay{
+
+        background:
             linear-gradient(
                 90deg,
                 rgba(255,255,255,.95) 0%,
                 rgba(255,255,255,.80) 40%,
                 rgba(255,255,255,.25) 75%,
                 rgba(255,255,255,0) 100%
-            ),
-            url("../images/berita/GambarPemandanganBakau.jpg");
-
-        background-position:center;
-
+            );
     }
 
 
@@ -317,7 +198,6 @@
         font-size:2.8rem;
 
         max-width:700px;
-
     }
 
 
@@ -326,7 +206,6 @@
         font-size:1.05rem;
 
         max-width:650px;
-
     }
 
 }
@@ -344,56 +223,74 @@
 
         align-items:flex-start;
 
-        background-image:
-            linear-gradient(
-                180deg,
-                rgba(255,255,255,.96) 0%,
-                rgba(255,255,255,.90) 42%,
-                rgba(255,255,255,.55) 68%,
-                rgba(255,255,255,.15) 100%
-            ),
-            url("../images/berita/GambarPemandanganBakau.jpg");
+        background-size:cover;
 
         background-position:center;
-    
-    
-    }
-
-    .news-detail-image{
-
-        max-width:100%;
-
-        margin-bottom:25px;
-
-        border-radius:12px;
-
     }
 
 
-    .news-detail-image img{
+    /* ==============================================
+       OVERLAY MOBILE
+    ============================================== */
 
-        max-height:none;
+    .berita-detail-hero .berita-hero-overlay{
 
-        border-radius:12px;
-
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255,255,255,.94) 0%,
+                rgba(255,255,255,.86) 35%,
+                rgba(255,255,255,.55) 62%,
+                rgba(255,255,255,.12) 100%
+            );
     }
 
+
+    /* ==============================================
+       CONTAINER MOBILE
+    ============================================== */
 
     .berita-detail-hero .container{
 
+        width:100%;
+
+        max-width:100%;
+
         padding-top:35px;
+
+        padding-right:20px;
 
         padding-bottom:30px;
 
+        padding-left:20px;
+
+        box-sizing:border-box;
     }
 
+
+    /* ==============================================
+       BREADCRUMB
+    ============================================== */
 
     .berita-detail-hero .breadcrumb-custom{
 
+        width:100%;
+
+        max-width:100%;
+
         margin-bottom:24px;
 
+        font-size:.9rem;
+
+        line-height:1.55;
+
+        overflow-wrap:anywhere;
     }
 
+
+    /* ==============================================
+       LABEL
+    ============================================== */
 
     .berita-detail-hero .page-hero-label{
 
@@ -402,38 +299,100 @@
         letter-spacing:2.5px;
 
         margin-bottom:14px;
-
     }
 
 
+    /* ==============================================
+       JUDUL
+    ============================================== */
+
     .berita-detail-hero h1{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin:0;
 
         font-size:2.15rem;
 
         line-height:1.2;
 
+        overflow-wrap:anywhere;
     }
 
+
+    /* ==============================================
+       GARIS
+    ============================================== */
 
     .berita-detail-hero h1::after{
 
         width:55px;
 
-        margin-top:22px;
+        height:3px;
 
+        margin-top:22px;
     }
 
 
+    /* ==============================================
+       DESKRIPSI
+    ============================================== */
+
     .berita-detail-hero p{
 
+        width:100%;
+
+        max-width:100%;
+
         margin-top:22px;
+
+        margin-bottom:0;
+
+        padding:9px 12px;
+
+        color:#202428;
+
+        background:rgba(255,255,255,.90);
+
+        border-radius:6px;
 
         font-size:.98rem;
 
         line-height:1.7;
 
+        box-sizing:border-box;
+
+        overflow-wrap:anywhere;
     }
 
+
+    /* ==============================================
+       GAMBAR UTAMA
+    ============================================== */
+
+    .news-detail-image{
+
+        max-width:100%;
+
+        margin-bottom:25px;
+
+        border-radius:12px;
+    }
+
+
+    .news-detail-image img{
+
+        max-height:none;
+
+        border-radius:12px;
+    }
+
+
+    /* ==============================================
+       META
+    ============================================== */
 
     .news-detail-meta{
 
@@ -442,27 +401,31 @@
         padding:15px 0;
 
         font-size:.9rem;
-
     }
 
+
+    /* ==============================================
+       ISI BERITA
+    ============================================== */
 
     .news-detail-content p{
 
         font-size:1rem;
 
         line-height:1.8;
-
     }
 
+
+    /* ==============================================
+       GALERI
+    ============================================== */
 
     .news-detail-gallery{
 
         margin:25px 0;
-
     }
 
 }
-
 /* ==========================================================
    GALERI DONASI ACEH
 ========================================================== */

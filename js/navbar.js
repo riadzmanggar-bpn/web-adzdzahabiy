@@ -22,6 +22,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ======================================================
+       LOAD CSS TOMBOL KEMBALI
+    ====================================================== */
+
+    if (
+        !document.querySelector(
+            'link[data-back-button-css]'
+        )
+    ) {
+
+        const backButtonCSS =
+            document.createElement("link");
+
+        backButtonCSS.rel = "stylesheet";
+
+        backButtonCSS.href =
+            base + "css/back-button.css";
+
+        backButtonCSS.dataset.backButtonCss =
+            "true";
+
+        document.head.appendChild(
+            backButtonCSS
+        );
+
+    }
+
+
+    /* ======================================================
        LINK WEBSITE
     ====================================================== */
 
@@ -127,6 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const navbarContainer =
         document.getElementById("global-navbar");
 
+
     if (navbarContainer) {
 
         fetch(componentPath + "navbar.html")
@@ -134,9 +163,11 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => {
 
                 if (!response.ok) {
+
                     throw new Error(
                         "Navbar tidak ditemukan."
                     );
+
                 }
 
                 return response.text();
@@ -156,6 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const logo =
                     navbarContainer
                         .querySelector(".logo");
+
 
                 if (logo) {
 
@@ -190,11 +222,14 @@ document.addEventListener("DOMContentLoaded", function () {
                         const href =
                             link.getAttribute("href");
 
+
                         if (
                             !href ||
                             href === "#"
                         ) {
+
                             return;
+
                         }
 
 
@@ -229,6 +264,95 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     });
 
+
+                /* ------------------------------------------
+                   BUAT CONTAINER TOMBOL KEMBALI
+                   OTOMATIS SETELAH NAVBAR
+                ------------------------------------------ */
+
+                const backButtonContainer =
+                    document.createElement("div");
+
+
+                backButtonContainer.id =
+                    "global-back-button";
+
+
+                navbarContainer.insertAdjacentElement(
+                    "afterend",
+                    backButtonContainer
+                );
+
+
+                /* ------------------------------------------
+                   LOAD COMPONENT TOMBOL KEMBALI
+                ------------------------------------------ */
+
+                fetch(
+                    componentPath +
+                    "back-button.html"
+                )
+
+                    .then(response => {
+
+                        if (!response.ok) {
+
+                            throw new Error(
+                                "Tombol kembali tidak ditemukan."
+                            );
+
+                        }
+
+                        return response.text();
+
+                    })
+
+                    .then(html => {
+
+                        backButtonContainer.innerHTML =
+                            html;
+
+                    })
+
+                    .catch(error => {
+
+                        console.error(
+                            "Back Button:",
+                            error
+                        );
+
+                    });
+
+
+                /* ------------------------------------------
+                   LOAD JS TOMBOL KEMBALI
+                ------------------------------------------ */
+
+                if (
+                    !document.querySelector(
+                        'script[data-back-button-js]'
+                    )
+                ) {
+
+                    const backButtonJS =
+                        document.createElement("script");
+
+
+                    backButtonJS.src =
+                        base +
+                        "js/back-button.js";
+
+
+                    backButtonJS.dataset.backButtonJs =
+                        "true";
+
+
+                    document.body.appendChild(
+                        backButtonJS
+                    );
+
+                }
+
             })
 
             .catch(error => {
@@ -250,6 +374,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const footerContainer =
         document.getElementById("global-footer");
 
+
     if (footerContainer) {
 
         fetch(componentPath + "footer.html")
@@ -257,9 +382,11 @@ document.addEventListener("DOMContentLoaded", function () {
             .then(response => {
 
                 if (!response.ok) {
+
                     throw new Error(
                         "Footer tidak ditemukan."
                     );
+
                 }
 
                 return response.text();
@@ -281,6 +408,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         .querySelector(
                             "[data-footer-logo]"
                         );
+
 
                 if (footerLogo) {
 

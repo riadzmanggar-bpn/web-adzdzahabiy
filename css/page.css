@@ -2497,7 +2497,231 @@
 
 }
 
+/* ==========================================================
+   CARD JENJANG PENDIDIKAN
+========================================================== */
 
+.program-detail-card{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:25px;
+
+    height:100%;
+
+    padding:35px;
+
+    background:#fff;
+
+    border:1px solid #e5ebe7;
+
+    border-radius:20px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.06);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.program-detail-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.10);
+
+}
+
+
+/* ==========================================================
+   ICON PROGRAM
+========================================================== */
+
+.program-detail-icon{
+
+    width:70px;
+
+    height:70px;
+
+    flex:0 0 70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:16px;
+
+    background:#eaf4ee;
+
+    color:var(--primary);
+
+    font-size:1.8rem;
+
+}
+
+
+/* ==========================================================
+   ISI PROGRAM
+========================================================== */
+
+.program-detail-content{
+
+    flex:1;
+
+    min-width:0;
+
+}
+
+
+.program-level{
+
+    display:block;
+
+    margin-bottom:8px;
+
+    color:var(--primary);
+
+    font-size:.75rem;
+
+    font-weight:700;
+
+    letter-spacing:1.5px;
+
+}
+
+
+.program-detail-content h3{
+
+    margin:0 0 5px;
+
+    color:#222;
+
+    font-size:1.7rem;
+
+    font-weight:700;
+
+}
+
+
+.program-detail-content h5{
+
+    margin-bottom:15px;
+
+    color:#666;
+
+    font-size:1rem;
+
+    font-weight:500;
+
+}
+
+
+.program-detail-content p{
+
+    margin-bottom:18px;
+
+    color:#666;
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+}
+
+
+/* ==========================================================
+   LIST PROGRAM
+========================================================== */
+
+.program-detail-content ul{
+
+    margin:0 0 22px;
+
+    padding:0;
+
+    list-style:none;
+
+}
+
+
+.program-detail-content li{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:10px;
+
+    margin-bottom:10px;
+
+    color:#555;
+
+    line-height:1.6;
+
+}
+
+
+.program-detail-content li i{
+
+    margin-top:4px;
+
+    color:var(--primary);
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .program-detail-card{
+
+        display:block;
+
+        padding:25px 20px;
+
+        border-radius:16px;
+
+    }
+
+
+    .program-detail-icon{
+
+        width:55px;
+
+        height:55px;
+
+        margin-bottom:18px;
+
+        font-size:1.4rem;
+
+    }
+
+
+    .program-detail-content h3{
+
+        font-size:1.4rem;
+
+    }
+
+
+    .program-detail-content p{
+
+        font-size:.95rem;
+
+        line-height:1.7;
+
+    }
+
+}
 
 /* ==========================================================
    PENUTUP

@@ -95,3 +95,187 @@
     font-size:2rem;
 
 }
+
+/* ==========================================================
+   SCROLL REVEAL ANIMATION
+   BERANDA
+========================================================== */
+
+/*
+   Mencegah animasi left/right membuat
+   halaman melebar secara horizontal.
+*/
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+
+[data-reveal] {
+
+    opacity: 0;
+
+    transform: translateY(180px);
+
+    transition:
+        opacity 1s cubic-bezier(.25, .46, .45, .94),
+        transform 1s cubic-bezier(.25, .46, .45, .94);
+
+    will-change:
+        opacity,
+        transform;
+}
+
+
+[data-reveal].is-visible {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+
+/* ==========================================================
+   REVEAL DARI KIRI
+========================================================== */
+
+[data-reveal="left"] {
+
+    opacity: 0;
+
+    transform: translateX(-180px);
+
+    transition:
+        opacity 1s cubic-bezier(.25, .46, .45, .94),
+        transform 1s cubic-bezier(.25, .46, .45, .94);
+
+}
+
+
+[data-reveal="left"].is-visible {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+/* ==========================================================
+   REVEAL DARI KANAN
+========================================================== */
+
+[data-reveal="right"] {
+
+    opacity: 0;
+
+    transform: translateX(180px);
+
+    transition:
+        opacity 1s cubic-bezier(.25, .46, .45, .94),
+        transform 1s cubic-bezier(.25, .46, .45, .94);
+
+}
+
+
+[data-reveal="right"].is-visible {
+
+    opacity: 1;
+
+    transform: translateX(0);
+
+}
+
+
+/* ==========================================================
+   REVEAL ZOOM
+========================================================== */
+
+[data-reveal="zoom"] {
+
+    opacity: 0;
+
+    transform:
+        translateY(180px)
+        scale(.78);
+
+    transition:
+        opacity 1s cubic-bezier(.25, .46, .45, .94),
+        transform 1s cubic-bezier(.25, .46, .45, .94);
+
+    will-change:
+        opacity,
+        transform;
+}
+
+
+[data-reveal="zoom"].is-visible {
+
+    opacity: 1;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* ==========================================================
+   MOBILE
+   JARAK ANIMASI LEBIH KECIL
+========================================================== */
+
+@media (max-width: 767.98px) {
+
+    [data-reveal="left"] {
+
+        transform: translateX(-40px);
+
+    }
+
+
+    [data-reveal="right"] {
+
+        transform: translateX(40px);
+
+    }
+
+
+    [data-reveal="left"].is-visible {
+
+        transform: translateX(0);
+
+    }
+
+
+    [data-reveal="right"].is-visible {
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+/* ==========================================================
+   AKSESIBILITAS
+========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    [data-reveal],
+    [data-reveal="left"],
+    [data-reveal="right"],
+    [data-reveal="zoom"] {
+
+        opacity: 1;
+
+        transform: none;
+
+        transition: none;
+
+    }
+
+}
