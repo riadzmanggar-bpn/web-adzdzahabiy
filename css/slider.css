@@ -1,0 +1,138 @@
+/* ==========================================================
+   UNIVERSAL SLIDER
+========================================================== */
+
+[data-slider] {
+    position: relative;
+}
+
+
+/* ==========================================================
+   GAMBAR
+========================================================== */
+
+[data-slider-display] {
+
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+
+    opacity: 1;
+
+    transition: opacity 0.4s ease;
+
+}
+
+
+/* ==========================================================
+   SLIDER LINK
+========================================================== */
+
+[data-slider-link] {
+
+    display: block;
+
+    text-decoration: none;
+
+}
+
+
+/* ==========================================================
+   SLIDER DOTS
+   Overlay di kiri bawah gambar
+========================================================== */
+
+.slider-dots {
+
+    position: absolute;
+
+    left: 16px;
+    bottom: 16px;
+
+    z-index: 10;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+/* ==========================================================
+   DOT
+   Kecil + putih
+========================================================== */
+
+.slider-dot {
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, 0.3);
+
+    cursor: pointer;
+
+    transition:
+        width 0.3s ease,
+        background-color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+/* ==========================================================
+   ACTIVE DOT
+   Hijau
+========================================================== */
+
+.slider-dot.active {
+
+    width: 24px;
+    height: 8px;
+
+    border-radius: 10px;
+
+    background-color: #198754;
+
+}
+
+
+/* ==========================================================
+   HOVER
+========================================================== */
+
+@media (hover: hover) {
+
+    .slider-dot:hover {
+
+        transform: scale(1.15);
+
+    }
+
+}
+
+
+/* ==========================================================
+   FOCUS KEYBOARD
+========================================================== */
+
+.slider-dot:focus-visible {
+
+    outline: 2px solid #198754;
+
+    outline-offset: 3px;
+
+}

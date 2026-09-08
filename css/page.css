@@ -2675,6 +2675,166 @@
 
 }
 
+/* ==========================================================
+   GLOBAL CTA
+   CTA UNIVERSAL UNTUK SEMUA HALAMAN
+========================================================== */
+
+.global-cta{
+
+    padding:90px 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #17663b,
+            #198754
+        );
+
+    color:#fff;
+
+    text-align:center;
+}
+
+
+.global-cta h2{
+
+    margin-bottom:15px;
+
+    color:#fff;
+
+    font-size:2.6rem;
+
+    font-weight:700;
+}
+
+
+.global-cta p{
+
+    max-width:750px;
+
+    margin:0 auto 25px;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:1.1rem;
+
+    line-height:1.8;
+}
+
+
+.global-cta .btn{
+
+    padding:12px 30px;
+
+    border-radius:30px;
+
+    font-weight:600;
+}
+
+
+/* ==========================================================
+   GLOBAL CTA - RESPONSIVE HP
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .global-cta{
+
+        width:100%;
+
+        padding:65px 20px 70px;
+
+        overflow:hidden;
+
+        box-sizing:border-box;
+    }
+
+
+    .global-cta > .container{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin:0 auto;
+
+        padding:0;
+    }
+
+
+    .global-cta .row{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin-left:0;
+
+        margin-right:0;
+    }
+
+
+    .global-cta .row > *{
+
+        width:100%;
+
+        max-width:100%;
+
+        padding-left:0;
+
+        padding-right:0;
+    }
+
+
+    .global-cta h2{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin:0 0 20px;
+
+        font-size:2rem;
+
+        line-height:1.2;
+
+        font-weight:700;
+
+        overflow-wrap:normal;
+    }
+
+
+    .global-cta p{
+
+        width:100%;
+
+        max-width:100%;
+
+        margin:0 auto 28px;
+
+        font-size:1rem;
+
+        line-height:1.7;
+
+        overflow-wrap:normal;
+    }
+
+
+    .global-cta .btn{
+
+        display:inline-block;
+
+        padding:12px 30px;
+
+        border-radius:30px;
+
+        font-size:1rem;
+
+        font-weight:600;
+    }
+
+}
 
 /* ==========================================================
    MOBILE

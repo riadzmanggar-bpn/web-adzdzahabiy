@@ -49,7 +49,7 @@ function setupRevealElement(element) {
             if (!isNaN(seconds)) {
 
                 finalDelay =
-                    (seconds * 0.5) + "s";
+                    (seconds * 0.7) + "s";
 
             }
 

@@ -38,6 +38,7 @@
     <!-- CSS KHUSUS DONASI -->
 
     <link rel="stylesheet" href="../css/donasi.css">
+    <link rel="stylesheet" href="../css/slider.css">
 
 </head>
 
@@ -52,7 +53,6 @@
 <div id="global-navbar"></div>
 
 
-
 <!-- ==========================================================
      HERO
 ========================================================== -->
@@ -63,16 +63,22 @@
 
         <div class="donasi-hero-content">
 
-            <span class="donasi-section-label">
+            <span
+                class="donasi-section-label"
+                data-reveal>
                 DONASI
             </span>
 
-            <h1>
+            <h1
+                data-reveal
+                data-delay="0.15s">
                 Bersama Membangun
                 Generasi Qur'ani
             </h1>
 
-            <p>
+            <p
+                data-reveal
+                data-delay="0.3s">
                 Dukung perjuangan pendidikan dan pembinaan generasi
                 muslim melalui Rumah Tahfizhul Quran
                 Al Imam Adz Dzahabiy.
@@ -84,28 +90,32 @@
 
 </section>
 
-
-
 <!-- ==========================================================
      DONASI UTAMA / FEATURED
 ========================================================== -->
-
 <section class="donasi-featured">
 
     <div class="container">
 
 
-        <div class="text-center mb-5">
+        <div
+            class="text-center mb-5"
+            data-reveal>
 
             <span class="donasi-section-label">
                 PROGRAM DONASI
             </span>
 
-            <h2>
+            <h2
+                data-reveal
+                data-delay="0.15s">
                 Mari Ambil Bagian
             </h2>
 
-            <p class="section-subtitle">
+            <p
+                class="section-subtitle"
+                data-reveal
+                data-delay="0.3s">
                 Pilih program donasi yang ingin Anda dukung.
             </p>
 
@@ -113,41 +123,98 @@
 
 
 
-        <div class="donasi-featured-card">
+        <div
+            class="donasi-featured-card"
+            data-reveal
+            data-delay="0.15s">
 
             <div class="row align-items-center g-5">
 
 
-                <!-- GAMBAR -->
+                <!-- ==================================================
+                    GAMBAR FEATURED SLIDER
+                ================================================== -->
 
                 <div class="col-lg-5">
 
-                    <div class="donasi-featured-image">
+                    <div
+                        class="donasi-featured-image"
+                        data-slider
+                        data-interval="5000"
+                        data-reveal
+                        data-delay="0.2s">
 
-                        <img
-                            id="donasiFeaturedImage"
-                            src="../images/donasi/donasi-default.jpg"
-                            alt="Program Donasi RTQ">
+
+                        <!-- GAMBAR YANG BISA DIKLIK -->
+
+                        <a
+                            href="donasi-masjid.html"
+                            data-slider-link
+                            aria-label="Lihat program donasi">
+
+                            <img
+                                data-slider-display
+                                src="../images/donasi/donasi-masjid-2.jpg"
+                                alt="Donasi Pembangunan Masjid Al Anshor">
+
+                        </a>
+
+
+                        <!-- BULLET OVERLAY -->
+
+                        <div
+                            class="slider-dots"
+                            data-slider-dots>
+                        </div>
+
+
+                        <!-- DATA PROGRAM 1 -->
+
+                        <div
+                            data-slider-item
+                            data-image="../images/donasi/donasi-masjid-2.jpg"
+                            data-link="donasi-masjid.html"
+                            data-alt="Donasi Pembangunan Masjid Al Anshor">
+                        </div>
+
+
+                        <!-- DATA PROGRAM 2 -->
+
+                        <div
+                            data-slider-item
+                            data-image="../images/donasi/Taawun AC.png"
+                            data-link="donasi-ac.html"
+                            data-alt="Taawun Pengadaan AC RTQ Al Imam Adz Dzahabiy">
+                        </div>
 
                     </div>
 
                 </div>
+
+                <!-- END FEATURE SLIDER -->
 
 
                 <!-- INFORMASI -->
 
                 <div class="col-lg-7">
 
-                    <span class="donasi-category">
+                    <span
+                        class="donasi-category"
+                        data-reveal
+                        data-delay="0.25s">
                         PROGRAM UTAMA
                     </span>
 
-                    <h2>
+                    <h2
+                        data-reveal
+                        data-delay="0.3s">
                         Dukung Pendidikan
                         Generasi Qur'ani
                     </h2>
 
-                    <p>
+                    <p
+                        data-reveal
+                        data-delay="0.4s">
                         Setiap dukungan yang diberikan menjadi bagian
                         dari ikhtiar bersama dalam menyediakan pendidikan,
                         pembinaan Al-Qur'an, fasilitas, serta lingkungan
@@ -158,25 +225,40 @@
 
                     <div class="donasi-info-list">
 
-                        <div>
+                        <div
+                            data-reveal
+                            data-delay="0.45s">
+
                             <i class="bi bi-heart-fill"></i>
+
                             <span>
                                 Bersedekah untuk pendidikan Islam
                             </span>
+
                         </div>
 
-                        <div>
+                        <div
+                            data-reveal
+                            data-delay="0.5s">
+
                             <i class="bi bi-mortarboard-fill"></i>
+
                             <span>
                                 Mendukung pendidikan peserta didik
                             </span>
+
                         </div>
 
-                        <div>
+                        <div
+                            data-reveal
+                            data-delay="0.55s">
+
                             <i class="bi bi-building-fill"></i>
+
                             <span>
                                 Mendukung pengembangan fasilitas
                             </span>
+
                         </div>
 
                     </div>
@@ -202,17 +284,24 @@
     <div class="container">
 
 
-        <div class="text-center mb-5">
+        <div
+            class="text-center mb-5"
+            data-reveal>
 
             <span class="donasi-section-label">
                 DONASI TERKINI
             </span>
 
-            <h2>
+            <h2
+                data-reveal
+                data-delay="0.15s">
                 Program yang Sedang Dibuka
             </h2>
 
-            <p class="section-subtitle">
+            <p
+                class="section-subtitle"
+                data-reveal
+                data-delay="0.3s">
                 Informasi program donasi akan diperbarui
                 secara berkala.
             </p>
@@ -224,12 +313,14 @@
         <div class="row g-4">
 
 
-            
             <!-- ==================================================
                  DONASI MASJID
             =================================================== -->
 
-            <div class="col-lg-4 col-md-6">
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.15s">
 
                 <article class="donasi-card">
 
@@ -237,7 +328,7 @@
                     <div class="donasi-card-image">
 
                         <img
-                            src="../images/donasi/Masjid 3.jpeg"
+                            src="../images/donasi/donasi-masjid-2.jpg"
                             alt="Donasi Masjid">
 
                     </div>
@@ -265,7 +356,6 @@
                             Selengkapnya
                             <i class="bi bi-arrow-right"></i>
 
-                        
                         </a>
 
                     </div>
@@ -275,11 +365,15 @@
             </div>
 
 
+
             <!-- ==================================================
-                DONASI AC
+                 DONASI AC
             ================================================== -->
 
-            <div class="col-lg-4 col-md-6">
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.3s">
 
                 <article class="donasi-card">
 
@@ -329,30 +423,37 @@
 </section>
 
 
-
 <!-- ==========================================================
-     PENUTUP
+     PENUTUP / GLOBAL CTA
 ========================================================== -->
 
-<section class="donasi-cta">
+<section class="global-cta">
 
     <div class="container text-center">
 
-        <h2>
+        <h2
+            data-reveal="zoom"
+            data-delay="0s">
+
             Jadilah Bagian dari Kebaikan Ini
+
         </h2>
 
-        <p>
-            Semoga setiap rupiah yang disalurkan menjadi
-            amal jariyah dan memberikan manfaat bagi
-            generasi yang akan datang.
+          
+        <p
+            data-reveal="left"
+            data-delay="0.2s">
+
+                Semoga setiap rupiah yang disalurkan menjadi
+                amal jariyah dan memberikan manfaat bagi
+                generasi yang akan datang.
+
         </p>
 
+     
     </div>
 
 </section>
-
-
 
 <!-- ==========================================================
      FOOTER
@@ -371,52 +472,8 @@
 </script>
 
 <script src="../js/navbar.js"></script>
-
-<script>
-
-/* ==========================================================
-   SLIDER DONASI UTAMA
-========================================================== */
-
-const donasiImages = [
-
-    "../images/donasi/donasi-masjid_1.jpg",
-
-    "../images/donasi/Taawun AC.png",
-
-    
-];
-
-
-let donasiIndex = 0;
-
-const donasiFeaturedImage =
-    document.getElementById("donasiFeaturedImage");
-
-
-setInterval(function () {
-
-    donasiIndex++;
-
-    if (donasiIndex >= donasiImages.length) {
-        donasiIndex = 0;
-    }
-
-    donasiFeaturedImage.style.opacity = "0";
-
-
-    setTimeout(function () {
-
-        donasiFeaturedImage.src =
-            donasiImages[donasiIndex];
-
-        donasiFeaturedImage.style.opacity = "1";
-
-    }, 400);
-
-}, 5000);
-
-</script>
+<script src="../js/scroll-reveal.js"></script>
+<script src="../js/slider.js"></script>
 
 </body>
 
