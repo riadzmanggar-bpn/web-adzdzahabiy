@@ -117,6 +117,10 @@
     <link rel="stylesheet" href="css/style.css"> 
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/beranda.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/back-button.css">
+    
+
 </head>
 
 <body>
@@ -260,201 +264,257 @@
         </div>
 
 
-        <!-- ==================================================
-             HIGHLIGHT CARDS
-        =================================================== -->
+        <!-- ==========================================================
+            HIGHLIGHT SLIDER
+        ========================================================== -->
 
-        <div class="highlight-wrapper">
+        <div
+            class="highlight-slider"
+            data-slider
+            data-slider-type="cards"
+            data-interval="5000">
 
-            <div class="highlight-track">
 
-                <!-- CARD 1 -->
+            <!-- ======================================================
+                SLIDE 1
+            ======================================================= -->
 
-                <article class="highlight-card">
+            <article
+                class="highlight-card"
+                data-slider-slide>
 
-                    <div class="highlight-image">
+                <div class="highlight-image">
+
+                    <a
+                        href="pages/berita/berita-classmeeting.html"
+                        aria-label="Buka berita Class Meeting">
 
                         <img
                             src="images/berita/class-meeting-camping-senja.jpeg"
-                            alt="Kegiatan terbaru">
+                            alt="Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy">
 
-                        <span class="highlight-badge">
-                            Class Meeting Semester Gasal 1448 H / 2026 M
-                        </span>
+                    </a>
 
-                    </div>
+                    <span class="highlight-badge">
+                        Class Meeting Semester Gasal 1448 H / 2026 M
+                    </span>
 
-
-                    <div class="highlight-content">
-
-                        <small>
-                            02 September 2026
-                        </small>
-
-                        <h3>
-                            Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy 
-                        </h3>
-
-                        <p>
-                            Kegiatan kebersamaan santri
-                            selepas ujian semester, 29-30 Agustus 2026, Tanah Merah,
-                            Samboja
-                        </p>
-
-                        <a
-                            href="pages/berita/berita-classmeeting.html"
-                            class="highlight-link">
-
-                            Selengkapnya
-                            <span>→</span>
-
-                        </a>
-
-                    </div>
-
-                </article>
+                </div>
 
 
-                <!-- CARD 2 -->
+                <div class="highlight-content">
 
-                <article class="highlight-card">
+                    <small>
+                        02 September 2026
+                    </small>
 
-                    <div class="highlight-image">
+                    <h3>
+                        Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy
+                    </h3>
+
+                    <p>
+                        Kegiatan kebersamaan santri selepas ujian semester,
+                        29-30 Agustus 2026, Tanah Merah, Samboja
+                    </p>
+
+                    <a
+                        href="pages/berita/berita-classmeeting.html"
+                        class="highlight-link">
+
+                        Selengkapnya
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ======================================================
+                SLIDE 2
+            ======================================================= -->
+
+            <article
+                class="highlight-card"
+                data-slider-slide>
+
+                <div class="highlight-image">
+
+                    <a
+                        href="pages/berita/donasi-aceh-2025.html"
+                        aria-label="Buka berita Donasi Aceh dan Sumut">
 
                         <img
                             src="images/berita/donasi-via-AL.jpg"
-                            alt="Donasi Aceh & Sumut 2025">
+                            alt="Donasi Aceh dan Sumut 2025">
 
-                        <span class="highlight-badge">
-                            Donasi Aceh & Sumut 2025
-                        </span>
+                    </a>
 
-                    </div>
+                    <span class="highlight-badge">
+                        Donasi Aceh & Sumut 2025
+                    </span>
+
+                </div>
 
 
-                    <div class="highlight-content">
+                <div class="highlight-content">
 
-                        <small>
-                            22 Agustus 2026
-                        </small>
+                    <small>
+                        22 Agustus 2026
+                    </small>
 
-                        <h3>
-                            Donasi Aceh & Sumut 2025
-                        </h3>
+                    <h3>
+                        Donasi Aceh & Sumut 2025
+                    </h3>
 
-                        <p>
-                            Laporan penutupan donasi bencana alam 
-                            untuk saudara-saudara kita di Sumatra Utara dan Aceh. 
-                            Donasi dana terkumpul <strong>Rp42.482.515 </strong> dan 
-                            donasi pakaian terkumpul <strong>17 kodi..</strong>
-                        </p>
+                    <p>
+                        Laporan penutupan donasi bencana alam untuk
+                        saudara-saudara kita di Sumatra Utara dan Aceh.
+                        Donasi dana terkumpul
+                        <strong>Rp42.482.515</strong> dan donasi pakaian
+                        terkumpul <strong>17 kodi.</strong>
+                    </p>
 
-                        <a
-                            href="pages/berita/donasi-aceh-2025.html"
-                            class="highlight-link">
+                    <a
+                        href="pages/berita/donasi-aceh-2025.html"
+                        class="highlight-link">
 
-                            Selengkapnya
-                            <span>→</span>
+                        Selengkapnya
+                        <span>→</span>
 
-                        </a>
+                    </a>
 
-                    </div>
+                </div>
 
-                </article>
+            </article>
 
-                 <!-- CARD 3 -->
 
-                <article class="highlight-card">
+            <!-- ======================================================
+                SLIDE 3
+            ======================================================= -->
 
-                    <div class="highlight-image">
+            <article
+                class="highlight-card"
+                data-slider-slide>
+
+                <div class="highlight-image">
+
+                    <a
+                        href="pages/donasi-masjid.html"
+                        aria-label="Buka informasi Donasi Masjid Al Anshor">
 
                         <img
                             src="images/donasi/donasi-masjid-highlight.png"
                             alt="Donasi Masjid Al Anshor">
 
-                        <span class="highlight-badge">
-                            Donasi Jariyah Masjid Al Anshor
-                        </span>
+                    </a>
 
-                    </div>
+                    <span class="highlight-badge">
+                        Donasi Jariyah Masjid Al Anshor
+                    </span>
+
+                </div>
 
 
-                    <div class="highlight-content">
+                <div class="highlight-content">
 
-                        <small>
-                            02 September 2026
-                        </small>
+                    <small>
+                        02 September 2026
+                    </small>
 
-                        <h3>
-                            Update Donasi Jariyah Masjid Al Anshor
-                        </h3>
+                    <h3>
+                        Update Donasi Jariyah Masjid Al Anshor
+                    </h3>
 
-                        <p>
-                            Pembangunan Masjid Al Anshar terus berlanjut menuju Tahap 6. 
-                            Dana yang telah terkumpul mencapai <strong>Rp40.615.466,14</strong>. 
-                        </p>
+                    <p>
+                        Pembangunan Masjid Al Anshar terus berlanjut menuju
+                        Tahap 6. Dana yang telah terkumpul mencapai
+                        <strong>Rp40.615.466,14</strong>.
+                    </p>
 
-                        <a
-                            href="pages/donasi-masjid.html"
-                            class="highlight-link">
+                    <a
+                        href="pages/donasi-masjid.html"
+                        class="highlight-link">
 
-                            Selengkapnya
-                            <span>→</span>
+                        Selengkapnya
+                        <span>→</span>
 
-                        </a>
+                    </a>
 
-                    </div>
+                </div>
 
-                </article>
+            </article>
 
-                <!-- CARD 4 -->
 
-                <article class="highlight-card">
+            <!-- ======================================================
+                SLIDE 4
+            ======================================================= -->
 
-                    <div class="highlight-image">
+            <article
+                class="highlight-card"
+                data-slider-slide>
+
+                <div class="highlight-image">
+
+                    <a
+                        href="pages/berita/berita-musabaqoh-asy-syatibi2.html"
+                        aria-label="Buka informasi Musabaqah Al-Qur'an">
 
                         <img
                             src="images/berita/musabaqah-al-imam-asy-syathiby-2026-hero.jpg"
                             alt="Poster Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo">
 
-                        <span class="highlight-badge">
-                            Persiapan Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo
-                        </span>
+                    </a>
 
-                    </div>
+                    <span class="highlight-badge">
+                        Persiapan Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo
+                    </span>
+
+                </div>
 
 
-                    <div class="highlight-content">
+                <div class="highlight-content">
 
-                        <small>
-                            04 September 2026
-                        </small>
+                    <small>
+                        04 September 2026
+                    </small>
 
-                        <h3>
-                            Persiapan Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo
-                        </h3>
+                    <h3>
+                        Persiapan Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo
+                    </h3>
 
-                        <p>
-                            14-16 Rabiul Akhir 1448 H / 25 - 27 September 2026, Masjid Al-Anshar, Balikpapan. 
-                        </p>
+                    <p>
+                        14-16 Rabiul Akhir 1448 H /
+                        25 - 27 September 2026,
+                        Masjid Al-Anshar, Balikpapan.
+                    </p>
 
-                        <a
-                            href="pages/berita/berita-musabaqoh-asy-syatibi2.html"
-                            class="highlight-link">
+                    <a
+                        href="pages/berita/berita-musabaqoh-asy-syatibi2.html"
+                        class="highlight-link">
 
-                            Selengkapnya
-                            <span>→</span>
+                        Selengkapnya
+                        <span>→</span>
 
-                        </a>
+                    </a>
 
-                    </div>
+                </div>
 
-                </article>
+            </article>
 
-               
+
+            <!-- ======================================================
+                BULLET INDICATOR
+            ======================================================= -->
+
+            <div
+                class="slider-dots"
+                data-slider-dots>
             </div>
 
-        </div>
+
+        </div>  
 
     </div>
 
@@ -1061,6 +1121,8 @@
 <script src="js/beranda-kaldik.js"></script>
 <script src="js/navbar.js"></script>
 <script src="js/scroll-reveal.js"></script>
+<script src="js/slider.js"></script>
+<script src="js/back-button.js"></script>
 
 </body>
 </html>

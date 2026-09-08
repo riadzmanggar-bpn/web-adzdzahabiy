@@ -5,20 +5,48 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ======================================================
-       TENTUKAN LOKASI HALAMAN
-    ====================================================== */
+   /* ======================================================
+        TENTUKAN LOKASI HALAMAN
+        ====================================================== */
 
-    const isPages =
-        window.location.pathname.includes("/pages/");
+        const pathname =
+            window.location.pathname;
 
-    const base =
-        isPages ? "../" : "";
+        const pathParts =
+            pathname
+                .split("/")
+                .filter(Boolean);
 
-    const componentPath =
-        isPages
-            ? "../components/"
-            : "components/";
+        const pagesIndex =
+            pathParts.indexOf("pages");
+
+
+        /* ------------------------------------------------------
+        HITUNG KEDALAMAN HALAMAN
+        ------------------------------------------------------ */
+
+        let base = "";
+
+        if (pagesIndex !== -1) {
+
+            const depth =
+                pathParts.length -
+                pagesIndex -
+                1;
+
+            base =
+                "../".repeat(depth);
+
+        }
+
+
+        /* ------------------------------------------------------
+        LOKASI COMPONENT
+        ------------------------------------------------------ */
+
+        const componentPath =
+            base +
+            "components/";
 
 
     /* ======================================================
@@ -288,26 +316,41 @@ document.addEventListener("DOMContentLoaded", function () {
                    LOAD COMPONENT TOMBOL KEMBALI
                 ------------------------------------------ */
 
-                fetch(
-                    componentPath +
-                    "back-button.html"
-                )
+                fetch(componentPath + "back-button.html")
 
                     .then(response => {
+
+                        console.log(
+                            "Back button URL:",
+                            componentPath + "back-button.html"
+                        );
+
+                        console.log(
+                            "Back button status:",
+                            response.status
+                        );
+
 
                         if (!response.ok) {
 
                             throw new Error(
-                                "Tombol kembali tidak ditemukan."
+                                "Tombol kembali tidak ditemukan: " +
+                                response.status
                             );
 
                         }
+
 
                         return response.text();
 
                     })
 
                     .then(html => {
+
+                        console.log(
+                            "Back button berhasil dimuat."
+                        );
+
 
                         backButtonContainer.innerHTML =
                             html;
@@ -323,7 +366,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     });
 
-
+                    
                 /* ------------------------------------------
                    LOAD JS TOMBOL KEMBALI
                 ------------------------------------------ */

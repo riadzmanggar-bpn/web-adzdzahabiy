@@ -601,34 +601,37 @@
 
 }
 
-
-@media (max-width:768px){
-
     /* ------------------------------------------------------
        HERO
     ------------------------------------------------------ */
 
-    .donasi-hero{
-
-        padding:80px 0 75px;
-
-    }
+    @media (max-width:768px){
 
 
-    .donasi-hero h1{
 
-        font-size:2.25rem;
+        .donasi-hero{
 
-        line-height:1.3;
+            padding:80px 0 75px;
 
-    }
+        }
 
 
-    .donasi-hero p{
+        .donasi-hero h1{
 
-        font-size:1.05rem;
+            font-size:2.25rem;
 
-        line-height:1.8;
+            line-height:1.3;
+
+        }
+
+
+        .donasi-hero p{
+
+            font-size:1.05rem;
+
+            line-height:1.8;
+
+        }
 
     }
 
@@ -1686,4 +1689,3 @@
     }
 
 }
-
