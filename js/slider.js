@@ -2,7 +2,7 @@
    UNIVERSAL SLIDER
    Mendukung:
    1. Image Slider
-   2. Card Slider
+   2. Highlight / Content Slider
 ========================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -26,6 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
 function initSlider(slider) {
 
+    /*
+       Semua slider sekarang menggunakan
+       sistem data-slider-item.
+
+       Jika masih ada slider lama dengan
+       data-slider-type="cards", tetap didukung.
+    */
+
     const type =
         slider.dataset.sliderType || "image";
 
@@ -45,6 +53,9 @@ function initSlider(slider) {
 
 /* ==========================================================
    CARD SLIDER
+   SISTEM LAMA
+   Tetap dipertahankan agar halaman lain
+   tidak rusak.
 ========================================================== */
 
 function initCardSlider(slider) {
@@ -240,8 +251,10 @@ function initCardSlider(slider) {
 
 
 /* ==========================================================
-   IMAGE SLIDER
-   Untuk donasi dan slider gambar lainnya
+   IMAGE / CONTENT SLIDER
+   Digunakan oleh:
+   - Donasi
+   - Highlight Beranda
 ========================================================== */
 
 function initImageSlider(slider) {
@@ -258,8 +271,8 @@ function initImageSlider(slider) {
         );
 
 
-    const link =
-        slider.querySelector(
+    const links =
+        slider.querySelectorAll(
             "[data-slider-link]"
         );
 
@@ -267,6 +280,35 @@ function initImageSlider(slider) {
     const dotsContainer =
         slider.querySelector(
             "[data-slider-dots]"
+        );
+
+
+    /*
+       Elemen tambahan untuk Highlight.
+       Tidak wajib ada pada slider Donasi.
+    */
+
+    const badge =
+        slider.querySelector(
+            "[data-slider-badge]"
+        );
+
+
+    const date =
+        slider.querySelector(
+            "[data-slider-date]"
+        );
+
+
+    const title =
+        slider.querySelector(
+            "[data-slider-title]"
+        );
+
+
+    const description =
+        slider.querySelector(
+            "[data-slider-description]"
         );
 
 
@@ -285,6 +327,10 @@ function initImageSlider(slider) {
     let timer;
 
 
+    /* ======================================================
+       AMBIL DATA SLIDE
+    ====================================================== */
+
     const slides =
         Array.from(items).map(
             function (item) {
@@ -298,7 +344,19 @@ function initImageSlider(slider) {
                         item.dataset.link || "#",
 
                     alt:
-                        item.dataset.alt || ""
+                        item.dataset.alt || "",
+
+                    badge:
+                        item.dataset.badge || "",
+
+                    date:
+                        item.dataset.date || "",
+
+                    title:
+                        item.dataset.title || "",
+
+                    description:
+                        item.dataset.description || ""
 
                 };
 
@@ -323,7 +381,7 @@ function initImageSlider(slider) {
 
         dot.setAttribute(
             "aria-label",
-            "Tampilkan gambar " +
+            "Tampilkan slide " +
             (index + 1)
         );
 
@@ -355,12 +413,27 @@ function initImageSlider(slider) {
 
     function showSlide(index) {
 
+        if (
+            index < 0 ||
+            index >= slides.length
+        ) {
+
+            return;
+
+        }
+
+
         currentIndex = index;
 
 
         const slide =
             slides[currentIndex];
 
+
+        /*
+           Fade hanya jika slider mempunyai
+           lebih dari satu slide.
+        */
 
         display.style.opacity = "0";
 
@@ -374,16 +447,70 @@ function initImageSlider(slider) {
                 slide.alt;
 
 
-            if (link) {
+            /* ==============================================
+               UPDATE SEMUA LINK
+            ============================================== */
+
+            links.forEach(function (link) {
 
                 link.href =
                     slide.link;
+
+            });
+
+
+            /* ==============================================
+               UPDATE BADGE
+               Hanya Highlight yang punya elemen ini.
+            ============================================== */
+
+            if (badge) {
+
+                badge.textContent =
+                    slide.badge;
+
+            }
+
+
+            /* ==============================================
+               UPDATE TANGGAL
+            ============================================== */
+
+            if (date) {
+
+                date.textContent =
+                    slide.date;
+
+            }
+
+
+            /* ==============================================
+               UPDATE JUDUL
+            ============================================== */
+
+            if (title) {
+
+                title.textContent =
+                    slide.title;
+
+            }
+
+
+            /* ==============================================
+               UPDATE DESKRIPSI
+            ============================================== */
+
+            if (description) {
+
+                description.textContent =
+                    slide.description;
 
             }
 
 
             display.style.opacity =
                 "1";
+
 
         }, 300);
 
@@ -482,3 +609,383 @@ function initImageSlider(slider) {
     startSlider();
 
 }
+
+/* ==========================================================
+   HIGHLIGHT BERANDA
+   4 BERITA → 3 CARD AUTO ROTATION
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const container =
+        document.querySelector(".highlight-cards");
+
+    if (!container) {
+        return;
+    }
+
+
+    const cards =
+        Array.from(
+            container.querySelectorAll(".highlight-card")
+        );
+
+
+    if (cards.length <= 3) {
+
+        cards.forEach(function (card) {
+
+            card.classList.add("is-visible");
+
+        });
+
+        return;
+
+    }
+
+
+    let startIndex = 0;
+
+    const interval = 5000;
+
+    let timer;
+
+
+    /* ======================================================
+       TAMPILKAN 3 CARD
+    ====================================================== */
+
+    function showCards() {
+
+        cards.forEach(function (card, index) {
+
+            const relativeIndex =
+                (index - startIndex + cards.length)
+                % cards.length;
+
+
+            card.classList.toggle(
+                "is-visible",
+                relativeIndex < 3
+            );
+
+        });
+
+    }
+
+
+    /* ======================================================
+       NEXT
+    ====================================================== */
+
+    function nextCards() {
+
+        startIndex++;
+
+        if (startIndex >= cards.length) {
+
+            startIndex = 0;
+
+        }
+
+        showCards();
+
+    }
+
+
+    /* ======================================================
+       START
+    ====================================================== */
+
+    showCards();
+
+
+    timer = setInterval(
+        nextCards,
+        interval
+    );
+
+});
+
+/* ==========================================================
+   HIGHLIGHT BERANDA
+   4 BERITA → 3 CARD DESKTOP
+   MOBILE → 1 CARD
+========================================================== */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const container =
+        document.getElementById("highlightCards");
+
+    const timerBar =
+        document.getElementById("highlightTimerBar");
+
+    const dotsContainer =
+        document.getElementById("highlightDots");
+
+
+    if (!container) {
+        return;
+    }
+
+
+    const cards =
+        Array.from(
+            container.querySelectorAll(".highlight-card")
+        );
+
+
+    if (!cards.length) {
+        return;
+    }
+
+
+    /*
+       Kalau hanya ada 1–3 berita,
+       semuanya langsung ditampilkan.
+    */
+
+    if (cards.length <= 3) {
+
+        cards.forEach(function (card) {
+
+            card.classList.add("is-visible");
+
+        });
+
+        return;
+
+    }
+
+
+    /* ======================================================
+       SETTING
+    ====================================================== */
+
+    const interval = 5000;
+
+    let startIndex = 0;
+
+    let timer;
+
+
+    /* ======================================================
+       BUAT DOT
+       1 DOT = 1 POSISI ROTASI
+    ====================================================== */
+
+    cards.forEach(function (_, index) {
+
+        const dot =
+            document.createElement("button");
+
+        dot.type = "button";
+
+        dot.className =
+            "highlight-dot";
+
+
+        dot.setAttribute(
+            "aria-label",
+            "Tampilkan berita " + (index + 1)
+        );
+
+
+        dot.addEventListener(
+            "click",
+            function () {
+
+                startIndex = index;
+
+                showCards();
+
+                restartTimer();
+
+            }
+        );
+
+
+        dotsContainer.appendChild(dot);
+
+    });
+
+
+    /* ======================================================
+       TAMPILKAN CARD
+    ====================================================== */
+
+    function showCards() {
+
+        cards.forEach(function (card, index) {
+
+            const relativeIndex =
+                (
+                    index -
+                    startIndex +
+                    cards.length
+                ) % cards.length;
+
+
+            /*
+               Desktop:
+               tampilkan 3 card
+
+               Mobile:
+               tampilkan 1 card
+            */
+
+            const visibleCount =
+                window.innerWidth <= 767
+                    ? 1
+                    : 3;
+
+
+            card.classList.toggle(
+                "is-visible",
+                relativeIndex < visibleCount
+            );
+
+        });
+
+
+        updateDots();
+
+        resetTimerBar();
+
+    }
+
+
+    /* ======================================================
+       UPDATE DOT
+    ====================================================== */
+
+    function updateDots() {
+
+        const dots =
+            dotsContainer.querySelectorAll(
+                ".highlight-dot"
+            );
+
+
+        dots.forEach(function (dot, index) {
+
+            dot.classList.toggle(
+                "active",
+                index === startIndex
+            );
+
+        });
+
+    }
+
+
+    /* ======================================================
+       TIMER BAR
+    ====================================================== */
+
+    function resetTimerBar() {
+
+        if (!timerBar) {
+            return;
+        }
+
+
+        timerBar.style.transition = "none";
+
+        timerBar.style.width = "0%";
+
+
+        /*
+           Force browser melakukan reflow
+           agar animasi selalu restart.
+        */
+
+        void timerBar.offsetWidth;
+
+
+        timerBar.style.transition =
+            "width " + interval + "ms linear";
+
+        timerBar.style.width = "100%";
+
+    }
+
+
+    /* ======================================================
+       NEXT
+    ====================================================== */
+
+    function nextSlide() {
+
+        startIndex++;
+
+
+        if (startIndex >= cards.length) {
+
+            startIndex = 0;
+
+        }
+
+
+        showCards();
+
+    }
+
+
+    /* ======================================================
+       TIMER
+    ====================================================== */
+
+    function startTimer() {
+
+        clearInterval(timer);
+
+
+        timer =
+            setInterval(
+                nextSlide,
+                interval
+            );
+
+    }
+
+
+    /* ======================================================
+       RESTART TIMER
+    ====================================================== */
+
+    function restartTimer() {
+
+        clearInterval(timer);
+
+        startTimer();
+
+    }
+
+
+    /* ======================================================
+       RESPONSIVE
+       Kalau layar berubah desktop ↔ mobile,
+       posisi tetap sama.
+    ====================================================== */
+
+    window.addEventListener(
+        "resize",
+        function () {
+
+            showCards();
+
+        }
+    );
+
+
+    /* ======================================================
+       INITIAL
+    ====================================================== */
+
+    showCards();
+
+    startTimer();
+
+});

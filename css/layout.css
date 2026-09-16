@@ -1107,17 +1107,13 @@
    MENU DESKTOP
 ========================================================== */
 
-/* ==========================================================
-   MENU DESKTOP
-========================================================== */
-
 @media (min-width:1200px){
 
     .navbar-nav{
         display:flex;
         align-items:center;
 
-        margin-left:0px;
+        margin-left:70px;
     }
 
     .navbar .nav-link{

@@ -131,6 +131,7 @@
 <div id="global-navbar"></div>
 <!-- END NAVBAR -->
 
+
 <!-- ==========================================================
      HERO
 ========================================================== -->
@@ -138,16 +139,18 @@
 <section class="hero">
 
     <div class="container">
-    
 
         <div class="row align-items-center">
+
 
             <!-- ==================================================
                  HERO CONTENT
             ================================================== -->
 
-            <div class="col-lg-7"
-                data-reveal="right">
+            <div
+                class="col-lg-7"
+                data-reveal="right"
+                data-delay="0.1s">
 
                 <h1>
                     Mencetak Generasi Qur'ani<br>
@@ -155,27 +158,31 @@
                 </h1>
 
                 <p>
-                    Rumah Tahfizhul Quran Al Imam Adz Dzahabiy merupakan lembaga pendidikan
-                    yang berkomitmen membina generasi muslim dengan berlandaskan
+                    Rumah Tahfizhul Quran Al Imam Adz Dzahabiy
+                    merupakan lembaga pendidikan yang berkomitmen
+                    membina generasi muslim dengan berlandaskan
                     Al-Qur'an, Sunnah, dan pemahaman Salafus Shalih.
                 </p>
 
                 <a
                     href="pages/profil.html"
-                    class="btn btn-success me-2"
-                >
+                    class="btn btn-success me-2">
+
                     Profil
+
                 </a>
 
             </div>
 
+
             <!-- ==================================================
-                KALENDER HARI INI
+                 KALENDER HARI INI
             ================================================== -->
 
-            <div class="col-lg-5"
+            <div
+                class="col-lg-5"
                 data-reveal="left"
-                data-delay="0.1s">
+                data-delay="0.2s">
 
                 <div class="home-date">
 
@@ -185,9 +192,10 @@
 
                         <div
                             id="home-date-weekday"
-                            class="home-date-weekday"
-                        >
+                            class="home-date-weekday">
+
                             -
+
                         </div>
 
 
@@ -202,16 +210,17 @@
 
                         <div
                             id="home-date-month"
-                            class="home-date-month"
-                        >
+                            class="home-date-month">
+
                             -
+
                         </div>
 
 
                         <div
                             id="home-date-event"
-                            class="home-date-event"
-                        >
+                            class="home-date-event">
+
                         </div>
 
                     </a>
@@ -219,9 +228,10 @@
 
                     <a
                         href="pages/kaldik.html"
-                        class="home-date-more"
-                    >
+                        class="home-date-more">
+
                         Baca Selengkapnya →
+
                     </a>
 
                 </div>
@@ -236,24 +246,25 @@
 
 <!-- End Hero -->
 
-<!-- ==================================================
+<!-- ==========================================================
      HIGHLIGHT TERBARU
-================================================== -->
+========================================================== -->
 
 <section class="highlight-section">
 
     <div class="container">
 
+        <!-- HEADER -->
         <div class="highlight-header"
-            data-reveal="zoom"
-            data-delay="0.1s">
+             data-reveal="zoom"
+             data-delay="0.1s">
 
             <span class="highlight-label">
-                TERBARU
+                - BERITA TERBARU -
             </span>
 
             <h2>
-                Highlight Terbaru
+                Informasi & Kegiatan Terkini
             </h2>
 
             <p>
@@ -264,62 +275,118 @@
         </div>
 
 
-        <!-- ==========================================================
-            HIGHLIGHT SLIDER
-        ========================================================== -->
-
-        <div
-            class="highlight-slider"
-            data-slider
-            data-slider-type="cards"
-            data-interval="5000">
+        <!-- ==================================================
+             HIGHLIGHT 3 CARD
+        ================================================== -->
+        <div class="highlight-cards"
+            id="highlightCards">
 
 
-            <!-- ======================================================
-                SLIDE 1
-            ======================================================= -->
+            <!-- ==================================================
+                CARD 1 — IMUNISASI BIAS
+            ================================================== -->
 
             <article
-                class="highlight-card"
-                data-slider-slide>
+                class="highlight-card">
 
-                <div class="highlight-image">
+                <div class="highlight-card-image">
 
-                    <a
-                        href="pages/berita/berita-classmeeting.html"
-                        aria-label="Buka berita Class Meeting">
-
-                        <img
-                            src="images/berita/class-meeting-camping-senja.jpeg"
-                            alt="Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy">
-
-                    </a>
+                    <img
+                        src="images/berita/berita-imunisasi-poster.png"
+                        alt="Imunisasi BIAS di Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy">
 
                     <span class="highlight-badge">
-                        Class Meeting Semester Gasal 1448 H / 2026 M
+                        Kesehatan
                     </span>
 
                 </div>
 
+                <div class="highlight-card-content">
 
-                <div class="highlight-content">
+                    <small
+                        data-reveal="zoom"
+                        data-delay="0.3s">
+                        14 September 2026
+                    </small>
 
-                    <small>
+                    <h3
+                        data-reveal="right"
+                        data-delay="0.4s">
+                        Imunisasi BIAS di Rumah Tahfizhul Qur'an
+                        Al Imam Adz Dzahabiy
+                    </h3>
+
+                    <p
+                        data-reveal
+                        data-delay="0.5s">
+                        Pelaksanaan imunisasi BIAS bersama Puskesmas Manggar
+                        untuk santri Kelas 1 dan Kelas 5 di Pondok RTQ
+                        Al Imam Adz Dzahabiy.
+                    </p>
+
+                    <a
+                        href="pages/berita/berita-imunisasi.html"
+                        class="highlight-link"
+                        data-reveal="right"
+                        data-delay="0.6s">
+
+                        Selengkapnya
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+            
+            
+            <!-- ==================================================
+                CARD 2
+            ================================================== -->
+
+            <article
+                class="highlight-card">
+
+                <div class="highlight-card-image">
+
+                    <img
+                        src="images/berita/class-meeting-camping-senja.jpeg"
+                        alt="Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy">
+
+                    <span class="highlight-badge">
+                        Kegiatan
+                    </span>
+
+                </div>
+
+                <div class="highlight-card-content">
+
+                    <small
+                        data-reveal="zoom"
+                        data-delay="0.3s">
                         02 September 2026
                     </small>
 
-                    <h3>
-                        Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy
+                    <h3
+                        data-reveal="right"
+                        data-delay="0.4s">
+                        Class Meeting Rumah Tahfizhul Qur'an
+                        Al Imam Adz Dzahabiy
                     </h3>
 
-                    <p>
-                        Kegiatan kebersamaan santri selepas ujian semester,
-                        29-30 Agustus 2026, Tanah Merah, Samboja
+                    <p
+                        data-reveal
+                        data-delay="0.5s">
+                        Kegiatan kebersamaan santri selepas ujian
+                        semester, 29–30 Agustus 2026,
+                        Tanah Merah, Samboja.
                     </p>
 
                     <a
                         href="pages/berita/berita-classmeeting.html"
-                        class="highlight-link">
+                        class="highlight-link"
+                        data-reveal="right"
+                        data-delay="0.6s">
 
                         Selengkapnya
                         <span>→</span>
@@ -331,113 +398,55 @@
             </article>
 
 
-            <!-- ======================================================
-                SLIDE 2
-            ======================================================= -->
+            <!-- ==================================================
+                CARD 3
+            ================================================== -->
 
             <article
-                class="highlight-card"
-                data-slider-slide>
+                class="highlight-card">
 
-                <div class="highlight-image">
+                <div class="highlight-card-image">
 
-                    <a
-                        href="pages/berita/donasi-aceh-2025.html"
-                        aria-label="Buka berita Donasi Aceh dan Sumut">
-
-                        <img
-                            src="images/berita/donasi-via-AL.jpg"
-                            alt="Donasi Aceh dan Sumut 2025">
-
-                    </a>
+                    <img
+                        src="images/donasi/donasi-masjid-2.jpg"
+                        alt="Donasi Jariyah Masjid Al Anshor">
 
                     <span class="highlight-badge">
-                        Donasi Aceh & Sumut 2025
+                        Donasi
                     </span>
 
                 </div>
 
+                <div class="highlight-card-content">
 
-                <div class="highlight-content">
-
-                    <small>
-                        22 Agustus 2026
-                    </small>
-
-                    <h3>
-                        Donasi Aceh & Sumut 2025
-                    </h3>
-
-                    <p>
-                        Laporan penutupan donasi bencana alam untuk
-                        saudara-saudara kita di Sumatra Utara dan Aceh.
-                        Donasi dana terkumpul
-                        <strong>Rp42.482.515</strong> dan donasi pakaian
-                        terkumpul <strong>17 kodi.</strong>
-                    </p>
-
-                    <a
-                        href="pages/berita/donasi-aceh-2025.html"
-                        class="highlight-link">
-
-                        Selengkapnya
-                        <span>→</span>
-
-                    </a>
-
-                </div>
-
-            </article>
-
-
-            <!-- ======================================================
-                SLIDE 3
-            ======================================================= -->
-
-            <article
-                class="highlight-card"
-                data-slider-slide>
-
-                <div class="highlight-image">
-
-                    <a
-                        href="pages/donasi-masjid.html"
-                        aria-label="Buka informasi Donasi Masjid Al Anshor">
-
-                        <img
-                            src="images/donasi/donasi-masjid-highlight.png"
-                            alt="Donasi Masjid Al Anshor">
-
-                    </a>
-
-                    <span class="highlight-badge">
-                        Donasi Jariyah Masjid Al Anshor
-                    </span>
-
-                </div>
-
-
-                <div class="highlight-content">
-
-                    <small>
+                    <small
+                        data-reveal="zoom"
+                        data-delay="0.5s">
                         02 September 2026
                     </small>
 
-                    <h3>
-                        Update Donasi Jariyah Masjid Al Anshor
+                    <h3
+                        data-reveal="left"
+                        data-delay="0.6s">
+                        Update Donasi Jariyah
+                        Masjid Al Anshor
                     </h3>
 
-                    <p>
-                        Pembangunan Masjid Al Anshar terus berlanjut menuju
-                        Tahap 6. Dana yang telah terkumpul mencapai
-                        <strong>Rp40.615.466,14</strong>.
+                    <p
+                        data-reveal
+                        data-delay="0.7s">
+                        Pembangunan Masjid Al Anshar terus berlanjut
+                        menuju Tahap 6. Dana yang telah terkumpul
+                        mencapai Rp40.615.466,14.
                     </p>
 
                     <a
                         href="pages/donasi-masjid.html"
-                        class="highlight-link">
+                        class="highlight-link"
+                        data-reveal="right"
+                        data-delay="0.8s">
 
-                        Selengkapnya
+                        Donasi Sekarang
                         <span>→</span>
 
                     </a>
@@ -447,54 +456,54 @@
             </article>
 
 
-            <!-- ======================================================
-                SLIDE 4
-            ======================================================= -->
+            <!-- ==================================================
+                CARD 4
+            ================================================== -->
 
             <article
-                class="highlight-card"
-                data-slider-slide>
+                class="highlight-card">
 
-                <div class="highlight-image">
+                <div class="highlight-card-image">
 
-                    <a
-                        href="pages/berita/berita-musabaqoh-asy-syatibi2.html"
-                        aria-label="Buka informasi Musabaqah Al-Qur'an">
-
-                        <img
-                            src="images/berita/musabaqah-al-imam-asy-syathiby-2026-hero.jpg"
-                            alt="Poster Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo">
-
-                    </a>
+                    <img
+                        src="images/berita/musabaqah-al-imam-asy-syathiby-2026-hero.jpg"
+                        alt="Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo">
 
                     <span class="highlight-badge">
-                        Persiapan Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo
+                        Kegiatan
                     </span>
 
                 </div>
 
+                <div class="highlight-card-content">
 
-                <div class="highlight-content">
-
-                    <small>
+                    <small
+                        data-reveal="zoom"
+                        data-delay="0.7s">
                         04 September 2026
                     </small>
 
-                    <h3>
-                        Persiapan Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo
+                    <h3
+                        data-reveal="left"
+                        data-delay="0.8s">
+                        Musabaqah Al-Qur'an
+                        Al-Imam Asy-Syathiby ke-2 Se-Borneo
                     </h3>
 
-                    <p>
-                        14-16 Rabiul Akhir 1448 H /
-                        25 - 27 September 2026,
-                        Masjid Al-Anshar, Balikpapan.
+                    <p
+                        data-reveal
+                        data-delay="0.9s">
+                        25–27 September 2026 di Masjid Al-Anshar,
+                        Balikpapan.
                     </p>
 
                     <a
                         href="pages/berita/berita-musabaqoh-asy-syatibi2.html"
-                        class="highlight-link">
+                        class="highlight-link"
+                        data-reveal="right"
+                        data-delay="1s">
 
-                        Selengkapnya
+                        Lihat Detail
                         <span>→</span>
 
                     </a>
@@ -503,22 +512,34 @@
 
             </article>
 
+        </div>
 
-            <!-- ======================================================
-                BULLET INDICATOR
-            ======================================================= -->
 
-            <div
-                class="slider-dots"
-                data-slider-dots>
+        <!-- ==================================================
+             TIMER / INDICATOR
+        ================================================== -->
+
+        <div class="highlight-timer">
+
+            <div class="highlight-timer-track">
+                <div
+                    id="highlightTimerBar"
+                    class="highlight-timer-bar">
+                </div>
             </div>
 
+            <div
+                id="highlightDots"
+                class="highlight-dots">
+            </div>
 
-        </div>  
+        </div>
+
 
     </div>
 
 </section>
+
 <!-- ==========================================================
      PROGRAM PENDIDIKAN
 ========================================================== -->
@@ -527,10 +548,10 @@
 
     <div class="container">
 
-
-        <div class="text-center mb-5"
-             data-reveal
-             data-delay="0.1s">
+        <div
+            class="text-center mb-5"
+            data-reveal="zoom"
+            data-delay="0.15s">
 
             <h2>
                 Program Pendidikan
@@ -546,27 +567,37 @@
         <div class="row g-4">
 
 
-            <!-- ==================================================
-                 RA
+           <!-- ==================================================
+                RA
             ================================================== -->
 
-            <div class="col-lg col-md-6"
-                 data-reveal="left"
-                 data-delay="0.15s">
+            <div
+                class="col-lg col-md-6"
+                data-reveal
+                data-delay="0.3s">
 
-                <a href="pages/ra.html"
-                   class="program-box-link">
+                <a
+                    href="pages/ra.html"
+                    class="program-box-link">
 
                     <div class="program-box">
 
                         <i class="bi bi-backpack2 program-icon"></i>
 
-                        <h4>
+                        <h4
+                            data-reveal="left"
+                            data-delay="0.4s">
+
                             RA
+
                         </h4>
 
-                        <p>
+                        <p
+                            data-reveal="right"
+                            data-delay="0.5s">
+
                             Raudhatul Athfal
+
                         </p>
 
                     </div>
@@ -577,26 +608,36 @@
 
 
             <!-- ==================================================
-                 RB
+                RB
             ================================================== -->
 
-            <div class="col-lg col-md-6"
-                 data-reveal="right"
-                 data-delay="0.2s">
+            <div
+                class="col-lg col-md-6"
+                data-reveal
+                data-delay="0.4s">
 
-                <a href="pages/rb.html"
-                   class="program-box-link">
+                <a
+                    href="pages/rb.html"
+                    class="program-box-link">
 
                     <div class="program-box">
 
                         <i class="bi bi-backpack2 program-icon"></i>
 
-                        <h4>
+                        <h4
+                            data-reveal="right"
+                            data-delay="0.5s">
+
                             RB
+
                         </h4>
 
-                        <p>
+                        <p
+                            data-reveal="left"
+                            data-delay="0.6s">
+
                             Raudhatul Banaat
+
                         </p>
 
                     </div>
@@ -607,26 +648,36 @@
 
 
             <!-- ==================================================
-                 ULA
+                ULA
             ================================================== -->
 
-            <div class="col-lg col-md-6"
-                 data-reveal="left"
-                 data-delay="0.3s">
+            <div
+                class="col-lg col-md-6"
+                data-reveal
+                data-delay="0.5s">
 
-                <a href="pages/mu.html"
-                   class="program-box-link">
+                <a
+                    href="pages/mu.html"
+                    class="program-box-link">
 
                     <div class="program-box">
 
                         <i class="bi bi-book program-icon"></i>
 
-                        <h4>
+                        <h4
+                            data-reveal="left"
+                            data-delay="0.6s">
+
                             ULA
+
                         </h4>
 
-                        <p>
+                        <p
+                            data-reveal="right"
+                            data-delay="0.7s">
+
                             Marhalah Ula
+
                         </p>
 
                     </div>
@@ -637,26 +688,36 @@
 
 
             <!-- ==================================================
-                 WUSTHO
+                WUSTHO
             ================================================== -->
 
-            <div class="col-lg col-md-6"
-                 data-reveal="right"
-                 data-delay="0.4s">
+            <div
+                class="col-lg col-md-6"
+                data-reveal
+                data-delay="0.6s">
 
-                <a href="pages/mw.html"
-                   class="program-box-link">
+                <a
+                    href="pages/mw.html"
+                    class="program-box-link">
 
                     <div class="program-box">
 
                         <i class="bi bi-mortarboard program-icon"></i>
 
-                        <h4>
+                        <h4
+                            data-reveal="right"
+                            data-delay="0.7s">
+
                             WUSTHO
+
                         </h4>
 
-                        <p>
+                        <p
+                            data-reveal="left"
+                            data-delay="0.8s">
+
                             Marhalah Wustho
+
                         </p>
 
                     </div>
@@ -667,26 +728,36 @@
 
 
             <!-- ==================================================
-                 ULYA
+                ULYA
             ================================================== -->
 
-            <div class="col-lg col-md-6"
-                 data-reveal="left"
-                 data-delay="0.5s">
+            <div
+                class="col-lg col-md-6"
+                data-reveal
+                data-delay="0.7s">
 
-                <a href="pages/muy.html"
-                   class="program-box-link">
+                <a
+                    href="pages/muy.html"
+                    class="program-box-link">
 
                     <div class="program-box">
 
                         <i class="bi bi-building program-icon"></i>
 
-                        <h4>
+                        <h4
+                            data-reveal="left"
+                            data-delay="0.8s">
+
                             ULYA
+
                         </h4>
 
-                        <p>
+                        <p
+                            data-reveal="right"
+                            data-delay="0.9s">
+
                             Marhalah Ulya
+
                         </p>
 
                     </div>
@@ -694,7 +765,6 @@
                 </a>
 
             </div>
-
 
         </div>
 
@@ -703,7 +773,6 @@
 </section>
 
 <!-- END PROGRAM PENDIDIKAN -->
-
 <!-- ==========================================================
      MENGAPA MEMILIH RTQ
 ========================================================== -->
@@ -712,11 +781,15 @@
 
     <div class="container">
 
-        <div class="text-center mb-5"
-             data-reveal="0s">
+        <div
+            class="text-center mb-5"
+            data-reveal="zoom"
+            data-delay="0.15s">
 
-            <h2>Mengapa Memilih Rumah Tahfizhul Quran <br>
-                Al Imam Adz Dzahabiy?</h2>
+            <h2>
+                Mengapa Memilih Rumah Tahfizhul Quran <br>
+                Al Imam Adz Dzahabiy?
+            </h2>
 
             <p>
                 Pendidikan yang berlandaskan Al-Qur'an dan Sunnah sesuai
@@ -725,19 +798,32 @@
 
         </div>
 
+
         <div class="row g-4">
 
-            <div class="col-lg-4 col-md-6"
-                data-reveal="left"
-                data-delay="0.1s">
+
+            <!-- ==================================================
+                 AL-QUR'AN & SUNNAH
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.3s">
 
                 <div class="why-box">
 
                     <i class="bi bi-book-half why-icon"></i>
 
-                    <h4>Al-Qur'an & Sunnah</h4>
+                    <h4
+                        data-reveal="left"
+                        data-delay="0.4s">
+                        Al-Qur'an & Sunnah
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal="right"
+                        data-delay="0.5s">
                         Kurikulum berdasarkan Al-Qur'an dan Sunnah sesuai
                         pemahaman Salafus Shalih.
                     </p>
@@ -746,17 +832,29 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6"
+
+            <!-- ==================================================
+                 STAF PENGAJAR
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
                 data-reveal
-                data-delay="0.2s">
+                data-delay="0.4s">
 
                 <div class="why-box">
 
                     <i class="bi bi-person-workspace why-icon"></i>
 
-                    <h4>Staf Pengajar Berpengalaman</h4>
+                    <h4
+                        data-reveal="right"
+                        data-delay="0.5s">
+                        Staf Pengajar Berpengalaman
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal
+                        data-delay="0.6s">
                         Dibimbing oleh para pengajar yang berpengalaman
                         dalam pendidikan Islam.
                     </p>
@@ -765,17 +863,29 @@
 
             </div>
 
-           <div class="col-lg-4 col-md-6"
-                data-reveal="right"
-                data-delay="0.3s">
+
+            <!-- ==================================================
+                 LINGKUNGAN ISLAMI
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.5s">
 
                 <div class="why-box">
 
                     <i class="bi bi-tree why-icon"></i>
 
-                    <h4>Lingkungan Islami</h4>
+                    <h4
+                        data-reveal="left"
+                        data-delay="0.6s">
+                        Lingkungan Islami
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal="right"
+                        data-delay="0.7s">
                         Suasana belajar yang nyaman,
                         aman dan kondusif.
                     </p>
@@ -784,17 +894,29 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6"
-                data-reveal="left"
-                data-delay="0.4s">
+
+            <!-- ==================================================
+                 PEMBINAAN ADAB
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.6s">
 
                 <div class="why-box">
-                    
+
                     <i class="bi bi-stars why-icon"></i>
 
-                    <h4>Pembinaan Adab</h4>
+                    <h4
+                        data-reveal="right"
+                        data-delay="0.7s">
+                        Pembinaan Adab
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal
+                        data-delay="0.8s">
                         Membina akhlak mulia dan adab Islami
                         dalam kehidupan sehari-hari.
                     </p>
@@ -803,17 +925,29 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6"
+
+            <!-- ==================================================
+                 SINERGI ORANG TUA
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
                 data-reveal
-                data-delay="0.5s">
+                data-delay="0.7s">
 
                 <div class="why-box">
 
                     <i class="bi bi-people why-icon"></i>
 
-                    <h4>Sinergi Orang Tua</h4>
+                    <h4
+                        data-reveal="left"
+                        data-delay="0.8s">
+                        Sinergi Orang Tua
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal="right"
+                        data-delay="0.9s">
                         Orang tua dilibatkan dalam perkembangan
                         pendidikan dan hafalan ananda.
                     </p>
@@ -822,17 +956,29 @@
 
             </div>
 
-            <div class="col-lg-4 col-md-6"
-                data-reveal="right"
-                data-delay="0.6s">
+
+            <!-- ==================================================
+                 TARGET PEMBELAJARAN
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.8s">
 
                 <div class="why-box">
 
                     <i class="bi bi-bullseye why-icon"></i>
 
-                    <h4>Target Pembelajaran</h4>
+                    <h4
+                        data-reveal="right"
+                        data-delay="0.9s">
+                        Target Pembelajaran
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal
+                        data-delay="1s">
                         Target hafalan dan pembelajaran
                         yang jelas pada setiap jenjang.
                     </p>
@@ -847,8 +993,10 @@
 
 </section>
 
-<!-- END MENGAPA MEMILIH RTQ -->
+        
 
+<!-- END MENGAPA MEMILIH RTQ -->
+ 
 <!-- ==========================================================
      JADWAL TAKLIM
 ========================================================== -->
@@ -857,73 +1005,128 @@
 
     <div class="container">
 
-        <div class="text-center mb-5"
-            data-reveal>
 
-            <h2>Jadwal Taklim</h2>
+        <div
+            class="text-center mb-5"
+            data-reveal="zoom">
+
+            <h2>
+                Jadwal Taklim
+            </h2>
 
             <p class="section-subtitle">
+
                 Kajian rutin mingguan<br>
-                <strong>Ba'da Maghrib – Isya</strong>
+
+                <strong>
+                    Ba'da Maghrib – Isya
+                </strong>
+
             </p>
 
         </div>
 
+
         <div class="row g-4">
 
-            <!-- AHAD -->
-            <div class="col-lg-4 col-md-6"
+            <!-- ==================================================
+                AHAD
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
                 data-reveal="left"
                 data-delay="0.1s">
 
                 <div class="taklim-card">
 
-                    <span class="taklim-day">Ahad</span>
+                    <span class="taklim-day">
+                        Ahad
+                    </span>
 
                     <div class="taklim-icon">
+
                         <i class="bi bi-book"></i>
+
                     </div>
 
-                    <h4>Fadhoilul Qur'an</h4>
+                    <h4
+                        data-reveal="zoom"
+                        data-delay="0.2s">
+                        Fadhoilul Qur'an
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal="right"
+                        data-delay="0.3s">
+
                         <strong>Pemateri:</strong><br>
+
                         Al Ustadz Abu 'Adil Abdul Hamid حفظه الله تعالى
+
                     </p>
 
-                    <p class="taklim-time">
+                    <p
+                        class="taklim-time"
+                        data-reveal
+                        data-delay="0.4s">
+
                         <i class="bi bi-clock"></i>
+
                         Ba'da Maghrib – Isya
+
                     </p>
 
                 </div>
 
             </div>
 
+            <!-- ==================================================
+                SENIN
+            ================================================== -->
 
-            <!-- SENIN -->
-            <div class="col-lg-4 col-md-6"
-            data-reveal
-            data-delay="0.2s">
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal
+                data-delay="0.2s">
 
                 <div class="taklim-card">
 
-                    <span class="taklim-day">Senin</span>
+                    <span class="taklim-day">
+                        Senin
+                    </span>
 
                     <div class="taklim-icon">
+
                         <i class="bi bi-book"></i>
+
                     </div>
 
-                    <h4>Tafsir Juz 'Amma</h4>
+                    <h4
+                        data-reveal="left"
+                        data-delay="0.3s">
+                        Tafsir Juz 'Amma
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal="right"
+                        data-delay="0.4s">
+
                         <strong>Pemateri:</strong><br>
+
                         Al Ustadz Abu Usaid Abdul Fattah حفظه الله تعالى
+
                     </p>
 
-                    <p class="taklim-time">
+                    <p
+                        class="taklim-time"
+                        data-reveal="zoom"
+                        data-delay="0.5s">
+
                         <i class="bi bi-clock"></i>
+
                         Ba'da Maghrib – Isya
+
                     </p>
 
                 </div>
@@ -931,59 +1134,104 @@
             </div>
 
 
-            <!-- SELASA -->
-            <div class="col-lg-4 col-md-6"
-            data-reveal="right"
-            data-delay="0.3s">
+            <!-- ==================================================
+                SELASA
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal="right"
+                data-delay="0.3s">
 
                 <div class="taklim-card">
 
-                    <span class="taklim-day">Selasa</span>
+                    <span class="taklim-day">
+                        Selasa
+                    </span>
 
                     <div class="taklim-icon">
+
                         <i class="bi bi-book"></i>
+
                     </div>
 
-                    <h4>Syarah Riyadhus Shalihin</h4>
+                    <h4
+                        data-reveal="zoom"
+                        data-delay="0.4s">
+                        Syarah Riyadhus Shalihin
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal
+                        data-delay="0.5s">
+
                         <strong>Pemateri:</strong><br>
+
                         Al Ustadz Abu Syu'bah Ubaidullah حفظه الله تعالى
+
                     </p>
 
-                    <p class="taklim-time">
+                    <p
+                        class="taklim-time"
+                        data-reveal="left"
+                        data-delay="0.6s">
+
                         <i class="bi bi-clock"></i>
+
                         Ba'da Maghrib – Isya
+
                     </p>
 
                 </div>
 
             </div>
 
+            <!-- ==================================================
+                RABU
+            ================================================== -->
 
-            <!-- RABU -->
-            <div class="col-lg-4 col-md-6"
+            <div
+                class="col-lg-4 col-md-6"
                 data-reveal="left"
                 data-delay="0.4s">
 
                 <div class="taklim-card">
 
-                    <span class="taklim-day">Rabu</span>
+                    <span class="taklim-day">
+                        Rabu
+                    </span>
 
                     <div class="taklim-icon">
+
                         <i class="bi bi-book"></i>
+
                     </div>
 
-                    <h4>Al-Minhatur Rabbaniyyah</h4>
+                    <h4
+                        data-reveal="right"
+                        data-delay="0.5s">
+                        Al-Minhatur Rabbaniyyah
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal
+                        data-delay="0.6s">
+
                         <strong>Pemateri:</strong><br>
+
                         Al Ustadz Abu Hanan Abdul Haq حفظه الله تعالى
+
                     </p>
 
-                    <p class="taklim-time">
+                    <p
+                        class="taklim-time"
+                        data-reveal="zoom"
+                        data-delay="0.7s">
+
                         <i class="bi bi-clock"></i>
+
                         Ba'da Maghrib – Isya
+
                     </p>
 
                 </div>
@@ -991,111 +1239,186 @@
             </div>
 
 
-            <!-- KAMIS -->
-            <div class="col-lg-4 col-md-6"
+            <!-- ==================================================
+                KAMIS
+            ================================================== -->
+
+            <div
+                class="col-lg-4 col-md-6"
                 data-reveal
                 data-delay="0.5s">
 
                 <div class="taklim-card">
 
-                    <span class="taklim-day">Kamis</span>
+                    <span class="taklim-day">
+                        Kamis
+                    </span>
 
                     <div class="taklim-icon">
+
                         <i class="bi bi-book"></i>
+
                     </div>
 
-                    <h4>Adabul Masyaa' Ilaa Sholat</h4>
+                    <h4
+                        data-reveal="zoom"
+                        data-delay="0.6s">
+                        Adabul Masyaa' Ilaa Sholat
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal="left"
+                        data-delay="0.7s">
+
                         <strong>Pemateri:</strong><br>
+
                         Al Ustadz Abu Ali Usamah حفظه الله تعالى
+
                     </p>
 
-                    <p class="taklim-time">
+                    <p
+                        class="taklim-time"
+                        data-reveal="right"
+                        data-delay="0.8s">
+
                         <i class="bi bi-clock"></i>
+
                         Ba'da Maghrib – Isya
+
                     </p>
 
                 </div>
 
             </div>
+            <!-- ==================================================
+                JUMAT
+            ================================================== -->
 
-
-            <!-- JUMAT -->
-            <div class="col-lg-4 col-md-6"
-                data-reveal=""right"
+            <div
+                class="col-lg-4 col-md-6"
+                data-reveal="right"
                 data-delay="0.6s">
 
                 <div class="taklim-card">
 
-                    <span class="taklim-day">Jumat</span>
+                    <span class="taklim-day">
+                        Jumat
+                    </span>
 
                     <div class="taklim-icon">
+
                         <i class="bi bi-book"></i>
+
                     </div>
 
-                    <h4>Syarh Masail Jahiliyyah</h4>
+                    <h4
+                        data-reveal="left"
+                        data-delay="0.7s">
+                        Syarh Masail Jahiliyyah
+                    </h4>
 
-                    <p>
+                    <p
+                        data-reveal
+                        data-delay="0.8s">
+
                         <strong>Pemateri:</strong><br>
+
                         Al Ustadz Abu Nu'aim Ismail حفظه الله تعالى
+
                     </p>
 
-                    <p class="taklim-time">
+                    <p
+                        class="taklim-time"
+                        data-reveal="zoom"
+                        data-delay="0.9s">
+
                         <i class="bi bi-clock"></i>
+
                         Ba'da Maghrib – Isya
+
                     </p>
 
                 </div>
 
             </div>
 
-        </div>
-
-
-        <!-- SABTU -->
-        <div class="taklim-saturday"
-            data-reveal
-            data-delay="0.7s">
-
-            <div class="taklim-card">
-
-                <span class="taklim-day">Sabtu</span>
-
-                <div class="taklim-icon">
-                    <i class="bi bi-book"></i>
-                </div>
-
-                <h4>Mujtana Al-Fawaid</h4>
-
-                <p>
-                    <strong>Pemateri:</strong><br>
-                    Al Ustadz Abul Abbas Abdul Majid حفظه الله تعالى
-                </p>
-
-                <p class="taklim-time">
-                    <i class="bi bi-clock"></i>
-                    Ba'da Maghrib – Isya
-                </p>
 
             </div>
 
-        </div>
 
+            <!-- ==================================================
+                SABTU
+            ================================================== -->
 
-        <div class="text-center taklim-more"
+            <div
+                class="taklim-saturday"
+                data-reveal="zoom"
+                data-delay="0.7s">
+
+                <div class="taklim-card">
+
+                    <span class="taklim-day">
+                        Sabtu
+                    </span>
+
+                    <div class="taklim-icon">
+
+                        <i class="bi bi-book"></i>
+
+                    </div>
+
+                    <h4
+                        data-reveal="right"
+                        data-delay="0.8s">
+                        Mujtana Al-Fawaid
+                    </h4>
+
+                    <p
+                        data-reveal="left"
+                        data-delay="0.9s">
+
+                        <strong>Pemateri:</strong><br>
+
+                        Al Ustadz Abul Abbas Abdul Majid حفظه الله تعالى
+
+                    </p>
+
+                    <p
+                        class="taklim-time"
+                        data-reveal
+                        data-delay="1s">
+
+                        <i class="bi bi-clock"></i>
+
+                        Ba'da Maghrib – Isya
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        <!-- ==================================================
+             TOMBOL JADWAL LENGKAP
+        ================================================== -->
+
+        <div
+            class="text-center taklim-more"
             data-reveal
             data-delay="0.8s">
 
-            <a href="pages/jadwal-taklim.html"
-               class="btn btn-success">
+            <a
+                href="pages/jadwal-taklim.html"
+                class="btn btn-success">
 
                 Lihat Jadwal Lengkap
+
                 <i class="bi bi-arrow-right"></i>
 
             </a>
 
         </div>
+
 
     </div>
 
@@ -1107,8 +1430,7 @@
      FOOTER
 ========================================================== -->
 
-<div id="global-footer"
-    data-reveal="zoom">
+<div id="global-footer">
 
 </div>
 
@@ -1122,6 +1444,7 @@
 <script src="js/navbar.js"></script>
 <script src="js/scroll-reveal.js"></script>
 <script src="js/slider.js"></script>
+<script src="js/highlight.js"></script>
 <script src="js/back-button.js"></script>
 
 </body>

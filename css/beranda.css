@@ -160,7 +160,6 @@
 
 }
 
-
 /* ==========================================================
    HIGHLIGHT TERBARU
 ========================================================== */
@@ -168,11 +167,12 @@
 .highlight-section {
     padding: 80px 0;
     background: #f8faf9;
+    overflow: hidden;
 }
 
 
 /* ==========================================================
-   HIGHLIGHT HEADER
+   HEADER
 ========================================================== */
 
 .highlight-header {
@@ -196,7 +196,6 @@
     color: #006B3C;
     font-weight: 700;
     text-align: center !important;
-
 }
 
 .highlight-header p {
@@ -208,119 +207,244 @@
 }
 
 
-
 /* ==========================================================
-   HIGHLIGHT GAMBAR
+   GRID CARD
 ========================================================== */
 
-.highlight-image {
+.highlight-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.highlight-card {
     position: relative;
 
     width: 100%;
-    height: 280px;
+    min-width: 0;
+    height: 550px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #222;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, .10);
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.highlight-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, .16);
+}
+
+
+/* ==========================================================
+   GAMBAR FULL CARD
+========================================================== */
+
+.highlight-card-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
 
     overflow: hidden;
 }
 
-.highlight-image img {
+.highlight-card-image img {
     display: block;
 
     width: 100%;
     height: 100%;
 
+    max-width: none;
+
     object-fit: cover;
+    object-position: center;
+
+    transition: transform .6s ease;
+}
+
+.highlight-card:hover
+.highlight-card-image img {
+    transform: scale(1.04);
 }
 
 
 /* ==========================================================
-   HIGHLIGHT BADGE
+   GRADIENT OVERLAY
+========================================================== */
+
+.highlight-card-image::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.05) 0%,
+            rgba(0,0,0,.10) 25%,
+            rgba(0,0,0,.38) 50%,
+            rgba(0,0,0,.82) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* ==========================================================
+   BADGE
 ========================================================== */
 
 .highlight-badge {
     position: absolute;
 
-    top: 18px;
-    left: 18px;
+    top: 22px;
+    left: 22px;
+
+    z-index: 3;
 
     padding: 9px 18px;
 
-    background: #E04B5A;
-    color: #ffffff;
+    background: #198754;
+    color: #fff;
 
     border-radius: 30px;
 
     font-size: 14px;
-    font-weight: 800;
+    font-weight: 700;
 
     box-shadow:
-        0 4px 12px rgba(0, 0, 0, 0.15);
+        0 4px 12px rgba(0,0,0,.18);
 }
 
 
 /* ==========================================================
-   HIGHLIGHT CONTENT
+   CONTENT OVERLAY
 ========================================================== */
 
-.highlight-content {
-    padding: 25px 30px;
+.highlight-card-content {
+    position: relative;
 
-    text-align: left;
+    z-index: 2;
+
+    margin-top: auto;
+
+    padding: 30px;
+
+    color: #fff;
+
+    display: flex;
+    flex-direction: column;
 }
 
-.highlight-content small {
+
+/* TANGGAL */
+
+.highlight-card-content small {
     display: block;
 
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 
-    color: #777;
+    color: rgba(255,255,255,.90);
 
-    font-size: 15px;
+    font-size: 14px;
 }
 
-.highlight-content h3 {
-    margin: 0 0 10px;
 
-    color: #006B3C;
+/* JUDUL */
 
-    font-size: 26px;
+.highlight-card-content h3 {
+    margin: 0 0 14px;
+
+    color: #fff;
+
+    font-size: 25px;
     font-weight: 800;
 
     line-height: 1.3;
+
+    text-shadow:
+        0 2px 6px rgba(0,0,0,.45);
 }
 
-.highlight-content p {
-    margin: 0 0 18px;
 
-    color: #666;
+/* DESKRIPSI */
 
-    font-size: 16px;
+.highlight-card-content p {
+    margin: 0 0 20px;
 
-    line-height: 1.6;
+    color: rgba(255,255,255,.94);
+
+    font-size: 15px;
+    line-height: 1.65;
+
+    text-shadow:
+        0 1px 4px rgba(0,0,0,.4);
 }
+
+
+/* ==========================================================
+   LINK
+========================================================== */
 
 .highlight-link {
     display: inline-flex;
 
     align-items: center;
+    justify-content: center;
 
-    gap: 8px;
+    align-self: flex-start;
 
-    color: #006B3C;
+    gap: 10px;
 
-    font-size: 16px;
-    font-weight: 800;
+    padding: 11px 20px;
+
+    color: #fff;
+
+    background: #198754;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 700;
 
     text-decoration: none;
 
-    transition: 0.3s ease;
+    transition: .3s ease;
 }
 
 .highlight-link span {
-    transition: transform 0.3s ease;
+    transition: transform .3s ease;
 }
 
 .highlight-link:hover {
-    color: #E04B5A;
+    color: #fff;
+
+    background: #146c43;
 }
 
 .highlight-link:hover span {
@@ -329,7 +453,73 @@
 
 
 /* ==========================================================
-  HIGHLIGHT RESPONSIVE TABLET
+   TIMER
+========================================================== */
+
+.highlight-timer {
+    margin-top: 35px;
+
+    text-align: center;
+}
+
+.highlight-timer-track {
+    width: 100%;
+    max-width: 500px;
+    height: 4px;
+
+    margin: 0 auto 18px;
+
+    background: #ddd;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.highlight-timer-bar {
+    width: 0;
+    height: 100%;
+
+    background: #198754;
+
+    border-radius: 10px;
+}
+
+.highlight-dots {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.highlight-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #ccc;
+
+    cursor: pointer;
+
+    transition:
+        width .25s ease,
+        background .25s ease;
+}
+
+.highlight-dot.active {
+    width: 24px;
+
+    border-radius: 10px;
+
+    background: #198754;
+}
+
+
+/* ==========================================================
+   TABLET
 ========================================================== */
 
 @media (max-width: 992px) {
@@ -338,27 +528,27 @@
         padding: 65px 20px;
     }
 
-    .highlight-wrapper {
-        height: 530px;
+    .highlight-cards {
+        gap: 20px;
     }
 
     .highlight-card {
-        height: 510px;
+        height: 500px;
     }
 
-    .highlight-image {
-        height: 250px;
+    .highlight-card-content {
+        padding: 25px;
     }
 
-    .highlight-header h2 {
-        font-size: 36px;
+    .highlight-card-content h3 {
+        font-size: 21px;
     }
 
 }
 
 
 /* ==========================================================
-   HIGHLIGHT RESPONSIVE HP
+   HP
 ========================================================== */
 
 @media (max-width: 768px) {
@@ -385,35 +575,39 @@
         line-height: 1.6;
     }
 
-    .highlight-wrapper {
-        height: 500px;
+
+    /* SATU CARD */
+
+    .highlight-cards {
+        display: block;
     }
 
     .highlight-card {
-        height: 480px;
+        display: none;
 
-        border-radius: 18px;
+        width: 100%;
+        height: 500px;
     }
 
-    .highlight-image {
-        height: 210px;
+    .highlight-card.is-visible {
+        display: flex;
     }
 
-    .highlight-content {
-        padding: 20px;
+    .highlight-card-content {
+        padding: 25px;
     }
 
-    .highlight-content h3 {
-        font-size: 21px;
+    .highlight-card-content h3 {
+        font-size: 22px;
     }
 
-    .highlight-content p {
+    .highlight-card-content p {
         font-size: 15px;
     }
 
     .highlight-badge {
-        top: 14px;
-        left: 14px;
+        top: 16px;
+        left: 16px;
 
         padding: 8px 15px;
 
@@ -424,33 +618,46 @@
 
 
 /* ==========================================================
-   HIGHLIGHT HP KECIL
+   HP KECIL
 ========================================================== */
 
 @media (max-width: 480px) {
 
-    .highlight-wrapper {
-        height: 480px;
-    }
-
     .highlight-card {
-        height: 460px;
+        height: 470px;
     }
 
-    .highlight-image {
-        height: 185px;
+    .highlight-card-content {
+        padding: 20px;
     }
 
     .highlight-header h2 {
         font-size: 27px;
     }
 
-    .highlight-content h3 {
-        font-size: 19px;
+    .highlight-card-content h3 {
+        font-size: 20px;
     }
 
-    .highlight-content p {
+    .highlight-card-content p {
         font-size: 14px;
+    }
+
+}
+
+/* ==========================================================
+   HIGHLIGHT ROTATION
+   DESKTOP = 3 CARD
+========================================================== */
+
+@media (min-width: 768px) {
+
+    .highlight-cards > .highlight-card:not(.is-visible) {
+        display: none;
+    }
+
+    .highlight-cards > .highlight-card.is-visible {
+        display: flex;
     }
 
 }
