@@ -36,10 +36,9 @@
     <link rel="stylesheet" href="../css/page.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/beranda.css">
 
-    <!-- CSS KHUSUS BERITA -->
-
-    <link rel="stylesheet" href="../css/berita.css">
+   
 
 </head>
 
@@ -53,88 +52,51 @@
 
 <div id="global-navbar"></div>
 
-
-
 <!-- ==========================================================
-     BERITA TERBARU / FEATURED NEWS
-     
-     DATA FEATURED DIAMBIL OTOMATIS
-     DARI BERITA NOMOR 1 DI BAWAH
+     HERO BERITA
 ========================================================== -->
 
-<section class="news-featured">
+<!-- ==========================================================
+     HERO BERITA
+========================================================== -->
+
+<section class="hero">
 
     <div class="container">
 
-        <div class="news-featured-slider">
+        <div class="row align-items-center">
 
-            <article class="news-featured-item active">
+            <div class="col-lg-7">
 
-                <div class="row align-items-center g-4">
+                <span
+                    class="berita-hero-label"
+                    data-reveal
+                    data-delay="0s">
 
+                    - BERITA & INFORMASI -
 
-                    <!-- ==================================================
-                         GAMBAR
-                    ================================================== -->
-
-                    <div class="col-lg-5">
-
-                        <div class="news-featured-image">
-
-                            <img
-                                id="featuredImage"
-                                src=""
-                                alt="">
-
-                        </div>
-
-                    </div>
+                </span>
 
 
-                    <!-- ==================================================
-                         ISI
-                    ================================================== -->
+                <h1
+                    data-reveal="right"
+                    data-delay="0.1s">
 
-                    <div class="col-lg-7">
+                    Kabar dari Rumah Tahfizhul Qur'an
 
-                        <span
-                            id="featuredCategory"
-                            class="news-category">
-                        </span>
+                </h1>
 
 
-                        <h2 id="featuredTitle"></h2>
+                <p
+                    data-reveal="left"
+                    data-delay="0.2s">
 
+                    Informasi, kegiatan, dan kabar terbaru
+                    Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy.
 
-                        <div
-                            id="featuredDate"
-                            class="news-date">
-                        </div>
+                </p>
 
-
-                        <p id="featuredSummary"></p>
-
-
-                        <div
-                            id="featuredLocation"
-                            class="news-location">
-                        </div>
-
-
-                        <a
-                            id="featuredLink"
-                            href="#"
-                            class="btn btn-success">
-
-                            Baca Selengkapnya
-
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </article>
+            </div>
 
         </div>
 
@@ -143,397 +105,448 @@
 </section>
 
 
-
 <!-- ==========================================================
-     DAFTAR BERITA
-     
-     BERITA NOMOR 1 ADALAH SUMBER DATA FEATURED NEWS
+     BERITA TERKINI
+     4 BERITA → 3 CARD DESKTOP
+     MOBILE → 1 CARD
 ========================================================== -->
 
-<section class="page-section news-list-section">
+<section class="highlight-section news-list-section">
 
     <div class="container">
 
-
         <!-- ==================================================
-             JUDUL
-        =================================================== -->
+             HEADER
+        ================================================== -->
 
-        <div class="text-center mb-5"
-            data-reveal="left">
+        <div class="highlight-header">
 
-            <span class="section-label">
-                BERITA TERKINI
+            <span class="highlight-label">
+                - BERITA TERKINI -
             </span>
 
             <h2>
                 Kabar dari Rumah Tahfizhul Qur'an
             </h2>
 
-            <p class="section-subtitle">
+            <p>
                 Informasi dan kegiatan terbaru
-                Rumah Tahfizhul Quran Al Imam Adz Dzahabiy.
+                Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy.
             </p>
 
         </div>
 
 
+        <!-- ==================================================
+             HIGHLIGHT CARDS
+        ================================================== -->
+
+        <div
+            class="highlight-cards"
+            id="highlightCards">
+
+
+            <!-- ==================================================
+                 BERITA 1 — IMUNISASI BIAS
+            ================================================== -->
+
+            <article class="highlight-card">
+
+                <div class="highlight-card-image">
+
+                    <img
+                        src="../images/berita/berita-imunisasi-santri1.jpg"
+                        alt="Imunisasi BIAS di Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy">
+
+                    <span class="highlight-badge">
+                        Kesehatan
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-card-content">
+
+                    <small>
+                        14 September 2026
+                    </small>
+
+                    <h3>
+                        Imunisasi BIAS di Rumah Tahfizhul Qur'an
+                        Al Imam Adz Dzahabiy
+                    </h3>
+
+                    <p>
+                        RTQ Al Imam Adz Dzahabiy bekerja sama dengan
+                        UPTD Puskesmas Manggar melaksanakan Program
+                        Bulan Imunisasi Anak Sekolah (BIAS) bagi
+                        santri Kelas 1 dan Kelas 5.
+                    </p>
+
+                    <a
+                        href="berita/berita-imunisasi.html"
+                        class="highlight-link">
+
+                        Selengkapnya
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 BERITA 2 — CLASS MEETING
+            ================================================== -->
+
+            <article class="highlight-card">
+
+                <div class="highlight-card-image">
+
+                    <img
+                        src="../images/berita/class-meeting-camping-senja.jpeg"
+                        alt="Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy">
+
+                    <span class="highlight-badge">
+                        Kegiatan
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-card-content">
+
+                    <small>
+                        29–30 Agustus 2026
+                    </small>
+
+                    <h3>
+                        Class Meeting Santri
+                        Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy
+                    </h3>
+
+                    <p>
+                        Kegiatan class meeting santri Syabaab
+                        sebagai sarana kebersamaan, penyegaran,
+                        dan pengembangan potensi.
+                    </p>
+
+                    <a
+                        href="berita/berita-classmeeting.html"
+                        class="highlight-link">
+
+                        Selengkapnya
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 BERITA 3 — MUSABAQAH
+            ================================================== -->
+
+            <article class="highlight-card">
+
+                <div class="highlight-card-image">
+
+                    <img
+                        src="../images/berita/musabaqah-al-imam-asy-syathiby-2026-hero.jpg"
+                        alt="Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo">
+
+                    <span class="highlight-badge">
+                        Kegiatan
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-card-content">
+
+                    <small>
+                        04 September 2026
+                    </small>
+
+                    <h3>
+                        Musabaqah Al-Qur'an
+                        Al-Imam Asy-Syathiby ke-2 Se-Borneo
+                    </h3>
+
+                    <p>
+                        Persiapan Musabaqah Al-Qur'an
+                        Al-Imam Asy-Syathiby ke-2 Se-Borneo
+                        yang akan dilaksanakan di Balikpapan.
+                    </p>
+
+                    <a
+                        href="berita/berita-musabaqoh-asy-syatibi2.html"
+                        class="highlight-link">
+
+                        Selengkapnya
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- ==================================================
+                 BERITA 4 — DONASI
+            ================================================== -->
+
+            <article class="highlight-card">
+
+                <div class="highlight-card-image">
+
+                    <img
+                        src="../images/berita/donasi-via-AL.jpg"
+                        alt="Laporan Donasi Bencana Sumatra Utara dan Aceh 2025">
+
+                    <span class="highlight-badge">
+                        Sosial & Donasi
+                    </span>
+
+                </div>
+
+
+                <div class="highlight-card-content">
+
+                    <small>
+                        25 Desember 2025
+                    </small>
+
+                    <h3>
+                        Penutupan dan Laporan Donasi
+                        Bencana Sumatra Utara & Aceh 2025
+                    </h3>
+
+                    <p>
+                        Alhamdulillah, donasi telah selesai disalurkan
+                        untuk membantu saudara-saudara kita yang
+                        terdampak bencana di Sumatra Utara dan Aceh.
+                    </p>
+
+                    <a
+                        href="berita/donasi-aceh-2025.html"
+                        class="highlight-link">
+
+                        Selengkapnya
+                        <span>→</span>
+
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
 
         <!-- ==================================================
-             GRID BERITA
+             TIMER + DOT
+        ================================================== -->
+
+        <div class="highlight-timer">
+
+            <div class="highlight-timer-track">
+
+                <div
+                    id="highlightTimerBar"
+                    class="highlight-timer-bar">
+                </div>
+
+            </div>
+
+            <div
+                id="highlightDots"
+                class="highlight-dots">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================================
+     DAFTAR BERITA LENGKAP
+     TETAP ADA — JANGAN DIHAPUS
+========================================================== -->
+
+<section class="page-section news-list-section">
+
+    <div class="container">
+
+        <div
+            class="text-center mb-5"
+            data-reveal="left">
+
+            <span class="section-label">
+                SEMUA BERITA
+            </span>
+
+            <h2>
+                Informasi & Kegiatan Rumah Tahfizhul Qur'an
+            </h2>
+
+            <p class="section-subtitle">
+                Simak informasi dan kegiatan
+                Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy.
+            </p>
+
+        </div>
+
+
+        <!-- ==================================================
+             CARD BERITA LENGKAP
         ================================================== -->
 
         <div class="row g-4">
 
-       <!-- ==================================================
-            BERITA 1
-        ================================================== -->
 
-        <div
-            class="col-lg-4 col-md-6"
-            data-reveal="zoom"
-            data-delay="0s">
-
-            <article
-                class="news-card"
-                data-featured="true">
-
-
-                <!-- GAMBAR -->
-
-                <div
-                    class="news-card-image"
-                    data-reveal="zoom"
-                    data-delay="0.1s">
-
-                    <img
-                        src="../images/berita/berita-imunisasi-santri1.jpg"
-                        alt="Imunisasi Bias RTQ">
-
-                </div>
-
-
-                <!-- ISI -->
-
-                <div class="news-card-body">
-
-
-                    <!-- KATEGORI -->
-
-                    <span
-                        class="news-category"
-                        data-reveal
-                        data-delay="0.2s">
-
-                        KEGIATAN
-
-                    </span>
-
-
-                    <!-- JUDUL -->
-
-                    <h3
-                        data-reveal
-                        data-delay="0.3s">
-
-                        Imunisasi Bias
-                        Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy
-
-                    </h3>
-
-
-                    <!-- TANGGAL -->
-
-                    <div
-                        class="news-date"
-                        data-reveal
-                        data-delay="0.4s">
-
-                        <i class="bi bi-calendar3"></i>
-
-                        14 September 2026
-
-                    </div>
-
-
-                    <!-- RINGKASAN -->
-
-                    <p
-                        data-reveal
-                        data-delay="0.5s">
-
-                        RTQ Al Imam Adz Dzahabiy bekerja sama dengan UPTD Puskesmas Manggar 
-                        melaksanakan Program Bulan Imunisasi Anak Sekolah (BIAS) 
-                        bagi santri Kelas 1 dan Kelas 5.
-
-                    </p>
-
-
-                    <!-- LOKASI -->
-
-                    <div
-                        class="news-location"
-                        data-reveal
-                        data-delay="0.6s">
-
-                        <i class="bi bi-geo-alt"></i>
-
-                        Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy, Balikpapan
-
-                    </div>
-
-
-                    <!-- LINK -->
-
-                    <a
-                        href="berita/berita-classmeeting.html"
-                        class="news-read-more">
-
-                        Baca Selengkapnya
-
-                        <i class="bi bi-arrow-right"></i>
-
-                    </a>
-
-
-                </div>
-
-            </article>
-
-        </div>
-       
-       
-            <!-- ==================================================
-            BERITA 2
-            ================================================== -->
-
-        <div
-            class="col-lg-4 col-md-6"
-            data-reveal="zoom"
-            data-delay="0s">
-
-            <article
-                class="news-card"
-                data-featured="true">
-
-
-                <!-- GAMBAR -->
-
-                <div
-                    class="news-card-image"
-                    data-reveal="zoom"
-                    data-delay="0.1s">
-
-                    <img
-                        src="../images/berita/class-meeting-camping-senja.jpeg"
-                        alt="Class Meeting RTQ">
-
-                </div>
-
-
-                <!-- ISI -->
-
-                <div class="news-card-body">
-
-
-                    <!-- KATEGORI -->
-
-                    <span
-                        class="news-category"
-                        data-reveal
-                        data-delay="0.2s">
-
-                        KEGIATAN
-
-                    </span>
-
-
-                    <!-- JUDUL -->
-
-                    <h3
-                        data-reveal
-                        data-delay="0.3s">
-
-                        Class Meeting Santri
-                        Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy
-
-                    </h3>
-
-
-                    <!-- TANGGAL -->
-
-                    <div
-                        class="news-date"
-                        data-reveal
-                        data-delay="0.4s">
-
-                        <i class="bi bi-calendar3"></i>
-
-                        29 - 30 Agustus 2026
-
-                    </div>
-
-
-                    <!-- RINGKASAN -->
-
-                    <p
-                        data-reveal
-                        data-delay="0.5s">
-
-                        Kegiatan class meeting santri syabaab
-                        sebagai sarana kebersamaan,
-                        penyegaran, dan pengembangan
-                        potensi.
-
-                    </p>
-
-
-                    <!-- LOKASI -->
-
-                    <div
-                        class="news-location"
-                        data-reveal
-                        data-delay="0.6s">
-
-                        <i class="bi bi-geo-alt"></i>
-
-                        Pantai Tanah Merah, Samboja
-
-                    </div>
-
-
-                    <!-- LINK -->
-
-                    <a
-                        href="berita/berita-classmeeting.html"
-                        class="news-read-more">
-
-                        Baca Selengkapnya
-
-                        <i class="bi bi-arrow-right"></i>
-
-                    </a>
-
-
-                </div>
-
-            </article>
-
-        </div>
-
-            <!-- ==================================================
-                BERITA 3
-            ================================================== -->
-
-            <div
-                class="col-lg-4 col-md-6"
-                data-reveal="zoom"
-                data-delay="0s">
+            <!-- BERITA 1 -->
+            <div class="col-lg-4 col-md-6">
 
                 <article
-                    class="news-card"
-                    data-featured="false">
+                    class="highlight-card"
+                    data-reveal="zoom"
+                    data-delay="0s">
 
-
-                    <!-- GAMBAR -->
-
-                    <div
-                        class="news-card-image"
-                        data-reveal="zoom"
-                        data-delay="0.1s">
+                    <a
+                        href="berita/berita-imunisasi.html"
+                        class="highlight-card-image">
 
                         <img
-                            src="../images/berita/musabaqah-al-imam-asy-syathiby-2026-hero.jpg"
-                            alt="musabaqah-al-imam-asy-syathiby-2026-hero">
+                            src="../images/berita/berita-imunisasi-santri1.jpg"
+                            alt="Imunisasi BIAS di Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy">
 
-                    </div>
+                        <span class="highlight-badge">
+                            Kesehatan
+                        </span>
+
+                    </a>
 
 
-                    <!-- ISI -->
+                    <div class="highlight-card-content">
 
-                    <div class="news-card-body">
-
-
-                        <!-- KATEGORI -->
-
-                        <span
-                            class="news-category"
+                        <small
                             data-reveal
                             data-delay="0.2s">
 
-                            KEGIATAN
+                            14 September 2026
 
-                        </span>
+                        </small>
 
-
-                        <!-- JUDUL -->
 
                         <h3
-                            data-reveal
+                            data-reveal="left"
                             data-delay="0.3s">
 
-                            Persiapan Musabaqah Al-Qur'an
-                            <br>
-                            Al-Imam Asy-Syathiby ke-2 Se-Borneo
+                            Imunisasi BIAS di Rumah Tahfizhul Qur'an
+                            Al Imam Adz Dzahabiy
 
                         </h3>
 
 
-                        <!-- TANGGAL -->
-
-                        <div
-                            class="news-date"
-                            data-reveal
+                        <p
+                            data-reveal="right"
                             data-delay="0.4s">
 
-                            <i class="bi bi-calendar3"></i>
-
-                            26 - 27 September 2026
-
-                        </div>
-
-
-                        <!-- RINGKASAN -->
-
-                        <p
-                            data-reveal
-                            data-delay="0.5s">
-
-                            Persiapan Musabaqah Al-Qur'an
-                            Al-Imam Asy-Syathiby ke-2 Se-Borneo.
-                            Mari ikut berpartisipasi untuk menyukseskan kegiatan ini.
-                            Musabaqah ini membuka kategori Golongan dan Maqra 5 Juz serta 10 Juz.
+                            RTQ Al Imam Adz Dzahabiy bekerja sama dengan
+                            UPTD Puskesmas Manggar melaksanakan Program
+                            Bulan Imunisasi Anak Sekolah (BIAS) bagi
+                            santri Kelas 1 dan Kelas 5.
 
                         </p>
 
 
-                        <!-- LOKASI -->
-
-                        <div
-                            class="news-location"
-                            data-reveal
-                            data-delay="0.6s">
-
-                            <i class="bi bi-geo-alt"></i>
-
-                            Masjid Al-Anshar Rumah Tahfizhul Qur'an
-                            Al-Imam Adz-Dzahabiy, Balikpapan
-
-                        </div>
-
-
-                        <!-- LINK -->
-
                         <a
-                            href="berita/berita-musabaqoh-asy-syatibi2.html"
-                            class="news-read-more">
+                            href="berita/berita-imunisasi.html"
+                            class="highlight-link">
 
-                            Baca Selengkapnya
-
-                            <i class="bi bi-arrow-right"></i>
+                            Selengkapnya
+                            <span>→</span>
 
                         </a>
+                    </div>
 
+                </article>
+
+            </div>
+
+
+            <!-- BERITA 2 -->
+            <div class="col-lg-4 col-md-6">
+
+                <article
+                    class="highlight-card"
+                    data-reveal="zoom"
+                    data-delay="0.1s">
+
+                    <a
+                        href="berita/berita-classmeeting.html"
+                        class="highlight-card-image">
+
+                        <img
+                            src="../images/berita/class-meeting-camping-senja.jpeg"
+                            alt="Class Meeting Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy">
+
+                        <span class="highlight-badge">
+                            Kegiatan
+                        </span>
+
+                    </a>
+
+
+                    <div class="highlight-card-content">
+
+                        <small
+                            data-reveal="left"
+                            data-delay="0.3s">
+
+                            29–30 Agustus 2026
+
+                        </small>
+
+
+                        <h3
+                            data-reveal="right"
+                            data-delay="0.4s">
+
+                            Class Meeting Santri
+                            Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy
+
+                        </h3>
+
+
+                        <p
+                            data-reveal="zoom"
+                            data-delay="0.5s">
+
+                            Kegiatan class meeting santri Syabaab
+                            sebagai sarana kebersamaan, penyegaran,
+                            dan pengembangan potensi.
+
+                        </p>
+
+
+                        <a
+                            href="berita/berita-classmeeting.html"
+                            class="highlight-link">
+
+                            Selengkapnya
+                            <span>→</span>
+
+                        </a>
 
                     </div>
 
@@ -541,124 +554,154 @@
 
             </div>
 
-                <!-- ==================================================
-                    BERITA 4
-                ================================================== -->
 
-                <div
-                    class="col-lg-4 col-md-6"
+            <!-- BERITA 3 -->
+            <div class="col-lg-4 col-md-6">
+
+                <article
+                    class="highlight-card"
                     data-reveal="zoom"
-                    data-delay="0s">
+                    data-delay="0.2s">
 
-                    <article
-                        class="news-card"
-                        data-featured="false">
+                    <a
+                        href="berita/berita-musabaqoh-asy-syatibi2.html"
+                        class="highlight-card-image">
+
+                        <img
+                            src="../images/berita/musabaqah-al-imam-asy-syathiby-2026-hero.jpg"
+                            alt="Musabaqah Al-Qur'an Al-Imam Asy-Syathiby ke-2 Se-Borneo">
+
+                        <span class="highlight-badge">
+                            Kegiatan
+                        </span>
+
+                    </a>
 
 
-                        <!-- GAMBAR -->
+                    <div class="highlight-card-content">
 
-                        <div
-                            class="news-card-image"
+                        <small
+                            data-reveal="left"
+                            data-delay="0.4s">
+
+                            04 September 2026
+
+                        </small>
+
+
+                        <h3
+                            data-reveal="right"
+                            data-delay="0.5s">
+
+                            Musabaqah Al-Qur'an
+                            Al-Imam Asy-Syathiby ke-2 Se-Borneo
+
+                        </h3>
+
+
+                        <p
                             data-reveal="zoom"
-                            data-delay="0.1s">
+                            data-delay="0.6s">
 
-                            <img
-                                src="../images/berita/donasi-via-AL.jpg"
-                                alt="Laporan Donasi Bencana Sumatra Utara dan Aceh 2025">
+                            Persiapan Musabaqah Al-Qur'an
+                            Al-Imam Asy-Syathiby ke-2 Se-Borneo
+                            yang akan dilaksanakan di Balikpapan.
 
-                        </div>
-
-
-                        <!-- ISI -->
-
-                        <div class="news-card-body">
+                        </p>
 
 
-                            <!-- KATEGORI -->
+                        <a
+                            href="berita/berita-musabaqoh-asy-syatibi2.html"
+                            class="highlight-link">
 
-                            <span
-                                class="news-category"
-                                data-reveal
-                                data-delay="0.2s">
+                            Selengkapnya
+                            <span>→</span>
 
-                                SOSIAL & DONASI
+                        </a>
 
-                            </span>
+                    </div>
 
+                </article>
 
-                            <!-- JUDUL -->
-
-                            <h3
-                                data-reveal
-                                data-delay="0.3s">
-
-                                Penutupan dan Laporan Donasi
-                                Bencana Sumatra Utara & Aceh 2025
-
-                            </h3>
+            </div>
 
 
-                            <!-- TANGGAL -->
+            <!-- BERITA 4 -->
+            <div class="col-lg-4 col-md-6">
 
-                            <div
-                                class="news-date"
-                                data-reveal
-                                data-delay="0.4s">
+                <article
+                    class="highlight-card"
+                    data-reveal="zoom"
+                    data-delay="0.3s">
 
-                                <i class="bi bi-calendar3"></i>
+                    <a
+                        href="berita/donasi-aceh-2025.html"
+                        class="highlight-card-image">
+                    
+                        <img
+                            src="../images/berita/donasi-via-AL.jpg"
+                            alt="Laporan Donasi Bencana Sumatra Utara dan Aceh 2025">
 
-                                25 Desember 2025
+                        <span class="highlight-badge">
+                            Sosial & Donasi
+                        </span>
 
-                            </div>
-
-
-                            <!-- RINGKASAN -->
-
-                            <p
-                                data-reveal
-                                data-delay="0.5s">
-
-                                Alhamdulillah, telah selesai disalurkan
-                                donasi untuk membantu saudara-saudara kita
-                                yang terdampak bencana di Sumatra Utara
-                                dan Aceh. Total dana yang terkumpul sebesar
-                                Rp42.482.515 dan pakaian sebanyak 17 kodi.
-
-                            </p>
+                    </a>
 
 
-                            <!-- LOKASI -->
+                    <div class="highlight-card-content">
 
-                            <div
-                                class="news-location"
-                                data-reveal
-                                data-delay="0.6s">
+                        <small
+                            data-reveal="left"
+                            data-delay="0.5s">
 
-                                <i class="bi bi-geo-alt"></i>
+                            25 Desember 2025
 
-                                Sumatra Utara & Aceh
-
-                            </div>
+                        </small>
 
 
-                            <!-- LINK -->
+                        <h3
+                            data-reveal="right"
+                            data-delay="0.6s">
 
-                            <a
-                                href="berita/donasi-aceh-2025.html"
-                                class="news-read-more">
+                            Penutupan dan Laporan Donasi
+                            Bencana Sumatra Utara & Aceh 2025
 
-                                Baca Selengkapnya
-
-                                <i class="bi bi-arrow-right"></i>
-
-                            </a>
+                        </h3>
 
 
-                        </div>
+                        <p
+                            data-reveal="zoom"
+                            data-delay="0.7s">
 
-                    </article>
+                            Alhamdulillah, donasi telah selesai disalurkan
+                            untuk membantu saudara-saudara kita yang
+                            terdampak bencana di Sumatra Utara dan Aceh.
 
-                </div>
+                        </p>
+
+
+                        <a
+                            href="berita/donasi-aceh-2025.html"
+                            class="highlight-link">
+
+                            Selengkapnya
+                            <span>→</span>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- ==========================================================
      FOOTER
@@ -677,170 +720,11 @@
 </script>
 
 
-
-<!-- ==========================================================
-     FEATURED NEWS
-     OTOMATIS MENGAMBIL BERITA #1
-========================================================== -->
-
-<script>
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
-
-        /* ==============================================
-           AMBIL BERITA PERTAMA
-        ============================================== */
-
-        const firstNews =
-            document.querySelector(
-                ".news-card[data-featured='true']"
-            );
-
-
-        if (!firstNews) return;
-
-
-
-        /* ==============================================
-           AMBIL DATA
-        ============================================== */
-
-        const image =
-            firstNews.querySelector(
-                ".news-card-image img"
-            );
-
-
-        const category =
-            firstNews.querySelector(
-                ".news-category"
-            );
-
-
-        const title =
-            firstNews.querySelector(
-                "h3"
-            );
-
-
-        const date =
-            firstNews.querySelector(
-                ".news-date"
-            );
-
-
-        const summary =
-            firstNews.querySelector(
-                ".news-card-body p"
-            );
-
-
-        const location =
-            firstNews.querySelector(
-                ".news-location"
-            );
-
-
-        const link =
-            firstNews.querySelector(
-                ".news-read-more"
-            );
-
-
-
-        /* ==============================================
-           TARGET FEATURED
-        ============================================== */
-
-        const featuredImage =
-            document.getElementById(
-                "featuredImage"
-            );
-
-
-        const featuredCategory =
-            document.getElementById(
-                "featuredCategory"
-            );
-
-
-        const featuredTitle =
-            document.getElementById(
-                "featuredTitle"
-            );
-
-
-        const featuredDate =
-            document.getElementById(
-                "featuredDate"
-            );
-
-
-        const featuredSummary =
-            document.getElementById(
-                "featuredSummary"
-            );
-
-
-        const featuredLocation =
-            document.getElementById(
-                "featuredLocation"
-            );
-
-
-        const featuredLink =
-            document.getElementById(
-                "featuredLink"
-            );
-
-
-
-        /* ==============================================
-           SALIN DATA BERITA #1
-        ============================================== */
-
-        featuredImage.src =
-            image.src;
-
-        featuredImage.alt =
-            image.alt;
-
-
-        featuredCategory.innerHTML =
-            category.innerHTML;
-
-
-        featuredTitle.innerHTML =
-            title.innerHTML;
-
-
-        featuredDate.innerHTML =
-            date.innerHTML;
-
-
-        featuredSummary.innerHTML =
-            summary.innerHTML;
-
-
-        featuredLocation.innerHTML =
-            location.innerHTML;
-
-
-        featuredLink.href =
-            link.href;
-
-
-    }
-
-);
-
 </script>
 
 <script src="../js/navbar.js"></script>
 <script src="../js/scroll-reveal.js"></script>
+<script src="../js/slider.js"></script>
 
 </body>
 

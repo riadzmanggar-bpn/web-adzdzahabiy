@@ -612,103 +612,6 @@ function initImageSlider(slider) {
 
 /* ==========================================================
    HIGHLIGHT BERANDA
-   4 BERITA → 3 CARD AUTO ROTATION
-========================================================== */
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const container =
-        document.querySelector(".highlight-cards");
-
-    if (!container) {
-        return;
-    }
-
-
-    const cards =
-        Array.from(
-            container.querySelectorAll(".highlight-card")
-        );
-
-
-    if (cards.length <= 3) {
-
-        cards.forEach(function (card) {
-
-            card.classList.add("is-visible");
-
-        });
-
-        return;
-
-    }
-
-
-    let startIndex = 0;
-
-    const interval = 5000;
-
-    let timer;
-
-
-    /* ======================================================
-       TAMPILKAN 3 CARD
-    ====================================================== */
-
-    function showCards() {
-
-        cards.forEach(function (card, index) {
-
-            const relativeIndex =
-                (index - startIndex + cards.length)
-                % cards.length;
-
-
-            card.classList.toggle(
-                "is-visible",
-                relativeIndex < 3
-            );
-
-        });
-
-    }
-
-
-    /* ======================================================
-       NEXT
-    ====================================================== */
-
-    function nextCards() {
-
-        startIndex++;
-
-        if (startIndex >= cards.length) {
-
-            startIndex = 0;
-
-        }
-
-        showCards();
-
-    }
-
-
-    /* ======================================================
-       START
-    ====================================================== */
-
-    showCards();
-
-
-    timer = setInterval(
-        nextCards,
-        interval
-    );
-
-});
-
-/* ==========================================================
-   HIGHLIGHT BERANDA
    4 BERITA → 3 CARD DESKTOP
    MOBILE → 1 CARD
 ========================================================== */
@@ -770,10 +673,16 @@ document.addEventListener("DOMContentLoaded", function () {
     let timer;
 
 
+
     /* ======================================================
        BUAT DOT
        1 DOT = 1 POSISI ROTASI
     ====================================================== */
+
+    /* Bersihkan dot lama agar tidak dobel */
+    if (dotsContainer) {
+        dotsContainer.innerHTML = "";
+    }
 
     cards.forEach(function (_, index) {
 
@@ -799,7 +708,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 startIndex = index;
 
                 showCards();
-
+                resetTimerBar();
                 restartTimer();
 
             }
@@ -817,43 +726,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function showCards() {
 
-        cards.forEach(function (card, index) {
+    const visibleCount =
+        window.innerWidth <= 767
+            ? 1
+            : 3;
 
-            const relativeIndex =
-                (
-                    index -
-                    startIndex +
-                    cards.length
-                ) % cards.length;
+    cards.forEach(function (card, index) {
 
+        const relativeIndex =
+            (
+                index -
+                startIndex +
+                cards.length
+            ) % cards.length;
 
-            /*
-               Desktop:
-               tampilkan 3 card
+        const shouldShow =
+            relativeIndex < visibleCount;
 
-               Mobile:
-               tampilkan 1 card
-            */
+        card.classList.toggle(
+            "is-visible",
+            shouldShow
+        );
 
-            const visibleCount =
-                window.innerWidth <= 767
-                    ? 1
-                    : 3;
+    });
 
-
-            card.classList.toggle(
-                "is-visible",
-                relativeIndex < visibleCount
-            );
-
-        });
-
-
-        updateDots();
-
-        resetTimerBar();
-
-    }
+    updateDots();
+}
 
 
     /* ======================================================
@@ -920,15 +818,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
         startIndex++;
 
-
         if (startIndex >= cards.length) {
-
             startIndex = 0;
-
         }
 
-
         showCards();
+        resetTimerBar();
 
     }
 
@@ -985,7 +880,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ====================================================== */
 
     showCards();
-
+    resetTimerBar();
     startTimer();
 
 });
