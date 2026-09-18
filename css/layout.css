@@ -465,7 +465,7 @@
         display:grid;
         grid-template-columns:1fr;
 
-        row-gap:42px;
+        row-gap:0px;
 
         align-items:start;
         justify-items:center;

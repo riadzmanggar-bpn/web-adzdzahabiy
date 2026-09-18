@@ -279,3 +279,97 @@ body {
     }
 
 }
+
+/* ==========================================================
+   TEXT REVEAL
+   FITUR TAMBAHAN - PER 1 / 2 BARIS
+========================================================== */
+
+
+/* ==========================================================
+   KATA SEMENTARA SAAT JS MEMBACA BARIS
+========================================================== */
+
+.text-reveal-word {
+
+    display:inline;
+
+}
+
+
+/* ==========================================================
+   TEXT REVEAL GROUP
+========================================================== */
+
+.text-reveal-group {
+
+    display:block;
+
+    width:100%;
+
+    opacity:0;
+
+    transition:
+        opacity 1s cubic-bezier(.25,.46,.45,.94),
+        transform 1s cubic-bezier(.25,.46,.45,.94);
+
+    will-change:
+        opacity,
+        transform;
+
+}
+
+
+/* ==========================================================
+   DARI KANAN
+========================================================== */
+
+.text-reveal-right {
+
+    transform:translateX(120px);
+
+}
+
+
+/* ==========================================================
+   DARI KIRI
+========================================================== */
+
+.text-reveal-left {
+
+    transform:translateX(-120px);
+
+}
+
+
+/* ==========================================================
+   SAAT TERLIHAT
+========================================================== */
+
+.text-reveal-group.text-reveal-visible {
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+
+/* ==========================================================
+   AKSESIBILITAS
+========================================================== */
+
+@media (prefers-reduced-motion:reduce) {
+
+    .text-reveal-group {
+
+        opacity:1;
+
+        transform:none;
+
+        transition:none;
+
+    }
+
+}
