@@ -111,7 +111,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         donasi: "donasi.html",
 
-        daftar: "daftar.html"
+        daftar: "daftar.html",
+
+        kaldik: "kaldik.html"
 
     };
 

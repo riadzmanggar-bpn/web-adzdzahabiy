@@ -281,95 +281,83 @@ body {
 }
 
 /* ==========================================================
-   TEXT REVEAL
-   FITUR TAMBAHAN - PER 1 / 2 BARIS
+   TEXT SPAN REVEAL
 ========================================================== */
 
-
-/* ==========================================================
-   KATA SEMENTARA SAAT JS MEMBACA BARIS
-========================================================== */
-
-.text-reveal-word {
-
-    display:inline;
-
+span[data-reveal] {
+    display: inline-block;
+    vertical-align: top;
 }
 
 
 /* ==========================================================
-   TEXT REVEAL GROUP
+   MOBILE
+   Natural wrapping + LEFT / RIGHT
 ========================================================== */
 
-.text-reveal-group {
+@media (max-width: 767.98px) {
 
-    display:block;
+    span[data-reveal],
+    span[data-reveal="left"],
+    span[data-reveal="right"],
+    span[data-reveal="zoom"] {
 
-    width:100%;
+        display: inline;
 
-    opacity:0;
+        opacity: 0;
 
-    transition:
-        opacity 1s cubic-bezier(.25,.46,.45,.94),
-        transform 1s cubic-bezier(.25,.46,.45,.94);
+        transform: none;
 
-    will-change:
-        opacity,
-        transform;
+        position: relative;
 
-}
-
-
-/* ==========================================================
-   DARI KANAN
-========================================================== */
-
-.text-reveal-right {
-
-    transform:translateX(120px);
-
-}
+        transition:
+            opacity 1.3s cubic-bezier(.22, .61, .36, 1),
+            left 1.3s cubic-bezier(.22, .61, .36, 1);
+    }
 
 
-/* ==========================================================
-   DARI KIRI
-========================================================== */
+    /* ------------------------------------------
+       LEFT
+    ------------------------------------------ */
 
-.text-reveal-left {
-
-    transform:translateX(-120px);
-
-}
+    span[data-reveal="left"] {
+        left: -40px;
+    }
 
 
-/* ==========================================================
-   SAAT TERLIHAT
-========================================================== */
-
-.text-reveal-group.text-reveal-visible {
-
-    opacity:1;
-
-    transform:translateX(0);
-
-}
+    span[data-reveal="left"].is-visible {
+        opacity: 1;
+        left: 0;
+    }
 
 
+    /* ------------------------------------------
+       RIGHT
+    ------------------------------------------ */
 
-/* ==========================================================
-   AKSESIBILITAS
-========================================================== */
+    span[data-reveal="right"] {
+        left: 40px;
+    }
 
-@media (prefers-reduced-motion:reduce) {
 
-    .text-reveal-group {
+    span[data-reveal="right"].is-visible {
+        opacity: 1;
+        left: 0;
+    }
 
-        opacity:1;
 
-        transform:none;
+    /* ------------------------------------------
+       ZOOM
+    ------------------------------------------ */
 
-        transition:none;
+    span[data-reveal="zoom"] {
+        left: 0;
+    }
 
+
+    span[data-reveal="zoom"].is-visible {
+        opacity: 1;
+        left: 0;
     }
 
 }
