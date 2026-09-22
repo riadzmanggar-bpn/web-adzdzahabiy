@@ -968,6 +968,25 @@
 
 }
 
+
+/* ==========================================================
+   FOOTER MENU — HOVER HARUS RESPONSIF
+========================================================== */
+
+.footer-menu li a[data-reveal]{
+    transition:
+        color .15s ease,
+        transform .15s ease;
+
+    transition-delay:0s !important;
+}
+
+.footer-menu li a[data-reveal]:hover{
+    color:#FFD45A !important;
+
+    transform:translateX(5px);
+}
+
 /* ==========================================================
    NAVBAR
 ========================================================== */

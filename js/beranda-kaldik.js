@@ -41,6 +41,9 @@
             "home-date-event"
         );
 
+    const gregorianElement =
+        document.getElementById("home-date-gregorian");
+
 
     /* ======================================================
        CEK ELEMENT
@@ -50,6 +53,7 @@
         !weekdayElement ||
         !hijriElement ||
         !monthElement ||
+        !gregorianElement ||
         !eventElement
     ) {
 
@@ -193,6 +197,14 @@
 
         const hijriDate =
             today.iDate();
+
+
+        /* --------------------------------------------------
+        TANGGAL MASEHI
+        -------------------------------------------------- */
+
+        gregorianElement.textContent =
+            today.format("D/M");
 
 
         /* --------------------------------------------------

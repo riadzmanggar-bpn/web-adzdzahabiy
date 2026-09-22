@@ -1689,3 +1689,449 @@
     }
 
 }
+
+
+/* ==========================================================
+   ZAKAT & INFAQ
+   CLASS KHUSUS HALAMAN DONASI
+========================================================== */
+
+.zakat-section {
+
+    padding: 90px 0 100px;
+
+    background: #fff;
+}
+
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.zakat-label {
+
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #198754;
+
+    font-size: .9rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================================
+   JUDUL
+========================================================== */
+
+.zakat-section h2 {
+
+    margin-bottom: 15px;
+
+    font-weight: 700;
+}
+
+
+.zakat-subtitle {
+
+    margin-bottom: 0;
+
+    color: #666;
+
+    font-size: 1rem;
+
+    line-height: 1.7;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.zakat-content {
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    gap: 30px;
+
+    align-items: stretch;
+}
+
+
+/* ==========================================================
+   REKENING
+========================================================== */
+
+.zakat-info {
+
+    flex: 1.5;
+
+    min-width: 0;
+
+    padding: 30px;
+
+    border-radius: 16px;
+
+    background: #f7faf8;
+
+    border-left: 4px solid #198754;
+}
+
+
+.zakat-info h3 {
+
+    margin-bottom: 15px;
+
+    font-size: 1.4rem;
+
+    font-weight: 700;
+}
+
+
+.zakat-info p {
+
+    margin-bottom: 25px;
+
+    color: #555;
+
+    font-size: 1rem;
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   BANK
+========================================================== */
+
+.zakat-bank {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.zakat-bank strong {
+
+    color: #198754;
+
+    font-size: 1.1rem;
+}
+
+
+.zakat-rekening {
+
+    display: block;
+
+    padding: 15px;
+
+    margin: 10px 0;
+
+    border-radius: 10px;
+
+    background: #f5f5f5;
+
+    font-size: 24px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+}
+
+
+.zakat-bank small {
+
+    color: #666;
+}
+
+
+/* ==========================================================
+   KONFIRMASI
+========================================================== */
+
+.zakat-confirmation {
+
+    flex: 1;
+
+    min-width: 0;
+
+    margin: 0;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    background: #fff;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .08);
+}
+
+
+.zakat-confirmation h4 {
+
+    margin-bottom: 15px;
+
+    font-size: 22px;
+
+    font-weight: 500;
+}
+
+
+.zakat-confirmation p {
+
+    margin-bottom: 25px;
+
+    color: #666;
+
+    line-height: 1.8;
+}
+
+
+.zakat-confirmation strong {
+
+    display: block;
+
+    margin-bottom: 20px;
+
+    font-size: 1rem;
+}
+
+
+.zakat-confirmation .btn {
+
+    padding: 12px;
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .zakat-section {
+
+        padding: 65px 0 75px;
+    }
+
+
+    .zakat-content {
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    .zakat-info {
+
+        padding: 22px;
+    }
+
+
+    .zakat-confirmation {
+
+        padding: 25px;
+    }
+
+
+    .zakat-rekening {
+
+        font-size: 1.2rem;
+    }
+
+}
+
+/* ==========================================================
+   HERO DONASI MASJID
+========================================================== */
+
+.donasi-masjid-hero {
+
+    width: 100%;
+
+    overflow: hidden;
+}
+
+
+.donasi-masjid-hero-image {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 520px;
+
+    overflow: hidden;
+}
+
+
+.donasi-masjid-hero-image img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+/* ==========================================================
+   OVERLAY
+========================================================== */
+
+.donasi-masjid-hero-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, .72) 0%,
+            rgba(0, 0, 0, .48) 45%,
+            rgba(0, 0, 0, .15) 75%,
+            rgba(0, 0, 0, 0) 100%
+        );
+
+    z-index: 1;
+}
+
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.donasi-masjid-hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.donasi-masjid-hero-content {
+
+    max-width: 760px;
+
+    color: #fff;
+}
+
+
+/* ==========================================================
+   LABEL
+========================================================== */
+
+.donasi-masjid-label {
+
+    display: inline-block;
+
+    margin-bottom: 18px;
+
+    color: #FFD45A;
+
+    font-size: .95rem;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+
+/* ==========================================================
+   JUDUL
+========================================================== */
+
+.donasi-masjid-hero h1 {
+
+    margin: 0 0 22px;
+
+    color: #fff;
+
+    font-size: 3.2rem;
+
+    font-weight: 700;
+
+    line-height: 1.25;
+
+    text-shadow:
+        2px 2px 6px rgba(0, 0, 0, .7);
+}
+
+
+/* ==========================================================
+   DESKRIPSI
+========================================================== */
+
+.donasi-masjid-hero p {
+
+    max-width: 700px;
+
+    margin: 0;
+
+    color: #fff;
+
+    font-size: 1.2rem;
+
+    line-height: 1.8;
+
+    text-shadow:
+        1px 1px 5px rgba(0, 0, 0, .7);
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 767.98px) {
+
+    .donasi-masjid-hero-image {
+
+        height: 480px;
+
+    }
+
+
+    .donasi-masjid-hero h1 {
+
+        font-size: 2.25rem;
+
+        line-height: 1.3;
+
+    }
+
+
+    .donasi-masjid-hero p {
+
+        font-size: 1.05rem;
+
+        line-height: 1.7;
+
+    }
+
+}

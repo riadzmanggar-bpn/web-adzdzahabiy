@@ -239,9 +239,9 @@ document.addEventListener(
                         rootMargin:
                             window.innerWidth <= 767.98
                                 ? "0px 0px -20% 0px"
-                                : "0px 0px 150px 0px"
+                                : "0px 0px -20% 0px"
 
-                    }
+                    }   
 
                 );
 

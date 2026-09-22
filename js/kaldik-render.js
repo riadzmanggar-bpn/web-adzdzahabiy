@@ -495,14 +495,22 @@ if (
 
 
         /* --------------------------------------------------
-           ISI DASAR
+        ISI DASAR
         -------------------------------------------------- */
 
         day.innerHTML = `
 
-            <span class="kaldik-day-hijri">
-                ${hijriDate}
-            </span>
+            <div class="kaldik-date">
+
+                <span class="kaldik-day-hijri">
+                    ${hijriDate}
+                </span>
+
+                <span class="kaldik-day-gregorian">
+                    ${gregorianDate.format("D/M")}
+                </span>
+
+            </div>
 
         `;
 

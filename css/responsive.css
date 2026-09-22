@@ -12,15 +12,6 @@
 
 @media (max-width: 992px){
 
-    .hero{
-        text-align:center;
-        padding:120px 0;
-    }
-
-    .hero h1{
-        font-size:2.2rem;
-    }
-
     .nav-link{
         margin-left:0;
     }
@@ -29,11 +20,7 @@
 
 @media (max-width: 768px){
 
-    .hero p{
-        font-size:1.1rem;
-    }
-
-    .section-subtitle{
+     .section-subtitle{
         font-size:1rem;
     }
 }
@@ -991,13 +978,17 @@
         padding:70px 20px 75px !important;
 
         background:
-            linear-gradient(
-                rgba(255,255,255,.94),
-                rgba(255,255,255,.86)
-            ),
-            url("../images/GambarPemandanganBakau.jpg");
+          linear-gradient(
+            to right,
+            rgba(0,0,0,.68),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.18)
+        ),
+        url("../images/Bakau GPT1.png");
 
         background-position:center;
+        overflow:hidden;
+        color:#fff;
 
     }
 
@@ -1437,65 +1428,42 @@
    MOBILE FIX - HERO JADWAL TAKLIM
 ========================================================== */
 
-@media (max-width: 767.98px){
+@media (max-width:767.98px){
 
     .page-hero{
-
-        min-height: auto;
-
-        padding: 70px 20px 90px;
+        min-height:420px;
+        padding:75px 20px 70px;
+        text-align:center;
 
         background:
             linear-gradient(
-                90deg,
-                rgba(255, 255, 255, 0.942) 0%,
-                rgba(255, 255, 255, 0.881) 55%,
-                rgba(255, 255, 255, 0.496) 100%
+                to right,
+                rgba(0,0,0,.68),
+                rgba(0,0,0,.42),
+                rgba(0,0,0,.18)
             ),
-            url("../images/GambarPemandanganBakau.jpg");
+            url("../images/Bakau GPT1.png");
 
-        background-size: cover;
-
-        background-position: center;
-
+        background-size:cover;
+        background-position:center;
     }
-
-
-    .page-hero .container{
-
-        position:relative;
-
-        z-index:2;
-
-    }
-
 
     .page-hero h1{
-
-        font-size:2.8rem;
-
-        line-height:1.15;
-
-        max-width:100%;
-
-        color:#20252a;
-
+        font-size:2.15rem;
+        line-height:1.25;
+        color:#fff;
     }
-
 
     .page-hero p{
-
-        max-width:100%;
-
-        color:#20252a;
-
         font-size:1.05rem;
-
-        line-height:1.8;
-
+        line-height:1.75;
+        color:#fff;
     }
 
-
+    .page-hero h1::after{
+        margin-left:auto;
+        margin-right:auto;
+    }
 }
 
 /* ==========================================================

@@ -299,7 +299,7 @@
 
     text-align: center;
 
-    color: #68756e;
+    color: #393d3bcb;
 
     font-size: .9rem;
 
@@ -371,26 +371,36 @@
 }
 
 
+/* ==========================================================
+   LAYOUT TANGGAL + KEGIATAN
+========================================================== */
+
 .kaldik-day {
 
-    min-height: 85px;
+    min-height: 70px;
 
-    padding: 9px;
+    padding: 10px;
 
-    position: relative;
+    border-right:
+        1px solid #e5ebe8;
 
-    border-radius: 10px;
+    border-bottom:
+        1px solid #e5ebe8;
 
-    border: 1px solid #edf1ee;
+    background: #ffffff;
 
-    background: #fff;
+    display: flex;
 
-    cursor: pointer;
+    flex-direction: column;
+
+    align-items: stretch;
+
+    justify-content: flex-start;
+
+    cursor: default;
 
     transition:
-        transform .18s ease,
-        box-shadow .18s ease,
-        border-color .18s ease;
+        background .2s ease;
 
 }
 
@@ -1045,18 +1055,56 @@
 
 
 /* ==========================================================
-   ANGKA TANGGAL
+   TANGGAL HIJRIAH + MASEHI
 ========================================================== */
+
+.kaldik-date {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: flex-start;
+
+}
+
+
+/* ----------------------------------------------------------
+   TANGGAL HIJRIAH
+---------------------------------------------------------- */
 
 .kaldik-day-hijri {
 
-    align-self: flex-end;
+    font-size: 18px;
 
-    font-size: 16px;
+    font-weight: 700;
 
-    font-weight: 600;
+    line-height: 1.1;
 
     color: #174f3b;
+
+}
+
+
+/* ==========================================================
+   TANGGAL MASEHI
+========================================================== */
+
+.kaldik-day-gregorian {
+
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: .68rem;
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    color: #7f8b86;
 
 }
 
@@ -1161,6 +1209,15 @@
     .kaldik-day-hijri {
 
         font-size: 14px;
+
+    }
+
+
+    .kaldik-day-gregorian {
+
+        margin-top: 3px;
+
+        font-size: .58rem;
 
     }
 

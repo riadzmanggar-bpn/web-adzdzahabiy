@@ -287,6 +287,17 @@
     overflow: hidden;
 }
 
+/* LINK GAMBAR */
+.highlight-card-image > a {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    z-index: 1;
+}
+
 .highlight-card-image img {
     display: block;
 
@@ -432,12 +443,52 @@
         0 1px 4px rgba(0,0,0,.4);
 }
 
+/* ==========================================================
+   LINK SELURUH CARD
+========================================================== */
+
+.highlight-card-link {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+
+    color: inherit;
+    text-decoration: none;
+
+    z-index: 1;
+}
+
+.highlight-card-link:hover,
+.highlight-card-link:focus,
+.highlight-card-link:active {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==========================================================
+   ISI CARD
+========================================================== */
+
+.highlight-card-link h3,
+.highlight-card-link p,
+.highlight-card-link small {
+    text-decoration: none;
+}
+
 
 /* ==========================================================
    LINK / TOMBOL
 ========================================================== */
 
 .highlight-link {
+
     display: inline-flex;
 
     align-items: center;
@@ -468,23 +519,28 @@
         transform .3s ease;
 }
 
+
 .highlight-link span {
     transition:
         transform .3s ease;
 }
 
-.highlight-link:hover {
+
+.highlight-card-link .highlight-link:hover {
+
     color: #fff;
 
     background: #146c43;
 
     transform: translateY(-1px);
+
+    text-decoration: none;
 }
 
-.highlight-link:hover span {
+
+.highlight-card-link .highlight-link:hover span {
     transform: translateX(4px);
 }
-
 
 /* ==========================================================
    TIMER
@@ -1829,6 +1885,8 @@
 
     font-weight: 800;
 
+    line-height: 1.3;
+
 }
 
 
@@ -1947,6 +2005,8 @@
         ) 0 0 / 10px 10px repeat-x;
 
 }
+
+
 /* ==========================================================
    KALENDER HERO - RESPONSIVE
    OPTIMASI HP / TABLET / IPAD
@@ -1968,6 +2028,31 @@
 
 }
 
+
+/* ==========================================================
+   TANGGAL MASEHI
+========================================================== */
+
+.home-date-gregorian {
+
+    display: block;
+
+    margin-top: 4px;
+    margin-bottom: 10px;
+
+    text-align: center;
+
+    color: #7f8d88;
+
+    font-size: .78rem;
+
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    letter-spacing: .3px;
+
+}
 
 /* ==========================================================
    TABLET
@@ -2185,3 +2270,4 @@
     }
 
 }
+
