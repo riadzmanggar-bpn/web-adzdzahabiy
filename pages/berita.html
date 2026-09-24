@@ -37,6 +37,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/beranda.css">
+    <link rel="stylesheet" href="../css/kaldik.css">
 
    
 
@@ -56,40 +57,54 @@
      HERO BERITA
 ========================================================== -->
 
-<!-- ==========================================================
-     HERO BERITA
-========================================================== -->
-
-<section class="hero">
+<section class="page-hero">
 
     <div class="container">
 
+        <!-- BREADCRUMB -->
+
+        <nav class="breadcrumb-custom"
+             data-reveal
+             data-delay="0s">
+
+            <a href="../index.html">
+                Beranda
+            </a>
+
+            <span>/</span>
+
+            <span>Berita & Informasi</span>
+
+        </nav>
+
+
         <div class="row align-items-center">
 
-            <div class="col-lg-7">
 
-                <span
-                    class="berita-hero-label"
-                    data-reveal
-                    data-delay="0s">
+            <!-- ==========================================
+                 HERO CONTENT
+            ========================================== -->
 
-                    - BERITA & INFORMASI -
+            <div
+                class="col-lg-7"
+                data-reveal="right"
+                data-delay="0.1s">
 
-                </span>
-
+                <div class="page-hero-label">
+                    BERITA & INFORMASI
+                </div>
 
                 <h1
                     data-reveal="right"
-                    data-delay="0.1s">
+                    data-delay="0.2s">
 
                     Kabar dari Rumah Tahfizhul Qur'an
 
                 </h1>
 
-
                 <p
                     data-reveal="left"
-                    data-delay="0.2s">
+                    data-delay="0.3s">
 
                     Informasi, kegiatan, dan kabar terbaru
                     Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy.
@@ -98,11 +113,96 @@
 
             </div>
 
+
+            <!-- ==========================================
+                 KALENDER HARI INI
+            ========================================== -->
+
+            <div
+                class="col-lg-5"
+                data-reveal="left"
+                data-delay="0.3s">
+
+                <div class="home-date">
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-card">
+
+                        <!-- HARI -->
+
+                        <div
+                            id="home-date-weekday"
+                            class="home-date-weekday">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL HIJRIAH -->
+
+                        <div class="home-date-number">
+
+                            <span id="home-date-hijri">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <!-- BULAN + TAHUN HIJRIAH -->
+
+                        <div
+                            id="home-date-month"
+                            class="home-date-month">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL MASEHI -->
+
+                        <div
+                            id="home-date-gregorian"
+                            class="home-date-gregorian">
+
+                            -
+
+                        </div>
+
+
+                        <!-- EVENT -->
+
+                        <div
+                            id="home-date-event"
+                            class="home-date-event">
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-more">
+
+                        Baca Selengkapnya →
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
+
+<!-- End Hero Berita -->
 
 
 <!-- ==========================================================
@@ -333,19 +433,13 @@
                     <div class="highlight-card-content">
 
                         <small>
-                            04 September 2026
+                            24 September 2026
                         </small>
 
                         <h3>
-                            Musabaqah Al-Qur'an
+                            Penundaan Musabaqah Al-Qur'an
                             Al-Imam Asy-Syathiby ke-2 Se-Borneo
                         </h3>
-
-                        <p>
-                            Persiapan Musabaqah Al-Qur'an
-                            Al-Imam Asy-Syathiby ke-2 Se-Borneo
-                            yang akan dilaksanakan di Balikpapan.
-                        </p>
 
                         <span class="highlight-link">
                             Selengkapnya
@@ -720,7 +814,7 @@
                             data-reveal="left"
                             data-delay="0.4s">
 
-                            04 September 2026
+                            24 September 2026
 
                         </small>
 
@@ -729,7 +823,7 @@
                             data-reveal="right"
                             data-delay="0.5s">
 
-                            Musabaqah Al-Qur'an
+                            Penundaan Musabaqah Al-Qur'an
                             Al-Imam Asy-Syathiby ke-2 Se-Borneo
 
                         </h3>
@@ -739,7 +833,7 @@
                             data-reveal="zoom"
                             data-delay="0.6s">
 
-                            Persiapan Musabaqah Al-Qur'an
+                            Penundaan Musabaqah Al-Qur'an
                             Al-Imam Asy-Syathiby ke-2 Se-Borneo
                             yang akan dilaksanakan di Balikpapan.
 
@@ -855,12 +949,13 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js">
 </script>
 
-
-</script>
-
 <script src="../js/navbar.js"></script>
 <script src="../js/scroll-reveal.js"></script>
 <script src="../js/slider.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/moment-hijri.js"></script>
+<script src="../js/kaldik.js"></script>
+<script src="../js/beranda-kaldik.js"></script>
 
 </body>
 

@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/kaldik.css">
 
 
 </head>
@@ -53,49 +54,149 @@
 <div id="global-navbar"></div>
 
 <!-- ==========================================================
-     HERO
-========================================================== -->
-
-<!-- ==========================================================
      HERO KONTAK
 ========================================================== -->
 
-<section class="contact-hero">
+<section class="page-hero">
 
     <div class="container">
 
-        <div class="contact-hero-content">
+        <!-- BREADCRUMB -->
 
-            <span
-                class="page-label"
-                data-reveal
-                data-delay="0s">
+        <nav class="breadcrumb-custom"
+             data-reveal
+             data-delay="0s">
 
-                KONTAK
+            <a href="../index.html">
+                Beranda
+            </a>
 
-            </span>
+            <span>/</span>
+
+            <span>Kontak</span>
+
+        </nav>
 
 
-            <h1
+        <div class="row align-items-center">
+
+
+            <!-- ==========================================
+                 HERO CONTENT
+            ========================================== -->
+
+            <div
+                class="col-lg-7"
                 data-reveal="right"
                 data-delay="0.1s">
 
-                Hubungi Kami
+                <div class="page-hero-label">
+                    KONTAK
+                </div>
 
-            </h1>
+                <h1
+                    data-reveal="right"
+                    data-delay="0.2s">
+
+                    Hubungi Kami
+
+                </h1>
+
+                <p
+                    data-reveal="left"
+                    data-delay="0.3s">
+
+                    Silakan menghubungi Rumah Tahfizhul Quran
+                    Al Imam Adz Dzahabiy untuk mendapatkan
+                    informasi lebih lanjut mengenai program
+                    pendidikan dan kegiatan RTQ.
+
+                </p>
+
+            </div>
 
 
-            <p
+            <!-- ==========================================
+                 KALENDER HARI INI
+            ========================================== -->
+
+            <div
+                class="col-lg-5"
                 data-reveal="left"
-                data-delay="0.2s">
+                data-delay="0.3s">
 
-                Silakan menghubungi Rumah Tahfizhul Quran
-                Al Imam Adz Dzahabiy untuk mendapatkan
-                informasi lebih lanjut mengenai program
-                pendidikan dan kegiatan RTQ.
+                <div class="home-date">
 
-            </p>
+                    <a
+                        href="kaldik.html"
+                        class="home-date-card">
 
+                        <!-- HARI -->
+
+                        <div
+                            id="home-date-weekday"
+                            class="home-date-weekday">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL HIJRIAH -->
+
+                        <div class="home-date-number">
+
+                            <span id="home-date-hijri">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <!-- BULAN + TAHUN HIJRIAH -->
+
+                        <div
+                            id="home-date-month"
+                            class="home-date-month">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL MASEHI -->
+
+                        <div
+                            id="home-date-gregorian"
+                            class="home-date-gregorian">
+
+                            -
+
+                        </div>
+
+
+                        <!-- EVENT -->
+
+                        <div
+                            id="home-date-event"
+                            class="home-date-event">
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-more">
+
+                        Baca Selengkapnya →
+
+                    </a>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -103,7 +204,7 @@
 
 </section>
 
-
+<!-- End Hero Kontak -->
 
 <!-- ==========================================================
      INFORMASI KONTAK
@@ -631,6 +732,10 @@
 
 <script src="../js/navbar.js"></script>
 <script src="../js/scroll-reveal.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/moment-hijri.js"></script>
+<script src="../js/kaldik.js"></script>
+<script src="../js/beranda-kaldik.js"></script>
 
 
 </body>

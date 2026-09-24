@@ -8,6 +8,8 @@
 
     min-height:540px;
 
+    padding:110px 0 100px;
+
     display:flex;
 
     align-items:center;
@@ -19,6 +21,8 @@
     background-position:center;
 
     background-repeat:no-repeat;
+
+    color:#fff;
 }
 
 
@@ -36,12 +40,10 @@
 
     background:
         linear-gradient(
-            90deg,
-            rgba(255,255,255,.96) 0%,
-            rgba(255,255,255,.88) 28%,
-            rgba(255,255,255,.45) 52%,
-            rgba(255,255,255,.08) 75%,
-            rgba(255,255,255,0) 100%
+            to right,
+            rgba(0,0,0,.68),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.18)
         );
 
     pointer-events:none;
@@ -72,9 +74,23 @@
 
 .berita-detail-hero .breadcrumb-custom{
 
-    margin-bottom:28px;
+    margin-bottom:18px;
 
     line-height:1.5;
+
+    color:#fff;
+}
+
+
+.berita-detail-hero .breadcrumb-custom a{
+
+    color:#fff;
+}
+
+
+.berita-detail-hero .breadcrumb-custom a:hover{
+
+    color:#fff;
 }
 
 
@@ -84,17 +100,19 @@
 
 .berita-detail-hero .page-hero-label{
 
-    display:block;
+    display:inline-block;
 
-    color:#198754;
+    color:var(--accent);
 
-    font-size:.9rem;
+    font-size:.85rem;
 
     font-weight:700;
 
-    letter-spacing:3px;
+    letter-spacing:2px;
 
-    margin-bottom:18px;
+    margin-bottom:8px;
+
+    text-shadow:1px 1px 5px rgba(0,0,0,.75);
 }
 
 
@@ -106,17 +124,19 @@
 
     max-width:850px;
 
-    margin:0;
+    margin:0 0 25px;
 
-    color:#202428;
+    color:#fff;
 
     font-size:3.4rem;
 
     font-weight:700;
 
-    line-height:1.15;
+    line-height:1.2;
 
     overflow-wrap:break-word;
+
+    text-shadow:2px 2px 7px rgba(0,0,0,.75);
 }
 
 
@@ -130,13 +150,13 @@
 
     display:block;
 
-    width:68px;
+    width:60px;
 
     height:3px;
 
-    margin-top:30px;
+    margin-top:25px;
 
-    background:#198754;
+    background:var(--accent);
 }
 
 
@@ -148,25 +168,84 @@
 
     max-width:800px;
 
-    margin-top:30px;
+    margin:0;
 
-    margin-bottom:0;
+    color:#fff;
 
-    padding:10px 14px;
-
-    color:#202428;
-
-    background:rgba(255,255,255,.90);
-
-    border-radius:6px;
-
-    font-size:1.15rem;
+    font-size:1.25rem;
 
     line-height:1.8;
 
-    box-sizing:border-box;
+    text-shadow:1px 1px 5px rgba(0,0,0,.75);
 }
 
+/* ==========================================================
+   GAMBAR UTAMA BERITA
+========================================================== */
+
+.news-detail-image{
+
+    width:100%;
+
+    max-width:900px;
+
+    margin:0 auto 35px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:16px;
+
+    background:#f5f7f6;
+
+}
+
+
+.news-detail-image img{
+
+    width:100%;
+
+    height:auto;
+
+    max-height:500px;
+
+    object-fit:contain;
+
+    display:block;
+
+    border-radius:16px;
+
+}
+
+/* ==========================================================
+   ISI BERITA
+========================================================== */
+
+.news-detail-content{
+
+    max-width:900px;
+
+    margin:0 auto;
+
+}
+
+
+.news-detail-content p{
+
+    color:#555;
+
+    font-size:1.05rem;
+
+    line-height:1.9;
+
+    margin-bottom:22px;
+
+}
 
 /* ==========================================================
    TABLET
@@ -177,6 +256,7 @@
     .berita-detail-hero{
 
         min-height:480px;
+
     }
 
 
@@ -184,11 +264,10 @@
 
         background:
             linear-gradient(
-                90deg,
-                rgba(255,255,255,.95) 0%,
-                rgba(255,255,255,.80) 40%,
-                rgba(255,255,255,.25) 75%,
-                rgba(255,255,255,0) 100%
+                to right,
+                rgba(0,0,0,.68),
+                rgba(0,0,0,.42),
+                rgba(0,0,0,.18)
             );
     }
 
@@ -198,6 +277,7 @@
         font-size:2.8rem;
 
         max-width:700px;
+
     }
 
 
@@ -206,10 +286,10 @@
         font-size:1.05rem;
 
         max-width:650px;
+
     }
 
 }
-
 
 /* ==========================================================
    MOBILE
@@ -223,9 +303,12 @@
 
         align-items:flex-start;
 
+        padding:0;
+
         background-size:cover;
 
         background-position:center;
+
     }
 
 
@@ -238,10 +321,9 @@
         background:
             linear-gradient(
                 180deg,
-                rgba(255,255,255,.94) 0%,
-                rgba(255,255,255,.86) 35%,
-                rgba(255,255,255,.55) 62%,
-                rgba(255,255,255,.12) 100%
+                rgba(0,0,0,.30) 0%,
+                rgba(0,0,0,.40) 45%,
+                rgba(0,0,0,.52) 100%
             );
     }
 
@@ -285,6 +367,14 @@
         line-height:1.55;
 
         overflow-wrap:anywhere;
+
+        color:#fff;
+    }
+
+
+    .berita-detail-hero .breadcrumb-custom a{
+
+        color:#fff;
     }
 
 
@@ -299,6 +389,8 @@
         letter-spacing:2.5px;
 
         margin-bottom:14px;
+
+        color:var(--accent);
     }
 
 
@@ -318,7 +410,11 @@
 
         line-height:1.2;
 
+        color:#fff;
+
         overflow-wrap:anywhere;
+
+        text-shadow:2px 2px 7px rgba(0,0,0,.8);
     }
 
 
@@ -333,6 +429,8 @@
         height:3px;
 
         margin-top:22px;
+
+        background:var(--accent);
     }
 
 
@@ -350,45 +448,42 @@
 
         margin-bottom:0;
 
-        padding:9px 12px;
-
-        color:#202428;
-
-        background:rgba(255,255,255,.90);
-
-        border-radius:6px;
+        color:#fff;
 
         font-size:.98rem;
 
         line-height:1.7;
 
-        box-sizing:border-box;
-
         overflow-wrap:anywhere;
+
+        text-shadow:1px 1px 5px rgba(0,0,0,.75);
     }
 
 
     /* ==============================================
-       GAMBAR UTAMA
-    ============================================== */
+   GAMBAR UTAMA
+============================================== */
 
-    .news-detail-image{
+.news-detail-image{
 
-        max-width:100%;
+    width:100%;
 
-        margin-bottom:25px;
+    max-width:100%;
 
-        border-radius:12px;
-    }
+    margin-bottom:25px;
+
+    border-radius:12px;
+}
 
 
-    .news-detail-image img{
+.news-detail-image img{
 
-        max-height:none;
+    width:100%;
 
-        border-radius:12px;
-    }
+    max-height:none;
 
+    border-radius:12px;
+}
 
     /* ==============================================
        META

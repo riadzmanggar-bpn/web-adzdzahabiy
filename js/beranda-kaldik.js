@@ -288,46 +288,50 @@
 
 
     /* ======================================================
-       LOAD KALDIK.JSON
-    ====================================================== */
+   LOAD KALDIK.JSON
+====================================================== */
 
-    async function load() {
+async function load() {
 
-        try {
+    try {
 
-            const response =
-                await fetch(
-                    "data/kaldik.json"
-                );
-
-
-            if (!response.ok) {
-
-                throw new Error(
-                    `HTTP ${response.status}`
-                );
-
-            }
+        const jsonPath =
+            window.location.pathname.includes("/pages/")
+                ? "../data/kaldik.json"
+                : "data/kaldik.json";
 
 
-            const data =
-                await response.json();
+        const response =
+            await fetch(jsonPath);
 
 
-            render(data);
+        if (!response.ok) {
 
-        }
-
-        catch (error) {
-
-            console.error(
-                "Gagal memuat kalender akademik:",
-                error
+            throw new Error(
+                `HTTP ${response.status}`
             );
 
         }
 
+
+        const data =
+            await response.json();
+
+
+        render(data);
+
     }
+
+    catch (error) {
+
+        console.error(
+            "Gagal memuat kalender akademik:",
+            error
+        );
+
+    }
+
+}
 
 
     /* ======================================================

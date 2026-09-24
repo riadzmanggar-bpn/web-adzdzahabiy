@@ -69,7 +69,7 @@ function setupRevealElement(element) {
 
                 finalDelay =
                     (
-                        seconds * 0.7
+                        seconds * 0.5
                     ) + "s";
 
             }

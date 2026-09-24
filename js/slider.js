@@ -644,22 +644,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /*
-       Kalau hanya ada 1–3 berita,
-       semuanya langsung ditampilkan.
+        /*
+        Tentukan jumlah card yang ditampilkan.
+
+        - HP      : selalu 1 card
+        - Desktop : maksimal 3 card
+        - Jika card hanya 1–2:
+          tetap 1 card agar bisa berganti dengan timer.
     */
 
-    if (cards.length <= 3) {
+    const isMobile = window.innerWidth <= 767;
 
-        cards.forEach(function (card) {
-
-            card.classList.add("is-visible");
-
-        });
-
-        return;
-
-    }
+    const visibleCount =
+        isMobile
+            ? 1
+            : cards.length >= 3
+                ? 3
+                : 1;
 
 
     /* ======================================================
@@ -724,34 +725,36 @@ document.addEventListener("DOMContentLoaded", function () {
        TAMPILKAN CARD
     ====================================================== */
 
-    function showCards() {
+        function showCards() {
 
-    const visibleCount =
-        window.innerWidth <= 767
-            ? 1
-            : 3;
+        const visibleCount =
+            window.innerWidth <= 767
+                ? 1
+                : cards.length >= 3
+                    ? 3
+                    : 1;
 
-    cards.forEach(function (card, index) {
+        cards.forEach(function (card, index) {
 
-        const relativeIndex =
-            (
-                index -
-                startIndex +
-                cards.length
-            ) % cards.length;
+            const relativeIndex =
+                (
+                    index -
+                    startIndex +
+                    cards.length
+                ) % cards.length;
 
-        const shouldShow =
-            relativeIndex < visibleCount;
+            const shouldShow =
+                relativeIndex < visibleCount;
 
-        card.classList.toggle(
-            "is-visible",
-            shouldShow
-        );
+            card.classList.toggle(
+                "is-visible",
+                shouldShow
+            );
 
-    });
+        });
 
-    updateDots();
-}
+        updateDots();
+    }
 
 
     /* ======================================================

@@ -91,20 +91,20 @@
 <!-- END NAVBAR -->
 
 
-
 <!-- ==========================================================
      HERO KALDIK
 ========================================================== -->
 
-<!-- ==========================================================
-     HERO KALDIK
-========================================================== -->
+<!-- ==========================================
+     HERO KALENDER PENDIDIKAN
+========================================== -->
 
 <section class="page-hero">
 
     <div class="container">
 
         <!-- Breadcrumb -->
+
         <nav class="breadcrumb-custom"
              data-reveal
              data-delay="0s">
@@ -122,14 +122,22 @@
         </nav>
 
 
-        <div class="row">
+        <div class="row align-items-center">
 
-            <div class="col-lg-9"
-                 data-reveal
-                 data-delay="0.1s">
+
+            <!-- ==========================================
+                 HERO CONTENT
+            ========================================== -->
+
+            <div
+                class="col-lg-7"
+                data-reveal="right"
+                data-delay="0.1s">
 
                 <div class="page-hero-label">
+
                     KALENDER PENDIDIKAN
+
                 </div>
 
 
@@ -153,11 +161,96 @@
 
             </div>
 
+
+            <!-- ==========================================
+                 KALENDER HARI INI
+            ========================================== -->
+
+            <div
+                class="col-lg-5"
+                data-reveal="left"
+                data-delay="0.3s">
+
+                <div class="home-date">
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-card">
+
+                        <!-- HARI -->
+
+                        <div
+                            id="home-date-weekday"
+                            class="home-date-weekday">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL HIJRIAH -->
+
+                        <div class="home-date-number">
+
+                            <span id="home-date-hijri">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <!-- BULAN + TAHUN HIJRIAH -->
+
+                        <div
+                            id="home-date-month"
+                            class="home-date-month">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL MASEHI -->
+
+                        <div
+                            id="home-date-gregorian"
+                            class="home-date-gregorian">
+
+                            -
+
+                        </div>
+
+
+                        <!-- EVENT -->
+
+                        <div
+                            id="home-date-event"
+                            class="home-date-event">
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-more">
+
+                        Baca Selengkapnya →
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
     </div>
 
 </section>
+
+<!-- End Hero Kalender Pendidikan -->
 
 
 <!-- ==========================================================
@@ -416,6 +509,8 @@
 <script src="../js/kaldik.js"></script>
 
 <script src="../js/kaldik-render.js"></script>
+
+<script src="../js/beranda-kaldik.js"></script>
 
 <script src="../js/navbar.js"></script>
 
