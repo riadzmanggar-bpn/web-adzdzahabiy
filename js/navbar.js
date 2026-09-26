@@ -294,25 +294,42 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     });
 
-
-                /* ------------------------------------------
-                   BUAT CONTAINER TOMBOL KEMBALI
-                   OTOMATIS SETELAH NAVBAR
-                ------------------------------------------ */
+               /* ==========================================================
+                BUAT CONTAINER TOMBOL KEMBALI
+                OTOMATIS SEBELUM FOOTER
+                ========================================================== */
 
                 const backButtonContainer =
                     document.createElement("div");
-
 
                 backButtonContainer.id =
                     "global-back-button";
 
 
-                navbarContainer.insertAdjacentElement(
-                    "afterend",
-                    backButtonContainer
-                );
+                /* ----------------------------------------------------------
+                TEMPATKAN SEBELUM FOOTER
+                ---------------------------------------------------------- */
 
+                const footerContainer =
+                    document.getElementById("global-footer");
+
+                if (footerContainer) {
+
+                    footerContainer.insertAdjacentElement(
+                        "beforebegin",
+                        backButtonContainer
+                    );
+
+                } else {
+
+                    /* fallback jika footer belum tersedia */
+
+                    navbarContainer.insertAdjacentElement(
+                        "afterend",
+                        backButtonContainer
+                    );
+
+                }
 
                 /* ------------------------------------------
                    LOAD COMPONENT TOMBOL KEMBALI

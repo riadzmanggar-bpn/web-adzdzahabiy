@@ -987,21 +987,45 @@
     transform:translateX(5px);
 }
 
+
+/* ==========================================================
+NAVBAR
+GLOBAL NAVBAR — FIXED
+========================================================== */
+
+#global-navbar{
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:94px;
+    min-height:94px;
+
+    z-index:9999;
+}
+
+
 /* ==========================================================
    NAVBAR
 ========================================================== */
 
 .navbar{
-    min-height:78px;
+    height:94px;
+    min-height:94px;
+
     padding:8px 0;
+
     background:#fff;
+
+    box-sizing:border-box;
+
+    position:relative;
+
+    z-index:10000;
 }
 
-.navbar > .container{
-    display:flex;
-    align-items:center;
-    width:100%;
-}
 
 
 /* ==========================================================
@@ -1272,7 +1296,10 @@
 ========================================================== */
 
 .navbar-toggler{
+    position:relative;
+    z-index:1001;
     flex-shrink:0;
+    cursor:pointer;
 }
 
 
@@ -1381,28 +1408,34 @@
         padding:6px 9px;
     }
 
+/* ==========================================================
+   MOBILE / TABLET NAVBAR OVERLAY
+========================================================== */
 
-    /* ======================================================
-       COLLAPSE
-    ====================================================== */
+@media (max-width:1199.98px){
 
     .navbar-expand-xl .navbar-collapse{
+
+        position:absolute;
+
+        top:100%;
+        left:0;
+
         width:100%;
-        flex-basis:100%;
 
-        margin-top:8px;
+        margin:0;
 
-        order:10;
+        padding:15px 20px 20px;
+
+        background:#fff;
+
+        z-index:1001;
+
+        box-shadow:
+            0 8px 20px rgba(0,0,0,.12);
     }
 
-    .navbar-expand-xl .navbar-collapse.collapse:not(.show){
-        display:none;
-    }
-
-    .navbar-expand-xl .navbar-collapse.collapse.show{
-        display:block;
-    }
-
+}
 
     /* ======================================================
        MENU
@@ -1536,13 +1569,15 @@
         display:none;
     }
 
+}
+
 
     /* ------------------------------------------
        HP KECIL
        IQAAMAH TURUN
     ------------------------------------------ */
 
-    @media (max-width:575.98px){
+        @media (max-width:575.98px){
 
         .navbar > .container{
             display:grid;
@@ -1551,8 +1586,7 @@
 
             grid-template-areas:
                 "brand toggler"
-                "iqaamah iqaamah"
-                "collapse collapse";
+                "iqaamah iqaamah";
 
             align-items:center;
         }
@@ -1583,13 +1617,7 @@
             display:none;
         }
 
-        .navbar-collapse{
-            grid-area:collapse;
-        }
-
     }
-
-}
 
 
 /* ==========================================================
@@ -1630,6 +1658,10 @@
 
         align-items:center;
         justify-content:center;
+
+    position:relative;
+    z-index:1001;
+
     }
 
     /* MENU */
@@ -1680,4 +1712,141 @@
         position:absolute;
         margin-top:0;
     }
+}
+
+/* ==========================================================
+   MOBILE NAVBAR — OVERLAY MENU
+   MENU TIDAK MENDORONG HALAMAN
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .navbar{
+        top:0;
+        z-index:1000;
+    }
+
+    .navbar > .container{
+        position:relative;
+    }
+
+
+    /* ======================================================
+       HAMBURGER
+    ====================================================== */
+
+    .navbar-toggler{
+        position:relative;
+        z-index:1002;
+
+        pointer-events:auto;
+        cursor:pointer;
+    }
+
+
+    /* ======================================================
+       MENU COLLAPSE
+    ====================================================== */
+
+    .navbar-expand-xl .navbar-collapse{
+
+        position:absolute;
+
+        top:100%;
+        left:0;
+
+        width:100%;
+
+        margin:0;
+
+        padding:15px 20px 20px;
+
+        background:#fff;
+
+        z-index:1001;
+
+        box-shadow:
+            0 8px 20px rgba(0,0,0,.12);
+    }
+
+
+    /* ======================================================
+       MENU
+    ====================================================== */
+
+    .navbar-expand-xl .navbar-nav{
+
+        width:100%;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:stretch;
+        justify-content:flex-start;
+
+        gap:0;
+
+        margin:0;
+        padding:0;
+    }
+
+
+    .navbar-expand-xl .navbar-nav .nav-link{
+
+        display:block;
+
+        width:100%;
+
+        padding:11px 10px;
+
+        font-size:1rem;
+
+        text-align:center;
+
+        white-space:normal;
+    }
+
+
+    /* HILANGKAN GARIS DESKTOP */
+
+    .navbar-expand-xl .navbar-nav .nav-link::before{
+
+        display:none;
+    }
+
+
+    /* ======================================================
+       BUTTON DONASI / DAFTAR
+    ====================================================== */
+
+    .navbar-expand-xl .navbar-buttons{
+
+        display:flex;
+
+        justify-content:center;
+        align-items:center;
+
+        width:100%;
+
+        margin:10px 0 0;
+
+        gap:10px;
+    }
+
+}
+
+
+/* ==========================================================
+   BOOTSTRAP COLLAPSE — SMOOTH
+========================================================== */
+
+@media (max-width:767.98px){
+
+    .navbar-expand-xl .navbar-collapse.collapsing{
+
+        transition:
+            height .15s ease;
+    }
+
 }
