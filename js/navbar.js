@@ -113,7 +113,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         daftar: "daftar.html",
 
-        kaldik: "kaldik.html"
+        kaldik: "kaldik.html",
+
+        prestasi: "prestasi.html"
 
     };
 

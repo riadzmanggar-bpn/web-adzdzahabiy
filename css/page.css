@@ -64,7 +64,7 @@
     display:inline-block;
     color:var(--accent);
     
-    font-size:.85rem;
+    font-size:1rem;
     font-weight:700;
     letter-spacing:2px;
     margin-bottom:8px;
@@ -3642,6 +3642,1410 @@
     .donasi-featured .section-subtitle {
         font-size: 15px;
         line-height: 1.5;
+    }
+
+}
+
+/* ==========================================================
+   PRESTASI PAGE
+========================================================== */
+
+.prestasi-page {
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 55px 0 70px;
+
+    background: #f6f3e9;
+}
+
+/* ==========================================================
+   FOTO BACKGROUND PRESTASI
+========================================================== */
+
+.prestasi-page-bg {
+
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    /*
+       FOTO TIDAK FULL SELEBAR LAYAR
+    */
+    width: min(1800px, calc(100% - 50px));
+
+    /*
+       Mengikuti tinggi section prestasi
+    */
+    height: calc(100% - 40px);
+
+    background-image:
+        url("../images/prestasi/prestasi-foto-musabaqoh.png");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+
+    background-position: center center;
+
+    border-radius: 28px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+/* ==========================================================
+   OVERLAY GELAP + BLUR
+========================================================== */
+
+.prestasi-page-bg::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(161, 163, 162, 0.28);
+
+    backdrop-filter: blur(2px);
+
+    -webkit-backdrop-filter: blur(2px);
+
+    pointer-events: none;
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.prestasi-page-content {
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* ==========================================================
+   HEADER MUSABAQAH
+========================================================== */
+
+.prestasi-event-header {
+
+    max-width: 900px;
+
+    margin: 0 auto 28px;
+
+    padding: 23px 30px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    border-radius: 20px;
+
+    border:
+        3px solid rgba(163, 119, 15, 0.747);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.13);
+
+    backdrop-filter: blur(6px);
+}
+
+
+.prestasi-event-header .page-hero-label {
+
+    display: inline-block;
+
+    border: 1px solid #d2a72e;
+
+    margin-bottom: 10px;
+
+    padding: 6px 18px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1d6546,
+            #0f452f
+        );
+
+    border-radius: 20px;
+
+    font-size: 0.95rem;
+
+    font-weight: 800;
+
+    letter-spacing: 1.8px;
+
+    box-shadow:
+        0 4px 10px rgba(15, 69, 47, 0.20);
+}
+
+
+.prestasi-event-header h2 {
+
+    margin: 0 0 8px;
+
+    color: #20563c;
+
+    font-weight: 700;
+
+}
+
+
+.prestasi-event-header .section-subtitle {
+
+    margin: 0;
+
+    color: #414943;
+
+}
+
+
+/* ==========================================================
+   EVENT INFO
+========================================================== */
+
+.prestasi-event-info {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+
+    max-width: 900px;
+
+    margin: 0 auto 65px;
+}
+
+/* ==========================================================
+   EVENT CARD
+========================================================== */
+
+.event-info-card {
+
+    position: relative;
+
+    min-height: 145px;
+
+    padding: 18px 24px 18px 28px;
+
+    background:
+        rgba(255,255,255,0.94);
+
+    border:
+        1px solid rgba(255,255,255,0.9);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.14);
+
+    backdrop-filter: blur(6px);
+
+    overflow: hidden;
+}
+
+
+/* AKSEN HIJAU + EMAS */
+
+.event-info-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 5px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #d5ae35,
+            #246044
+        );
+}
+
+/* ==========================================================
+   EVENT TITLE
+========================================================== */
+
+.event-info-title {
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid #e3e9e5;
+}
+
+
+.event-info-icon {
+
+    width: 44px;
+    height: 44px;
+
+    flex: 0 0 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background: #edf5f0;
+
+    color: #2b6a4d;
+
+    font-size: 1.1rem;
+
+    line-height: 1;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+
+.event-info-title h3 {
+
+    margin: 0;
+
+    color: #294c3a;
+
+    font-size: 1.12rem;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.event-info-icon i {
+
+    display: block;
+
+    margin: 0;
+
+    line-height: 2.5;
+
+}
+
+/* ==========================================================
+   EVENT CONTENT
+========================================================== */
+
+.event-info-content {
+
+    color: #414944;
+
+    font-size: 0.9rem;
+
+    line-height: 1.55;
+}
+
+
+.event-info-content p {
+
+    margin: 0 0 8px;
+}
+
+
+.event-info-content p:last-child {
+
+    margin-bottom: 0;
+}
+
+
+.event-info-content strong {
+
+    color: #273e32;
+
+    font-weight: 700;
+}
+
+/* ==========================================================
+   PRESTASI RESULT HEADER
+========================================================== */
+
+.prestasi-result-header {
+
+    position: relative;
+
+    max-width: 800px;
+
+    margin: 0 auto 32px;
+
+    padding: 27px 25px 20px;
+
+    text-align: center;
+
+    background:
+        rgba(255,255,255,0.93);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 9px 25px rgba(0,0,0,0.11);
+
+    backdrop-filter: blur(5px);
+}
+
+
+.prestasi-result-icon {
+
+    width: 54px;
+    height: 54px;
+
+    margin:
+        -50px auto 10px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f0cb51,
+            #b98b20
+        );
+
+    color: #ffffff;
+
+    border:
+        4px solid #f6f3e9;
+
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.16);
+
+    font-size: 1.35rem;
+}
+
+
+.prestasi-result-header h2 {
+
+    margin: 0 0 7px;
+
+    color: #20563c;
+
+    font-weight: 700;
+}
+
+
+.prestasi-result-header p {
+
+    margin: 0;
+
+    color: #555e58;
+
+}
+
+/* ==========================================================
+   HOVER — KOTAK INFORMASI PRESTASI
+========================================================== */
+
+.prestasi-event-header,
+.event-info-card,
+.prestasi-result-header {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* ==========================================================
+   HOVER HEADER MUSABAQAH
+========================================================== */
+
+.prestasi-event-header:hover {
+
+    transform: translateY(-4px);
+
+    border-color: #d2a72e;
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.18);
+}
+
+
+/* ==========================================================
+   HOVER INFO TANGGAL & TEMPAT
+========================================================== */
+
+.event-info-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.18);
+
+    border-color:
+        rgba(210, 167, 46, 0.45);
+}
+
+
+/* ==========================================================
+   HOVER HASIL PRESTASI
+========================================================== */
+
+.prestasi-result-header:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================================================
+   ICON HOVER
+========================================================== */
+
+.event-info-card .event-info-icon {
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+
+.event-info-card:hover .event-info-icon {
+
+    transform: scale(1.08);
+
+    background:
+        linear-gradient(
+            145deg,
+            #edf5f0,
+            #dcece3
+        );
+
+    color: #20563c;
+}
+
+/* ==========================================================
+   PRESTASI CARD
+========================================================== */
+
+.prestasi-card {
+
+    max-width: 900px;
+
+    margin: 0 auto 25px;
+
+    padding: 0;
+
+    background:
+        rgba(255,255,255,0.95);
+
+    border:
+        1px solid rgba(255,255,255,0.9);
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 9px 25px rgba(0,0,0,0.10);
+
+    overflow: hidden;
+
+    backdrop-filter: blur(5px);
+}
+
+/* ==========================================================
+   HOVER — KARTU KATEGORI PRESTASI
+========================================================== */
+
+.prestasi-card {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.prestasi-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 38px rgba(0, 0, 0, 0.18);
+}
+
+/* ==========================================================
+   HOVER — HEADER KATEGORI
+========================================================== */
+
+.prestasi-card-header {
+
+    transition:
+        background 0.3s ease;
+}
+
+
+.prestasi-card:hover .prestasi-card-header {
+
+    background:
+        linear-gradient(
+            135deg,
+            #1c6545,
+            #105036
+        );
+}
+
+/* ==========================================================
+   HOVER — TROPHY
+========================================================== */
+
+.prestasi-card-header .prestasi-trophy {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+.prestasi-card:hover .prestasi-trophy {
+
+    transform: scale(1.08) rotate(-3deg);
+
+    box-shadow:
+        0 7px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ==========================================================
+   HEADER KATEGORI
+========================================================== */
+
+.prestasi-card-header {
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin: 0;
+
+    padding: 20px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #185a3d,
+            #0f452f
+        );
+
+    overflow: hidden;
+}
+
+
+/* ORNAMEN */
+
+.prestasi-card-header::after {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: -12px;
+    right: 25px;
+
+    color:
+        rgba(255,255,255,0.08);
+
+    font-size: 5rem;
+}
+
+
+.prestasi-trophy {
+
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #f0cd57,
+            #b58a1d
+        );
+
+    color: #ffffff;
+
+    font-size: 1.3rem;
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.20);
+}
+
+
+.prestasi-jenjang {
+
+    display: block;
+
+    margin-bottom: 2px;
+
+    color: #e8d58d;
+
+    font-size: 0.76rem;
+
+    font-weight: 600;
+}
+
+
+.prestasi-card-header h3 {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 1.35rem;
+
+    font-weight: 700;
+}
+
+
+/* ==========================================================
+   DAFTAR JUARA
+========================================================== */
+
+.prestasi-list {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0,2fr));
+
+    gap: 24px;
+
+    padding: 36px;
+    
+}
+
+
+/* ==========================================================
+   ITEM SANTRI
+========================================================== */
+
+.prestasi-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    min-width: 0;
+
+    padding: 15px;
+
+    background: #e2eae6;
+
+    border:
+        1px solid #7d94b9;
+
+    border-radius: 16px;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.prestasi-item:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,0.08);
+}
+
+
+/* ==========================================================
+   JUARA 1
+========================================================== */
+
+.prestasi-juara-1 {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7d9,
+            #fffdf5
+        );
+
+    border-color: #e3ca63;
+}
+
+
+/* ==========================================================
+   NOMOR
+========================================================== */
+
+.prestasi-rank {
+
+    width: 44px;
+    height: 44px;
+
+    min-width: 44px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #2d6c51;
+}
+
+
+.prestasi-rank span {
+
+    font-size: 1rem;
+
+    font-weight: 800;
+}
+
+
+.prestasi-juara-1 .prestasi-rank {
+
+    background:
+        linear-gradient(
+            145deg,
+            #f1cc4c,
+            #b98d1f
+        );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 4px 9px rgba(180,140,25,0.25);
+}
+
+
+
+/* ==========================================================
+   INFO SANTRI
+========================================================== */
+
+.prestasi-info {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.prestasi-info strong {
+
+    display: block;
+
+    color: #293b32;
+
+    font-size: 0.95rem;
+
+    line-height: 1.4;
+
+}
+
+
+.prestasi-kelas {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    margin-top: 6px;
+
+    padding: 4px 10px;
+
+    border-radius: 20px;
+
+    background: #fbfcfc;
+
+    color: #356b53;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+}
+
+
+.prestasi-juara-1 .prestasi-kelas {
+
+    background: #f2e5ad;
+
+    color: #80681b;
+}
+
+/* =========================================
+   RANK HARAPAN
+========================================= */
+
+.prestasi-rank-harapan {
+    width: auto;
+    min-width: 82px;
+    height: 44px;
+    padding: 0 12px;
+    border-radius: 22px;
+
+    background: #feffff;
+    color: #2d336c;
+
+    white-space: nowrap;
+}
+
+.prestasi-rank-harapan span {
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+/* ==========================================================
+   MEDALI
+========================================================== */
+
+.prestasi-medal {
+
+    flex: 0 0 auto;
+
+    font-size: 1.35rem;
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 767px) {
+
+    .prestasi-page {
+
+        padding:
+            40px 0 50px;
+
+    }
+
+
+       .prestasi-event-header {
+
+        padding:
+            18px 16px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .prestasi-event-header h2 {
+
+        font-size: 1.4rem;
+
+    }
+
+
+    .prestasi-event-info {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-bottom: 55px;
+
+    }
+
+
+    .event-info-card {
+
+        min-height: auto;
+
+        padding:
+            20px 18px 20px 23px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .event-info-title h3 {
+
+        font-size: 1.05rem;
+
+    }
+
+
+    .prestasi-result-header {
+
+        padding:
+            25px 16px 18px;
+
+    }
+
+
+    .prestasi-result-header h2 {
+
+        font-size: 1.35rem;
+
+    }
+
+
+    .prestasi-card-header {
+
+        padding: 17px;
+
+    }
+
+
+    .prestasi-card-header h3 {
+
+        font-size: 1.15rem;
+
+    }
+
+
+    .prestasi-list {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        padding: 12px;
+
+    }
+
+
+    .prestasi-item {
+
+        padding: 13px;
+
+    }
+
+
+    .prestasi-info strong {
+
+        font-size: 0.9rem;
+
+    }
+
+}
+
+/* ==========================================================
+   GALERI PRESTASI
+========================================================== */
+
+.prestasi-gallery-section {
+
+    padding: 75px 0 80px;
+
+    background: #f6f3e9;
+}
+
+
+/* ==========================================================
+   HEADER GALERI
+========================================================== */
+
+.prestasi-gallery-header {
+
+    max-width: 750px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+
+.prestasi-gallery-header .page-hero-label {
+
+    margin-bottom: 7px;
+
+    color: #d1a52c;
+
+    font-size: 0.9rem;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+.prestasi-gallery-header h2 {
+
+    margin: 0 0 8px;
+
+    color: #20563c;
+
+    font-size: 2rem;
+
+    font-weight: 700;
+}
+
+
+.prestasi-gallery-header p {
+
+    margin: 0;
+
+    color: #68716b;
+
+    font-size: 0.95rem;
+}
+
+
+/* ==========================================================
+   GARIS DEKORATIF
+========================================================== */
+
+.prestasi-gallery-header::after {
+
+    content: "";
+
+    display: block;
+
+    width: 55px;
+
+    height: 3px;
+
+    margin: 17px auto 0;
+
+    border-radius: 5px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #d4ad38,
+            #356b53
+        );
+}
+
+
+/* ==========================================================
+   GRID GALERI
+========================================================== */
+
+.prestasi-gallery {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* ==========================================================
+   ITEM FOTO
+========================================================== */
+
+.prestasi-gallery-item {
+
+    position: relative;
+
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    background: #ffffff;
+
+    border:
+        5px solid #ffffff;
+
+    box-shadow:
+        0 8px 25px
+        rgba(0, 0, 0, 0.10);
+
+    cursor: pointer;
+}
+
+
+/* ==========================================================
+   FOTO
+========================================================== */
+
+.prestasi-gallery-item img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease;
+}
+
+
+//* ==========================================================
+   OVERLAY
+========================================================== */
+
+.prestasi-gallery-item::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15, 55, 38, 0.88),
+            rgba(15, 55, 38, 0.25) 55%,
+            transparent 75%
+        );
+
+    opacity: 0;
+
+    transition:
+        opacity 0.35s ease;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+/* ==========================================================
+   KETERANGAN FOTO
+========================================================== */
+
+.prestasi-gallery-caption {
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 24px 18px 17px;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(8, 35, 24, 0.88),
+            rgba(8, 35, 24, 0.60),
+            rgba(8, 35, 24, 0)
+        );
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+
+    transform: translateY(100%);
+
+    opacity: 0;
+
+    transition:
+        transform 0.35s ease,
+        opacity 0.35s ease;
+
+    z-index: 2;
+}
+
+
+.prestasi-gallery-caption strong {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #ffffff;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+
+.prestasi-gallery-caption span {
+
+    display: block;
+
+    color: #e7bd26;
+
+    font-size: 0.8rem;
+
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    text-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.55);
+}
+/* ==========================================================
+   HOVER
+========================================================== */
+
+.prestasi-gallery-item:hover img {
+
+    transform: scale(1.06);
+}
+
+
+.prestasi-gallery-item:hover::after {
+
+    opacity: 1;
+}
+
+.prestasi-gallery-item:hover .prestasi-gallery-caption {
+
+    transform: translateY(0);
+
+    opacity: 1;
+}
+
+/* ==========================================================
+   GALERI — MOBILE
+========================================================== */
+
+@media (max-width: 767px) {
+
+    .prestasi-gallery-section {
+
+        padding: 50px 0 60px;
+
+    }
+
+
+    .prestasi-gallery-header {
+
+        margin-bottom: 25px;
+
+    }
+
+
+    .prestasi-gallery-header h2 {
+
+        font-size: 1.45rem;
+
+    }
+
+
+    .prestasi-gallery-header p {
+
+        font-size: 0.85rem;
+
+        padding: 0 10px;
+
+    }
+
+
+    .prestasi-gallery {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+    }
+
+
+    .prestasi-gallery-item {
+
+        aspect-ratio: 4 / 3;
+
+        border-radius: 15px;
+
+        border-width: 4px;
+
+    }
+
+        .prestasi-gallery-caption {
+
+        transform: translateY(0);
+
+        opacity: 1;
+
+        padding:
+            20px 14px 13px;
+    }
+
+
+    .prestasi-gallery-caption strong {
+
+        font-size: 0.9rem;
+
+    }
+
+
+    .prestasi-gallery-caption span {
+
+        font-size: 0.7rem;
+
+    }
+
+
+    .prestasi-gallery-item::after {
+
+        opacity: 1;
+
+    }
+
+      
+}
+@media (max-width: 767px) {
+
+    .prestasi-page-bg {
+
+        top: 15px;
+
+        width: calc(100% - 24px);
+
+        height: calc(100% - 30px);
+
+        border-radius: 20px;
+
+        background-position: center center;
     }
 
 }

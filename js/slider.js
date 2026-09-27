@@ -612,8 +612,9 @@ function initImageSlider(slider) {
 
 /* ==========================================================
    HIGHLIGHT BERANDA
-   4 BERITA → 3 CARD DESKTOP
-   MOBILE → 1 CARD
+   DESKTOP = 3 CARD
+   MOBILE  = 1 CARD
+   ROTASI  = 1 CARD SETIAP 5 DETIK
 ========================================================== */
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -638,94 +639,136 @@ document.addEventListener("DOMContentLoaded", function () {
             container.querySelectorAll(".highlight-card")
         );
 
+        /* ======================================================
+        TOMBOL PANAH
+        ====================================================== */
+
+        const prevButton =
+            document.createElement("button");
+
+        const nextButton =
+            document.createElement("button");
+
+
+        prevButton.type = "button";
+        nextButton.type = "button";
+
+
+        prevButton.className =
+            "highlight-arrow highlight-arrow-prev";
+
+        nextButton.className =
+            "highlight-arrow highlight-arrow-next";
+
+
+        prevButton.innerHTML = "&#10094;";
+        nextButton.innerHTML = "&#10095;";
+
+
+        prevButton.setAttribute(
+            "aria-label",
+            "Berita sebelumnya"
+        );
+
+        nextButton.setAttribute(
+            "aria-label",
+            "Berita berikutnya"
+        );
+
+
+        container.parentElement.insertBefore(
+            prevButton,
+            container
+        );
+
+        container.parentElement.insertBefore(
+            nextButton,
+            container.nextSibling
+        );
 
     if (!cards.length) {
         return;
     }
 
 
-        /*
-        Tentukan jumlah card yang ditampilkan.
+    const interval = 5000;
 
-        - HP      : selalu 1 card
-        - Desktop : maksimal 3 card
-        - Jika card hanya 1–2:
-          tetap 1 card agar bisa berganti dengan timer.
-    */
+    let currentIndex = 0;
 
-    const isMobile = window.innerWidth <= 767;
-
-    const visibleCount =
-        isMobile
-            ? 1
-            : cards.length >= 3
-                ? 3
-                : 1;
+    let timer = null;
 
 
     /* ======================================================
-       SETTING
+       JUMLAH CARD TERLIHAT
     ====================================================== */
 
-    const interval = 5000;
+    function getVisibleCount() {
 
-    let startIndex = 0;
+        if (window.innerWidth <= 767) {
+            return 1;
+        }
 
-    let timer;
+        return Math.min(3, cards.length);
 
+    }
 
 
     /* ======================================================
        BUAT DOT
-       1 DOT = 1 POSISI ROTASI
+       1 CARD = 1 DOT
     ====================================================== */
 
-    /* Bersihkan dot lama agar tidak dobel */
-    if (dotsContainer) {
+    function createDots() {
+
+        if (!dotsContainer) {
+            return;
+        }
+
         dotsContainer.innerHTML = "";
+
+
+        cards.forEach(function (_, index) {
+
+            const dot =
+                document.createElement("button");
+
+            dot.type = "button";
+
+            dot.className =
+                "highlight-dot";
+
+
+            dot.setAttribute(
+                "aria-label",
+                "Tampilkan posisi " + (index + 1)
+            );
+
+
+            dot.addEventListener(
+                "click",
+                function () {
+
+                    currentIndex = index;
+
+                    showCards();
+
+                    restartTimer();
+
+                }
+            );
+
+
+            dotsContainer.appendChild(dot);
+
+        });
+
     }
-
-    cards.forEach(function (_, index) {
-
-        const dot =
-            document.createElement("button");
-
-        dot.type = "button";
-
-        dot.className =
-            "highlight-dot";
-
-
-        dot.setAttribute(
-            "aria-label",
-            "Tampilkan berita " + (index + 1)
-        );
-
-
-        dot.addEventListener(
-            "click",
-            function () {
-
-                startIndex = index;
-
-                showCards();
-                resetTimerBar();
-                restartTimer();
-
-            }
-        );
-
-
-        dotsContainer.appendChild(dot);
-
-    });
 
 
     /* ======================================================
        TAMPILKAN CARD
     ====================================================== */
-
-        function showCards() {
+    function showCards() {
 
         const visibleCount =
             window.innerWidth <= 767
@@ -734,26 +777,54 @@ document.addEventListener("DOMContentLoaded", function () {
                     ? 3
                     : 1;
 
+
         cards.forEach(function (card, index) {
 
             const relativeIndex =
                 (
                     index -
-                    startIndex +
+                    currentIndex +
                     cards.length
                 ) % cards.length;
 
+
             const shouldShow =
                 relativeIndex < visibleCount;
+
 
             card.classList.toggle(
                 "is-visible",
                 shouldShow
             );
 
+
+            /*
+            * Atur urutan card yang tampil.
+            *
+            * currentIndex = 0
+            * 1 - 2 - 3
+            *
+            * currentIndex = 1
+            * 2 - 3 - 4
+            *
+            * currentIndex = 2
+            * 3 - 4 - 5
+            *
+            * currentIndex = 3
+            * 4 - 5 - 1
+            *
+            * currentIndex = 4
+            * 5 - 1 - 2
+            */
+
+            card.style.order =
+                relativeIndex;
+
         });
 
+
         updateDots();
+
     }
 
 
@@ -763,23 +834,183 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateDots() {
 
+        if (!dotsContainer) {
+            return;
+        }
+
+
         const dots =
             dotsContainer.querySelectorAll(
                 ".highlight-dot"
             );
 
 
-        dots.forEach(function (dot, index) {
+        dots.forEach(
+            function (dot, index) {
 
-            dot.classList.toggle(
-                "active",
-                index === startIndex
-            );
+                dot.classList.toggle(
+                    "active",
+                    index === currentIndex
+                );
 
-        });
+            }
+        );
 
     }
 
+
+    /* ======================================================
+       NEXT
+    ====================================================== */
+
+    function nextSlide() {
+
+        if (
+            cards.length <=
+            getVisibleCount()
+        ) {
+            return;
+        }
+
+
+        /*
+         * MAJU TEPAT 1 CARD
+         */
+
+        currentIndex =
+            (currentIndex + 1) %
+            cards.length;
+
+
+        showCards();
+
+        resetTimerBar();
+
+    }
+
+
+    /* ======================================================
+    PREVIOUS
+    ====================================================== */
+
+    function prevSlide() {
+
+        if (
+            cards.length <=
+            getVisibleCount()
+        ) {
+            return;
+        }
+
+
+        currentIndex =
+            (
+                currentIndex -
+                1 +
+                cards.length
+            ) % cards.length;
+
+
+        showCards();
+
+        resetTimerBar();
+
+    }
+
+    /* ======================================================
+    EVENT TOMBOL PANAH
+    ====================================================== */
+
+    prevButton.addEventListener(
+        "click",
+        function () {
+
+            prevSlide();
+
+            restartTimer();
+
+        }
+    );
+
+
+    nextButton.addEventListener(
+        "click",
+        function () {
+
+            nextSlide();
+
+            restartTimer();
+
+        }
+    );
+
+    /* ======================================================
+    SWIPE MOBILE
+    ====================================================== */
+
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+
+    container.addEventListener(
+        "touchstart",
+        function (event) {
+
+            touchStartX =
+                event.changedTouches[0].screenX;
+
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    container.addEventListener(
+        "touchend",
+        function (event) {
+
+            touchEndX =
+                event.changedTouches[0].screenX;
+
+
+            const swipeDistance =
+                touchEndX -
+                touchStartX;
+
+
+            /*
+            * Swipe kiri
+            * → berita berikutnya
+            */
+
+            if (swipeDistance < -50) {
+
+                nextSlide();
+
+                restartTimer();
+
+            }
+
+
+            /*
+            * Swipe kanan
+            * → berita sebelumnya
+            */
+
+            if (swipeDistance > 50) {
+
+                prevSlide();
+
+                restartTimer();
+
+            }
+
+        },
+        {
+            passive: true
+        }
+    );
 
     /* ======================================================
        TIMER BAR
@@ -792,52 +1023,58 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
 
-        timerBar.style.transition = "none";
+        if (
+            cards.length <=
+            getVisibleCount()
+        ) {
 
-        timerBar.style.width = "0%";
+            timerBar.style.transition =
+                "none";
+
+            timerBar.style.width =
+                "0%";
+
+            return;
+
+        }
 
 
-        /*
-           Force browser melakukan reflow
-           agar animasi selalu restart.
-        */
+        timerBar.style.transition =
+            "none";
+
+        timerBar.style.width =
+            "0%";
+
 
         void timerBar.offsetWidth;
 
 
         timerBar.style.transition =
-            "width " + interval + "ms linear";
+            "width " +
+            interval +
+            "ms linear";
 
-        timerBar.style.width = "100%";
-
-    }
-
-
-    /* ======================================================
-       NEXT
-    ====================================================== */
-
-    function nextSlide() {
-
-        startIndex++;
-
-        if (startIndex >= cards.length) {
-            startIndex = 0;
-        }
-
-        showCards();
-        resetTimerBar();
+        timerBar.style.width =
+            "100%";
 
     }
 
 
     /* ======================================================
-       TIMER
+       START TIMER
     ====================================================== */
 
     function startTimer() {
 
         clearInterval(timer);
+
+
+        if (
+            cards.length <=
+            getVisibleCount()
+        ) {
+            return;
+        }
 
 
         timer =
@@ -857,22 +1094,38 @@ document.addEventListener("DOMContentLoaded", function () {
 
         clearInterval(timer);
 
+        resetTimerBar();
+
         startTimer();
 
     }
 
 
     /* ======================================================
-       RESPONSIVE
-       Kalau layar berubah desktop ↔ mobile,
-       posisi tetap sama.
+       RESIZE
     ====================================================== */
+
+    let resizeTimer = null;
+
 
     window.addEventListener(
         "resize",
         function () {
 
-            showCards();
+            clearTimeout(resizeTimer);
+
+
+            resizeTimer =
+                setTimeout(
+                    function () {
+
+                        showCards();
+
+                        restartTimer();
+
+                    },
+                    150
+                );
 
         }
     );
@@ -882,8 +1135,12 @@ document.addEventListener("DOMContentLoaded", function () {
        INITIAL
     ====================================================== */
 
+    createDots();
+
     showCards();
+
     resetTimerBar();
+
     startTimer();
 
 });

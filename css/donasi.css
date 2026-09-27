@@ -24,6 +24,7 @@
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
+    margin-top:94px;
 
 }
 
@@ -1048,6 +1049,7 @@
         ),
         url("../images/donasi/donasi-ac.jpg")
         center center / cover no-repeat;
+        margin-top:94px;
 }
 
 
@@ -1965,6 +1967,7 @@
     width: 100%;
 
     overflow: hidden;
+    margin-top:94px;
 }
 
 
