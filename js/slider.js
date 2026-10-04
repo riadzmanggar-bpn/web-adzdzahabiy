@@ -773,9 +773,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const visibleCount =
             window.innerWidth <= 767
                 ? 1
-                : cards.length >= 3
-                    ? 3
-                    : 1;
+                : Math.min(3, cards.length);
 
 
         cards.forEach(function (card, index) {

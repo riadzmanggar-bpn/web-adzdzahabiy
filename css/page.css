@@ -1,6 +1,3 @@
-
-
-
 /* =====================================
    VALUE
 ===================================== */
@@ -3559,92 +3556,6 @@
         0 2px 6px rgba(0, 0, 0, .35);
 }
 
-/* ==========================================================
-   DONASI FEATURED
-========================================================== */
-
-.donasi-featured {
-    padding: 70px 0 80px;
-}
-
-
-/* ==========================================================
-   HEADER PROGRAM DONASI
-========================================================== */
-
-.donasi-featured .donasi-section-label {
-
-    display: inline-block;
-
-    margin-bottom: 10px;
-
-    color: #198754;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    letter-spacing: 3px;
-
-    line-height: 1.4;
-}
-
-
-.donasi-featured h2 {
-
-    margin: 0 0 10px;
-
-    color: #222;
-
-    font-size: 38px;
-    font-weight: 800;
-
-    line-height: 1.2;
-}
-
-
-.donasi-featured .section-subtitle {
-
-    margin: 0;
-
-    color: #666;
-
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-@media (max-width: 991.98px) {
-
-    .donasi-featured {
-        padding: 60px 20px 70px;
-    }
-
-    .donasi-featured h2 {
-        font-size: 34px;
-    }
-
-}
-
-@media (max-width: 767.98px) {
-
-    .donasi-featured {
-        padding: 50px 15px 60px;
-    }
-
-    .donasi-featured .donasi-section-label {
-        font-size: 13px;
-        letter-spacing: 2.5px;
-    }
-
-    .donasi-featured h2 {
-        font-size: 30px;
-    }
-
-    .donasi-featured .section-subtitle {
-        font-size: 15px;
-        line-height: 1.5;
-    }
-
-}
 
 /* ==========================================================
    PRESTASI PAGE
@@ -5046,6 +4957,599 @@
         border-radius: 20px;
 
         background-position: center center;
+    }
+
+}
+
+/* ==========================================================
+   TADRIBUT DU'AT
+========================================================== */
+
+.td-intro {
+    padding: 100px 0;
+}
+
+.td-intro-inner {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 70px;
+    align-items: start;
+}
+
+.td-intro-title h2 {
+    margin-top: 14px;
+}
+
+.td-intro-content p {
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.td-age-box {
+    margin-top: 30px;
+    padding: 22px 25px;
+    border-radius: 16px;
+    background: rgba(198, 129, 48, 0.10);
+    border: 1px solid rgba(198, 129, 48, 0.22);
+}
+
+.td-age-box span {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    margin-bottom: 6px;
+    opacity: 0.75;
+}
+
+.td-age-box strong {
+    display: block;
+    font-size: 1.35rem;
+}
+
+.td-gender-cards {
+    margin-top: 30px;
+}
+
+.td-gender-card {
+    height: 100%;
+    padding: 25px;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.td-gender-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    background: rgba(198, 129, 48, 0.10);
+    font-size: 1.35rem;
+}
+
+.td-gender-card h4 {
+    margin-bottom: 8px;
+}
+
+.td-gender-card p {
+    margin: 0;
+    line-height: 1.7;
+}
+
+.td-curriculum-section {
+    padding: 100px 0;
+}
+
+.td-year-card {
+    height: 100%;
+    padding: 34px;
+    border-radius: 22px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+}
+
+.td-year-card-header {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.td-year-number {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: rgba(198, 129, 48, 0.12);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.td-year-card h3 {
+    margin: 0;
+}
+
+.td-subtitle {
+    color: #777;
+    margin: 5px 0 0;
+}
+
+.td-material-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.td-material-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    padding: 17px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.td-material-list li:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.td-material-number {
+    width: 34px;
+    height: 34px;
+    flex: 0 0 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: rgba(198, 129, 48, 0.09);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.td-material-name {
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.td-schedule-section {
+    padding: 100px 0;
+}
+
+.td-schedule-card {
+    height: 100%;
+    padding: 35px;
+    border-radius: 22px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    text-align: center;
+}
+
+.td-schedule-icon {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    background: rgba(198, 129, 48, 0.10);
+    font-size: 1.65rem;
+}
+
+.td-schedule-card span {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    opacity: 0.7;
+    margin-bottom: 8px;
+}
+
+.td-schedule-card strong {
+    display: block;
+    font-size: 1.25rem;
+}
+
+.td-closing-section {
+    padding: 110px 0;
+    text-align: center;
+}
+
+.td-closing-content {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.td-closing-content p {
+    max-width: 720px;
+    margin: 25px auto 0;
+    line-height: 1.9;
+}
+
+
+/* ==========================================================
+   TADRIBUT DU'AT - RESPONSIVE
+========================================================== */
+
+@media (max-width: 991px) {
+
+    .td-intro-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+}
+
+@media (max-width: 767px) {
+
+    .td-intro,
+    .td-curriculum-section,
+    .td-schedule-section,
+    .td-closing-section {
+        padding: 75px 0;
+    }
+
+    .td-year-card {
+        padding: 25px;
+    }
+
+}
+
+/* ==========================================================
+   MATERI PEMBELAJARAN RA KELAS 1
+========================================================== */
+
+.ra-class-material-section {
+    background: #fff;
+}
+
+
+/* ==========================================================
+   GRID
+========================================================== */
+
+.ra-class-material-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 22px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+}
+
+
+/* ==========================================================
+   CARD
+========================================================== */
+
+.ra-class-material-card {
+
+    position: relative;
+
+    min-height: 230px;
+
+    padding: 28px 22px 25px;
+
+    background: #fff;
+
+    border: 1px solid rgba(0, 0, 0, .06);
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .06);
+
+}
+
+
+.ra-class-material-card:hover {
+
+    box-shadow: 0 16px 35px rgba(0, 0, 0, .10);
+
+}
+
+
+/* ==========================================================
+   NOMOR
+========================================================== */
+
+.ra-class-material-number {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 18px;
+
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    opacity: .35;
+
+}
+
+
+/* ==========================================================
+   ICON
+========================================================== */
+
+.ra-class-material-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    margin: 5px auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 18px;
+
+    font-size: 1.45rem;
+
+}
+
+
+/* ==========================================================
+   TITLE
+========================================================== */
+
+.ra-class-material-card h3 {
+
+    margin: 0 0 10px;
+
+    color: #222;
+
+    font-size: 1rem;
+
+    font-weight: 700;
+
+}
+
+
+/* ==========================================================
+   DESCRIPTION
+========================================================== */
+
+.ra-class-material-card p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: .8rem;
+
+    line-height: 1.6;
+
+}
+
+
+/* ==========================================================
+   WARNA ICON
+========================================================== */
+
+.ra-material-green .ra-class-material-icon {
+
+    background: #e4f5eb;
+
+    color: #198754;
+
+}
+
+
+.ra-material-yellow .ra-class-material-icon {
+
+    background: #fff4cf;
+
+    color: #c18a00;
+
+}
+
+
+.ra-material-blue .ra-class-material-icon {
+
+    background: #e2f2fc;
+
+    color: #168acb;
+
+}
+
+
+.ra-material-pink .ra-class-material-icon {
+
+    background: #fde5ec;
+
+    color: #d95778;
+
+}
+
+
+.ra-material-purple .ra-class-material-icon {
+
+    background: #eee7fa;
+
+    color: #8055b5;
+
+}
+
+
+.ra-material-orange .ra-class-material-icon {
+
+    background: #fff0e5;
+
+    color: #dc7139;
+
+}
+
+
+.ra-material-teal .ra-class-material-icon {
+
+    background: #e0f5f2;
+
+    color: #178b7b;
+
+}
+
+
+.ra-material-red .ra-class-material-icon {
+
+    background: #fde7e5;
+
+    color: #d34d45;
+
+}
+
+
+/* ==========================================================
+   DOWNLOAD
+========================================================== */
+
+.ra-class-material-download {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 35px;
+
+}
+
+
+.ra-class-material-download a {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    padding: 12px 25px;
+
+    border-radius: 30px;
+
+    background: var(--primary);
+
+    border: 1px solid var(--primary);
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    transition:
+        transform .25s ease,
+        background .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.ra-class-material-download a:hover {
+
+    background: var(--primary-dark);
+
+    color: #fff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(25, 135, 84, .20);
+
+}
+
+
+/* ==========================================================
+   TABLET
+========================================================== */
+
+@media (max-width: 991.98px) {
+
+    .ra-class-material-grid {
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* ==========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 575.98px) {
+
+    .ra-class-material-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+
+    }
+
+
+    .ra-class-material-card {
+
+        min-height: auto;
+
+        padding: 25px 20px;
+
+    }
+
+
+    .ra-class-material-icon {
+
+        width: 55px;
+
+        height: 55px;
+
+        margin-bottom: 15px;
+
+    }
+
+
+    .ra-class-material-download {
+
+        margin-top: 28px;
+
+    }
+
+
+    .ra-class-material-download a {
+
+        width: 100%;
+
+        max-width: 320px;
+
     }
 
 }

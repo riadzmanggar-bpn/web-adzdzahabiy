@@ -110,81 +110,6 @@
 }
 
 
-/* ==========================================================
-   FEATURED DONASI
-========================================================== */
-
-.donasi-featured{
-
-    padding:90px 0 100px;
-
-    background:#f8f9fa;
-
-}
-
-
-.donasi-featured h2{
-
-    margin-bottom:15px;
-
-    font-weight:700;
-
-}
-
-
-.donasi-featured-card{
-
-    padding:40px;
-
-    background:#fff;
-
-    border-radius:24px;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,.08);
-
-}
-
-
-/* ==========================================================
-   FEATURED IMAGE
-========================================================== */
-
-.donasi-featured-image{
-
-    width:100%;
-
-    height:360px;
-
-    overflow:hidden;
-
-    border-radius:18px;
-
-}
-
-
-.donasi-featured-image img{
-
-    width:100%;
-
-    height:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    transition:.4s ease;
-
-}
-
-
-.donasi-featured-card:hover
-.donasi-featured-image img{
-
-    transform:scale(1.04);
-
-}
-
 
 /* ==========================================================
    DONASI CATEGORY
@@ -206,35 +131,6 @@
 
 }
 
-
-/* ==========================================================
-   FEATURED CONTENT
-========================================================== */
-
-.donasi-featured-card h2{
-
-    margin-bottom:18px;
-
-    font-size:2.2rem;
-
-    font-weight:700;
-
-    line-height:1.35;
-
-}
-
-
-.donasi-featured-card p{
-
-    margin-bottom:25px;
-
-    color:#666;
-
-    font-size:1.1rem;
-
-    line-height:1.9;
-
-}
 
 
 /* ==========================================================
@@ -282,20 +178,6 @@
 
 }
 
-
-/* ==========================================================
-   BUTTON
-========================================================== */
-
-.donasi-featured-card .btn{
-
-    padding:12px 30px;
-
-    border-radius:30px;
-
-    font-weight:600;
-
-}
 
 
 /* ==========================================================
@@ -587,19 +469,6 @@
     }
 
 
-    .donasi-featured-card{
-
-        padding:30px;
-
-    }
-
-
-    .donasi-featured-image{
-
-        height:300px;
-
-    }
-
 }
 
     /* ------------------------------------------------------
@@ -633,51 +502,6 @@
             line-height:1.8;
 
         }
-
-    }
-
-
-    /* ------------------------------------------------------
-       FEATURED
-    ------------------------------------------------------ */
-
-    .donasi-featured{
-
-        padding:65px 0 75px;
-
-    }
-
-
-    .donasi-featured-card{
-
-        padding:22px;
-
-        border-radius:18px;
-
-    }
-
-
-    .donasi-featured-image{
-
-        height:230px;
-
-        border-radius:15px;
-
-    }
-
-
-    .donasi-featured-card h2{
-
-        font-size:1.8rem;
-
-    }
-
-
-    .donasi-featured-card p{
-
-        font-size:1rem;
-
-        line-height:1.8;
 
     }
 
@@ -1564,13 +1388,6 @@
 
 }
 
-/* ==========================================================
-   SLIDER DONASI UTAMA
-========================================================== */
-
-.donasi-featured-image img {
-    transition: opacity .4s ease;
-}
 
 /* ==========================================================
    Title kontak - WHATSAPP 

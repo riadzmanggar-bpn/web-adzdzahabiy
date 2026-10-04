@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="../css/page.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/kaldik.css">
 
 </head>
 
@@ -52,11 +53,13 @@
 
 <section class="page-hero">
 
-    <div class="container"
-        data-reveal="zoom"
-        data-delay="0.1s">
+    <div class="container">
 
-        <nav class="breadcrumb-custom">
+        <!-- BREADCRUMB -->
+
+        <nav class="breadcrumb-custom"
+             data-reveal
+             data-delay="0s">
 
             <a href="../index.html">
                 Beranda
@@ -64,38 +67,131 @@
 
             <span>/</span>
 
-            <span>
-                Program
-            </span>
+            <span>Program</span>
 
             <span>/</span>
 
-            <span>
-                Marhalah Ula
-            </span>
+            <span>Marhalah Ula</span>
 
         </nav>
 
 
-        <div class="row">
+        <div class="row align-items-center">
 
-            <div class="col-lg-9">
+
+            <!-- ==========================================
+                 HERO CONTENT
+            ========================================== -->
+
+            <div
+                class="col-lg-7"
+                data-reveal="right"
+                data-delay="0.1s">
 
                 <div class="page-hero-label">
                     PROGRAM PENDIDIKAN
                 </div>
 
+                <h1
+                    data-reveal="right"
+                    data-delay="0.2s">
 
-                <h1>
                     Marhalah Ula
+
                 </h1>
 
+                <p
+                    data-reveal="left"
+                    data-delay="0.3s">
 
-                <p>
                     Pendidikan setingkat Sekolah Dasar bagi putra dan putri
                     yang berlandaskan Al-Qur'an dan As-Sunnah sesuai dengan
                     pemahaman Salafus Shalih.
+
                 </p>
+
+            </div>
+
+
+            <!-- ==========================================
+                 KALENDER HARI INI
+            ========================================== -->
+
+            <div
+                class="col-lg-5"
+                data-reveal="left"
+                data-delay="0.3s">
+
+                <div class="home-date">
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-card">
+
+                        <!-- HARI -->
+
+                        <div
+                            id="home-date-weekday"
+                            class="home-date-weekday">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL HIJRIAH -->
+
+                        <div class="home-date-number">
+
+                            <span id="home-date-hijri">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <!-- BULAN + TAHUN HIJRIAH -->
+
+                        <div
+                            id="home-date-month"
+                            class="home-date-month">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL MASEHI -->
+
+                        <div
+                            id="home-date-gregorian"
+                            class="home-date-gregorian">
+
+                            -
+
+                        </div>
+
+
+                        <!-- EVENT -->
+
+                        <div
+                            id="home-date-event"
+                            class="home-date-event">
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-more">
+
+                        Baca Selengkapnya →
+
+                    </a>
+
+                </div>
 
             </div>
 
@@ -104,8 +200,6 @@
     </div>
 
 </section>
-
-
 
 <!-- ==========================================================
      TENTANG ULA
@@ -862,6 +956,457 @@
 
 </section>
 
+<section class="page-section ra-class-material-section">
+
+    <div class="container">
+
+
+        <!-- HEADER -->
+
+        <div class="text-center mb-5"
+             data-reveal
+             data-delay="0.1s">
+
+            <span class="ra-section-label">
+                MATERI PEMBELAJARAN
+            </span>
+
+            <h2>
+                Materi Pembelajaran Marhalah Ula
+            </h2>
+
+            <p class="section-subtitle">
+                Berbagai materi pembelajaran yang diberikan
+                secara bertahap sesuai jenjang kelas santri.
+            </p>
+
+        </div>
+
+
+        <!-- ==================================================
+             MATERI
+        ================================================== -->
+
+        <div class="ra-class-material-grid">
+
+
+            <!-- 01 -->
+
+            <div class="ra-class-material-card ra-material-green"
+                 data-reveal="left"
+                 data-delay="0.15s">
+
+                <div class="ra-class-material-number">
+                    01
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-book"></i>
+                </div>
+
+                <h3>
+                    Al-Qur'an
+                </h3>
+
+                <p>
+                    Pembelajaran membaca dan mempelajari
+                    Al-Qur'an.
+                </p>
+
+            </div>
+
+
+            <!-- 02 -->
+
+            <div class="ra-class-material-card ra-material-yellow"
+                 data-reveal="right"
+                 data-delay="0.2s">
+
+                <div class="ra-class-material-number">
+                    02
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-translate"></i>
+                </div>
+
+                <h3>
+                    Bahasa Arab
+                </h3>
+
+                <p>
+                    Pembelajaran dasar dan pengembangan
+                    kemampuan bahasa Arab.
+                </p>
+
+            </div>
+
+
+            <!-- 03 -->
+
+            <div class="ra-class-material-card ra-material-blue"
+                 data-reveal="left"
+                 data-delay="0.25s">
+
+                <div class="ra-class-material-number">
+                    03
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-heart"></i>
+                </div>
+
+                <h3>
+                    Akidah
+                </h3>
+
+                <p>
+                    Pembelajaran dasar-dasar akidah.
+                </p>
+
+            </div>
+
+
+            <!-- 04 -->
+
+            <div class="ra-class-material-card ra-material-pink"
+                 data-reveal="right"
+                 data-delay="0.3s">
+
+                <div class="ra-class-material-number">
+                    04
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-stars"></i>
+                </div>
+
+                <h3>
+                    Akhlak & Adab
+                </h3>
+
+                <p>
+                    Pembelajaran dan pembiasaan akhlak
+                    serta adab yang baik.
+                </p>
+
+            </div>
+
+
+            <!-- 05 -->
+
+            <div class="ra-class-material-card ra-material-purple"
+                 data-reveal="left"
+                 data-delay="0.35s">
+
+                <div class="ra-class-material-number">
+                    05
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-journal-text"></i>
+                </div>
+
+                <h3>
+                    Fikih
+                </h3>
+
+                <p>
+                    Pembelajaran dasar-dasar fikih.
+                </p>
+
+            </div>
+
+
+            <!-- 06 -->
+
+            <div class="ra-class-material-card ra-material-orange"
+                 data-reveal="right"
+                 data-delay="0.4s">
+
+                <div class="ra-class-material-number">
+                    06
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-bookmark"></i>
+                </div>
+
+                <h3>
+                    Sirah
+                </h3>
+
+                <p>
+                    Pembelajaran sirah dan kisah
+                    Rasulullah ﷺ.
+                </p>
+
+            </div>
+
+
+            <!-- 07 -->
+
+            <div class="ra-class-material-card ra-material-teal"
+                 data-reveal="left"
+                 data-delay="0.45s">
+
+                <div class="ra-class-material-number">
+                    07
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-book-half"></i>
+                </div>
+
+                <h3>
+                    Al-Hadits
+                </h3>
+
+                <p>
+                    Pembelajaran hadits-hadits pilihan.
+                    <br>
+                    <small>Mulai kelas 2.</small>
+                </p>
+
+            </div>
+
+
+            <!-- 08 -->
+
+            <div class="ra-class-material-card ra-material-red"
+                 data-reveal="right"
+                 data-delay="0.5s">
+
+                <div class="ra-class-material-number">
+                    08
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-pencil"></i>
+                </div>
+
+                <h3>
+                    Khat
+                </h3>
+
+                <p>
+                    Pembelajaran dasar penulisan
+                    huruf Arab.
+                </p>
+
+            </div>
+
+
+            <!-- 09 -->
+
+            <div class="ra-class-material-card ra-material-green"
+                 data-reveal="left"
+                 data-delay="0.55s">
+
+                <div class="ra-class-material-number">
+                    09
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-calculator"></i>
+                </div>
+
+                <h3>
+                    Matematika
+                </h3>
+
+                <p>
+                    Pembelajaran berhitung dan
+                    matematika sesuai tingkat kelas.
+                </p>
+
+            </div>
+
+
+            <!-- 10 -->
+
+            <div class="ra-class-material-card ra-material-yellow"
+                 data-reveal="right"
+                 data-delay="0.6s">
+
+                <div class="ra-class-material-number">
+                    10
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-fonts"></i>
+                </div>
+
+                <h3>
+                    Bahasa Indonesia
+                </h3>
+
+                <p>
+                    Pembelajaran kemampuan membaca
+                    dan berbahasa Indonesia.
+                </p>
+
+            </div>
+
+
+            <!-- 11 -->
+
+            <div class="ra-class-material-card ra-material-blue"
+                 data-reveal="left"
+                 data-delay="0.65s">
+
+                <div class="ra-class-material-number">
+                    11
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-chat-heart"></i>
+                </div>
+
+                <h3>
+                    Do'a
+                </h3>
+
+                <p>
+                    Pembelajaran dan pembiasaan
+                    doa sehari-hari.
+                </p>
+
+            </div>
+
+
+            <!-- 12 -->
+
+            <div class="ra-class-material-card ra-material-pink"
+                 data-reveal="right"
+                 data-delay="0.7s">
+
+                <div class="ra-class-material-number">
+                    12
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-scissors"></i>
+                </div>
+
+                <h3>
+                    Keterampilan
+                </h3>
+
+                <p>
+                    Kegiatan pembelajaran keterampilan.
+                </p>
+
+            </div>
+
+
+            <!-- 13 -->
+
+            <div class="ra-class-material-card ra-material-purple"
+                 data-reveal="left"
+                 data-delay="0.75s">
+
+                <div class="ra-class-material-number">
+                    13
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-heart-pulse"></i>
+                </div>
+
+                <h3>
+                    Olahraga
+                </h3>
+
+                <p>
+                    Kegiatan olahraga dan aktivitas fisik.
+                </p>
+
+            </div>
+
+
+            <!-- 14 -->
+
+            <div class="ra-class-material-card ra-material-orange"
+                 data-reveal="right"
+                 data-delay="0.8s">
+
+                <div class="ra-class-material-number">
+                    14
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-tree"></i>
+                </div>
+
+                <h3>
+                    Ilmu Pengetahuan Alam
+                </h3>
+
+                <p>
+                    Pembelajaran dasar ilmu pengetahuan alam.
+                    <br>
+                    <small>Ula kelas 4–6.</small>
+                </p>
+
+            </div>
+
+
+            <!-- 15 -->
+
+            <div class="ra-class-material-card ra-material-teal"
+                 data-reveal="left"
+                 data-delay="0.85s">
+
+                <div class="ra-class-material-number">
+                    15
+                </div>
+
+                <div class="ra-class-material-icon">
+                    <i class="bi bi-globe2"></i>
+                </div>
+
+                <h3>
+                    Ilmu Pengetahuan Sosial
+                </h3>
+
+                <p>
+                    Pembelajaran dasar ilmu pengetahuan sosial.
+                    <br>
+                    <small>Ula kelas 4–6.</small>
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <!-- ==================================================
+             DOWNLOAD JADWAL
+        ================================================== -->
+
+        <div class="ra-class-material-download"
+             data-reveal
+             data-delay="0.95s">
+
+            <a href="https://drive.google.com/drive/folders/1GHp5Gj1bj9k3OQa12ziPe2p4cQJpEwZy?usp=sharing"
+               target="_blank"
+               rel="noopener">
+
+                <i class="bi bi-folder2-open"></i>
+
+                Lihat & Download Jadwal Pelajaran
+
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
 <!-- ==========================================================
      METODE PEMBELAJARAN
 ========================================================== -->
@@ -1229,7 +1774,7 @@
 
                     <p>
                         Menyediakan makanan dan minuman untuk memenuhi
-                        kebutuhan santri selama kegiatan di lingkungan RTQ.
+                        kebutuhan santri selama kegiatan di lingkungan Rumah Tahfizhul Qur'an.
                     </p>
 
                 </div>
@@ -1412,6 +1957,10 @@
 
 <script src="../js/navbar.js"></script>
 <script src="../js/scroll-reveal.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/moment-hijri.js"></script>
+<script src="../js/kaldik.js"></script>
+<script src="../js/beranda-kaldik.js"></script>
 
 
 </body>

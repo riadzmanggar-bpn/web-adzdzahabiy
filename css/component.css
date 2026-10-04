@@ -147,7 +147,7 @@ body {
 
     opacity: 0;
 
-    transform: translateX(-180px);
+    transform: translateX(-220px);
 
     transition:
         opacity 1s cubic-bezier(.25, .46, .45, .94),
@@ -173,7 +173,7 @@ body {
 
     opacity: 0;
 
-    transform: translateX(180px);
+    transform: translateX(220px);
 
     transition:
         opacity 1s cubic-bezier(.25, .46, .45, .94),
@@ -233,14 +233,14 @@ body {
 
     [data-reveal="left"] {
 
-        transform: translateX(-40px);
+        transform: translateX(-60px);
 
     }
 
 
     [data-reveal="right"] {
 
-        transform: translateX(40px);
+        transform: translateX(60px);
 
     }
 

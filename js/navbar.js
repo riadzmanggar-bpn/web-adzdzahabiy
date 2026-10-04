@@ -101,6 +101,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         muy: "muy.html",
 
+        td: "td.html",
+
         ibadah: "ibadah.html",
 
         berita: "berita.html",
