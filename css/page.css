@@ -336,9 +336,9 @@
 }
 
 
-/* =====================================
+/* ==========================================================
    ORNAMEN DAUN
-===================================== */
+========================================================== */
 
 .about-leaf{
 
@@ -347,14 +347,17 @@
     pointer-events:none;
 
     opacity:.12;
+
 }
 
+
+/* DAUN KIRI */
 
 .about-leaf-left{
 
     left:-70px;
 
-    bottom:-40px;
+    bottom:-70px;
 
     width:230px;
 
@@ -372,11 +375,13 @@
 }
 
 
+/* DAUN KANAN */
+
 .about-leaf-right{
 
     right:-100px;
 
-    top:50px;
+    top:100px;
 
     width:300px;
 
@@ -390,9 +395,8 @@
         );
 
     transform:rotate(25deg);
+
 }
-
-
 /* =====================================
    PEMBATAS HERO
 ===================================== */
@@ -403,7 +407,7 @@
 
     left:0;
 
-    bottom:-1px;
+    bottom:-15px;
 
     width:100%;
 
@@ -427,7 +431,7 @@
 
     left:50%;
 
-    top:-32px;
+    top:-25px;
 
     transform:translateX(-50%);
 
@@ -1590,6 +1594,7 @@
     }
 
 }
+
 
 /* ==========================================================
    RAUDHATUL ATHFAL
@@ -2974,6 +2979,24 @@
     font-size:1.1rem;
 
     line-height:1.9;
+
+}
+
+/* ==========================================================
+   TOMBOL HUBUNGI KAMI
+========================================================== */
+
+.ra-closing-section .btn{
+
+    display:inline-block;
+
+    margin-top:22px;
+
+    padding:12px 28px;
+
+    border-radius:10px;
+
+    font-weight:600;
 
 }
 
@@ -5553,3 +5576,4 @@
     }
 
 }
+ 

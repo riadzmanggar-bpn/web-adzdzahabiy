@@ -4,6 +4,9 @@
 
 .gallery-page{
     background:#fff;
+    min-height:520px;
+    position:relative;
+    margin-top:94px;
 }
 
 
