@@ -1,0 +1,61 @@
+
+<section class="ai-presenter" aria-label="AI Robot Presenter">
+    <div class="ai-presenter-header">
+        <div class="ai-presenter-avatar">
+            <i class="bi bi-robot"></i>
+        </div>
+
+        <div class="ai-presenter-title">
+            <span class="ai-presenter-label">AI NEWS PRESENTER</span>
+            <h3>Dengarkan Berita</h3>
+            <p>Berita Rumah Tahfizhul Qur'an Al-Imam Adz-Dzahabiy</p>
+        </div>
+    </div>
+
+    <div class="ai-presenter-controls">
+        <button type="button" data-speech="play" class="speech-btn speech-play">
+            <i class="bi bi-play-fill"></i> Play
+        </button>
+        <button type="button" data-speech="pause" class="speech-btn">
+            <i class="bi bi-pause-fill"></i> Pause
+        </button>
+        <button type="button" data-speech="resume" class="speech-btn">
+            <i class="bi bi-play-circle"></i> Lanjutkan
+        </button>
+        <button type="button" data-speech="stop" class="speech-btn speech-stop">
+            <i class="bi bi-stop-fill"></i> Stop
+        </button>
+    </div>
+
+    <div class="ai-presenter-settings">
+        <label>
+            Suara presenter
+            <select data-speech="voice">
+                <option value="">Memuat suara...</option>
+            </select>
+        </label>
+
+        <div class="speech-speed">
+            <label>
+                Kecepatan:
+                <strong data-speech="rate-value">1.0×</strong>
+            </label>
+            <input
+                type="range"
+                data-speech="rate"
+                min="0.7"
+                max="1.3"
+                step="0.1"
+                value="1">
+        </div>
+    </div>
+
+    <div class="ai-presenter-status" aria-live="polite">
+        <span class="speech-status-dot"></span>
+        <span data-speech="status">Siap membacakan berita</span>
+    </div>
+
+    <div class="speech-progress-track">
+        <div data-speech="progress" class="speech-progress-bar"></div>
+    </div>
+</section>

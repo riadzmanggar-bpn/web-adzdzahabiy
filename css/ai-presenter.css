@@ -1,0 +1,225 @@
+
+/* =========================================
+   AI ROBOT PRESENTER
+========================================= */
+
+.ai-presenter {
+    margin: 28px 0;
+    padding: 22px;
+    color: #f9ecd0;
+    background: linear-gradient(135deg, #4b160f, #230807);
+    border: 1px solid rgba(227, 187, 97, .65);
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(35, 8, 7, .12);
+}
+
+.ai-presenter-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.ai-presenter-avatar {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 62px;
+    height: 62px;
+    color: #4b160f;
+    background: linear-gradient(135deg, #fff0b8, #d8ad50);
+    border: 2px solid rgba(255, 255, 255, .35);
+    border-radius: 50%;
+    font-size: 2rem;
+}
+
+.ai-presenter-label {
+    color: #e8c36c;
+    font-size: .68rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.news-detail-content .ai-presenter-title h3 {
+    margin: 4px 0 6px;
+    color: #fff0c7;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.news-detail-content .ai-presenter-title p {
+    margin: 0;
+    color: #ead7c3;
+    font-size: .88rem;
+    line-height: 1.6;
+}
+
+.ai-presenter-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 20px;
+}
+
+.ai-presenter .speech-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    min-height: 40px;
+    padding: 9px 13px;
+    color: #f8e8c9;
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(240, 219, 169, .35);
+    border-radius: 9px;
+    font-size: .85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.ai-presenter .speech-btn i {
+    font-size: 1.1rem;
+}
+
+.ai-presenter .speech-btn:hover:not(:disabled) {
+    color: #fff;
+    background: rgba(255, 255, 255, .17);
+}
+
+.ai-presenter .speech-btn.speech-play {
+    color: #3d160d;
+    background: linear-gradient(135deg, #ffe9a3, #dcb653);
+    border-color: #f0dba9;
+}
+
+.ai-presenter .speech-btn.speech-stop {
+    border-color: rgba(255, 180, 160, .4);
+}
+
+.ai-presenter .speech-btn:disabled {
+    opacity: .4;
+    cursor: not-allowed;
+}
+
+.ai-presenter-settings {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 8px;
+}
+
+.ai-presenter-settings label {
+    color: #f0dba9;
+    font-size: .84rem;
+    font-weight: 600;
+}
+
+.ai-presenter-settings select {
+    width: 100%;
+    min-height: 42px;
+    padding: 9px 12px;
+    color: #3c1b12;
+    background: #fff9ed;
+    border: 1px solid #d7b66a;
+    border-radius: 8px;
+    font-size: .9rem;
+}
+
+.speech-speed {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.speech-speed input {
+    width: 100%;
+    accent-color: #e8c36c;
+    cursor: pointer;
+}
+
+.ai-presenter-status {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 18px;
+    color: #f0dba9;
+    font-size: .83rem;
+}
+
+.speech-status-dot {
+    width: 9px;
+    height: 9px;
+    flex-shrink: 0;
+    background: #bca77f;
+    border-radius: 50%;
+}
+
+.ai-presenter.is-speaking .speech-status-dot {
+    background: #79e5a4;
+    box-shadow: 0 0 0 4px rgba(121, 229, 164, .12);
+    animation: speechPulse 1.2s infinite;
+}
+
+@keyframes speechPulse {
+    50% {
+        box-shadow: 0 0 0 7px rgba(121, 229, 164, .03);
+    }
+}
+
+.speech-progress-track {
+    height: 5px;
+    margin-top: 12px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, .13);
+    border-radius: 10px;
+}
+
+.speech-progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #e2b84f, #fff0b8);
+    transition: width .25s ease;
+}
+
+/* Highlight elemen yang sedang dibacakan */
+.news-detail-content .speech-current {
+    padding: 5px 8px;
+    background: rgba(235, 195, 103, .22);
+    outline: 1px solid rgba(197, 148, 49, .45);
+    border-radius: 6px;
+    scroll-margin-top: 100px;
+    transition: background .2s ease;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+    .ai-presenter {
+        padding: 17px 14px;
+        border-radius: 13px;
+    }
+
+    .ai-presenter-header {
+        gap: 12px;
+    }
+
+    .ai-presenter-avatar {
+        width: 50px;
+        height: 50px;
+        font-size: 1.6rem;
+    }
+
+    .news-detail-content .ai-presenter-title h3 {
+        font-size: 1.1rem;
+    }
+
+    .ai-presenter-controls {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ai-presenter .speech-btn {
+        width: 100%;
+    }
+}

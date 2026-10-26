@@ -976,3 +976,1824 @@
     }
 
 }
+
+
+/* ==========================================================
+   HASIL MUSABAQAH — TEMA MARUN DAN EMAS
+========================================================== */
+
+.musabaqah-hasil {
+    --hasil-marun: #650d17;
+    --hasil-marun-dark: #310c0b;
+    --hasil-emas: #e4bd63;
+    --hasil-krem: #fff8e8;
+    --hasil-teks: #f8e8c5;
+
+    margin: 55px 0;
+    padding: 30px;
+    color: var(--hasil-teks);
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(153, 82, 25, .28),
+            transparent 60%
+        ),
+        linear-gradient(
+            145deg,
+            #260b09,
+            #51100f 55%,
+            #260908
+        );
+    border: 1px solid rgba(228, 189, 99, .5);
+    border-radius: 20px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .12);
+    overflow: hidden;
+}
+
+/* JUDUL HASIL */
+
+.musabaqah-hasil .musabaqah-hasil-heading {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.musabaqah-hasil-label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--hasil-emas);
+    font-size: .8rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.musabaqah-hasil .musabaqah-hasil-heading h2 {
+    margin: 0 0 10px;
+    padding: 0;
+    color: #fff2cf;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 800;
+    text-align: center;
+}
+
+.musabaqah-hasil .musabaqah-hasil-heading h2::before {
+    display: none;
+}
+
+.musabaqah-hasil .musabaqah-hasil-heading p {
+    margin: 0;
+    color: #e8d2a8;
+    font-size: .98rem;
+}
+
+/* KARTU PER GOLONGAN */
+
+.musabaqah-juara-card {
+    margin: 25px 0;
+    overflow: hidden;
+    border: 1px solid rgba(228, 189, 99, .45);
+    border-radius: 15px;
+    background: rgba(30, 8, 7, .45);
+}
+
+.musabaqah-juara-title {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px 18px;
+    padding: 17px 20px;
+    background: linear-gradient(110deg, #e9c75e, #fff0a5, #d6a43f);
+}
+
+.musabaqah-hasil .musabaqah-juara-title h3 {
+    margin: 0;
+    color: #57100e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+}
+
+.musabaqah-juara-title span {
+    color: #5b2114;
+    font-weight: 700;
+}
+
+/* BARIS PEMENANG */
+
+.musabaqah-juara-list {
+    padding: 10px 14px;
+}
+
+.musabaqah-juara-item {
+    display: grid;
+    grid-template-columns: 100px minmax(0, 1fr) 85px;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 12px;
+    border-bottom: 1px solid rgba(228, 189, 99, .22);
+}
+
+.musabaqah-juara-item:last-child {
+    border-bottom: 0;
+}
+
+.musabaqah-predikat {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 38px;
+    padding: 7px 10px;
+    color: #4c160d;
+    background: linear-gradient(135deg, #f8e6a1, #d9ae4f);
+    border-radius: 30px;
+    font-size: .8rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.musabaqah-juara-identitas {
+    min-width: 0;
+}
+
+.musabaqah-juara-identitas strong {
+    display: block;
+    color: #fff3d7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.05rem;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.musabaqah-juara-identitas em {
+    font-weight: 400;
+}
+
+.musabaqah-juara-identitas small {
+    display: block;
+    margin-top: 3px;
+    color: #d9c6a8;
+    font-size: .84rem;
+    line-height: 1.5;
+}
+
+.musabaqah-nilai {
+    text-align: right;
+}
+
+.musabaqah-nilai strong {
+    display: block;
+    color: #f4d77d;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    font-weight: 800;
+    font-variant-numeric: tabular-nums;
+}
+
+.musabaqah-nilai small {
+    display: block;
+    color: #c9b18b;
+    font-size: .68rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* KATEGORI HARAPAN */
+
+.musabaqah-juara-item.musabaqah-harapan
+.musabaqah-predikat {
+    color: #f4dfb0;
+    background: transparent;
+    border: 1px solid rgba(228, 189, 99, .65);
+}
+
+/* PENUTUP */
+
+.musabaqah-hasil-penutup {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 25px;
+    padding: 20px;
+    color: #4c210e;
+    background: linear-gradient(110deg, #f2d87b, #fff1b7, #e2b94f);
+    border-radius: 12px;
+}
+
+.musabaqah-hasil-penutup i {
+    flex-shrink: 0;
+    color: #8b510e;
+    font-size: 2.2rem;
+}
+
+.musabaqah-hasil-penutup p {
+    margin: 0;
+    color: #4c210e;
+    font-size: .98rem;
+    line-height: 1.8;
+}
+
+/* TABLET */
+
+@media (max-width: 767px) {
+    .musabaqah-hasil {
+        margin: 35px 0;
+        padding: 16px 10px;
+        border-radius: 14px;
+    }
+
+    .musabaqah-hasil-label {
+        font-size: .7rem;
+        letter-spacing: 3px;
+    }
+
+    .musabaqah-hasil .musabaqah-hasil-heading p {
+        font-size: .88rem;
+        line-height: 1.6;
+    }
+
+    .musabaqah-juara-title {
+        padding: 14px 10px;
+    }
+
+    .musabaqah-hasil .musabaqah-juara-title h3 {
+        font-size: 1.2rem;
+    }
+
+    .musabaqah-juara-list {
+        padding: 5px 8px;
+    }
+
+    .musabaqah-juara-item {
+        grid-template-columns: 76px minmax(0, 1fr) 63px;
+        gap: 8px;
+        padding: 13px 2px;
+    }
+
+    .musabaqah-predikat {
+        min-height: 32px;
+        padding: 5px 4px;
+        font-size: .65rem;
+        border-radius: 20px;
+    }
+
+    .musabaqah-juara-identitas strong {
+        font-size: .88rem;
+        line-height: 1.45;
+    }
+
+    .musabaqah-juara-identitas small {
+        font-size: .74rem;
+        line-height: 1.45;
+    }
+
+    .musabaqah-nilai strong {
+        font-size: 1.05rem;
+    }
+
+    .musabaqah-nilai small {
+        font-size: .58rem;
+        letter-spacing: 1px;
+    }
+
+    .musabaqah-hasil-penutup {
+        align-items: flex-start;
+        gap: 12px;
+        padding: 15px 12px;
+    }
+
+    .musabaqah-hasil-penutup i {
+        font-size: 1.7rem;
+    }
+
+    .musabaqah-hasil-penutup p {
+        font-size: .88rem;
+        line-height: 1.7;
+    }
+}
+
+/* LAYAR SANGAT KECIL */
+
+@media (max-width: 380px) {
+    .musabaqah-juara-item {
+        grid-template-columns: 66px minmax(0, 1fr) 55px;
+        gap: 6px;
+    }
+
+    .musabaqah-predikat {
+        font-size: .58rem;
+    }
+
+    .musabaqah-juara-identitas strong {
+        font-size: .81rem;
+    }
+
+    .musabaqah-juara-identitas small {
+        font-size: .69rem;
+    }
+
+    .musabaqah-nilai strong {
+        font-size: .95rem;
+    }
+}
+
+
+/* ==========================================================
+   RANGKAIAN PERLOMBAAN MUSABAQAH
+========================================================== */
+
+.musabaqah-rangkaian {
+    --rangkaian-marun: #4b1010;
+    --rangkaian-marun-dark: #280a09;
+    --rangkaian-emas: #e3bb61;
+    --rangkaian-krem: #fff7e6;
+
+    margin: 55px 0;
+    padding: 30px;
+    color: var(--rangkaian-krem);
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(155, 91, 31, .22),
+            transparent 65%
+        ),
+        linear-gradient(
+            145deg,
+            var(--rangkaian-marun-dark),
+            var(--rangkaian-marun),
+            #310b0a
+        );
+    border: 1px solid rgba(227, 187, 97, .45);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* JUDUL BAGIAN */
+
+.musabaqah-rangkaian-heading {
+    max-width: 720px;
+    margin: 0 auto 35px;
+    text-align: center;
+}
+
+.musabaqah-rangkaian-heading > span {
+    color: var(--rangkaian-emas);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.musabaqah-rangkaian .musabaqah-rangkaian-heading h2 {
+    margin: 12px 0;
+    padding: 0;
+    color: #fff0c7;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    text-align: center;
+}
+
+.musabaqah-rangkaian .musabaqah-rangkaian-heading h2::before {
+    display: none;
+}
+
+.musabaqah-rangkaian-heading p {
+    margin: 0;
+    color: #e6d1ad;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* KARTU TAHAP */
+
+.rangkaian-card {
+    margin: 25px 0;
+    overflow: hidden;
+    background: rgba(35, 8, 7, .52);
+    border: 1px solid rgba(227, 187, 97, .4);
+    border-radius: 15px;
+    transition:
+        border-color .3s ease,
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+.rangkaian-card:hover {
+    border-color: var(--rangkaian-emas);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, .2);
+}
+
+/* HEADER TAHAP */
+
+.rangkaian-card-header {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 20px 23px;
+    background: linear-gradient(
+        100deg,
+        rgba(125, 35, 24, .8),
+        rgba(76, 15, 14, .55)
+    );
+    border-bottom: 1px solid rgba(227, 187, 97, .25);
+}
+
+.rangkaian-nomor {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: #4b160b;
+    background: linear-gradient(
+        135deg,
+        #fff0ae,
+        #dfb54e
+    );
+    border-radius: 50%;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.rangkaian-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--rangkaian-emas);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.rangkaian-card-header h3 {
+    margin: 0;
+    color: #fff1d0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.45rem;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.rangkaian-card-header p {
+    margin: 4px 0 0;
+    color: #dfc9a5;
+    font-size: .9rem;
+}
+
+/* FOTO DAN NARASI */
+
+.rangkaian-card-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 25px;
+    padding: 22px;
+}
+
+.rangkaian-foto {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    background: #1e0908;
+    border: 1px solid rgba(227, 187, 97, .3);
+    border-radius: 12px;
+}
+
+.rangkaian-foto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-height: 180px;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.rangkaian-card:hover .rangkaian-foto img {
+    transform: scale(1.025);
+}
+
+.rangkaian-foto-label {
+    display: block;
+    padding: 10px 12px;
+    color: #e9d6b3;
+    background: rgba(31, 8, 7, .95);
+    font-size: .78rem;
+    text-align: center;
+}
+
+.rangkaian-deskripsi h4 {
+    margin: 0 0 12px;
+    color: var(--rangkaian-emas);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.musabaqah-rangkaian .rangkaian-deskripsi p {
+    margin: 0;
+    color: #f0dfc2;
+    font-size: .98rem;
+    line-height: 1.9;
+}
+
+/* KARTU PUNCAK */
+
+.rangkaian-card-puncak {
+    border-color: rgba(255, 218, 120, .8);
+    box-shadow: 0 0 24px rgba(227, 187, 97, .09);
+}
+
+.rangkaian-card-puncak .rangkaian-card-header {
+    background: linear-gradient(
+        100deg,
+        #9b671c,
+        #e6c46c,
+        #9b671c
+    );
+}
+
+.rangkaian-card-puncak .rangkaian-label {
+    color: #4b160b;
+}
+
+.rangkaian-card-puncak .rangkaian-card-header h3 {
+    color: #3e1009;
+}
+
+.rangkaian-card-puncak .rangkaian-card-header p {
+    color: #5a2c13;
+}
+
+.rangkaian-card-puncak .rangkaian-nomor {
+    color: #fff1c9;
+    background: #601218;
+}
+
+/* LINK KE DAFTAR PEMENANG */
+
+.rangkaian-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 20px;
+    padding: 10px 16px;
+    color: #45100c;
+    background: linear-gradient(135deg, #f6e4a1, #d9ae4e);
+    border-radius: 25px;
+    font-size: .9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity .25s ease;
+}
+
+.rangkaian-link:hover {
+    color: #45100c;
+    opacity: .85;
+}
+
+/* TABLET DAN MOBILE */
+
+@media (max-width: 767px) {
+    .musabaqah-rangkaian {
+        margin: 35px 0;
+        padding: 17px 11px;
+        border-radius: 14px;
+    }
+
+    .musabaqah-rangkaian-heading {
+        margin-bottom: 25px;
+    }
+
+    .musabaqah-rangkaian-heading > span {
+        font-size: .68rem;
+        letter-spacing: 2px;
+    }
+
+    .musabaqah-rangkaian-heading p {
+        font-size: .9rem;
+    }
+
+    .rangkaian-card {
+        margin: 18px 0;
+        border-radius: 12px;
+    }
+
+    .rangkaian-card-header {
+        gap: 12px;
+        padding: 16px 13px;
+    }
+
+    .rangkaian-nomor {
+        width: 43px;
+        height: 43px;
+        font-size: 1rem;
+    }
+
+    .rangkaian-label {
+        font-size: .62rem;
+        letter-spacing: 1.5px;
+    }
+
+    .rangkaian-card-header h3 {
+        font-size: 1.15rem;
+    }
+
+    .rangkaian-card-header p {
+        font-size: .82rem;
+    }
+
+    .rangkaian-card-body {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 13px;
+    }
+
+    .rangkaian-foto img {
+        min-height: 0;
+    }
+
+    .rangkaian-deskripsi h4 {
+        font-size: 1.1rem;
+    }
+
+    .musabaqah-rangkaian .rangkaian-deskripsi p {
+        font-size: .93rem;
+        line-height: 1.8;
+    }
+}
+
+
+/* ==========================================================
+   DAFTAR PESERTA MUSABAQAH — 2 KOLOM
+========================================================== */
+
+.musabaqah-peserta-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 25px 0;
+    align-items: start;
+}
+
+.musabaqah-peserta-list .peserta-golongan {
+    min-width: 0;
+    padding: 22px;
+    background: #fffaf0;
+    border: 1px solid #e4d2a7;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(45, 20, 10, 0.07);
+}
+
+.musabaqah-peserta-list .peserta-golongan h3 {
+    margin: 0 0 16px;
+    padding-bottom: 12px;
+    color: #68151a;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.5;
+    border-bottom: 2px solid #dfbd66;
+}
+
+.musabaqah-peserta-list .peserta-golongan ol {
+    margin: 0;
+    padding-left: 25px;
+}
+
+.musabaqah-peserta-list .peserta-golongan li {
+    padding: 7px 0;
+    padding-left: 4px;
+    color: #40352b;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+    border-bottom: 1px solid #eee5d3;
+}
+
+.musabaqah-peserta-list .peserta-golongan li:last-child {
+    border-bottom: none;
+}
+
+/* Tablet dan HP */
+@media (max-width: 767px) {
+    .musabaqah-peserta-list {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .musabaqah-peserta-list .peserta-golongan {
+        padding: 17px;
+    }
+
+    .musabaqah-peserta-list .peserta-golongan h3 {
+        font-size: 1.1rem;
+    }
+
+    .musabaqah-peserta-list .peserta-golongan li {
+        font-size: 0.88rem;
+    }
+}
+/* ==========================================================
+   PENUTUP BERITA — FULL WIDTH
+========================================================== */
+
+.news-detail-content .musabaqah-penutup {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    clear: both;
+    margin: 45px 0 0;
+    padding: 0;
+    background: transparent;
+}
+
+/* Judul penutup */
+.news-detail-content .musabaqah-penutup h2 {
+    width: 100%;
+    margin: 0 0 20px;
+}
+
+/* Paragraf penutup */
+.news-detail-content .musabaqah-penutup p {
+    width: 100%;
+    margin: 0 0 16px;
+    line-height: 1.9;
+}
+
+/* Pastikan rangkaian mengisi lebar kontainer */
+.news-detail-content .musabaqah-rangkaian {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+}
+
+/* Tampilan HP */
+@media (max-width: 767px) {
+    .news-detail-content .musabaqah-penutup {
+        margin-top: 30px;
+    }
+
+    .news-detail-content .musabaqah-penutup h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ==========================================================
+   KARTU TAUSHIYAH PEMBUKAAN
+========================================================== */
+
+.taushiyah-card {
+    margin: 35px 0;
+    overflow: hidden;
+    color: #fff4dc;
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(150, 85, 31, .2),
+            transparent 55%
+        ),
+        linear-gradient(
+            145deg,
+            #2b0b09,
+            #54120f 55%,
+            #310b09
+        );
+    border: 1px solid rgba(222, 183, 94, .55);
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(42, 15, 8, .12);
+}
+
+/* HEADER */
+
+.taushiyah-card-header {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 24px 27px;
+    background: linear-gradient(
+        100deg,
+        rgba(120, 36, 23, .8),
+        rgba(70, 15, 13, .55)
+    );
+    border-bottom: 1px solid rgba(222, 183, 94, .3);
+}
+
+.taushiyah-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: #4b160b;
+    background: linear-gradient(135deg, #fff0ae, #dfb54e);
+    border-radius: 50%;
+    font-size: 1.4rem;
+}
+
+.taushiyah-label {
+    display: block;
+    margin-bottom: 7px;
+    color: #e7c46b;
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.news-detail-content .taushiyah-card-header h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff0ce;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+.news-detail-content .taushiyah-card-header h2::before {
+    display: none;
+}
+
+/* ISI KARTU */
+
+.taushiyah-card-body {
+    padding: 25px 27px;
+}
+
+.news-detail-content .taushiyah-card-body > p {
+    margin: 0 0 20px;
+    color: #f0dfc4;
+    font-size: .98rem;
+    line-height: 1.9;
+}
+
+/* KUTIPAN NASIHAT */
+
+.taushiyah-quote {
+    position: relative;
+    margin: 25px 0;
+    padding: 22px 24px;
+    background: rgba(20, 5, 4, .35);
+    border-left: 4px solid #dfb54e;
+    border-radius: 0 10px 10px 0;
+}
+
+.taushiyah-quote > i {
+    display: block;
+    margin-bottom: 5px;
+    color: #e5bf60;
+    font-size: 1.8rem;
+}
+
+.news-detail-content .taushiyah-quote p {
+    margin: 0;
+    color: #fff0d0;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.9;
+}
+
+/* KOTAK TAUTAN TELEGRAM */
+
+.taushiyah-link-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-top: 28px;
+    padding: 20px;
+    background: linear-gradient(110deg, #f8e7aa, #e3bd60);
+    border: 1px solid #f6dda0;
+    border-radius: 12px;
+}
+
+.taushiyah-link-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    color: #fff;
+    background: #2676b9;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+.taushiyah-link-content {
+    min-width: 0;
+}
+
+.taushiyah-link-content > strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #4b170d;
+    font-size: 1.05rem;
+}
+
+.news-detail-content .taushiyah-link-content p {
+    margin: 0 0 10px;
+    color: #5b321b;
+    font-size: .9rem;
+    line-height: 1.7;
+}
+
+.taushiyah-link-content a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #67151a;
+    font-size: .92rem;
+    font-weight: 800;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.taushiyah-link-content a:hover {
+    color: #32100b;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 767px) {
+    .taushiyah-card {
+        margin: 25px 0;
+        border-radius: 13px;
+    }
+
+    .taushiyah-card-header {
+        gap: 12px;
+        padding: 18px 15px;
+    }
+
+    .taushiyah-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 1.15rem;
+    }
+
+    .taushiyah-label {
+        font-size: .62rem;
+        letter-spacing: 1.3px;
+    }
+
+    .news-detail-content .taushiyah-card-header h2 {
+        font-size: 1.15rem;
+    }
+
+    .taushiyah-card-body {
+        padding: 18px 15px;
+    }
+
+    .news-detail-content .taushiyah-card-body > p {
+        font-size: .92rem;
+        line-height: 1.85;
+    }
+
+    .taushiyah-quote {
+        margin: 20px 0;
+        padding: 17px;
+    }
+
+    .news-detail-content .taushiyah-quote p {
+        font-size: .93rem;
+    }
+
+    .taushiyah-link-box {
+        gap: 12px;
+        padding: 15px 12px;
+    }
+
+    .taushiyah-link-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 1.25rem;
+    }
+
+    .taushiyah-link-content > strong {
+        font-size: .95rem;
+    }
+
+    .news-detail-content .taushiyah-link-content p {
+        font-size: .85rem;
+    }
+
+    .taushiyah-link-content a {
+        font-size: .85rem;
+    }
+}
+
+/* RANGKAIAN FINALLIS LIST 5 & 10 JUZ */
+
+.rangkaian-finalis-list {
+    margin: 15px 0 0;
+    padding-left: 25px;
+}
+
+.rangkaian-finalis-list li {
+    padding: 9px 0 9px 5px;
+    border-bottom: 1px solid rgba(227, 187, 97, .25);
+    color: #f0dfc2;
+    line-height: 1.6;
+}
+
+.rangkaian-finalis-list li:last-child {
+    border-bottom: none;
+}
+
+.rangkaian-finalis-list strong {
+    display: block;
+    color: #fff0ce;
+}
+
+.rangkaian-finalis-list small {
+    display: block;
+    margin-top: 3px;
+    color: #d9c6a8;
+    font-size: .82rem;
+}
+
+@media (max-width: 767px) {
+    .rangkaian-finalis-list {
+        padding-left: 22px;
+    }
+
+    .rangkaian-finalis-list li {
+        font-size: .9rem;
+    }
+}
+
+
+/* ==========================================================
+   DEWAN JURI MUSABAQAH
+========================================================== */
+
+.musabaqah-dewan-juri {
+    margin: 45px 0;
+    padding: 30px;
+    color: #fff0d0;
+    background:
+        radial-gradient(
+            ellipse at top,
+            rgba(151, 83, 31, .22),
+            transparent 65%
+        ),
+        linear-gradient(145deg, #280a08, #58120f 55%, #300a08);
+    border: 1px solid rgba(227, 187, 97, .55);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+/* JUDUL */
+
+.dewan-juri-heading {
+    max-width: 800px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.dewan-juri-label {
+    color: #e7c46b;
+    font-size: .76rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.news-detail-content .dewan-juri-heading h2 {
+    margin: 12px 0;
+    padding: 0;
+    color: #fff0ce;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+    font-weight: 800;
+    text-align: center;
+}
+
+.news-detail-content .dewan-juri-heading h2::before {
+    display: none;
+}
+
+.news-detail-content .dewan-juri-heading p {
+    margin: 0;
+    color: #e9d5b3;
+    font-size: .98rem;
+    line-height: 1.9;
+}
+
+/* GALERI 4 FOTO */
+
+.dewan-juri-galeri {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    margin: 25px 0 32px;
+}
+
+.dewan-juri-foto {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    background: #230807;
+    border: 1px solid rgba(227, 187, 97, .55);
+    border-radius: 11px;
+}
+
+.dewan-juri-foto img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.dewan-juri-foto:hover img {
+    transform: scale(1.04);
+}
+
+.dewan-juri-foto figcaption {
+    padding: 10px 5px;
+    color: #f0dba9;
+    font-size: .8rem;
+    text-align: center;
+}
+
+/* DAFTAR JURI */
+
+.dewan-juri-list-wrapper {
+    padding: 24px;
+    background: rgba(32, 7, 6, .42);
+    border: 1px solid rgba(227, 187, 97, .35);
+    border-radius: 13px;
+}
+
+.news-detail-content .dewan-juri-list-wrapper h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 18px;
+    padding-bottom: 14px;
+    color: #f0ce76;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.35rem;
+    border-bottom: 1px solid rgba(227, 187, 97, .35);
+}
+
+.dewan-juri-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+    margin: 0;
+    padding-left: 28px;
+}
+
+.dewan-juri-list li {
+    padding: 13px 8px 13px 4px;
+    color: #e5bd60;
+    border-bottom: 1px solid rgba(227, 187, 97, .2);
+}
+
+.dewan-juri-identitas strong {
+    display: block;
+    color: #fff0d0;
+    font-size: .98rem;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.dewan-juri-identitas small {
+    display: block;
+    margin-top: 3px;
+    color: #d7c3a2;
+    font-size: .84rem;
+    line-height: 1.6;
+}
+
+/* DOA PENUTUP */
+
+.dewan-juri-doa {
+    margin-top: 25px;
+    padding: 24px;
+    color: #4b1b0d;
+    background: linear-gradient(120deg, #f2d477, #fff0b0, #dfb653);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.dewan-juri-doa > i {
+    display: block;
+    margin-bottom: 12px;
+    color: #8c301c;
+    font-size: 1.8rem;
+}
+
+.news-detail-content .dewan-juri-doa p {
+    margin: 0 0 14px;
+    color: #4b1b0d;
+    font-size: .97rem;
+    line-height: 1.9;
+}
+
+.dewan-juri-doa > strong {
+    color: #5b160e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+}
+
+/* TABLET */
+
+@media (max-width: 991px) {
+    .dewan-juri-galeri {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    .musabaqah-dewan-juri {
+        margin: 30px 0;
+        padding: 17px 12px;
+        border-radius: 14px;
+    }
+
+    .dewan-juri-label {
+        font-size: .67rem;
+        letter-spacing: 2px;
+    }
+
+    .news-detail-content .dewan-juri-heading p {
+        font-size: .9rem;
+    }
+
+    .dewan-juri-galeri {
+        gap: 10px;
+        margin: 20px 0;
+    }
+
+    .dewan-juri-foto figcaption {
+        font-size: .72rem;
+    }
+
+    .dewan-juri-list-wrapper {
+        padding: 15px 12px;
+    }
+
+    .news-detail-content .dewan-juri-list-wrapper h3 {
+        font-size: 1.15rem;
+    }
+
+    .dewan-juri-list {
+        grid-template-columns: 1fr;
+        padding-left: 25px;
+    }
+
+    .dewan-juri-identitas strong {
+        font-size: .92rem;
+    }
+
+    .dewan-juri-identitas small {
+        font-size: .8rem;
+    }
+
+    .dewan-juri-doa {
+        padding: 18px 14px;
+    }
+
+    .news-detail-content .dewan-juri-doa p {
+        font-size: .9rem;
+        line-height: 1.8;
+    }
+}
+
+/* ==========================================================
+   PERAPIAN DAFTAR JURI DAN KOTAK DOA
+========================================================== */
+
+/* Daftar juri */
+.dewan-juri-list-wrapper {
+    padding: 22px 25px;
+    background: rgba(32, 7, 6, .35);
+    border: 1px solid rgba(227, 187, 97, .35);
+    border-radius: 14px;
+}
+
+.dewan-juri-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 30px;
+    row-gap: 0;
+    margin: 0;
+    padding-left: 25px;
+}
+
+.dewan-juri-list li {
+    padding: 12px 8px 12px 4px;
+    border-bottom: 1px solid rgba(227, 187, 97, .2);
+    line-height: 1.5;
+}
+
+.dewan-juri-identitas strong {
+    font-size: .96rem;
+    line-height: 1.5;
+}
+
+.dewan-juri-identitas small {
+    margin-top: 4px;
+    font-size: .82rem;
+    line-height: 1.5;
+}
+
+/* Kotak doa */
+.dewan-juri-doa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 22px;
+    padding: 24px 30px;
+    background: linear-gradient(
+        120deg,
+        #f7e5a2,
+        #fff0b7,
+        #e6c05e
+    );
+    border: 1px solid rgba(255, 239, 185, .8);
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 5px 16px rgba(0, 0, 0, .1);
+}
+
+/* Ikon tangan berdoa */
+.dewan-juri-doa > .doa-icon {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+/* Isi doa */
+.news-detail-content .dewan-juri-doa p {
+    max-width: 850px;
+    margin: 0;
+    color: #51301a;
+    font-size: .94rem;
+    line-height: 1.85;
+}
+
+/* Kalimat penutup */
+.dewan-juri-doa > strong {
+    display: block;
+    margin-top: 3px;
+    color: #641a13;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Tablet dan HP */
+@media (max-width: 767px) {
+    .dewan-juri-list-wrapper {
+        padding: 16px 13px;
+    }
+
+    .dewan-juri-list {
+        grid-template-columns: 1fr;
+        column-gap: 0;
+    }
+
+    .dewan-juri-list li {
+        padding: 11px 5px;
+    }
+
+    .dewan-juri-doa {
+        margin-top: 16px;
+        padding: 20px 15px;
+        gap: 9px;
+    }
+
+    .dewan-juri-doa > .doa-icon {
+        font-size: 1.6rem;
+    }
+
+    .news-detail-content .dewan-juri-doa p {
+        font-size: .88rem;
+        line-height: 1.8;
+    }
+
+    .dewan-juri-doa > strong {
+        font-size: .92rem;
+    }
+}
+
+
+/* ==========================================================
+   ORNAMEN BUNGA EMAS PADA KOTAK DOA
+========================================================== */
+
+.dewan-juri-doa {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 30px 105px;
+    background: linear-gradient(
+        120deg,
+        #f7e5a2,
+        #fff2bd 50%,
+        #e6c05e
+    );
+    border: 1px solid rgba(255, 239, 185, .9);
+    border-radius: 15px;
+}
+
+/* Isi tetap berada di atas ornamen */
+.dewan-juri-doa > :not(.doa-ornamen) {
+    position: relative;
+    z-index: 1;
+}
+
+.doa-ornamen {
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 75px;
+    color: #a87523;
+    opacity: .78;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.doa-ornamen-kiri {
+    left: 12px;
+}
+
+.doa-ornamen-kanan {
+    right: 12px;
+}
+
+.doa-ornamen span {
+    display: block;
+    line-height: 1;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.doa-ornamen span:nth-child(1) {
+    font-size: 1.8rem;
+}
+
+.doa-ornamen span:nth-child(2) {
+    font-size: 2.6rem;
+}
+
+.doa-ornamen span:nth-child(3) {
+    font-size: 1.5rem;
+}
+
+.dewan-juri-doa .doa-icon {
+    margin-bottom: 5px;
+    font-size: 1.8rem;
+}
+
+.news-detail-content .dewan-juri-doa p {
+    max-width: 850px;
+    margin: 0 auto 14px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.dewan-juri-doa > strong {
+    display: block;
+    text-align: center;
+}
+
+/* HP */
+@media (max-width: 767px) {
+    .dewan-juri-doa {
+        padding: 24px 52px;
+    }
+
+    .doa-ornamen {
+        width: 35px;
+        gap: 8px;
+        opacity: .6;
+    }
+
+    .doa-ornamen-kiri {
+        left: 3px;
+    }
+
+    .doa-ornamen-kanan {
+        right: 3px;
+    }
+
+    .doa-ornamen span:nth-child(1) {
+        font-size: 1rem;
+    }
+
+    .doa-ornamen span:nth-child(2) {
+        font-size: 1.5rem;
+    }
+
+    .doa-ornamen span:nth-child(3) {
+        font-size: .9rem;
+    }
+
+    .news-detail-content .dewan-juri-doa p {
+        font-size: .84rem;
+        line-height: 1.8;
+    }
+
+    .dewan-juri-doa > strong {
+        font-size: .85rem;
+    }
+}
+
+
+/* ==========================================================
+   LIGHTBOX FOTO BERITA
+========================================================== */
+
+/* Semua foto di dalam konten berita */
+.news-detail-content img {
+    cursor: zoom-in;
+    transition: filter .25s ease;
+}
+
+.news-detail-content img:hover {
+    filter: brightness(.94);
+}
+
+/* Foto yang sedang diperbesar */
+.foto-lightbox img {
+    cursor: zoom-out;
+}
+
+.foto-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(0, 0, 0, .92);
+}
+
+.foto-lightbox.aktif {
+    display: flex;
+}
+
+.foto-lightbox img {
+    display: block;
+    max-width: 96vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, .4);
+    cursor: zoom-out;
+}
+
+.foto-lightbox-tutup {
+    position: absolute;
+    top: 14px;
+    right: 22px;
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .12);
+    color: #fff;
+    font-size: 30px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.foto-lightbox-tutup:hover {
+    background: rgba(255, 255, 255, .25);
+}
+
+@media (max-width: 576px) {
+    .foto-lightbox {
+        padding: 10px;
+    }
+
+    .foto-lightbox img {
+        max-width: 98vw;
+        max-height: 88vh;
+    }
+
+    .foto-lightbox-tutup {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+/* ==========================================================
+   BONUS MAHAD DENGAN NILAI TERBANYAK
+========================================================== */
+
+.musabaqah-bonus {
+    margin: 40px 0;
+    overflow: hidden;
+    color: #fff0d0;
+    background:
+        radial-gradient(
+            ellipse at top right,
+            rgba(179, 127, 42, .22),
+            transparent 60%
+        ),
+        linear-gradient(145deg, #2b0b09, #59130f 55%, #310a08);
+    border: 1px solid rgba(227, 187, 97, .65);
+    border-radius: 17px;
+    box-shadow: 0 10px 28px rgba(42, 15, 8, .12);
+}
+
+.musabaqah-bonus-header {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    padding: 23px 26px;
+    background: linear-gradient(
+        100deg,
+        rgba(132, 75, 24, .75),
+        rgba(74, 18, 13, .6)
+    );
+    border-bottom: 1px solid rgba(227, 187, 97, .35);
+}
+
+.musabaqah-bonus-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    color: #4b160b;
+    background: linear-gradient(135deg, #fff0ae, #dfb54e);
+    border-radius: 50%;
+    font-size: 1.45rem;
+}
+
+.musabaqah-bonus-label {
+    display: block;
+    margin-bottom: 6px;
+    color: #e7c46b;
+    font-size: .72rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.news-detail-content .musabaqah-bonus-header h2 {
+    margin: 0;
+    padding: 0;
+    color: #fff0ce;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+    font-weight: 800;
+    line-height: 1.45;
+}
+
+.news-detail-content .musabaqah-bonus-header h2::before {
+    display: none;
+}
+
+.musabaqah-bonus-body {
+    padding: 25px 27px;
+}
+
+.news-detail-content .musabaqah-bonus-body > p {
+    margin: 0 0 16px;
+    color: #f0dfc4;
+    font-size: .98rem;
+    line-height: 1.9;
+}
+
+.musabaqah-bonus-body > p strong {
+    color: #f2d27b;
+}
+
+/* FOTO BONUS */
+
+.musabaqah-bonus-foto {
+    width: 50%;
+    max-width: 425px; /* Setengah dari max-width sebelumnya */
+    margin: 25px auto;
+    overflow: hidden;
+    background: #230807;
+    border: 1px solid rgba(227, 187, 97, .55);
+    border-radius: 12px;
+}
+
+.musabaqah-bonus-foto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    cursor: zoom-in;
+    transition: transform .3s ease;
+}
+
+.musabaqah-bonus-foto img:hover {
+    transform: scale(1.02);
+}
+
+.musabaqah-bonus-foto figcaption {
+    padding: 12px 15px;
+    color: #f0dba9;
+    background: rgba(35, 8, 7, .95);
+    font-size: .85rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* UCAPAN PENUTUP BONUS */
+
+.musabaqah-bonus-ucapan {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-top: 25px;
+    padding: 19px;
+    color: #4b1b0d;
+    background: linear-gradient(120deg, #f7e5a2, #fff2bd, #e6c05e);
+    border-radius: 12px;
+}
+
+.musabaqah-bonus-ucapan > i {
+    flex-shrink: 0;
+    color: #946019;
+    font-size: 1.6rem;
+}
+
+.news-detail-content .musabaqah-bonus-ucapan p {
+    margin: 0;
+    color: #51301a;
+    font-size: .94rem;
+    line-height: 1.85;
+}
+
+/* MOBILE */
+
+@media (max-width: 767px) {
+    .musabaqah-bonus {
+        margin: 30px 0;
+        border-radius: 13px;
+    }
+
+    .musabaqah-bonus-header {
+        gap: 12px;
+        padding: 17px 14px;
+    }
+
+    .musabaqah-bonus-icon {
+        width: 43px;
+        height: 43px;
+        font-size: 1.2rem;
+    }
+
+    .musabaqah-bonus-label {
+        font-size: .62rem;
+        letter-spacing: 1.4px;
+    }
+
+    .news-detail-content .musabaqah-bonus-header h2 {
+        font-size: 1.15rem;
+    }
+
+    .musabaqah-bonus-body {
+        padding: 18px 14px;
+    }
+
+    .news-detail-content .musabaqah-bonus-body > p {
+        font-size: .92rem;
+        line-height: 1.85;
+    }
+  
+    .musabaqah-bonus-foto {
+        width: 75%;
+        max-width: 300px;
+        margin: 20px auto;
+    }
+
+    .musabaqah-bonus-foto figcaption {
+        padding: 10px;
+        font-size: .78rem;
+    }
+
+    .musabaqah-bonus-ucapan {
+        gap: 10px;
+        padding: 15px 12px;
+    }
+
+    .news-detail-content .musabaqah-bonus-ucapan p {
+        font-size: .87rem;
+        line-height: 1.8;
+    }
+}
