@@ -3596,7 +3596,84 @@
 }
 
 /* ==========================================================
-   FOTO BACKGROUND PRESTASI
+   FOTO BACKGROUND PRESTASI 2
+========================================================== */
+
+.prestasi-page-bg2 {
+
+    position: absolute;
+
+    top: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    /*
+       FOTO TIDAK FULL SELEBAR LAYAR
+    */
+    width: min(1800px, calc(100% - 50px));
+
+    /*
+       Mengikuti tinggi section prestasi
+    */
+    height: calc(100% - 40px);
+
+    background-image:
+        url("../images/berita/musabaqah2_panggung3.jpeg");
+
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    
+
+    background-position: center center;
+
+    border-radius: 28px;
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+/* ==========================================================
+   OVERLAY GELAP + BLUR + DEGRADASI 2
+========================================================== */
+
+.prestasi-page-bg2::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        /* Gelap semakin ke kanan */
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.05) 0%,
+            rgba(0, 0, 0, 0.15) 45%,
+            rgba(0, 0, 0, 0.07) 100%
+        ),
+
+        /* Gelap semakin ke atas */
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.65) 0%,
+            rgba(0, 0, 0, 0.10) 35%,
+            rgba(0, 0, 0, 0.5) 100%
+        ),
+
+        /* Lapisan abu-abu transparan */
+        rgba(161, 163, 162, 0.20);
+
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+/* ==========================================================
+   FOTO BACKGROUND PRESTASI 1
 ========================================================== */
 
 .prestasi-page-bg {
@@ -3635,7 +3712,7 @@
 }
 
 /* ==========================================================
-   OVERLAY GELAP + BLUR
+   OVERLAY GELAP + BLUR 1
 ========================================================== */
 
 .prestasi-page-bg::after {
@@ -3655,6 +3732,7 @@
 
     pointer-events: none;
 }
+
 
 /* ==========================================================
    CONTENT
@@ -4485,6 +4563,43 @@
 
     font-size: 1.35rem;
 
+}
+
+/* ==========================================================
+   MEDALI PRESTASI SANTRI
+========================================================== */
+
+.prestasi-medal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.7rem;
+    line-height: 1;
+}
+
+/* JUARA 1 — EMAS */
+.prestasi-medal-emas {
+    color: #d4af37 !important;
+}
+
+/* JUARA 2 — PERAK */
+.prestasi-medal-perak {
+    color: #aeb7c2 !important;
+}
+
+/* JUARA 3 — PERUNGGU */
+.prestasi-medal-perunggu {
+    color: #b87333 !important;
+}
+
+/* JUARA HARAPAN — HIJAU */
+.prestasi-medal-hijau {
+    color: #159017 !important;
+}
+
+.prestasi-medal-hijau i {
+    color: #159017 !important;
 }
 
 
