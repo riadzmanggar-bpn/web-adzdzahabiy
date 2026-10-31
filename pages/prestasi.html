@@ -1,279 +1,1147 @@
-
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Halaman Dalam Perbaikan | RTQ Al Imam Adz Dzahabiy</title>
+    <title>
+        Prestasi | Rumah Tahfizhul Quran Al Imam Adz Dzahabiy
+    </title>
 
-    
-    <style>
-        :root {
-            --green: #164e3b;
-            --green-dark: #103b2d;
-            --gold: #c6a45c;
-            --cream: #f8f6ef;
-            --text: #34443b;
-        }
+<!-- ==========================================================
+     BOOTSTRAP
+========================================================== -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
 
-        body {
-            min-height: 100vh;
-            min-height: 100dvh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 24px;
-            font-family: Arial, Helvetica, sans-serif;
-            color: var(--text);
-            background:
-                radial-gradient(
-                    circle at top right,
-                    rgba(198, 164, 92, 0.12),
-                    transparent 35%
-                ),
-                var(--cream);
-        }
-
-        .maintenance-card {
-            position: relative;
-            width: 100%;
-            max-width: 620px;
-            padding: 56px 36px 48px;
-            text-align: center;
-            background: #fffefa;
-            border: 1px solid rgba(198, 164, 92, 0.35);
-            border-radius: 20px;
-            box-shadow: 0 20px 60px rgba(22, 78, 59, 0.08);
-            overflow: hidden;
-            animation: fadeIn 0.8s ease both;
-        }
-
-        .maintenance-card::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: linear-gradient(
-                90deg,
-                var(--green),
-                var(--gold),
-                var(--green)
-            );
-        }
-
-        .logo-mark {
-            width: 84px;
-            height: 84px;
-            margin: 0 auto 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 1px solid rgba(198, 164, 92, 0.65);
-            border-radius: 50%;
-            background: var(--green);
-            color: #f3dfaa;
-            font-family: Georgia, "Times New Roman", serif;
-            font-size: 42px;
-            box-shadow: 0 8px 24px rgba(22, 78, 59, 0.15);
-        }
-
-        .brand {
-            color: var(--green);
-            font-size: 13px;
-            font-weight: 700;
-            line-height: 1.8;
-            letter-spacing: 1.5px;
-            text-transform: uppercase;
-        }
-
-        .divider {
-            width: 54px;
-            height: 2px;
-            margin: 28px auto;
-            background: var(--gold);
-        }
-
-        .icon {
-            width: 76px;
-            height: 76px;
-            margin: 0 auto 22px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--green);
-            background: #eef3ee;
-            border-radius: 50%;
-        }
-
-        .icon svg {
-            width: 38px;
-            height: 38px;
-            stroke: currentColor;
-            stroke-width: 1.5;
-            fill: none;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-        }
-
-        h1 {
-            margin-bottom: 18px;
-            color: var(--green);
-            font-size: clamp(26px, 5vw, 36px);
-            line-height: 1.3;
-            font-weight: 700;
-        }
-
-        .message {
-            max-width: 440px;
-            margin: 0 auto;
-            font-size: 16px;
-            line-height: 1.9;
-            color: #58665d;
-        }
-
-        .closing {
-            margin-top: 28px;
-            color: var(--green);
-            font-family: 'Amiri', serif;
-            font-size: 27px;
-            font-weight: 700;
-        }
-
-        .arabic {
-            display: block;
-            margin-top: 8px;
-            color: #8c7747;
-            font-family: 'Amiri', serif;
-            font-size: 23px;
-            direction: rtl;
-        }
-
-        footer {
-            margin-top: 36px;
-            padding-top: 22px;
-            border-top: 1px solid #e9e5d9;
-            color: #899188;
-            font-size: 11px;
-            line-height: 1.8;
-            letter-spacing: 0.5px;
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(14px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (max-width: 480px) {
-            body {
-                padding: 16px;
-            }
-
-            .maintenance-card {
-                padding: 42px 22px 30px;
-                border-radius: 16px;
-            }
-
-            .logo-mark {
-                width: 72px;
-                height: 72px;
-                font-size: 36px;
-            }
-
-            .brand {
-                font-size: 11px;
-                letter-spacing: 1px;
-            }
-
-            .message {
-                font-size: 14px;
-            }
-
-            .closing {
-                font-size: 25px;
-            }
-
-            footer {
-                margin-top: 28px;
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            *,
-            *::before,
-            *::after {
-                animation: none !important;
-            }
-        }
-    </style>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/component.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/page.css">
+    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/responsive.css">  
+    <link rel="stylesheet" href="../css/kaldik.css">
+    <link rel="stylesheet" href="../css/berita-musabaqoh2.css">
 </head>
 
 <body>
-    <main class="maintenance-card">
 
-        <div class="logo-mark" aria-hidden="true">
-            <span>ض</span>
+<!-- ==========================================================
+    NAVBAR
+========================================================== -->
+<div id="global-navbar"></div>
+
+<!-- END NAVBAR -->
+
+<!-- ==========================================
+     HERO PROFIL
+========================================== -->
+
+<section class="page-hero">
+
+    <div class="container">
+
+        <!-- =========================
+             BREADCRUMB
+        ========================== -->
+
+        <nav class="breadcrumb-custom"
+             data-reveal
+             data-delay="0s">
+
+            <a href="../index.html">
+                Beranda
+            </a>
+
+            <span>/</span>
+
+            <span>
+                Prestasi
+            </span>
+
+        </nav>
+
+
+        <!-- =========================
+             HERO CONTENT
+        ========================== -->
+
+        <div class="row align-items-center">
+
+
+            <!-- =========================
+                 TEXT HERO
+            ========================== -->
+
+            <div class="col-lg-7"
+                 data-reveal="right"
+                 data-delay="0.1s">
+
+                <div class="page-hero-label">
+                    PRESTASI
+                </div>
+
+
+                <h1
+                    data-reveal="right"
+                    data-delay="0.2s">
+
+                    Prestasi Santri 
+                    <br> 
+                    Rumah Tahfizhul Qur'an
+                    <br>
+                    Al Imam Adz Dzahabiy
+
+                </h1>
+
+
+                <p
+                    data-reveal="left"
+                    data-delay="0.3s">
+
+                    Dokumentasi prestasi santri
+                    Rumah Tahfizhul Qur'an
+                    Al Imam Adz Dzahabiy.
+
+                </p>
+
+            </div>
+
+
+            <!-- =========================
+                 KALENDER
+            ========================== -->
+
+            <div class="col-lg-5"
+                 data-reveal="left"
+                 data-delay="0.3s">
+
+                <div class="home-date">
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-card">
+
+
+                        <!-- HARI -->
+
+                        <div
+                            id="home-date-weekday"
+                            class="home-date-weekday">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL HIJRIAH -->
+
+                        <div class="home-date-number">
+
+                            <span id="home-date-hijri">
+                                -
+                            </span>
+
+                        </div>
+
+
+                        <!-- BULAN + TAHUN HIJRIAH -->
+
+                        <div
+                            id="home-date-month"
+                            class="home-date-month">
+
+                            -
+
+                        </div>
+
+
+                        <!-- TANGGAL MASEHI -->
+
+                        <div
+                            id="home-date-gregorian"
+                            class="home-date-gregorian">
+
+                            -
+
+                        </div>
+
+
+                        <!-- EVENT -->
+
+                        <div
+                            id="home-date-event"
+                            class="home-date-event">
+
+                        </div>
+
+                    </a>
+
+
+                    <a
+                        href="kaldik.html"
+                        class="home-date-more">
+
+                        Baca Selengkapnya →
+
+                    </a>
+
+                </div>
+
+            </div>
+
         </div>
 
-        <div class="brand">
-            Rumah Tahfizhul Qur'an<br>
-            Al Imam Adz Dzahabiy
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================================
+     PRESTASI MUSABAQAH AL-IMAM ASY-SYATHIBY SE-BORNEO KE-2
+========================================================== -->
+<section class="page-section prestasi-page" id="prestasi-borneo-ke-2">
+
+    <!-- BACKGROUND FOTO -->
+    <div class="prestasi-page-bg2"></div>
+
+    <!-- CONTENT -->
+    <div class="prestasi-page-content">
+        <div class="container">
+
+            <!-- HEADER MUSABAQAH -->
+            <div class="prestasi-event-header"
+                 data-reveal
+                 data-delay="0.1s">
+
+                <div class="page-hero-label">
+                    MUSABAQAH
+                </div>
+
+                <h2>
+                    Musabaqah Al-Imam Asy-Syathiby se-Borneo Ke-2
+                </h2>
+
+                <p class="section-subtitle"
+                   data-reveal="right"
+                   data-delay="0.2s">
+                    Prestasi santri Rumah Tahfizhul Qur'an
+                    Al Imam Adz Dzahabiy dalam
+                    Musabaqah Al-Imam Asy-Syathiby se-Borneo Ke-2.
+                </p>
+            </div>
+
+            <!-- INFORMASI KEGIATAN -->
+            <div class="prestasi-event-info"
+                 data-reveal="bottom"
+                 data-delay="0.2s">
+
+                <!-- TANGGAL -->
+                <div class="event-info-card">
+                    <div class="event-info-title">
+
+                        <span class="event-info-icon"
+                              data-reveal="zoom"
+                              data-delay="0.1s">
+                            <i class="bi bi-calendar-event"></i>
+                        </span>
+
+                        <h3 data-reveal="left" data-delay="0.2s">
+                            Tanggal Pelaksanaan
+                        </h3>
+                    </div>
+
+                    <div class="event-info-content">
+
+                        <p data-reveal="right" data-delay="0.3s">
+                            <strong>Jum'at, 5 Jumadil Ula 1448 H</strong>
+                            <br>
+                            16 Oktober 2026 M
+                        </p>
+
+                        <p data-reveal="right" data-delay="0.4s">
+                            <strong>Sabtu, 6 Jumadil Ula 1448 H</strong>
+                            <br>
+                            17 Oktober 2026 M
+                        </p>
+
+                        <p data-reveal="right" data-delay="0.5s">
+                            <strong>Ahad, 7 Jumadil Ula 1448 H</strong>
+                            <br>
+                            18 Oktober 2026 M
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- TEMPAT -->
+                <div class="event-info-card">
+                    <div class="event-info-title">
+
+                        <span class="event-info-icon"
+                              data-reveal="zoom"
+                              data-delay="0.1s">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </span>
+
+                        <h3 data-reveal="right" data-delay="0.2s">
+                            Tempat
+                        </h3>
+                    </div>
+
+                    <div class="event-info-content">
+                        <p data-reveal="left" data-delay="0.3s">
+                            Masjid Al-Anshar
+                            <br>
+                            Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy
+                            <br>
+                            Manggar, Balikpapan, Kalimantan Timur, Indonesia
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- HEADER PRESTASI SANTRI -->
+            <div class="prestasi-result-header"
+                 data-reveal="bottom"
+                 data-delay="0.2s">
+
+                <div class="prestasi-result-icon"
+                     data-reveal="zoom"
+                     data-delay="0.1s">
+                    <i class="bi bi-trophy-fill"></i>
+                </div>
+
+                <h2 data-reveal="bottom" data-delay="0.2s">
+                    Prestasi Santri
+                </h2>
+
+                <p data-reveal="bottom" data-delay="0.3s">
+                    Alhamdulillah, berikut capaian santri
+                    Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy.
+                </p>
+            </div>
+
+            <!-- KATEGORI 5 JUZ -->
+            <div class="prestasi-card"
+                 data-reveal="zoom"
+                 data-delay="0.2s">
+
+                <div class="prestasi-card-header">
+
+                    <div class="prestasi-trophy"
+                         data-reveal="zoom"
+                         data-delay="0.1s">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+
+                    <div>
+                        <span class="prestasi-jenjang"
+                              data-reveal="right"
+                              data-delay="0.2s">
+                            Jenjang Ibtidaiah
+                        </span>
+
+                        <h3 data-reveal="left" data-delay="0.3s">
+                            Kategori 5 Juz
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="prestasi-list">
+
+                    <!-- HARAPAN 1 -->
+                    <div class="prestasi-item">
+
+                        <div class="prestasi-rank prestasi-rank-harapan"
+                             data-reveal="zoom"
+                             data-delay="0.1s">
+                            <span>Harapan 1</span>
+                        </div>
+
+                        <div class="prestasi-info">
+                            <strong data-reveal="right" data-delay="0.2s">
+                                Umar bin Zaenal Fanani
+                            </strong>
+
+                            <span class="prestasi-kelas"
+                                  data-reveal="left"
+                                  data-delay="0.3s">
+                                Kelas 1 Wustho
+                            </span>
+                        </div>
+
+                        <div class="prestasi-medal prestasi-medal-hijau"
+                                data-reveal="bottom"
+                                data-delay="0.3s">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                    </div>
+
+                    <!-- HARAPAN 2 -->
+                    <div class="prestasi-item">
+
+                        <div class="prestasi-rank prestasi-rank-harapan"
+                             data-reveal="zoom"
+                             data-delay="0.2s">
+                            <span>Harapan 2</span>
+                        </div>
+
+                        <div class="prestasi-info">
+                            <strong data-reveal="right" data-delay="0.3s">
+                                Adnan Abqary bin Ahmad Ratu Alam
+                            </strong>
+
+                            <span class="prestasi-kelas"
+                                  data-reveal="left"
+                                  data-delay="0.4s">
+                                Kelas 6 Ula
+                            </span>
+                        </div>
+                         <div class="prestasi-medal prestasi-medal-hijau"
+                                data-reveal="bottom"
+                                data-delay="0.4s">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- KATEGORI 10 JUZ -->
+            <div class="prestasi-card"
+                data-reveal="zoom"
+                data-delay="0.3s">
+
+                <div class="prestasi-card-header">
+
+                    <div class="prestasi-trophy"
+                        data-reveal="zoom"
+                        data-delay="0.1s">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+
+                    <div>
+                        <span class="prestasi-jenjang"
+                            data-reveal="right"
+                            data-delay="0.2s">
+                            Jenjang Ibtidaiah
+                        </span>
+
+                        <h3 data-reveal="left"
+                            data-delay="0.3s">
+                            Kategori 10 Juz
+                        </h3>
+                    </div>
+                </div>
+
+                                
+                <div class="prestasi-list">
+
+                    <!-- JUARA 1 — EMAS -->
+                    <div class="prestasi-item prestasi-juara-1">
+
+                        <div class="prestasi-rank"
+                            data-reveal="zoom"
+                            data-delay="0.1s">
+                            <span>1</span>
+                        </div>
+
+                        <div class="prestasi-info">
+                            <strong data-reveal="right"
+                                    data-delay="0.2s">
+                                Muhammad bin Adi Rakhman Said
+                            </strong>
+
+                            <span class="prestasi-kelas"
+                                data-reveal="bottom"
+                                data-delay="0.3s">
+                                Kelas 2 Wustho
+                            </span>
+                        </div>
+
+                        <div class="prestasi-medal prestasi-medal-emas"
+                            data-reveal="zoom"
+                            data-delay="0.4s">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                    </div>
+
+                    <!-- JUARA 3 — PERUNGGU -->
+                    <div class="prestasi-item">
+
+                        <div class="prestasi-rank"
+                            data-reveal="zoom"
+                            data-delay="0.2s">
+                            <span>3</span>
+                        </div>
+
+                        <div class="prestasi-info">
+                            <strong data-reveal="right"
+                                    data-delay="0.3s">
+                                Abdullah bin Muhammad Fahmi
+                            </strong>
+
+                            <span class="prestasi-kelas"
+                                data-reveal="left"
+                                data-delay="0.4s">
+                                Kelas 2 Wustho
+                            </span>
+                        </div>
+
+                        <div class="prestasi-medal prestasi-medal-perunggu"
+                            data-reveal="zoom"
+                            data-delay="0.5s">
+                            <i class="bi bi-award-fill"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ==========================================================
+     GALERI PRESTASI
+========================================================== -->
+
+<section class="prestasi-gallery-section">
+
+    <div class="container">
+
+        <!-- ==================================================
+             HEADER GALERI
+        =================================================== -->
+
+        <div
+            class="prestasi-gallery-header"
+            data-reveal="bottom">
+
+            <div class="page-hero-label">
+                DOKUMENTASI
+            </div>
+
+            <h2>
+                Galeri Kegiatan
+            </h2>
+
+            <p>
+                Dokumentasi Musabaqah Al-Imam Asy-Syathiby
+                se-Borneo Ke-2.
+            </p>
+
         </div>
 
-        <div class="divider"></div>
 
-        <div class="icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M12 7v5l3 2"></path>
-                <path d="M5 3 3 5"></path>
-                <path d="m19 3 2 2"></path>
-            </svg>
+        <!-- ==================================================
+            GALERI FOTO
+        =================================================== -->
+
+        <div class="prestasi-gallery">
+
+
+            <!-- FOTO 1 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/berita/musabaqah2_umar_gab.jpeg"
+                    alt="Umar Harapan 1">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Umar bin Zainal Fanani</strong>
+                    <span>Juara Harapan 1 · Kategori 5 Juz</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 2 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/berita/musabaqah2_adnan_gab.jpeg"
+                    alt="Adnan Abqary Juara Harapan 2">pe
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Adnan Abqary bin Ahmad Ratu Alam</strong>
+                    <span>Juara Harapan 2 · Kategori 5 Juz</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 3 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/berita/musabaqah2_muhammad_gab.jpeg"
+                    alt="Muhammad Juara 1">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Muhammad bin Adi Rakhman Sa'id</strong>
+                    <span>Juara 1 · Kategori 10 Juz</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 4 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/berita/musabaqah2_abdullahfahmi_gab.jpeg"
+                    alt="Abdullah Juara 3">pg
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Abdullah bin Muhammad Fahmi</strong>
+                    <span>Juara 3 · Kategori 10 Juz</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 5 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/berita/musabaqah2_panggung3.jpeg"
+                    alt="Musabaqah Al-Imam Asy-Syathiby2">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Musabaqah Al-Imam Asy-Syathiby se- Borneo ke-2</strong>
+                    <span>Dokumentasi Kegiatan</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 6 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/berita/musabaqah2_piala.png"
+                    alt="Tempat Musabaqah">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Masjid Al-Anshar</strong>
+                    <span>Tempat Pelaksanaan Musabaqah</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 7 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/berita/musabaqah2_piala_mahad.jpg"
+                    alt="Tempat Musabaqah">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>RTQ Al-Imam Adz-Dzahabiy</strong>
+                    <span>Pondok Juara 1 Dengan Nilai Terbanyak</span>
+                </div>
+
+            </div>
+
         </div>
 
-        <h1>Mohon Maaf</h1>
 
-        <p class="message">
-            Halaman yang antum kunjungi sedang dalam perbaikan.
-            <br>
-            Kunjungi kami di lain waktu.
-        </p>
-
-        <div class="closing">
-            Jazaakumullahu khoiron
         </div>
 
-        <span class="arabic" lang="ar">
-            جزاكم الله خيرًا
-        </span>
+    </div>
 
-        <footer>
-            &copy; <span id="year"></span>
-            RTQ Al Imam Adz Dzahabiy
-            <br>
-            Semoga Allah memberkahi waktu dan usaha kita.
-        </footer>
+</section>
 
-    </main>
 
-    <script>
-        document.getElementById("year").textContent =
-            new Date().getFullYear();
-    </script>
+<!-- ==========================================================
+     PRESTASI MUSABAQAH AL-IMAM ASY-SYATHIBY KALTIM KE-1
+========================================================== -->
+<section class="page-section prestasi-page" id="prestasi-kaltim-ke-1">
+
+    <!-- BACKGROUND FOTO -->
+    <div class="prestasi-page-bg"></div>
+
+    <!-- CONTENT -->
+    <div class="prestasi-page-content">
+        <div class="container">
+
+            <!-- HEADER MUSABAQAH -->
+            <div class="prestasi-event-header"
+                 data-reveal
+                 data-delay="0.1s">
+
+                <div class="page-hero-label">
+                    MUSABAQAH
+                </div>
+
+                <h2>
+                    Musabaqah Al-Imam Asy-Syathiby Kaltim Ke-1
+                </h2>
+
+                <p class="section-subtitle"
+                   data-reveal="right"
+                   data-delay="0.2s">
+                    Prestasi santri Rumah Tahfizhul Qur'an
+                    Al Imam Adz Dzahabiy dalam
+                    Musabaqah Al-Imam Asy-Syathiby Kaltim Ke-1.
+                </p>
+            </div>
+
+            <!-- INFORMASI KEGIATAN -->
+            <div class="prestasi-event-info"
+                 data-reveal="bottom"
+                 data-delay="0.2s">
+
+                <!-- TANGGAL -->
+                <div class="event-info-card">
+
+                    <div class="event-info-title">
+                        <span class="event-info-icon"
+                              data-reveal="zoom"
+                              data-delay="0.1s">
+                            <i class="bi bi-calendar-event"></i>
+                        </span>
+
+                        <h3 data-reveal="left" data-delay="0.2s">
+                            Tanggal Pelaksanaan
+                        </h3>
+                    </div>
+
+                    <div class="event-info-content">
+
+                        <p data-reveal="right" data-delay="0.3s">
+                            <strong>Sabtu, 12 Rajab 1446 H</strong>
+                            <br>
+                            11 Januari 2025 M
+                        </p>
+
+                        <p data-reveal="right" data-delay="0.4s">
+                            <strong>Ahad, 12 Rajab 1446 H</strong>
+                            <br>
+                            12 Januari 2025 M
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- TEMPAT -->
+                <div class="event-info-card">
+
+                    <div class="event-info-title">
+                        <span class="event-info-icon"
+                              data-reveal="zoom"
+                              data-delay="0.1s">
+                            <i class="bi bi-geo-alt-fill"></i>
+                        </span>
+
+                        <h3 data-reveal="right" data-delay="0.2s">
+                            Tempat
+                        </h3>
+                    </div>
+
+                    <div class="event-info-content">
+                        <p data-reveal="left" data-delay="0.3s">
+                            Masjid Jabalus Sholah
+                            <br>
+                            Ponpes Darussalaf Al Islamy
+                            <br>
+                            Kutai Timur
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- HEADER PRESTASI SANTRI -->
+            <div class="prestasi-result-header"
+                 data-reveal="bottom"
+                 data-delay="0.2s">
+
+                <div class="prestasi-result-icon"
+                     data-reveal="zoom"
+                     data-delay="0.1s">
+                    <i class="bi bi-trophy-fill"></i>
+                </div>
+
+                <h2 data-reveal="bottom" data-delay="0.2s">
+                    Prestasi Santri
+                </h2>
+
+                <p data-reveal="bottom" data-delay="0.3s">
+                    Alhamdulillah, berikut capaian santri
+                    Rumah Tahfizhul Qur'an Al Imam Adz Dzahabiy.
+                </p>
+            </div>
+
+            <!-- KATEGORI 3 JUZ -->
+            <div class="prestasi-card"
+                 data-reveal="zoom"
+                 data-delay="0.2s">
+
+                <div class="prestasi-card-header">
+
+                    <div class="prestasi-trophy"
+                         data-reveal="zoom"
+                         data-delay="0.1s">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+
+                    <div>
+                        <span class="prestasi-jenjang"
+                              data-reveal="left"
+                              data-delay="0.2s">
+                            Jenjang Ibtidaiah
+                        </span>
+
+                        <h3 data-reveal="left" data-delay="0.3s">
+                            Kategori 3 Juz
+                        </h3>
+                    </div>
+                </div>
+
+                <div class="prestasi-list">
+
+                    <!-- JUARA 1 -->
+                    <div class="prestasi-item prestasi-juara-1">
+
+                        <div class="prestasi-rank"
+                             data-reveal="zoom"
+                             data-delay="0.1s">
+                            <span>1</span>
+                        </div>
+
+                        <div class="prestasi-info">
+                            <strong data-reveal="right" data-delay="0.2s">
+                                Abdurrahman putra dari Bapak Nurhadi
+                            </strong>
+
+                            <span class="prestasi-kelas"
+                                  data-reveal="right"
+                                  data-delay="0.3s">
+                                Kelas 4
+                            </span>
+                        </div>
+
+                        <div class="prestasi-medal"
+                             data-reveal="zoom"
+                             data-delay="0.4s">
+                            🥇
+                        </div>
+                    </div>
+
+                    <!-- HARAPAN 2 -->
+                    <div class="prestasi-item">
+
+                        <div class="prestasi-rank prestasi-rank-harapan"
+                             data-reveal="zoom"
+                             data-delay="0.2s">
+                            <span>Harapan 2</span>
+                        </div>
+
+                        <div class="prestasi-info">
+                            <strong data-reveal="right" data-delay="0.3s">
+                                Nuh putra dari Bapak Tri Ananta
+                            </strong>
+
+                            <span class="prestasi-kelas"
+                                  data-reveal="left"
+                                  data-delay="0.4s">
+                                Kelas 4
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- KATEGORI 5 JUZ -->
+            <div class="prestasi-card"
+                 data-reveal="zoom"
+                 data-delay="0.3s">
+
+                <div class="prestasi-card-header">
+
+                    <div class="prestasi-trophy">
+                        <i class="bi bi-trophy-fill"></i>
+                    </div>
+
+                    <div>
+                        <span class="prestasi-jenjang">
+                            Jenjang Ibtidaiah
+                        </span>
+
+                        <h3>Kategori 5 Juz</h3>
+                    </div>
+                </div>
+
+                <div class="prestasi-list">
+
+                    <!-- JUARA 1 -->
+                    <div class="prestasi-item prestasi-juara-1">
+
+                        <div class="prestasi-rank">
+                            <span>1</span>
+                        </div>
+
+                        <div class="prestasi-info">
+                            <strong>
+                                Adnan Abqary putra dari Bapak Ahmad Ratu Alam
+                            </strong>
+
+                            <span class="prestasi-kelas">
+                                Kelas 4
+                            </span>
+                        </div>
+
+                        <div class="prestasi-medal">🥇</div>
+                    </div>
+
+                    <!-- JUARA 3 -->
+                    <div class="prestasi-item">
+
+                        <div class="prestasi-rank">
+                            <span>3</span>
+                        </div>
+
+                        <div class="prestasi-info">
+                            <strong>
+                                Umar putra dari Bapak Zaenal Fanani
+                            </strong>
+
+                            <span class="prestasi-kelas">
+                                Kelas 5
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================
+     GALERI PRESTASI
+========================================================== -->
+
+<section class="prestasi-gallery-section">
+
+    <div class="container">
+
+        <!-- ==================================================
+             HEADER GALERI
+        =================================================== -->
+
+        <div
+            class="prestasi-gallery-header"
+            data-reveal="bottom">
+
+            <div class="page-hero-label">
+                DOKUMENTASI
+            </div>
+
+            <h2>
+                Galeri Kegiatan
+            </h2>
+
+            <p>
+                Dokumentasi Musabaqah Al-Imam Asy-Syathiby
+                Kaltim Ke-1.
+            </p>
+
+        </div>
+
+
+        <!-- ==================================================
+            GALERI FOTO
+        =================================================== -->
+
+        <div class="prestasi-gallery">
+
+
+            <!-- FOTO 1 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/prestasi/abdurrahman-juara-1.jpg"
+                    alt="Abdurrahman Juara 1">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Abdurrahman</strong>
+                    <span>Juara 1 · Kategori 3 Juz</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 2 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/prestasi/adnan-juara-1.jpg"
+                    alt="Adnan Abqary Juara 1">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Adnan Abqary</strong>
+                    <span>Juara 1 · Kategori 5 Juz</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 3 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/prestasi/umar-juara-3.jpg"
+                    alt="Umar Juara 3">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Umar</strong>
+                    <span>Juara 3 · Kategori 5 Juz</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 4 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/prestasi/nuh-harapan-2.jpg"
+                    alt="Nuh Harapan 2">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Nuh</strong>
+                    <span>Harapan 2 · Kategori 3 Juz</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 5 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/prestasi/Musabaqoh 1.png"
+                    alt="Musabaqah Al-Imam Asy-Syathiby">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Musabaqah Al-Imam Asy-Syathiby</strong>
+                    <span>Dokumentasi Kegiatan</span>
+                </div>
+
+            </div>
+
+
+            <!-- FOTO 6 -->
+            <div
+                class="prestasi-gallery-item"
+                data-reveal="zoom">
+
+                <img
+                    src="../images/prestasi/tempat-musabaqoh.jpg"
+                    alt="Tempat Musabaqah">
+
+                <div class="prestasi-gallery-caption">
+                    <strong>Masjid Jabalus Sholah</strong>
+                    <span>Tempat Pelaksanaan Musabaqah</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================================
+     PENUTUP
+========================================================== -->
+
+<section class="page-section bg-light">
+
+    <div class="container">
+
+        <div
+            class="text-center"
+            data-reveal="bottom"
+            data-delay="0.2s">
+
+            <div class="history-quote">
+
+                "Segala puji bagi Allah yang dengan nikmat-Nya
+                segala kebaikan menjadi sempurna."
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================================================
+     FOOTER
+========================================================== -->
+
+<div id="global-footer">
+
+</div>
+
+<!-- END FOOTER -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+<script src="../js/navbar.js"></script>
+<script src="../js/scroll-reveal.js"></script>
+<script src="../js/moment.min.js"></script>
+<script src="../js/moment-hijri.js"></script>
+<script src="../js/kaldik.js"></script>
+<script src="../js/beranda-kaldik.js"></script>
+<script src="../js/klik-foto.js"></script>
+
+
 </body>
 </html>

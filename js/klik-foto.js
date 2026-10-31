@@ -1,30 +1,29 @@
 
 /* ==========================================================
-   KLIK FOTO BERITA — LIGHTBOX
+   KLIK FOTO — LIGHTBOX BERITA & PRESTASI
 ========================================================== */
 
 (function () {
     "use strict";
 
     function initKlikFoto() {
-        // Area konten berita
-        const areaBerita = document.querySelector(
-            ".news-detail-section"
-        );
 
-        if (!areaBerita) {
-            console.warn(
-                "Lightbox: .news-detail-section tidak ditemukan."
-            );
+        // Area foto yang didukung
+        const selectorFoto = [
+            ".news-detail-section img",
+            ".prestasi-gallery-item img"
+        ].join(", ");
+
+        // Cegah inisialisasi berulang
+        if (document.documentElement.dataset.lightboxReady === "true") {
             return;
         }
 
-        // Cegah inisialisasi berulang
-        if (areaBerita.dataset.lightboxReady === "true") return;
-        areaBerita.dataset.lightboxReady = "true";
+        document.documentElement.dataset.lightboxReady = "true";
 
         // Buat lightbox
         const lightbox = document.createElement("div");
+
         lightbox.className = "foto-lightbox";
         lightbox.setAttribute("role", "dialog");
         lightbox.setAttribute("aria-modal", "true");
@@ -44,28 +43,40 @@
         document.body.appendChild(lightbox);
 
         const fotoBesar = lightbox.querySelector("img");
+
         const tombolTutup = lightbox.querySelector(
             ".foto-lightbox-tutup"
         );
 
         let elemenSebelumnya = null;
 
-        // Tambahkan CSS langsung agar tidak bergantung
-        // pada pemuatan CSS lightbox terpisah
+        // CSS Lightbox
         const style = document.createElement("style");
 
         style.textContent = `
-            .news-detail-section img {
+
+            /* FOTO YANG BISA DIPERBESAR */
+            .news-detail-section img,
+            .prestasi-gallery-item img {
                 cursor: zoom-in;
+                transition: filter .25s ease;
             }
 
+            .news-detail-section img:hover,
+            .prestasi-gallery-item img:hover {
+                filter: brightness(.94);
+            }
+
+            /* LIGHTBOX */
             .foto-lightbox {
                 position: fixed;
                 inset: 0;
                 z-index: 999999;
+
                 display: none;
                 align-items: center;
                 justify-content: center;
+
                 padding: 24px;
                 background: rgba(0, 0, 0, .92);
             }
@@ -76,33 +87,50 @@
 
             .foto-lightbox img {
                 display: block;
+
                 max-width: 96vw;
                 max-height: 92vh;
+
                 width: auto;
                 height: auto;
+
                 object-fit: contain;
-                cursor: zoom-out;
+
                 border-radius: 4px;
                 box-shadow: 0 8px 40px rgba(0, 0, 0, .4);
+
+                cursor: zoom-out;
             }
 
+            /* TOMBOL TUTUP */
             .foto-lightbox-tutup {
                 position: absolute;
                 top: 14px;
                 right: 22px;
                 z-index: 2;
+
                 width: 44px;
                 height: 44px;
+
                 border: 1px solid rgba(255,255,255,.5);
                 border-radius: 50%;
+
                 background: rgba(255,255,255,.12);
                 color: white;
+
                 font-size: 30px;
                 line-height: 1;
+
                 cursor: pointer;
             }
 
+            .foto-lightbox-tutup:hover {
+                background: rgba(255,255,255,.25);
+            }
+
+            /* RESPONSIVE */
             @media (max-width: 576px) {
+
                 .foto-lightbox {
                     padding: 10px;
                 }
@@ -121,8 +149,13 @@
 
         document.head.appendChild(style);
 
+
+        // BUKA FOTO
         function bukaFoto(img) {
-            if (!img.src || img.src.startsWith("data:")) return;
+
+            if (!img.src || img.src.startsWith("data:")) {
+                return;
+            }
 
             elemenSebelumnya = document.activeElement;
 
@@ -130,45 +163,64 @@
             fotoBesar.alt = img.alt || "Foto dokumentasi";
 
             lightbox.classList.add("aktif");
+
             document.body.style.overflow = "hidden";
 
             tombolTutup.focus();
         }
 
+
+        // TUTUP FOTO
         function tutupFoto() {
+
             lightbox.classList.remove("aktif");
+
             document.body.style.overflow = "";
 
             fotoBesar.removeAttribute("src");
 
-            if (elemenSebelumnya &&
-                typeof elemenSebelumnya.focus === "function") {
+            if (
+                elemenSebelumnya &&
+                typeof elemenSebelumnya.focus === "function"
+            ) {
                 elemenSebelumnya.focus();
             }
         }
 
-        // Klik semua foto di area berita
-        areaBerita.addEventListener("click", function (event) {
-            const img = event.target.closest("img");
 
-            if (!img || !areaBerita.contains(img)) return;
+        // KLIK FOTO BERITA & PRESTASI
+        document.addEventListener("click", function (event) {
 
-            // Abaikan gambar yang memang menjadi tombol/link
+            const img = event.target.closest(selectorFoto);
+
+            if (!img) return;
+
+            // Abaikan gambar yang menjadi tombol atau link
             if (img.closest("a, button")) return;
 
             bukaFoto(img);
         });
 
+
+        // TOMBOL TUTUP
         tombolTutup.addEventListener("click", tutupFoto);
 
+
+        // KLIK AREA GELAP ATAU FOTO BESAR
         lightbox.addEventListener("click", function (event) {
-            if (event.target === lightbox ||
-                event.target === fotoBesar) {
+
+            if (
+                event.target === lightbox ||
+                event.target === fotoBesar
+            ) {
                 tutupFoto();
             }
         });
 
+
+        // TOMBOL ESCAPE
         document.addEventListener("keydown", function (event) {
+
             if (!lightbox.classList.contains("aktif")) return;
 
             if (event.key === "Escape") {
@@ -176,15 +228,25 @@
             }
         });
 
-        console.log("Lightbox foto berita berhasil diinisialisasi.");
+
+        console.log(
+            "Lightbox Berita & Prestasi berhasil diinisialisasi."
+        );
     }
 
+
+    // INISIALISASI
     if (document.readyState === "loading") {
+
         document.addEventListener(
             "DOMContentLoaded",
             initKlikFoto
         );
+
     } else {
+
         initKlikFoto();
+
     }
+
 })();
