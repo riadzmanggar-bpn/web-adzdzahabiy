@@ -2917,6 +2917,45 @@
 }
 
 /* ==========================================================
+   PROGRAM DETAIL - RESPONSIVE MOBILE
+========================================================== */
+
+@media (max-width: 767px) {
+
+    /* Paragraf menggunakan lebar lebih luas */
+    .program-detail-content p {
+        margin-left: -95px;
+        width: calc(100% + 95px);
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .program-detail-content ul {
+        margin-left: -95px;
+        width: calc(100% + 95px);
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+      .program-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+     .registration-program-section .program-detail-content p {
+        margin-left: 0;
+        width: 100%;
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+}
+
+
+/* ==========================================================
    PENUTUP
 ========================================================== */
 
