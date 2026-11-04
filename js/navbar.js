@@ -103,6 +103,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         td: "td.html",
 
+        tn: "tn.html",
+
         ibadah: "ibadah.html",
 
         berita: "berita.html",
