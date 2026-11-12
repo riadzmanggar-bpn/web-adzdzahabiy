@@ -112,7 +112,7 @@
         "end": "1448-07-04"
     },
 
-    "1448-07-11": {
+    "1448-07-25": {
         "title": "Pengumuman Penerimaan Santri Baru",
         "type": "pendaftaran"
     },
@@ -126,26 +126,26 @@
     "1448-08-29": {
         "title": "Classmeeting",
         "type": "classmeeting",
-        "end": "1448-09-01"
+        "end": "1448-09-02"
     },
 
-    "1448-09-21": {
+    "1448-09-15": {
         "title": "Pembagian Rapot",
         "type": "rapot"
     },
 
-    "1448-09-22": {
+    "1448-09-16": {
         "title": "Libur Semester Genap",
         "type": "libur",
-        "end": "1448-10-26"
+        "end": "1448-10-20"
     },
 
-    "1448-10-27": {
+    "1448-10-20": {
         "title": "Daftar Ulang Santri Baru",
         "type": "administrasi"
     },
 
-    "1448-10-28": {
+    "1448-10-21": {
         "title": "Awal KBM Semester Ganjil",
         "type": "kbm"
     }
