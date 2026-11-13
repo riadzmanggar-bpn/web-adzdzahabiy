@@ -1362,6 +1362,35 @@
 
 
 /* ==========================================================
+   CENTER FOTO
+========================================================== */
+.donasi-ac-detail {
+    text-align: center;
+}
+
+.donasi-ac-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.donasi-ac-image img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.donasi-ac-image img {
+    max-width: 800px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ==========================================================
    TOMBOL KEMBALI
 ========================================================== */
 
