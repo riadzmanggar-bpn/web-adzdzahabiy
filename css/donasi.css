@@ -1371,23 +1371,19 @@
 .donasi-ac-image {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
+    margin: 20px auto;
 }
 
 .donasi-ac-image img {
     display: block;
-    max-width: 100%;
+    width: 85%;
+    max-width: 500px;
     height: auto;
+    object-fit: contain;
     margin: 0 auto;
 }
 
-.donasi-ac-image img {
-    max-width: 800px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
 
 
 /* ==========================================================
@@ -1415,7 +1411,13 @@
         margin-bottom: 30px;
     }
 
+    .donasi-ac-image img {
+        width: 90%;
+        max-width: 380px;
+    }
+
 }
+
 
 
 /* ==========================================================
