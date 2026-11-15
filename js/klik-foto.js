@@ -12,7 +12,8 @@
         const selectorFoto = [
             ".news-detail-section img",
             ".prestasi-gallery-item img",
-            ".donasi-ac-image img"
+            ".donasi-ac-image img",
+            ".highlight-card-image img"
         ].join(", ");
 
         // Cegah inisialisasi berulang
@@ -59,14 +60,16 @@
             /* FOTO YANG BISA DIPERBESAR */
             .news-detail-section img,
             .prestasi-gallery-item img,
-            .donasi-ac-image img {
+            .donasi-ac-image img,
+            .highlight-card-image img {
                 cursor: zoom-in;
                 transition: filter .25s ease;
             }
 
             .news-detail-section img:hover,
             .prestasi-gallery-item img:hover,
-            .donasi-ac-image img:hover {
+            .donasi-ac-image img:hover,
+            .highlight-card-image img {
                 filter: brightness(.94);
             }
 
